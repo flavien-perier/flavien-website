@@ -1,0 +1,9 @@
+User-Agent: *
+Allow: *
+Disallow: /package.json
+Disallow: /app/
+Disallow: /css/
+Disallow: /fonts/
+Disallow: /img/
+Disallow: /js/
+Disallow: /node_modules/

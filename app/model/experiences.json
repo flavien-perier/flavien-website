@@ -1,0 +1,25 @@
+{
+    "experiences": [
+        {
+            "placement": "Beaupeyrat",
+            "description": "BTS SIO (Service Informatique aux Organisations)",
+            "city": "Limoges",
+            "start": "2015",
+            "end": "2017"
+        },
+        {
+            "placement": "3IL",
+            "description": "Engineering school",
+            "city": "Limoges",
+            "start": "2017",
+            "end": "2020"
+        },
+        {
+            "placement": "Orange",
+            "description": "Development",
+            "city": "Toulouse",
+            "start": "2017",
+            "end": "2020"
+        }
+    ]
+}

@@ -1,0 +1,217 @@
+{
+    "competences": [
+        {
+            "label": "Angular",
+            "commentary": "Framework frontend TypeScript",
+            "type": "framework",
+            "experiences": [
+                "orange",
+                "personal"
+            ],
+            "lvl": 75
+        },
+        {
+            "label": "Java spring",
+            "commentary": "Framework backend java",
+            "type": "framework",
+            "experiences": [
+                "orange"
+            ],
+            "lvl": 75
+        },
+        {
+            "label": "JQuery",
+            "commentary": "Framework frontend JavaScript",
+            "type": "framework",
+            "experiences": [
+                "3IL",
+                "personal"
+            ],
+            "lvl": 75
+        },
+        {
+            "label": "Django",
+            "commentary": "Framework backend python",
+            "type": "framework",
+            "experiences": [
+                "Association Seme Tes Graines"
+            ],
+            "lvl": 50
+        },
+        {
+            "label": "JavaScript",
+            "commentary": "Programming language JavaScript",
+            "type": "language",
+            "experiences": [
+                "orange",
+                "personal"
+            ],
+            "lvl": 90
+        },
+        {
+            "label": "TypeScript",
+            "commentary": "Programming language TypeScript",
+            "type": "language",
+            "experiences": [
+                "orange",
+                "personal"
+            ],
+            "lvl": 80
+        },
+        {
+            "label": "Java",
+            "commentary": "Programming language Java",
+            "type": "language",
+            "experiences": [
+                "orange",
+                "3IL",
+                "personal"
+            ],
+            "lvl": 70
+        },
+        {
+            "label": "PHP",
+            "commentary": "Programming language PHP",
+            "type": "language",
+            "experiences": [
+                "3IL",
+                "BTS Beaupeyrat",
+                "personal"
+            ],
+            "lvl": 65
+        },
+        {
+            "label": "C++",
+            "commentary": "Programming language C++",
+            "type": "language",
+            "experiences": [
+                "3IL",
+                "personal"
+            ],
+            "lvl": 50
+        },
+        {
+            "label": "Python",
+            "commentary": "Programming language Python",
+            "type": "language",
+            "experiences": [
+                "Association Seme Tes Graines",
+                "personal"
+            ],
+            "lvl": 50
+        },
+        {
+            "label": "MySQL",
+            "commentary": "Relational database",
+            "type": "db",
+            "experiences": [
+                "orange",
+                "3IL",
+                "BTS Beaupeyrat",
+                "personal"
+            ],
+            "lvl": 80
+        },
+        {
+            "label": "PostgreSQL",
+            "commentary": "Relational database",
+            "type": "db",
+            "experiences": [
+                "personal"
+            ],
+            "lvl": 80
+        },
+        {
+            "label": "MongoDB",
+            "commentary": "Document database",
+            "type": "db",
+            "experiences": [
+                "orange",
+                "personal"
+            ],
+            "lvl": 70
+        },
+        {
+            "label": "Neo4J",
+            "commentary": "Graph database",
+            "type": "db",
+            "experiences": [
+                "orange",
+                "personal"
+            ],
+            "lvl": 60
+        },
+        {
+            "label": "Linux",
+            "commentary": "Operating system Linux",
+            "type": "os",
+            "experiences": [
+                "orange",
+                "3IL",
+                "BTS Beaupeyrat",
+                "personal"
+            ],
+            "lvl": 80
+        },
+        {
+            "label": "Windows",
+            "commentary": "Operating system Windows",
+            "type": "os",
+            "experiences": [
+                "orange",
+                "3IL",
+                "BTS Beaupeyrat",
+                "personal"
+            ],
+            "lvl": 65
+        },
+        {
+            "label": "Postfix",
+            "commentary": "SMTP (mail) server",
+            "type": "network",
+            "experiences": [
+                "personal"
+            ],
+            "lvl": 60
+        },
+        {
+            "label": "Apache 2",
+            "commentary": "HTTP server",
+            "type": "network",
+            "experiences": [
+                "3IL",
+                "BTS Beaupeyrat",
+                "personal"
+            ],
+            "lvl": 70
+        },
+        {
+            "label": "NGINX",
+            "commentary": "HTTP server / Reverse proxy",
+            "type": "network",
+            "experiences": [
+                "orange",
+                "personal"
+            ],
+            "lvl": 75
+        },
+        {
+            "label": "Squid",
+            "commentary": "Proxy",
+            "type": "network",
+            "experiences": [
+                "personal"
+            ],
+            "lvl": 65
+        },
+        {
+            "label": "Bind 9",
+            "commentary": "DNS",
+            "type": "network",
+            "experiences": [
+                "personal"
+            ],
+            "lvl": 75
+        }
+    ]
+}
