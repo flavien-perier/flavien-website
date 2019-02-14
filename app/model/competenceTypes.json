@@ -1,0 +1,24 @@
+{
+    "competenceTypes": [
+        {
+            "id": "framework",
+            "message": "Framework"
+        },
+        {
+            "id": "language",
+            "message": "Language"
+        },
+        {
+            "id": "db",
+            "message": "Data Base"
+        },
+        {
+            "id": "os",
+            "message": "Operating System"
+        },
+        {
+            "id": "network",
+            "message": "Network"
+        }
+    ]
+}

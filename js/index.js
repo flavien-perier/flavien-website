@@ -16,11 +16,17 @@ function filterCompetences(competenceType) {
 
 $(function() {
     // controller initialisation
-    const competence = loadController("competence");
     const experience = loadController("experience");
+    const competenceType = loadController("competenceType");
+    const competence = loadController("competence");
 
     // competeneces progress bar initialisation
     experience.load();
+    competenceType.load().then(() => {
+        // competences filter
+        ["framework", "language", "db", "os", "network"]
+            .forEach(competence => filterCompetences(competence));
+    });
     competence.load().then(() => {
         $(".progress-bar").each(function() {
             $(this).animate({
@@ -28,10 +34,6 @@ $(function() {
             }, 2000);
         });
     });
-
-    // competences filter
-    ["framework", "language", "db", "os", "network"]
-        .forEach(competence => filterCompetences(competence));
 
     // bot chat
     $("#chat-button").click(() => {
