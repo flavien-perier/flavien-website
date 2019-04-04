@@ -20,6 +20,15 @@
             "lvl": 75
         },
         {
+            "label": "Swagger",
+            "commentary": "API designer",
+            "type": "framework",
+            "experiences": [
+                "Personal"
+            ],
+            "lvl": 75
+        },
+        {
             "label": "JQuery",
             "commentary": "Framework frontend JavaScript",
             "type": "framework",
@@ -57,6 +66,16 @@
                 "Personal"
             ],
             "lvl": 80
+        },
+        {
+            "label": "Java",
+            "commentary": "Programming language Kotlin",
+            "type": "language",
+            "experiences": [
+                "Orange",
+                "Personal"
+            ],
+            "lvl": 70
         },
         {
             "label": "Java",
@@ -128,7 +147,17 @@
             "experiences": [
                 "Personal"
             ],
-            "lvl": 80
+            "lvl": 70
+        },
+        {
+            "label": "SQLite",
+            "commentary": "Relational database",
+            "type": "db",
+            "experiences": [
+                "BTS Beaupeyrat",
+                "Personal"
+            ],
+            "lvl": 70
         },
         {
             "label": "MongoDB",
