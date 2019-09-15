@@ -1,6 +1,8 @@
 "use strict";
 
-class Controller {
+const $ = require("jquery");
+
+module.exports = class Controller {
     constructor(name, model, view, baliseId) {
         this.name = name;
         this.model = model;
@@ -33,4 +35,4 @@ class Controller {
             }).fail(reject);
         });
     }
-}
+};

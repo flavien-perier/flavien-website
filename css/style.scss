@@ -1,3 +1,12 @@
+$fa-font-path: "node_modules/@fortawesome/fontawesome-free/webfonts";
+
+@import "../node_modules/normalize.css/normalize.css";
+@import "../node_modules/bootstrap/scss/bootstrap.scss";
+@import "../node_modules/@fortawesome/fontawesome-free/scss/fontawesome.scss";
+@import "../node_modules/@fortawesome/fontawesome-free/scss/brands.scss";
+@import "../node_modules/@fortawesome/fontawesome-free/scss/regular.scss";
+@import "../node_modules/@fortawesome/fontawesome-free/scss/solid.scss";
+
 @keyframes rotation {
   0% {
     transform: rotate(0deg);
@@ -15,12 +24,12 @@
 
 @font-face {
 	font-family: 'body';
-	src: url('../fonts/arial.woff') format('woff');
+	src: url('fonts/arial.woff') format('woff');
 }
 
 @font-face {
 	font-family: 'title';
-	src: url('../fonts/kenyan-coffee.ttf') format('truetype');
+	src: url('fonts/kenyan-coffee.ttf') format('truetype');
 }
 
 body {

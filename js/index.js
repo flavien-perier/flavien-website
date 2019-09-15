@@ -1,5 +1,9 @@
 "use strict";
 
+const $ = require("jquery");
+const Controller = require("./Controller");
+const geneticLoader = require("./genetic");
+
 function loadController(name) {
     return new Controller(`${name}s`, `app/model/${name}s.json`, `app/view/${name}.html`, `${name}s-view`);
 }
@@ -15,6 +19,22 @@ function filterCompetences(competenceType) {
 }
 
 $(function() {
+    console.log(`
+_______ _       _______        ________________ _       
+(  ____ ( \\     (  ___  |\\     /\\__   __(  ____ ( (    /|
+| (    \\| (     | (   ) | )   ( |  ) (  | (    \\|  \\  ( |
+| (__   | |     | (___) | |   | |  | |  | (__   |   \\ | |
+|  __)  | |     |  ___  ( (   ) )  | |  |  __)  | (\\ \\) |
+| (     | |     | (   ) |\\ \\_/ /   | |  | (     | | \\   |
+| )     | (____/| )   ( | \\   / ___) (__| (____/| )  \\  |
+|/      (_______|/     \\|  \\_/  \\_______(_______|/    )_)
+`);
+
+    geneticLoader();
+    window.addEventListener("resize", () => {
+        geneticLoader();
+    });
+
     // controller initialisation
     const experience = loadController("experience");
     const competenceType = loadController("competenceType");

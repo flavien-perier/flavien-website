@@ -225,12 +225,9 @@ class Finder {
 const canvas = document.getElementById("bg-canvas");
 let screenLoop;
 
-window.addEventListener("resize", (event) => {
+module.exports = function load() {
     clearInterval(screenLoop);
-    load();
-});
 
-function load() {
     if (canvas.getContext) {
         const ctx = canvas.getContext("2d");
         canvas.height = Math.round(window.innerHeight / Case.width)*Case.width;
@@ -245,8 +242,6 @@ function load() {
         grid.draw();
         screenLoop = setInterval(() => {
             checkPoints.forEach(cp => cp.finders.forEach(f => f.work()));
-
         }, 250);
     }
 }
-load();
