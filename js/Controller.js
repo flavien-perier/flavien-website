@@ -1,6 +1,6 @@
 "use strict";
 
-const $ = require("jquery");
+const request = require("./request");
 
 module.exports = class Controller {
     constructor(name, model, view, baliseId) {
@@ -12,14 +12,15 @@ module.exports = class Controller {
 
     load() {
         return new Promise((resolve, reject) => {
-            $.get(this.model, (_model) => {
-                const model = _model[this.name];
-                $.get(this.view, (_view) => {
+            request("GET", this.model).then(_model => {
+                const model = JSON.parse(_model)[this.name];
+
+                request("GET", this.view).then(_view => {
                     model.forEach(instance => {
                         let view = _view;
                         Object.keys(instance).forEach(key => {
-                            const matcher = new RegExp(`{{[ ]?${key}[ ]?}}`, "g");
-                            if($.isArray(instance[key])) {
+                            const matcher = new RegExp(`{{[ ]*${key}[ ]*}}`, "g");
+                            if(Array.isArray(instance[key])) {
                                 view = view
                                     .replace(matcher, instance[key]
                                         .map(element => `<li>${element}</li>`)
@@ -28,11 +29,11 @@ module.exports = class Controller {
                                 view = view.replace(matcher, instance[key]);
                             }
                         });
-                        $(`#${this.baliseId}`).append(view);
+                        document.getElementById(this.baliseId).innerHTML += view;
                         resolve();
                     });
-                }).fail(reject);
-            }).fail(reject);
+                });
+            }).catch(reject);
         });
     }
 };

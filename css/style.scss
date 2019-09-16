@@ -6,21 +6,7 @@ $fa-font-path: "node_modules/@fortawesome/fontawesome-free/webfonts";
 @import "../node_modules/@fortawesome/fontawesome-free/scss/brands.scss";
 @import "../node_modules/@fortawesome/fontawesome-free/scss/regular.scss";
 @import "../node_modules/@fortawesome/fontawesome-free/scss/solid.scss";
-
-@keyframes rotation {
-  0% {
-    transform: rotate(0deg);
-  }
-  25% {
-    transform: rotate(-45deg);
-  }
-  50% {
-    transform: rotate(0deg);
-  }
-  100% {
-    transform: rotate(360deg);
-  }
-}
+@import "./animations.scss";
 
 @font-face {
 	font-family: 'body';
@@ -90,6 +76,28 @@ h1, h2, h3, h4, h5 {
   min-height: 250px;
 }
 
+.box-animation:hover {
+  animation-name: boxHover;
+  animation-duration: 1s;
+}
+
+.article-title {
+  font-size: 40px;
+  color: #fff;
+  text-shadow: 0px 0px 8px #000;
+}
+
+.competence-title {
+  min-width: 200px;
+  cursor: pointer; 
+}
+
+.competence-title:hover {
+  min-width: 275px;
+  animation-name: competenceTitleHover;
+  animation-duration: 1s;
+}
+
 .bg-box {
   background-color: #e5e5e5;
 }
@@ -112,10 +120,4 @@ h1, h2, h3, h4, h5 {
 
 .bg-color-network {
   background-color: #fffddc;
-}
-
-.article-title {
-  font-size: 40px;
-  color: #fff;
-  text-shadow: 0px 0px 8px #000;
 }

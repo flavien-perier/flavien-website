@@ -8,7 +8,7 @@
                 "Orange",
                 "Personal"
             ],
-            "lvl": 75
+            "lvl": 70
         },
         {
             "label": "Java spring",
@@ -17,7 +17,7 @@
             "experiences": [
                 "Orange"
             ],
-            "lvl": 75
+            "lvl": 70
         },
         {
             "label": "Swagger",
@@ -26,7 +26,7 @@
             "experiences": [
                 "Personal"
             ],
-            "lvl": 75
+            "lvl": 80
         },
         {
             "label": "JQuery",
@@ -36,7 +36,7 @@
                 "3IL",
                 "Personal"
             ],
-            "lvl": 75
+            "lvl": 80
         },
         {
             "label": "Django",
@@ -97,7 +97,7 @@
                 "BTS Beaupeyrat",
                 "Personal"
             ],
-            "lvl": 65
+            "lvl": 70
         },
         {
             "label": "C++",
@@ -201,7 +201,7 @@
                 "BTS Beaupeyrat",
                 "Personal"
             ],
-            "lvl": 65
+            "lvl": 70
         },
         {
             "label": "Postfix",
@@ -231,16 +231,7 @@
                 "Orange",
                 "Personal"
             ],
-            "lvl": 75
-        },
-        {
-            "label": "Squid",
-            "commentary": "Proxy",
-            "type": "network",
-            "experiences": [
-                "Personal"
-            ],
-            "lvl": 65
+            "lvl": 80
         },
         {
             "label": "Bind 9",
@@ -249,7 +240,16 @@
             "experiences": [
                 "Personal"
             ],
-            "lvl": 75
+            "lvl": 80
+        },
+        {
+            "label": "Squid",
+            "commentary": "Proxy",
+            "type": "network",
+            "experiences": [
+                "Personal"
+            ],
+            "lvl": 70
         }
     ]
 }

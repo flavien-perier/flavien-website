@@ -1,6 +1,5 @@
 "use strict";
 
-const $ = require("jquery");
 const Controller = require("./Controller");
 const geneticLoader = require("./genetic");
 
@@ -9,17 +8,19 @@ function loadController(name) {
 }
 
 function filterCompetences(competenceType) {
-    $(`#checkbox-${competenceType}`).click( function() {
-        if( !$(this).is(":checked") ) {
-            $(`.type-${competenceType}`).css("display", "none");
-        } else {
-            $(`.type-${competenceType}`).css("display", "");
+    const checkbox = document.getElementById(`checkbox-${competenceType}`);
+    var competenceStatus = true;
+    function checkOrUncheckCompetence() {
+        checkbox.checked = !competenceStatus;
+        for (const competence of document.getElementsByClassName(`type-${competenceType}`)) {
+            competence.style.display = competenceStatus ? "none" : "";
         }
-    });
+        competenceStatus = !competenceStatus;
+    }
+    document.getElementById(`competence-${competenceType}`).onclick = checkOrUncheckCompetence;
 }
 
-$(function() {
-    console.log(`
+console.log(`
 _______ _       _______        ________________ _       
 (  ____ ( \\     (  ___  |\\     /\\__   __(  ____ ( (    /|
 | (    \\| (     | (   ) | )   ( |  ) (  | (    \\|  \\  ( |
@@ -30,46 +31,17 @@ _______ _       _______        ________________ _
 |/      (_______|/     \\|  \\_/  \\_______(_______|/    )_)
 `);
 
-    geneticLoader();
-    window.addEventListener("resize", () => {
-        geneticLoader();
-    });
-
-    // controller initialisation
-    const experience = loadController("experience");
-    const competenceType = loadController("competenceType");
-    const competence = loadController("competence");
-
-    // competeneces progress bar initialisation
-    experience.load();
-    competenceType.load().then(() => {
-        // competences filter
-        ["framework", "language", "db", "os", "network"]
-            .forEach(competence => filterCompetences(competence));
-    });
-    competence.load().then(() => {
-        $(".progress-bar").each(function() {
-            $(this).animate({
-                width: $(this).attr("aria-valuenow")
-            }, 2000);
-        });
-    });
-
-    // bot chat
-    $("#chat-button").click(() => {
-        $("#bot-chat").toggle("slow");
-    });
-
-    // category deflection
-    $(".page-scroll a").bind("click", function(event) {
-        $("html, body")
-            .stop()
-            .animate({
-                scrollTop: $($(this).attr("href")).offset().top
-            },
-            1000,
-            "easeInOutExpo"
-            );
-        event.preventDefault();
-    });
+loadController("competenceType").load().then(() => {
+    ["framework", "language", "db", "os", "network"]
+        .forEach(competence => filterCompetences(competence));
 });
+loadController("competence").load();
+loadController("experience").load();
+
+document.getElementById("chat-button").onclick = function() {
+    let botChat = document.getElementById("bot-chat");
+    botChat.style.display = (botChat.style.display == "none" ? "" : "none");
+};
+
+geneticLoader();
+window.addEventListener("resize", () => geneticLoader());

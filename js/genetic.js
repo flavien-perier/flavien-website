@@ -49,19 +49,16 @@ class CheckPoint extends Case {
         super(posX, posY, context);
         this.grid = grid;
 
-        const typeSelector = Math.round(Math.random() * 2)
+        this.checkPointType = Math.round(Math.random() * 2)
 
-        switch(typeSelector) {
-            case 0:
-                this.checkPointType = "red";
+        switch(this.checkPointType) {
+            case 0: // red
                 this.color = new Color(255, 0, 0);
                 break;
-            case 1:
-                this.checkPointType = "green";
+            case 1: // green
                 this.color = new Color(0, 255, 0);
                 break;
-            case 2:
-                this.checkPointType = "blue";
+            case 2: // blue
                 this.color = new Color(0, 0, 255);
                 break;
         }
@@ -81,15 +78,16 @@ class Color {
         this.green = green;
         this.blue = blue;
     }
+
     add(color) {
         switch(color) {
-            case "red":
+            case 0: // red
                 if (this.red < 255) this.red++;
                 break;
-            case "green":
+            case 1: // green
                 if (this.red < 255) this.green++;
                 break;
-            case "blue":
+            case 2: // blue
                 if (this.blue < 255) this.blue++;
                 break;
         }
@@ -97,11 +95,11 @@ class Color {
 
     get(color) {
         switch(color) {
-            case "red":
+            case 0:
                 return this.red;
-            case "green":
+            case 1:
                 return this.green;
-            case "blue":
+            case 2:
                 return this.blue;
         }
     }
@@ -139,7 +137,7 @@ class Finder {
 
     work() {
         const {grid} = this.checkPoint;
-        let directions = ["top", "right", "bottom", "left"];
+        let directions = ["t", "r", "b", "l"]; // top, right, bottom, left
 
         const dropDir = (dir) => {
             directions.splice(directions.indexOf(dir), 1);
@@ -147,21 +145,21 @@ class Finder {
 
         const getDirCase = (dir) => {
             switch (dir) {
-                case "top":
+                case "t":
                     return grid.grid[this.posX][this.posY-1];
-                case "right":
+                case "r":
                     return grid.grid[this.posX+1][this.posY];
-                case "bottom":
+                case "b":
                     return grid.grid[this.posX][this.posY+1];
-                case "left":
+                case "l":
                     return grid.grid[this.posX-1][this.posY];
             }
         }
 
-        if (this.posX <= 0) dropDir("left");
-        if (this.posY <= 0) dropDir("top");
-        if (this.posX >= (grid.width - 1)) dropDir("right");
-        if (this.posY >= (grid.height - 1)) dropDir("bottom");
+        if (this.posX <= 0) dropDir("l");
+        if (this.posY <= 0) dropDir("t");
+        if (this.posX >= (grid.width - 1)) dropDir("r");
+        if (this.posY >= (grid.height - 1)) dropDir("b");
 
         directions.forEach(dir => {
             const dirCase = getDirCase(dir)
@@ -189,16 +187,16 @@ class Finder {
         }
 
         switch (directionChoice) {
-            case "top":
+            case "t":
                 this.posY--;
                 break;
-            case "right":
+            case "r":
                 this.posX++;
                 break;
-            case "bottom":
+            case "b":
                 this.posY++;
                 break;
-            case "left":
+            case "l":
                 this.posX--;
                 break;
             default:
@@ -228,7 +226,7 @@ let screenLoop;
 module.exports = function load() {
     clearInterval(screenLoop);
 
-    if (canvas.getContext) {
+    if (canvas && canvas.getContext) {
         const ctx = canvas.getContext("2d");
         canvas.height = Math.round(window.innerHeight / Case.width)*Case.width;
         canvas.width = Math.round(window.innerWidth / Case.height)*Case.height;
