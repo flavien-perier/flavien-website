@@ -19,52 +19,18 @@
   100% { min-width: 275px }
 }
 
-@keyframes percent10 {
-  0% { width: 0% }
-  100% { width: 10% }
+#chat-button:hover {
+  animation-name: rotation;
+  animation-duration: 3s;
 }
 
-@keyframes percent20 {
-  0% { width: 0% }
-  100% { width: 20% }
+.box-animation:hover {
+  animation-name: boxHover;
+  animation-duration: 1s;
 }
 
-@keyframes percent30 {
-  0% { width: 0% }
-  100% { width: 30% }
-}
-
-@keyframes percent40 {
-  0% { width: 0% }
-  100% { width: 40% }
-}
-
-@keyframes percent50 {
-  0% { width: 0% }
-  100% { width: 50% }
-}
-
-@keyframes percent60 {
-  0% { width: 0% }
-  100% { width: 60% }
-}
-
-@keyframes percent70 {
-  0% { width: 0% }
-  100% { width: 70% }
-}
-
-@keyframes percent80 {
-  0% { width: 0% }
-  100% { width: 80% }
-}
-
-@keyframes percent90 {
-  0% { width: 0% }
-  100% { width: 90% }
-}
-
-@keyframes percent100 {
-  0% { width: 0% }
-  100% { width: 100% }
+.competence-title:hover {
+  min-width: 275px;
+  animation-name: competenceTitleHover;
+  animation-duration: 1s;
 }

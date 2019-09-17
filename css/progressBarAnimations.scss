@@ -1,0 +1,181 @@
+$red: #dc3545;
+$color-10: #d36233;
+$color-20: #cf7e32;
+$color-30: #ca9931;
+$color-40: #c6b330;
+$color-50: #b8c12e;
+$color-60: #98bd2d;
+$color-70: #79b92c;
+$color-80: #5cb42b;
+$color-90: #3fb02a;
+$color-100: #29ab2e;
+
+@keyframes percent10 {
+  0% {
+    background-color: $red;
+    width: 0%;
+  }
+  100% {
+    width: 10%; 
+  }
+}
+
+@keyframes percent20 {
+  0% {
+    background-color: $red;
+    width: 0%;
+  }
+  100% {
+    width: 20%;
+  }
+}
+
+@keyframes percent30 {
+  0% {
+    background-color: $red;
+    width: 0%;
+  }
+  100% {
+    width: 30%;
+  }
+}
+
+@keyframes percent40 {
+  0% {
+    background-color: $red;
+    width: 0%;
+  }
+  100% {
+    width: 40%;
+  }
+}
+
+@keyframes percent50 {
+  0% {
+    background-color: $red;
+    width: 0%;
+  }
+  100% {
+    width: 50%;
+  }
+}
+
+@keyframes percent60 {
+  0% {
+    background-color: $red;
+    width: 0%;
+  }
+  100% {
+    width: 60%;
+  }
+}
+
+@keyframes percent70 {
+  0% {
+    background-color: $red;
+    width: 0%;
+  }
+  100% {
+    width: 70%;
+  }
+}
+
+@keyframes percent80 {
+  0% {
+    background-color: $red;
+    width: 0%;
+  }
+  100% {
+    width: 80%;
+  }
+}
+
+@keyframes percent90 {
+  0% {
+    background-color: $red;
+    width: 0%;
+  }
+  100% {
+    width: 90%;
+  }
+}
+
+@keyframes percent100 {
+  0% {
+    background-color: $red;
+    width: 0%;
+  }
+  100% {
+    width: 100%;
+  }
+}
+
+.progress-bar-animation-10 {
+  width: 10%;
+  background-color: $color-10;
+  animation-name: percent10;
+  animation-duration: 0.5s;
+}
+
+.progress-bar-animation-20 {
+  width: 20%;
+  background-color: $color-20;
+  animation-name: percent20;
+  animation-duration: 1s;
+}
+
+.progress-bar-animation-30 {
+  width: 30%;
+  background-color: $color-30;
+  animation-name: percent30;
+  animation-duration: 1.5s;
+}
+
+.progress-bar-animation-40 {
+  width: 40%;
+  background-color: $color-40;
+  animation-name: percent40;
+  animation-duration: 2s;
+}
+
+.progress-bar-animation-50 {
+  width: 50%;
+  background-color: $color-50;
+  animation-name: percent50;
+  animation-duration: 2.5s;
+}
+
+.progress-bar-animation-60 {
+  width: 60%;
+  background-color: $color-60;
+  animation-name: percent60;
+  animation-duration: 3s;
+}
+
+.progress-bar-animation-70 {
+  width: 70%;
+  background-color: $color-70;
+  animation-name: percent70;
+  animation-duration: 3.5s;
+}
+
+.progress-bar-animation-80 {
+  width: 80%;
+  background-color: $color-80;
+  animation-name: percent80;
+  animation-duration: 4s;
+}
+
+.progress-bar-animation-90 {
+  width: 90%;
+  background-color: $color-90;
+  animation-name: percent90;
+  animation-duration: 4.5s;
+}
+
+.progress-bar-animation-100 {
+  width: 100%;
+  background-color: $color-100;
+  animation-name: percent100;
+  animation-duration: 5s;
+}
