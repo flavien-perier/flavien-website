@@ -1,8 +1,8 @@
 "use strict";
 
-const request = require("./request");
+import { request } from "./request";
 
-module.exports = class Controller {
+export default class Controller {
     constructor(name, model, view, baliseId) {
         this.name = name;
         this.model = model;
@@ -13,7 +13,8 @@ module.exports = class Controller {
     load() {
         return new Promise((resolve, reject) => {
             request("GET", this.model).then(_model => {
-                const model = JSON.parse(_model)[this.name];
+                const parsedModel = JSON.parse(_model);
+                const model = parsedModel[this.name];
 
                 request("GET", this.view).then(_view => {
                     model.forEach(instance => {
@@ -30,7 +31,7 @@ module.exports = class Controller {
                             }
                         });
                         document.getElementById(this.baliseId).innerHTML += view;
-                        resolve();
+                        resolve(parsedModel);
                     });
                 });
             }).catch(reject);

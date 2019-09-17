@@ -1,6 +1,6 @@
 "use strict";
 
-module.exports = (method, url) => {
+function request(method, url) {
     return new Promise((resolve, reject) => {
         const req = new XMLHttpRequest();
         req.onreadystatechange = function(event) {
@@ -16,3 +16,5 @@ module.exports = (method, url) => {
         req.send(null);
     });
 }
+
+export { request };

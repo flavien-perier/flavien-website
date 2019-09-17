@@ -1,7 +1,9 @@
 "use strict";
 
-const Controller = require("./Controller");
-const geneticLoader = require("./genetic");
+import "bootstrap";
+
+import Controller from "./Controller";
+import { geneticLoader } from "./genetic";
 
 function loadController(name) {
     return new Controller(`${name}s`, `app/model/${name}s.json`, `app/view/${name}.html`, `${name}s-view`);
@@ -31,8 +33,8 @@ _______ _       _______        ________________ _
 |/      (_______|/     \\|  \\_/  \\_______(_______|/    )_)
 `);
 
-loadController("competenceType").load().then(() => {
-    ["framework", "language", "db", "os", "network"]
+loadController("competenceType").load().then(model => {
+    model.competenceTypes.map(m => m.id)
         .forEach(competence => filterCompetences(competence));
 });
 loadController("competence").load();

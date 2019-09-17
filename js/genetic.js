@@ -223,7 +223,7 @@ class Finder {
 const canvas = document.getElementById("bg-canvas");
 let screenLoop;
 
-module.exports = function load() {
+function geneticLoader() {
     clearInterval(screenLoop);
 
     if (canvas && canvas.getContext) {
@@ -243,3 +243,5 @@ module.exports = function load() {
         }, 250);
     }
 }
+
+export { geneticLoader };
