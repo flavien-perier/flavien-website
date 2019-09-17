@@ -49,16 +49,19 @@ class CheckPoint extends Case {
         super(posX, posY, context);
         this.grid = grid;
 
-        this.checkPointType = Math.round(Math.random() * 2)
+        const randomCheckPointType = Math.round(Math.random() * 3 - 0.5);
 
-        switch(this.checkPointType) {
+        switch(randomCheckPointType) {
             case 0: // red
+                this.checkPointType = "r";
                 this.color = new Color(255, 0, 0);
                 break;
             case 1: // green
+            this.checkPointType = "g";
                 this.color = new Color(0, 255, 0);
                 break;
             case 2: // blue
+                this.checkPointType = "b";
                 this.color = new Color(0, 0, 255);
                 break;
         }
@@ -81,13 +84,13 @@ class Color {
 
     add(color) {
         switch(color) {
-            case 0: // red
+            case "r":
                 if (this.red < 255) this.red++;
                 break;
-            case 1: // green
-                if (this.red < 255) this.green++;
+            case "g":
+                if (this.green < 255) this.green++;
                 break;
-            case 2: // blue
+            case "b":
                 if (this.blue < 255) this.blue++;
                 break;
         }
@@ -95,11 +98,11 @@ class Color {
 
     get(color) {
         switch(color) {
-            case 0:
+            case "r":
                 return this.red;
-            case 1:
+            case "g":
                 return this.green;
-            case 2:
+            case "b":
                 return this.blue;
         }
     }
