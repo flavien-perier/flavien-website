@@ -20,20 +20,20 @@
             "lvl": 70
         },
         {
-            "label": "Swagger",
-            "commentary": "API designer",
-            "type": "framework",
-            "experiences": [
-                "Personal"
-            ],
-            "lvl": 80
-        },
-        {
             "label": "JQuery",
             "commentary": "Framework frontend JavaScript",
             "type": "framework",
             "experiences": [
                 "3IL",
+                "Personal"
+            ],
+            "lvl": 80
+        },
+        {
+            "label": "Swagger",
+            "commentary": "API designer",
+            "type": "framework",
+            "experiences": [
                 "Personal"
             ],
             "lvl": 80
@@ -100,6 +100,15 @@
             "lvl": 70
         },
         {
+            "label": "ANTLR",
+            "commentary": "Language parser creator",
+            "type": "language",
+            "experiences": [
+                "Orange"
+            ],
+            "lvl": 70
+        },
+        {
             "label": "C++",
             "commentary": "Programming language C++",
             "type": "language",
@@ -116,15 +125,6 @@
             "experiences": [
                 "Association Seme Tes Graines",
                 "Personal"
-            ],
-            "lvl": 50
-        },
-        {
-            "label": "ANTLR",
-            "commentary": "Language parser creator",
-            "type": "language",
-            "experiences": [
-                "Orange"
             ],
             "lvl": 50
         },
@@ -178,6 +178,52 @@
                 "Personal"
             ],
             "lvl": 60
+        },
+        {
+            "label": "Redis",
+            "commentary": "Key-value database",
+            "type": "db",
+            "experiences": [
+                "Personal"
+            ],
+            "lvl": 60
+        },
+        {
+            "label": "Apache Kafka",
+            "commentary": "Asynchronous message queue",
+            "type": "big-data",
+            "experiences": [
+                "Orange"
+            ],
+            "lvl": 60
+        },
+        {
+            "label": "Apache Spark",
+            "commentary": "Distributed framework",
+            "type": "big-data",
+            "experiences": [
+                "Orange",
+                "Personal"
+            ],
+            "lvl": 30
+        },
+        {
+            "label": "Apache Ni-Fi",
+            "commentary": "Flow management framework",
+            "type": "big-data",
+            "experiences": [
+                "Orange"
+            ],
+            "lvl": 30
+        },
+        {
+            "label": "Apache Hadoop HDFS",
+            "commentary": "Hight level distributed file system",
+            "type": "big-data",
+            "experiences": [
+                "Orange"
+            ],
+            "lvl": 40
         },
         {
             "label": "Linux",

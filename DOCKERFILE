@@ -1,0 +1,9 @@
+FROM alpine
+MAINTAINER Flvien PERIER <perier@flavien.cc>
+
+RUN apk add apache2
+
+
+
+EXPOSE 80/TCP
+EXPOSE 443/TCP
