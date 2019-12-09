@@ -2,36 +2,34 @@
   "name": "flavien",
   "version": "1.0.0",
   "description": "Flavien website",
+  "author": "Flavien PERIER <perier@flavien.cc>",
+  "license": "MIT",
   "scripts": {
-    "build": "gulp",
-    "build:js": "gulp buildJs",
-    "build:css": "gulp buildCss",
-    "clean:css": "uncss ./dist/index.html -t 3000 -o ./dist/style.min.css"
+    "serve": "vue-cli-service serve",
+    "build": "vue-cli-service build"
   },
   "dependencies": {
-    "@fortawesome/fontawesome-free": "^5.9.0",
-    "bootstrap": "^4.1.3",
+    "@fortawesome/fontawesome-free": "^5.11.2",
+    "bootstrap": "^4.4.1",
     "canvas": "^2.6.0",
+    "core-js": "^3.4.3",
     "jquery": "^3.4.1",
-    "normalize.css": "^8.0.0",
-    "popper.js": "^1.15.0"
+    "normalize.css": "^8.0.1",
+    "popper.js": "^1.16.0",
+    "vue": "^2.6.10",
+    "vue-class-component": "^7.0.2",
+    "vue-property-decorator": "^8.3.0",
+    "vue-router": "^3.1.3",
+    "vuex": "^3.1.2"
   },
   "devDependencies": {
-    "@babel/core": "^7.6.0",
-    "@babel/preset-env": "^7.6.0",
-    "babel-plugin-minify-dead-code-elimination": "^0.5.1",
-    "babelify": "^10.0.0",
-    "browserify": "^16.5.0",
-    "gulp": "^4.0.2",
-    "gulp-clean": "^0.4.0",
-    "gulp-clean-css": "^4.2.0",
-    "gulp-rename": "^1.4.0",
-    "gulp-sass": "^4.0.2",
-    "gulp-streamify": "^1.0.2",
-    "gulp-uglify": "^3.0.2",
-    "uncss": "^0.17.2",
-    "vinyl-source-stream": "^2.0.0"
-  },
-  "author": "Flavien PERIER <perier@flavien.cc>",
-  "license": "MIT"
+    "@vue/cli-plugin-babel": "^4.1.0",
+    "@vue/cli-plugin-router": "^4.1.0",
+    "@vue/cli-plugin-typescript": "^4.1.0",
+    "@vue/cli-service": "^4.1.0",
+    "node-sass": "^4.12.0",
+    "sass-loader": "^8.0.0",
+    "typescript": "~3.5.3",
+    "vue-template-compiler": "^2.6.10"
+  }
 }

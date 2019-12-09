@@ -247,4 +247,5 @@ function geneticLoader() {
     }
 }
 
-export { geneticLoader };
+geneticLoader();
+window.addEventListener("resize", () => geneticLoader());
