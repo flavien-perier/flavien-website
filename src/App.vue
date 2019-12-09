@@ -4,10 +4,7 @@
 
     <Navbar />
     <Junbotron />
-
-    <section class="container">
-      <router-view />
-    </section>
+    <router-view />
 
     <Footer />
   </div>

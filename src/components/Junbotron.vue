@@ -1,5 +1,5 @@
 <template>
-  <div class="jumbotron jumbotron-fluid d-none d-md-block">
+  <div class="jumbotron bg-parallax jumbotron-fluid d-none d-md-block">
     <div class="container">
       <h1 class="display-4">Flavien PERIER</h1>
       <p class="lead">Full stack developer</p>
@@ -15,17 +15,14 @@ export default class Junbotron extends Vue {}
 </script>
 
 <style scoped lang="scss">
-.jumbotron {
-  background-image: url("../assets/img/wallpaper-header.jpeg");
-  background-attachment: fixed;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-}
 h1 {
   color: #eeeeee;
 }
 p {
   color: #aaaaaa;
+}
+.jumbotron {
+  min-height: 50vh;
+  padding-top: 15vh;
 }
 </style>

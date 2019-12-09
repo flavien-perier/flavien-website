@@ -1,9 +1,11 @@
 <template>
-  <article class="row">
-    <span class="col-12">
-      <h2 class="text-center article-title">Home</h2>
-    </span>
-  </article>
+  <section class="container">
+    <article class="row">
+      <span class="col-12">
+        <h2 class="text-center article-title">Home</h2>
+      </span>
+    </article>
+  </section>
 </template>
 
 <script>

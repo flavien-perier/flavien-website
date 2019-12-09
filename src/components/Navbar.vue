@@ -1,5 +1,5 @@
 <template>
-  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-parallax">
     <router-link class="navbar-brand" to="/">
       <img
         class="d-inline-block align-top"
