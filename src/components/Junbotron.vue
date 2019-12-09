@@ -1,5 +1,5 @@
 <template>
-  <div class="jumbotron bg-parallax jumbotron-fluid d-none d-md-block">
+  <div class="jumbotron bg-parallax jumbotron-fluid d-none d-lg-block">
     <div class="container">
       <h1 class="display-4">Flavien PERIER</h1>
       <p class="lead">Full stack developer</p>

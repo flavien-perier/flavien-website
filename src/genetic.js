@@ -243,7 +243,11 @@ function geneticLoader() {
         grid.draw();
         screenLoop = setInterval(() => {
             checkPoints.forEach(cp => cp.finders.forEach(f => f.work()));
-        }, 250);
+        }, 100);
+
+        setTimeout(() => {
+            clearInterval(screenLoop);
+        }, 30000);
     }
 }
 

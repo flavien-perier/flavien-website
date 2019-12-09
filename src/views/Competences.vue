@@ -4,6 +4,9 @@
       <span class="col-12">
         <h2 class="text-center article-title">Competences</h2>
       </span>
+    </article>
+
+    <article class="row">
       <div class="box col-12 px-3 bg-box">
         <h3 class="text-center">Filter</h3>
         <hr />
@@ -18,18 +21,19 @@
           />
         </div>
       </div>
-      <div class="row">
-        <Competence
-          v-for="c in competences"
-          :key="c.label"
-          v-if="checked(c.type)"
-          v-bind:type="c.type"
-          v-bind:label="c.label"
-          v-bind:commentary="c.commentary"
-          v-bind:experiences="c.experiences"
-          v-bind:lvl="c.lvl"
-        />
-      </div>
+    </article>
+
+    <article class="row">
+      <Competence
+        v-for="c in competences"
+        :key="c.label"
+        v-if="checked(c.type)"
+        v-bind:type="c.type"
+        v-bind:label="c.label"
+        v-bind:commentary="c.commentary"
+        v-bind:experiences="c.experiences"
+        v-bind:lvl="c.lvl"
+      />
     </article>
   </section>
 </template>

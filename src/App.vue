@@ -4,6 +4,7 @@
 
     <Navbar />
     <Junbotron />
+
     <router-view />
 
     <Footer />
