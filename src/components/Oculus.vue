@@ -17,3 +17,26 @@ export default class Oculus extends Vue {
   }
 }
 </script>
+
+<style scoped lang="scss">
+#chat-button {
+  position: fixed;
+  z-index: 1000;
+  right: 1rem;
+  bottom: 1rem;
+  height: 4rem;
+  width: 4rem;
+  cursor: pointer;
+  background-color: #fff;
+  border-radius: 2rem;
+}
+
+#bot-chat {
+  position: fixed;
+  z-index: 1000;
+  right: 1rem;
+  bottom: 6rem;
+  height: 35vw;
+  width: 22.5vw;
+}
+</style>

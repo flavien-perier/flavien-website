@@ -1,6 +1,6 @@
 <template>
-  <nav class="navbar navbar-expand-lg navbar-dark bg-dark" id="home">
-    <a class="navbar-brand" href="#home">
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <router-link class="navbar-brand" to="/">
       <img
         class="d-inline-block align-top"
         src="../assets/img/logo.svg"
@@ -9,7 +9,7 @@
         height="30"
       />
       Flavien
-    </a>
+    </router-link>
 
     <button
       class="navbar-toggler"

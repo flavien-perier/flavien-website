@@ -2,7 +2,7 @@
   <div class="col-12 col-md-6">
     <div class="row mx-auto box box-animation box-min-height bg-box">
       <h4 class="text-center col-12">
-        {{ placement }}
+        {{ location }}
         <hr />
       </h4>
 
@@ -31,7 +31,7 @@ import { Component, Prop, Vue } from "vue-property-decorator";
 
 @Component
 export default class Experience extends Vue {
-  @Prop() private placement!: string;
+  @Prop() private location!: string;
   @Prop() private description!: string;
   @Prop() private city!: string;
   @Prop() private start!: string;

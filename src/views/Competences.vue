@@ -1,12 +1,12 @@
 <template>
-  <article class="row" id="competences">
+  <article class="row">
     <span class="col-12">
       <h2 class="text-center article-title">Competences</h2>
     </span>
     <div class="box col-12 px-3 bg-box">
       <h3 class="text-center">Filter</h3>
       <hr />
-      <div class="row" id="competenceTypes-view">
+      <div class="row">
         <CompetenceType
           v-for="c in competenceTypes" :key="c.id"
           v-on:check="select(c.id)"

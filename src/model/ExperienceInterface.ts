@@ -1,5 +1,5 @@
 export default interface ExperienceInterface {
-    placement: string;
+    location: string;
     description: string;
     city: string;
     start: string;

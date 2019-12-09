@@ -12,7 +12,7 @@
       </div>
 
       <div class="col-7 col-md-6 col-lg-6">
-        <h5 class="text-center">Entreprises :</h5>
+        <h5 class="text-center">Enterprises :</h5>
         <ul>
           <li v-for="e in experiences" :key="e">{{e}}</li>
         </ul>

@@ -62,3 +62,10 @@ import { Component, Vue } from 'vue-property-decorator';
 @Component
 export default class Footer extends Vue {}
 </script>
+
+<style scoped lang="scss">
+#qr-code {
+  background-color: #fff;
+  width: 100%;
+}
+</style>

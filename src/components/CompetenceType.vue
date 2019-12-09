@@ -1,8 +1,8 @@
 <template>
-    <div v-bind:id="'competence-' + id" class="input-group mb-3 col-lg-4 col-md-6 col-sm-12" @click="check()">
+    <div class="input-group mb-3 col-lg-4 col-md-6 col-sm-12" @click="check()">
         <div class="input-group-prepend">
             <div class="input-group-text">
-                <input type="checkbox" v-bind:id="'checkbox-' + id" :checked="selected" />
+                <input type="checkbox" :checked="selected" />
             </div>
         </div>
         <div class="input-group-append">
