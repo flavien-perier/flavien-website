@@ -5,7 +5,7 @@
     <Navbar />
     <Junbotron />
 
-    <router-view />
+    <router-view class="mt-5 mt-lg-0" />
 
     <Footer />
   </div>

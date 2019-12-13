@@ -108,7 +108,7 @@ class Color {
     }
 
     getCss() {
-        return `rgb(${this.red}, ${this.green}, ${this.blue})`;
+        return `rgb(${this.red},${this.green},${this.blue})`;
     }
 }
 

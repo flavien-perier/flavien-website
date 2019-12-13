@@ -1,5 +1,5 @@
 <template>
-  <div v-bind:class="`col-12 col-md-6 type-${type}`">
+  <div class="col-12 col-md-6">
     <div v-bind:class="`row mx-auto box box-animation box-min-height bg-color-${type}`">
       <h4 class="text-center col-12">
         {{ label }}

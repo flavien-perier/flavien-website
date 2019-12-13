@@ -1,13 +1,9 @@
 <template>
   <section class="container">
-    <article class="row">
-      <span class="col-12">
-        <h2 class="text-center article-title">Competences</h2>
-      </span>
-    </article>
+    <h2 class="col-12 section-title">Competences</h2>
 
     <article class="row">
-      <div class="box col-12 px-3 bg-box">
+      <div class="col-12 box bg-box">
         <h3 class="text-center">Filter</h3>
         <hr />
         <div class="row">

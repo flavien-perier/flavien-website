@@ -1,10 +1,6 @@
 <template>
   <section class="container">
-    <article class="row">
-      <span class="col-12">
-        <h2 class="text-center article-title">Experiences</h2>
-      </span>
-    </article>
+    <h2 class="col-12 section-title">Experiences</h2>
 
     <article class="row">
       <Experience
