@@ -20,9 +20,8 @@
 
     <article class="row">
       <Competence
-        v-for="c in competences"
+        v-for="c in competences.filter(c => checked(c.type))"
         :key="c.label"
-        v-if="checked(c.type)"
         v-bind:competence="c"
       />
     </article>
