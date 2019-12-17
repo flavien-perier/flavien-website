@@ -15,7 +15,7 @@
 <script>
 import Experience from "@/components/Experience.vue";
 
-import { experiences } from "@/model/experiences.json";
+import { experiences } from "@/translations/experiences.en.json";
 
 export default {
   name: "experiences",

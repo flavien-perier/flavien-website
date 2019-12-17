@@ -22,7 +22,7 @@ import CompetenceTypeInterface from '../model/CompetenceTypeInterface';
 export default class CompetenceType extends Vue {
   @Prop() private competenceType!: CompetenceTypeInterface;
   @Prop() private selected!: string;
-  check() {
+  private check() {
     this.$emit("check");
   }
 }

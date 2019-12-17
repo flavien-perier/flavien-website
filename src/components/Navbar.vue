@@ -48,7 +48,15 @@
       </ul>
     </div>
 
-    <ul class="nav navbar-nav ml-auto d-none d-lg-flex">
+    <ul class="nav navbar-nav d-none d-lg-block cursor-link mr-5"  @click="changeLanguage()">
+      <li class="nav-item">
+        <a class="nav-link">
+          <i class="fas fa-flag"></i> {{ language == 0 ? "fr" : "en" }}
+        </a>
+      </li>
+    </ul>
+
+    <ul class="nav navbar-nav d-none d-lg-flex">
       <li class="nav-item">
         <a class="nav-link" href="https://www.facebook.com/flavien.cc">
           <i class="fab fa-facebook-square"></i>
@@ -79,8 +87,14 @@
 </template>
 
 <script lang="ts">
-import { Component, Vue } from "vue-property-decorator";
+import { Component, Prop, Vue } from "vue-property-decorator";
+import { Language } from "../model/Language";
 
 @Component
-export default class Navbar extends Vue {}
+export default class Navbar extends Vue {
+  @Prop() private language!: Language;
+  private changeLanguage() {
+    this.$emit("changeLanguage");
+  }
+}
 </script>

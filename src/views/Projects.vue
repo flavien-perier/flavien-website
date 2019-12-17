@@ -15,7 +15,7 @@
 <script>
 import Project from "@/components/Project.vue";
 
-import { projects } from "@/model/projects.json";
+import { projects } from "@/translations/projects.en.json";
 
 export default {
   name: "projects",

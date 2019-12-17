@@ -36,8 +36,8 @@ import CompetenceType from "@/components/CompetenceType.vue";
 import CompetenceInterface from "@/model/CompetenceInterface";
 import CompetenceTypeInterface from "@/model/CompetenceTypeInterface";
 
-const { competences } = require("@/model/competences.json");
-const { competenceTypes } = require("@/model/competenceTypes.json");
+const { competences } = require("@/translations/competences.en.json");
+const { competenceTypes } = require("@/translations/competenceTypes.en.json");
 
 export default {
   name: "competences",
@@ -52,7 +52,7 @@ export default {
     };
   },
   methods: {
-    ...mapActions("competences", ["select"])
+    ...mapActions("competences", ["changeLanguage"])
   },
   computed: {
     ...mapGetters("competences", ["checked"])
