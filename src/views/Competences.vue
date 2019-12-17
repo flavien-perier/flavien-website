@@ -11,8 +11,7 @@
             v-for="c in competenceTypes"
             :key="c.id"
             v-on:check="select(c.id)"
-            v-bind:id="c.id"
-            v-bind:message="c.message"
+            v-bind:competenceType="c"
             v-bind:selected="checked(c.id)"
           />
         </div>
@@ -24,11 +23,7 @@
         v-for="c in competences"
         :key="c.label"
         v-if="checked(c.type)"
-        v-bind:type="c.type"
-        v-bind:label="c.label"
-        v-bind:description="c.description"
-        v-bind:experiences="c.experiences"
-        v-bind:lvl="c.lvl"
+        v-bind:competence="c"
       />
     </article>
   </section>

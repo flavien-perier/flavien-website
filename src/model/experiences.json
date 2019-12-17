@@ -3,6 +3,7 @@
         {
             "location": "Beaupeyrat",
             "description": "BTS SIO (Service Informatique aux Organisations)",
+            "img": "img/enterprises/beaupeyrat.png",
             "url": "https://www.beaupeyrat.com/",
             "city": "Limoges",
             "start": "2015",
@@ -11,6 +12,7 @@
         {
             "location": "3IL",
             "description": "Engineering school",
+            "img": "img/enterprises/3il.svg",
             "url": "https://www.3il-ingenieurs.fr/",
             "city": "Limoges",
             "start": "2017",
@@ -19,6 +21,7 @@
         {
             "location": "Orange",
             "description": "Development",
+            "img": "img/enterprises/orange.svg",
             "url": "https://www.orange.fr/portail",
             "city": "Toulouse",
             "start": "2017",
@@ -27,6 +30,7 @@
         {
             "location": "Henallux",
             "description": "Semester in erasmus",
+            "img": "img/enterprises/henallux.png",
             "url": "https://www.henallux.be/departement-technique-de-marche-en-famenne",
             "city": "Marche-en-famenne (Belgium)",
             "start": "2019",

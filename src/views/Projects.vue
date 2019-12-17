@@ -4,13 +4,9 @@
 
     <article class="row">
       <Project
-        v-for="e in projects"
-        :key="e.location"
-        v-bind:name="e.name"
-        v-bind:description="e.description"
-        v-bind:technos="e.technos"
-        v-bind:experience="e.experience"
-        v-bind:date="e.date"
+        v-for="p in projects"
+        :key="p.location"
+        v-bind:project="p"
       />
     </article>
   </section>

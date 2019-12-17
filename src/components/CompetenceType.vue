@@ -6,7 +6,9 @@
       </div>
     </div>
     <div class="input-group-append">
-      <span v-bind:class="`competence-title input-group-text bg-color-${id}`">{{ message }}</span>
+      <span v-bind:class="`competence-title input-group-text bg-color-${competenceType.id}`">
+        {{ competenceType.message }}
+      </span>
     </div>
   </div>
 </template>
@@ -14,13 +16,12 @@
 <script lang="ts">
 import { mapGetters, mapActions } from "vuex";
 import { Component, Prop, Vue } from 'vue-property-decorator';
+import CompetenceTypeInterface from '../model/CompetenceTypeInterface';
 
 @Component
 export default class CompetenceType extends Vue {
-  @Prop() private id!: string;
-  @Prop() private message!: string;
+  @Prop() private competenceType!: CompetenceTypeInterface;
   @Prop() private selected!: string;
-
   check() {
     this.$emit("check");
   }
