@@ -40,6 +40,11 @@
             <i class="fas fa-graduation-cap"></i> Experiences
           </router-link>
         </li>
+        <li class="nav-item">
+          <router-link class="nav-link" to="/projects">
+            <i class="fas fa-project-diagram"></i> Projects
+          </router-link>
+        </li>
       </ul>
     </div>
 

@@ -1,14 +1,14 @@
 <template>
   <div class="col-12 col-md-6">
     <div v-bind:class="`row mx-auto box box-animation box-min-height bg-color-${type}`">
-      <h4 class="text-center col-12">
-        {{ label }}
+      <div class="text-center col-12">
+        <h4>{{ label }}</h4>
         <hr />
-      </h4>
+      </div>
 
       <div class="d-none d-lg-block col-6">
         <h5 class="text-center">Comments :</h5>
-        {{ commentary }}
+        {{ description }}
       </div>
 
       <div class="d-none d-md-block col-md-12 col-lg-6">
@@ -41,7 +41,7 @@ import { Component, Prop, Vue } from "vue-property-decorator";
 export default class Competence extends Vue {
   @Prop() private type!: string;
   @Prop() private label!: string;
-  @Prop() private commentary!: string;
+  @Prop() private description!: string;
   @Prop() private experiences!: string[];
   @Prop() private lvl!: number;
 }

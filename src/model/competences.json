@@ -2,7 +2,7 @@
     "competences": [
         {
             "label": "Angular",
-            "commentary": "Framework frontend TypeScript",
+            "description": "Framework frontend TypeScript",
             "type": "framework",
             "experiences": [
                 "Orange",
@@ -12,7 +12,7 @@
         },
         {
             "label": "VueJS",
-            "commentary": "Framework frontend JavaScript",
+            "description": "Framework frontend JavaScript",
             "type": "framework",
             "experiences": [
                 "Personal"
@@ -21,7 +21,7 @@
         },
         {
             "label": "Java spring",
-            "commentary": "Framework backend java",
+            "description": "Framework backend java",
             "type": "framework",
             "experiences": [
                 "Orange"
@@ -30,7 +30,7 @@
         },
         {
             "label": "JQuery",
-            "commentary": "Framework frontend JavaScript",
+            "description": "Framework frontend JavaScript",
             "type": "framework",
             "experiences": [
                 "3IL",
@@ -40,7 +40,7 @@
         },
         {
             "label": "Swagger",
-            "commentary": "API designer",
+            "description": "API designer",
             "type": "framework",
             "experiences": [
                 "Personal"
@@ -49,7 +49,7 @@
         },
         {
             "label": "Django",
-            "commentary": "Framework backend python",
+            "description": "Framework backend python",
             "type": "framework",
             "experiences": [
                 "Association Seme Tes Graines"
@@ -58,7 +58,7 @@
         },
         {
             "label": "JavaScript",
-            "commentary": "Programming language JavaScript",
+            "description": "Programming language JavaScript",
             "type": "language",
             "experiences": [
                 "Orange",
@@ -68,7 +68,7 @@
         },
         {
             "label": "TypeScript",
-            "commentary": "Programming language TypeScript",
+            "description": "Programming language TypeScript",
             "type": "language",
             "experiences": [
                 "Orange",
@@ -78,7 +78,7 @@
         },
         {
             "label": "Kotlin",
-            "commentary": "Programming language Kotlin",
+            "description": "Programming language Kotlin",
             "type": "language",
             "experiences": [
                 "Orange",
@@ -88,7 +88,7 @@
         },
         {
             "label": "Java",
-            "commentary": "Programming language Java",
+            "description": "Programming language Java",
             "type": "language",
             "experiences": [
                 "Orange",
@@ -99,7 +99,7 @@
         },
         {
             "label": "PHP",
-            "commentary": "Programming language PHP",
+            "description": "Programming language PHP",
             "type": "language",
             "experiences": [
                 "3IL",
@@ -110,7 +110,7 @@
         },
         {
             "label": "ANTLR",
-            "commentary": "Language parser creator",
+            "description": "Language parser creator",
             "type": "language",
             "experiences": [
                 "Orange"
@@ -119,7 +119,7 @@
         },
         {
             "label": "C++",
-            "commentary": "Programming language C++",
+            "description": "Programming language C++",
             "type": "language",
             "experiences": [
                 "3IL",
@@ -129,7 +129,7 @@
         },
         {
             "label": "Python",
-            "commentary": "Programming language Python",
+            "description": "Programming language Python",
             "type": "language",
             "experiences": [
                 "Association Seme Tes Graines",
@@ -139,7 +139,7 @@
         },
         {
             "label": "MySQL",
-            "commentary": "Relational database",
+            "description": "Relational database",
             "type": "db",
             "experiences": [
                 "Orange",
@@ -151,7 +151,7 @@
         },
         {
             "label": "PostgreSQL",
-            "commentary": "Relational database",
+            "description": "Relational database",
             "type": "db",
             "experiences": [
                 "Personal"
@@ -160,7 +160,7 @@
         },
         {
             "label": "SQLite",
-            "commentary": "Relational database",
+            "description": "Relational database",
             "type": "db",
             "experiences": [
                 "BTS Beaupeyrat",
@@ -170,7 +170,7 @@
         },
         {
             "label": "MongoDB",
-            "commentary": "Document database",
+            "description": "Document database",
             "type": "db",
             "experiences": [
                 "Orange",
@@ -180,7 +180,7 @@
         },
         {
             "label": "Neo4J",
-            "commentary": "Graph database",
+            "description": "Graph database",
             "type": "db",
             "experiences": [
                 "Orange",
@@ -190,7 +190,7 @@
         },
         {
             "label": "Redis",
-            "commentary": "Key-value database",
+            "description": "Key-value database",
             "type": "db",
             "experiences": [
                 "Personal"
@@ -199,7 +199,7 @@
         },
         {
             "label": "Apache Kafka",
-            "commentary": "Asynchronous message queue",
+            "description": "Asynchronous message queue",
             "type": "bigData",
             "experiences": [
                 "Orange"
@@ -208,7 +208,7 @@
         },
         {
             "label": "Apache Spark",
-            "commentary": "Distributed framework",
+            "description": "Distributed framework",
             "type": "bigData",
             "experiences": [
                 "Orange",
@@ -218,7 +218,7 @@
         },
         {
             "label": "Apache Ni-Fi",
-            "commentary": "Flow management framework",
+            "description": "Flow management framework",
             "type": "bigData",
             "experiences": [
                 "Orange"
@@ -227,7 +227,7 @@
         },
         {
             "label": "Apache Hadoop HDFS",
-            "commentary": "Hight level distributed file system",
+            "description": "Hight level distributed file system",
             "type": "bigData",
             "experiences": [
                 "Orange"
@@ -236,7 +236,7 @@
         },
         {
             "label": "Linux",
-            "commentary": "Operating system Linux",
+            "description": "Operating system Linux",
             "type": "os",
             "experiences": [
                 "Orange",
@@ -248,7 +248,7 @@
         },
         {
             "label": "Windows",
-            "commentary": "Operating system Windows",
+            "description": "Operating system Windows",
             "type": "os",
             "experiences": [
                 "Orange",
@@ -260,7 +260,7 @@
         },
         {
             "label": "Postfix",
-            "commentary": "SMTP (mail) server",
+            "description": "SMTP (mail) server",
             "type": "network",
             "experiences": [
                 "Personal"
@@ -269,7 +269,7 @@
         },
         {
             "label": "Apache 2",
-            "commentary": "HTTP server",
+            "description": "HTTP server",
             "type": "network",
             "experiences": [
                 "3IL",
@@ -280,7 +280,7 @@
         },
         {
             "label": "NGINX",
-            "commentary": "HTTP server / Reverse proxy",
+            "description": "HTTP server / Reverse proxy",
             "type": "network",
             "experiences": [
                 "Orange",
@@ -290,7 +290,7 @@
         },
         {
             "label": "Bind 9",
-            "commentary": "DNS",
+            "description": "DNS",
             "type": "network",
             "experiences": [
                 "Personal"
@@ -299,7 +299,7 @@
         },
         {
             "label": "Squid",
-            "commentary": "Proxy",
+            "description": "Proxy",
             "type": "network",
             "experiences": [
                 "Personal"

@@ -26,7 +26,7 @@
         v-if="checked(c.type)"
         v-bind:type="c.type"
         v-bind:label="c.label"
-        v-bind:commentary="c.commentary"
+        v-bind:description="c.description"
         v-bind:experiences="c.experiences"
         v-bind:lvl="c.lvl"
       />

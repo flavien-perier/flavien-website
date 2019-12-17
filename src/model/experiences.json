@@ -3,6 +3,7 @@
         {
             "location": "Beaupeyrat",
             "description": "BTS SIO (Service Informatique aux Organisations)",
+            "url": "https://www.beaupeyrat.com/",
             "city": "Limoges",
             "start": "2015",
             "end": "2017"
@@ -10,6 +11,7 @@
         {
             "location": "3IL",
             "description": "Engineering school",
+            "url": "https://www.3il-ingenieurs.fr/",
             "city": "Limoges",
             "start": "2017",
             "end": "2020"
@@ -17,6 +19,7 @@
         {
             "location": "Orange",
             "description": "Development",
+            "url": "https://www.orange.fr/portail",
             "city": "Toulouse",
             "start": "2017",
             "end": "2020"
@@ -24,6 +27,7 @@
         {
             "location": "Henallux",
             "description": "Semester in erasmus",
+            "url": "https://www.henallux.be/departement-technique-de-marche-en-famenne",
             "city": "Marche-en-famenne (Belgium)",
             "start": "2019",
             "end": "2019"

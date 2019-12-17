@@ -1,5 +1,115 @@
 {
-    "projects": {
-        
-    }
+    "projects": [
+        {
+            "name": "PHP forum",
+            "description": "First web development, with integration of a forum. The site operated for more than two years before I decided to close it. It was mainly used as a chat platform for my class during my two years of BTS.",
+            "technos": [
+                "PHP",
+                "MySQL"
+            ],
+            "experience": "Personal",
+            "date": "2015"
+        },
+        {
+            "name": "Raspberry server",
+            "description": "Server infrastructure based on Raspberry that I set up at home to host my website and a number of other services. Most of these demons are still running after 4 years even if I decided to delete some of them (like the mail stack), or to replace some services by equivalents (replacement of the Apache2 server by a Nginx server).",
+            "technos": [
+                "Raspberry",
+                "Rasbian",
+                "Squid proxy",
+                "Bind9",
+                "Postfix",
+                "Courier",
+                "nextcloud",
+                "Nginx",
+                "Apache2",
+                "Wordpress",
+                "Letsencrypt"
+            ],
+            "experience": "Personal",
+            "date": "2015"
+        },
+        {
+            "name": "Clémentine",
+            "description": "Projet de stage de deuxième année en BTS. Mon objectif dans cette mission était de développer des fonctionnalités pour un prototype de chatbot au sein d'Orange. J'ai ainsi pu mettre en place un bon nombre d'APIs (Google translation, Deezer, Page Jaune, Orange APIs...) enriching the possible interactions.",
+            "technos": [
+                "NodeJs",
+                "Microsoft LUIS",
+                "Microsoft BotFramework"
+            ],
+            "experience": "Orange",
+            "date": "2016"
+        },
+        {
+            "name": "Oculus",
+            "description": "After working on Clémentine I tried to set up an architecture that would allow me to easily create Chatbots.",
+            "technos": [
+                "NodeJs",
+                "ExpressJs",
+                "MongoDB"
+            ],
+            "experience": "Personal",
+            "date": "2016"
+        },
+        {
+            "name": "Voyager",
+            "description": "Voyageur is an Orange application that calculates the effect of a relocation on the travel time of employees who work there.",
+            "technos": [
+                "TypeScript",
+                "Angular",
+                "Java",
+                "Spring",
+                "MongoDB",
+                "CloudFoundry"
+            ],
+            "experience": "Orange",
+            "date": "2017"
+        },
+        {
+            "name": "DbSelection",
+            "description": "Tool to guide the choice of a database rather than another on a new project. This application had a lot of visibility in my center, so I was asked to make new versions. So there is now dbSelection, dataVizSelection (an equivalent for choosing a dataViz tool), distribSelection (a tool for choosing a BigData distribution) and finally cloudSelection (an equivalent for choosing the internal or external cloud most suited to our architecture) which has become an internal application at group level, therefore with good visibility.",
+            "technos": [
+                "TypeScript",
+                "ExpressJs",
+                "Angular",
+                "MySQL",
+                "CloudFoundry"
+            ],
+            "experience": "Orange",
+            "date": "2018"
+        },
+        {
+            "name": "Girafe",
+            "description": "An application to create a graph (Neo4j) of dependency between the different fields of a database (DataLineage). To do this, the application takes Microsoft DTSX files as input and analyzes the XML and SQL they contain in order to deduce the actions that are performed on the database. For my part, I mainly focused on the implementation of a SQL parser using the ANTLR framework.",
+            "technos": [
+                "Kotlin",
+                "Antlr",
+                "Neo4j"
+            ],
+            "experience": "Orange",
+            "date": "2019"
+        },
+        {
+            "name": "Sparkle",
+            "description": "Data flow analysis framework. The objective of this framework is to offer the user the possibility to develop modules that can be put in a flow processing pipeline. The advantage of this modular approach is that each module can then be tested individually. This guarantees a certain reliability in our pipeline.",
+            "technos": [
+                "Java",
+                "Vertex",
+                "Java 9 Modules",
+                "Docker"
+            ],
+            "experience": "Orange",
+            "date": "2019"
+        },
+        {
+            "name": "Personal website",
+            "description": "This website",
+            "technos": [
+                "TypeScript",
+                "VueJs"
+            ],
+            "experience": "Personal",
+            "date": "2019"
+        }
+    ]
 }

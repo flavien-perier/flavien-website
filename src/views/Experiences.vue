@@ -8,6 +8,7 @@
         :key="e.location"
         v-bind:location="e.location"
         v-bind:description="e.description"
+        v-bind:url="e.url"
         v-bind:city="e.city"
         v-bind:start="e.start"
         v-bind:end="e.end"

@@ -1,10 +1,10 @@
 <template>
   <div class="col-12 col-lg-6">
     <div class="row mx-auto box box-animation box-min-height bg-box">
-      <h4 class="text-center col-12">
-        {{ location }}
+      <div class="text-center col-12">
+        <a v-bind:href="url" class="text-dark"><h4>{{ location }}</h4></a>
         <hr />
-      </h4>
+      </div>
 
       <div class="col-12 col-lg-6">
         <h5 class="text-left text-lg-center">Description :</h5>
@@ -33,6 +33,7 @@ import { Component, Prop, Vue } from "vue-property-decorator";
 export default class Experience extends Vue {
   @Prop() private location!: string;
   @Prop() private description!: string;
+  @Prop() private url!: string;
   @Prop() private city!: string;
   @Prop() private start!: string;
   @Prop() private end!: string;
