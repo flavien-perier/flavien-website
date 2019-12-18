@@ -1,7 +1,7 @@
 import { Language } from '@/model/Language';
 
 const state = {
-  language: Language.FRENCH
+  language: navigator.language.split("-")[0].toUpperCase() == "FR" ? Language.FRENCH : Language.ENGLISH
 };
 
 const mutations = {
