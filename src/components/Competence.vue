@@ -7,19 +7,19 @@
       </div>
 
       <div class="d-none d-lg-block col-6">
-        <h5 class="text-center">Comments :</h5>
+        <h5 class="text-center">{{ commentsTitle }} :</h5>
         {{ description }}
       </div>
 
       <div class="d-none d-md-block col-md-12 col-lg-6">
-        <h5 class="text-left text-lg-center">Enterprises :</h5>
+        <h5 class="text-left text-lg-center">{{ enterprisesTitle }} :</h5>
         <ul>
           <li v-for="e in competence.experiences" :key="e">{{e}}</li>
         </ul>
       </div>
 
       <div class="col-12">
-        <h5 class="text-left text-lg-center">Level :</h5>
+        <h5 class="text-left text-lg-center">{{ levelTitle }} :</h5>
         <div class="progress">
           <div
             v-bind:class="`progress-bar progress-bar-animation-${competence.lvl}`"
@@ -36,8 +36,10 @@
 
 <script lang="ts">
 import { Component, Prop, Vue } from "vue-property-decorator";
-import CompetenceInterface from '../model/CompetenceInterface';
-import { Language } from '../model/Language';
+import CompetenceInterface from "@/model/CompetenceInterface";
+import { Language } from "@/model/Language";
+
+const titles = require("@/translations/titles.json");
 
 @Component
 export default class Competence extends Vue {
@@ -46,6 +48,18 @@ export default class Competence extends Vue {
 
   private get description() {
     return this.language == Language.FRENCH ? this.competence.descriptionFr : this.competence.descriptionEn;
+  }
+
+  private get commentsTitle() {
+    return this.language == Language.FRENCH ? titles.commentsFr : titles.CommentsEn;
+  }
+
+  private get enterprisesTitle() {
+    return this.language == Language.FRENCH ? titles.enterprisesFr : titles.enterprisesEn;
+  }
+
+  private get levelTitle() {
+    return this.language == Language.FRENCH ? titles.levelFr : titles.levelEn;
   }
 }
 </script>
