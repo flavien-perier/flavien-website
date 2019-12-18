@@ -29,6 +29,11 @@
             "id": "network",
             "messageFr": "Réseau",
             "messageEn": "Network"
+        },
+        {
+            "id": "tool",
+            "messageFr": "Outil",
+            "messageEn": "Tool"
         }
     ]
 }

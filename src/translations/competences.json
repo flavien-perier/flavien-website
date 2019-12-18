@@ -93,7 +93,7 @@
                 "Orange",
                 "Personal"
             ],
-            "lvl": 70
+            "lvl": 60
         },
         {
             "label": "Java",
@@ -101,8 +101,8 @@
             "descriptionEn": "Programming language Java",
             "type": "language",
             "experiences": [
-                "Orange",
                 "3IL",
+                "Orange",
                 "Personal"
             ],
             "lvl": 70
@@ -113,8 +113,8 @@
             "descriptionEn": "Programming language PHP",
             "type": "language",
             "experiences": [
-                "3IL",
                 "BTS Beaupeyrat",
+                "3IL",
                 "Personal"
             ],
             "lvl": 70
@@ -157,9 +157,9 @@
             "descriptionEn": "Relational database",
             "type": "db",
             "experiences": [
-                "Orange",
-                "3IL",
                 "BTS Beaupeyrat",
+                "3IL",
+                "Orange",
                 "Personal"
             ],
             "lvl": 80
@@ -264,9 +264,9 @@
             "descriptionEn": "Operating system Linux",
             "type": "os",
             "experiences": [
-                "Orange",
-                "3IL",
                 "BTS Beaupeyrat",
+                "3IL",
+                "Orange",
                 "Personal"
             ],
             "lvl": 80
@@ -277,9 +277,9 @@
             "descriptionEn": "Operating system Windows",
             "type": "os",
             "experiences": [
-                "Orange",
-                "3IL",
                 "BTS Beaupeyrat",
+                "3IL",
+                "Orange",
                 "Personal"
             ],
             "lvl": 70
@@ -300,8 +300,8 @@
             "descriptionEn": "HTTP server",
             "type": "network",
             "experiences": [
-                "3IL",
                 "BTS Beaupeyrat",
+                "3IL",
                 "Personal"
             ],
             "lvl": 70
@@ -336,6 +336,87 @@
                 "Personal"
             ],
             "lvl": 70
+        },
+        {
+            "label": "Docker",
+            "descriptionFr": "Gestionnaire de conteneurs",
+            "descriptionEn": "Container manager",
+            "type": "tool",
+            "experiences": [
+                "BTS Beaupeyrat",
+                "3IL",
+                "Orange",
+                "Personal"
+            ],
+            "lvl": 80
+        },
+        {
+            "label": "Visual Studio Code",
+            "descriptionFr": "IDE JavaScript",
+            "descriptionEn": "IDE JavaScript",
+            "type": "tool",
+            "experiences": [
+                "BTS Beaupeyrat",
+                "3IL",
+                "Orange",
+                "Personal"
+            ],
+            "lvl": 80
+        },
+        {
+            "label": "Intellij",
+            "descriptionFr": "IDE Java / Kotlin",
+            "descriptionEn": "IDE Java / Kotlin",
+            "type": "tool",
+            "experiences": [
+                "3IL",
+                "Orange",
+                "Personal"
+            ],
+            "lvl": 80
+        },
+        {
+            "label": "CloudFoundry",
+            "descriptionFr": "Plateforme PAAS",
+            "descriptionEn": "PAAS platform",
+            "type": "tool",
+            "experiences": [
+                "Orange"
+            ],
+            "lvl": 80
+        },
+        {
+            "label": "GIT",
+            "descriptionFr": "Logiciel de gestion de versions",
+            "descriptionEn": "Ddistributed version control system",
+            "type": "tool",
+            "experiences": [
+                "BTS Beaupeyrat",
+                "3IL",
+                "Orange",
+                "Personal"
+            ],
+            "lvl": 70
+        },
+        {
+            "label": "Gitlab",
+            "descriptionFr": "Implémentation de GIT",
+            "descriptionEn": "GIT implementation",
+            "type": "tool",
+            "experiences": [
+                "Orange"
+            ],
+            "lvl": 70
+        },
+        {
+            "label": "GitlabCI",
+            "descriptionFr": "Gestion de pipeline de déploiement continu",
+            "descriptionEn": "Continuous deployment pipeline management",
+            "type": "tool",
+            "experiences": [
+                "Orange"
+            ],
+            "lvl": 80
         }
     ]
 }

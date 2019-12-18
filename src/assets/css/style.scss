@@ -27,6 +27,17 @@ h1, h2, h3, h4, h5 {
   font-family: title;
 }
 
+.text-article {
+  text-align: justify;
+  padding: 10px !important;
+  line-height: 1.75;
+}
+
+.text-article br {
+  display: block;
+  margin: 5px;
+}
+
 .cursor-link {
   cursor: pointer;
 }
@@ -91,4 +102,8 @@ h1, h2, h3, h4, h5 {
 
 .bg-color-network {
   background-color: #fffddc;
+}
+
+.bg-color-tool {
+  background-color: #dcfdff;
 }
