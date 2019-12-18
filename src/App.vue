@@ -3,11 +3,11 @@
     <Oculus />
 
     <Navbar v-bind:language="language" v-on:changeLanguage="changeLanguage()" />
-    <Junbotron />
+    <Junbotron v-bind:language="language" />
 
     <router-view class="mt-5 mt-lg-0" />
 
-    <Footer />
+    <Footer v-bind:language="language" />
   </div>
 </template>
 

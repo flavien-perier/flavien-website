@@ -1,4 +1,5 @@
 export default interface CompetenceTypeInterface {
     id: string;
-    message: string;
+    messageFr: string;
+    messageEn: string;
 }

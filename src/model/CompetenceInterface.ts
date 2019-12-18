@@ -1,6 +1,7 @@
 export default interface CompetenceInterface {
     label: string;
-    description: string;
+    descriptionFr: string;
+    descriptionEn: string;
     type: string;
     experiences: string[];
     lvl: number;

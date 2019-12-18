@@ -16,7 +16,7 @@
       <div class="col-12">
         <h5 class="text-left">Description :</h5>
         {{ project.experience }} in {{ project.date }} <br />
-        {{ project.description }}
+        {{ description }}
       </div>
     </div>
   </div>
@@ -24,10 +24,19 @@
 
 <script lang="ts">
 import { Component, Prop, Vue } from "vue-property-decorator";
-import ProjectInterface from "../model/ProjectInterface";
+import ProjectInterface from "@/model/ProjectInterface";
+import { Language } from "@/model/Language";
 
 @Component
 export default class Project extends Vue {
   @Prop() private project!: ProjectInterface;
+  @Prop() private language!: Language;
+
+  private get description() {
+    if (this.language == Language.FRENCH) {
+      return this.project.descriptionFr;
+    }
+    return this.project.descriptionEn;
+  }
 }
 </script>

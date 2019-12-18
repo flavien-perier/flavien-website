@@ -3,11 +3,11 @@
     <div class="container">
       <div class="row">
         <div class="col-3 d-none d-lg-block my-auto">
-          <h2 class="text-center text-light">Scan me :</h2>
+          <h2 class="text-center text-light">{{ scanMe }} :</h2>
           <img id="qr-code" src="../assets/img/qr-code.png" alt="qr-code" />
         </div>
         <div class="list-group mx-auto col-12 col-lg-9">
-          <div class="list-group-item list-group-item-dark">Contact me:</div>
+          <div class="list-group-item list-group-item-dark">{{ contactMe }}:</div>
           <a
             class="list-group-item list-group-item-secondary list-group-item-action"
             href="mailto:perier@flavien.cc"
@@ -57,10 +57,23 @@
 </template>
 
 <script lang="ts">
-import { Component, Vue } from 'vue-property-decorator';
+import { Component, Prop, Vue } from "vue-property-decorator";
+import { Language } from "@/model/Language";
+
+const titles = require("@/translations/titles.json");
 
 @Component
-export default class Footer extends Vue {}
+export default class Footer extends Vue {
+  @Prop() private language!: Language;
+
+  private get contactMe() {
+    return this.language == Language.FRENCH ? titles.contactMeFr : titles.contactMeEn;
+  }
+
+  private get scanMe() {
+    return this.language == Language.FRENCH ? titles.scanMeFr : titles.scanMeEn;
+  }
+}
 </script>
 
 <style scoped lang="scss">

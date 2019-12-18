@@ -7,7 +7,7 @@
     </div>
     <div class="input-group-append">
       <span v-bind:class="`competence-title input-group-text bg-color-${competenceType.id}`">
-        {{ competenceType.message }}
+        {{ message }}
       </span>
     </div>
   </div>
@@ -17,11 +17,18 @@
 import { mapGetters, mapActions } from "vuex";
 import { Component, Prop, Vue } from 'vue-property-decorator';
 import CompetenceTypeInterface from '../model/CompetenceTypeInterface';
+import { Language } from '../model/Language';
 
 @Component
 export default class CompetenceType extends Vue {
   @Prop() private competenceType!: CompetenceTypeInterface;
+  @Prop() private language!: Language;
   @Prop() private selected!: string;
+
+  private get message() {
+    return this.language == Language.FRENCH ? this.competenceType.messageFr : this.competenceType.messageEn;
+  }
+
   private check() {
     this.$emit("check");
   }
@@ -30,7 +37,7 @@ export default class CompetenceType extends Vue {
 
 <style scoped lang="scss">
 .competence-title {
-  min-width: 200px;
+  min-width: 250px;
   cursor: pointer; 
 }
 </style>

@@ -1,0 +1,34 @@
+{
+    "competenceTypes": [
+        {
+            "id": "framework",
+            "messageFr": "Framework",
+            "messageEn": "Framework"
+        },
+        {
+            "id": "language",
+            "messageFr": "Language",
+            "messageEn": "Language"
+        },
+        {
+            "id": "db",
+            "messageFr": "Base de données",
+            "messageEn": "Data Base"
+        },
+        {
+            "id": "bigData",
+            "messageFr": "Big Data",
+            "messageEn": "Big Data"
+        },
+        {
+            "id": "os",
+            "messageFr": "Système d'exploitation",
+            "messageEn": "Operating System"
+        },
+        {
+            "id": "network",
+            "messageFr": "Réseau",
+            "messageEn": "Network"
+        }
+    ]
+}

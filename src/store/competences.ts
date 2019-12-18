@@ -1,6 +1,6 @@
 import CompetenceTypeInterface from '@/model/CompetenceTypeInterface';
 
-const { competenceTypes } = require("@/translations/competenceTypes.en.json") as { competenceTypes: CompetenceTypeInterface[] };
+const { competenceTypes } = require("@/translations/competenceTypes.json") as { competenceTypes: CompetenceTypeInterface[] };
 
 const state: any = {};
 

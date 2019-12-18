@@ -8,7 +8,7 @@
 
       <div class="d-none d-lg-block col-6">
         <h5 class="text-center">Comments :</h5>
-        {{ competence.description }}
+        {{ description }}
       </div>
 
       <div class="d-none d-md-block col-md-12 col-lg-6">
@@ -37,10 +37,16 @@
 <script lang="ts">
 import { Component, Prop, Vue } from "vue-property-decorator";
 import CompetenceInterface from '../model/CompetenceInterface';
+import { Language } from '../model/Language';
 
 @Component
 export default class Competence extends Vue {
   @Prop() private competence!: CompetenceInterface;
+  @Prop() private language!: Language;
+
+  private get description() {
+    return this.language == Language.FRENCH ? this.competence.descriptionFr : this.competence.descriptionEn;
+  }
 }
 </script>
 

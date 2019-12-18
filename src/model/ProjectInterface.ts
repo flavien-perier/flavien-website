@@ -1,6 +1,7 @@
 export default interface ProjectInterface {
     name: string;
-    description: string;
+    descriptionFr: string;
+    descriptionEn: string;
     img: String;
     technos: string[];
     experience: string;

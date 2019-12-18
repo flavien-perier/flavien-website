@@ -10,7 +10,7 @@
 
       <div class="col-12 col-lg-6">
         <h5 class="text-left text-lg-center">Description :</h5>
-        {{ experience.description }}
+        {{ description }}
       </div>
 
       <div class="col-12 col-lg-6">
@@ -30,10 +30,16 @@
 
 <script lang="ts">
 import { Component, Prop, Vue } from "vue-property-decorator";
-import ExperienceInterface from '../model/ExperienceInterface';
+import ExperienceInterface from "@/model/ExperienceInterface";
+import { Language } from "@/model/Language";
 
 @Component
 export default class Experience extends Vue {
   @Prop() private experience!: ExperienceInterface;
+  @Prop() private language!: Language;
+
+  private get description() {
+    return this.language == Language.FRENCH ? this.experience.descriptionFr : this.experience.descriptionEn;
+  }
 }
 </script>

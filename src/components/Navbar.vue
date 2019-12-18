@@ -27,22 +27,22 @@
       <ul class="navbar-nav">
         <li class="nav-item">
           <router-link class="nav-link" to="/">
-            <i class="fas fa-home"></i> Home
+            <i class="fas fa-home"></i> {{ homeTitle }}
           </router-link>
         </li>
         <li class="nav-item">
           <router-link class="nav-link" to="/competences">
-            <i class="fas fa-list"></i> Competences
+            <i class="fas fa-list"></i> {{ competencesTitle }}
           </router-link>
         </li>
         <li class="nav-item">
           <router-link class="nav-link" to="/experiences">
-            <i class="fas fa-graduation-cap"></i> Experiences
+            <i class="fas fa-graduation-cap"></i> {{ experiencesTitle }}
           </router-link>
         </li>
         <li class="nav-item">
           <router-link class="nav-link" to="/projects">
-            <i class="fas fa-project-diagram"></i> Projects
+            <i class="fas fa-project-diagram"></i> {{ projectsTitle }}
           </router-link>
         </li>
       </ul>
@@ -88,13 +88,31 @@
 
 <script lang="ts">
 import { Component, Prop, Vue } from "vue-property-decorator";
-import { Language } from "../model/Language";
+import { Language } from "@/model/Language";
+
+const titles = require("@/translations/titles.json");
 
 @Component
 export default class Navbar extends Vue {
   @Prop() private language!: Language;
   private changeLanguage() {
     this.$emit("changeLanguage");
+  }
+
+  private get homeTitle() {
+    return this.language == Language.FRENCH ? titles.homeFr : titles.homeEn;
+  }
+
+  private get competencesTitle() {
+    return this.language == Language.FRENCH ? titles.competencesFr : titles.competencesEn;
+  }
+
+  private get experiencesTitle() {
+    return this.language == Language.FRENCH ? titles.experiencesFr : titles.experiencesEn;
+  }
+
+  private get projectsTitle() {
+    return this.language == Language.FRENCH ? titles.projectsFr : titles.projectsEn;
   }
 }
 </script>

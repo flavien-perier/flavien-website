@@ -2,7 +2,8 @@
     "experiences": [
         {
             "location": "Beaupeyrat",
-            "description": "BTS SIO (Service Informatique aux Organisations)",
+            "descriptionFr": "BTS SIO (Service Informatique aux Organisations)",
+            "descriptionEn": "BTS SIO (Service Informatique aux Organisations)",
             "url": "https://www.beaupeyrat.com/",
             "city": "Limoges",
             "start": "2015",
@@ -10,7 +11,8 @@
         },
         {
             "location": "3IL",
-            "description": "Engineering school",
+            "descriptionFr": "Ecole d'ingénieur",
+            "descriptionEn": "Engineering school",
             "url": "https://www.3il-ingenieurs.fr/",
             "city": "Limoges",
             "start": "2017",
@@ -18,7 +20,8 @@
         },
         {
             "location": "Orange",
-            "description": "Development",
+            "descriptionFr": "Développement",
+            "descriptionEn": "Development",
             "url": "https://www.orange.fr/portail",
             "city": "Toulouse",
             "start": "2017",
@@ -26,7 +29,8 @@
         },
         {
             "location": "Henallux",
-            "description": "Semester in erasmus",
+            "descriptionFr": "Semestre en erasmus",
+            "descriptionEn": "Semester in erasmus",
             "url": "https://www.henallux.be/departement-technique-de-marche-en-famenne",
             "city": "Marche-en-famenne (Belgium)",
             "start": "2019",
