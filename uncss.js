@@ -3,7 +3,7 @@
 const express = require("express");
 const uncss = require("uncss");
 const path = require("path");
-const fs = require('fs');
+const fs = require("fs");
 
 const app = express();
 
@@ -17,8 +17,7 @@ const files = [
 ];
 
 const options = {
-    timeout: 5000,
-    inject: function(window) { window.document.querySelector('html').classList.add('no-csscalc', 'csscalc'); },
+    timeout: 5000
 };
 
 app.use(express.static("dist"));
