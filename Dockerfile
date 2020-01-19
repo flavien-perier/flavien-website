@@ -1,24 +1,18 @@
-FROM nginx:alpine
+FROM node:lts-alpine
 
 LABEL maintainer="Flavien PERIER <perier@flavien.cc>"
 LABEL version="1.0"
 LABEL description="Flavien website"
 
-RUN apk add nodejs npm python2 make gcc g++
-
-WORKDIR /tmp/app
-COPY . . 
-COPY nginx.conf /etc/nginx/conf.d/default.conf
+WORKDIR /app
+COPY . .
 
 RUN rm -Rf node_modules
 RUN npm install
 RUN npm run build
+RUN rm -Rf node_modules
+RUN npm install --production
 
-RUN apk del nodejs npm python2 make gcc g++
+EXPOSE 80
 
-RUN mkdir /var/www
-RUN mv ./dist/* /var/www
-
-WORKDIR /var/www
-
-RUN rm -Rf /tmp/app /root/.npm
+CMD npm start
