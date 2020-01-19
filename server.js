@@ -2,11 +2,44 @@
 
 const express = require("express");
 const helmet = require("helmet");
-const path = require("path");
+const NodeCache = require("node-cache");
+const { JSDOM } = require("jsdom");
+const fs = require("fs");
+
+const JS_LOCATION = "./dist/js";
+const PORT = 80;
+const TTL = 1800;
 
 const app = express();
+const htmlCache = new NodeCache();
+const html = fs.readFileSync("./dist/index.html", "utf8");
 
-const PORT = 8080;
+function loadPage(req, res) {
+    const { originalUrl } = req;
+
+    if (htmlCache.has(originalUrl)) {
+        res.send(htmlCache.get(originalUrl));
+    } else {
+        const dom = new JSDOM(html, {
+            url: `http://127.0.0.1${originalUrl}`,
+            referrer: `http://127.0.0.1${originalUrl}`,
+            contentType: "text/html",
+            strictSSL: false,
+            includeNodeLocations: true,
+            runScripts: "outside-only"
+        });
+        
+        fs.readdirSync(JS_LOCATION).map(name => `${JS_LOCATION}/${name}`).forEach(file => {
+            const js = fs.readFileSync(file, "utf8");
+            dom.window.eval(js);
+        });
+
+        const computedHtml = dom.window.document.documentElement.outerHTML;
+
+        htmlCache.set(originalUrl, computedHtml, TTL);
+        res.send(computedHtml);
+    }
+}
 
 app.use(helmet());
 app.use((req, res, next) => {
@@ -17,12 +50,8 @@ app.use((req, res, next) => {
     console.log(`[${date}] [${ip}] [${userAgent}] ${req.method}: ${req.originalUrl}`);
     next();
 });
-app.get("/", (req, res) => {
-    res.sendFile(path.join(__dirname + "/dist/index.html"));
-});
+app.get("/", loadPage);
 app.use(express.static("dist"));
-app.get("*", (req, res) => {
-    res.sendFile(path.join(__dirname + "/dist/index.html"));
-});
+app.get("*", loadPage);
 
 app.listen(PORT);

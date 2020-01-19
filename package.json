@@ -12,7 +12,9 @@
   },
   "dependencies": {
     "express": "^4.17.1",
-    "helmet": "^3.21.2"
+    "helmet": "^3.21.2",
+    "jsdom": "^16.0.0",
+    "node-cache": "^5.1.0"
   },
   "devDependencies": {
     "@fortawesome/fontawesome-free": "^5.11.2",

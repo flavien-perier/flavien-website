@@ -10,6 +10,7 @@ COPY . .
 RUN rm -Rf node_modules
 RUN npm install
 RUN npm run build
+RUN npm run clean-css
 RUN rm -Rf node_modules
 RUN npm install --production
 
