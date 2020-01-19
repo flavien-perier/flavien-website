@@ -1,6 +1,6 @@
 import Vue from "vue";
 
-import "bootstrap";
+import "bootstrap.native/dist/bootstrap-native-v4.js";
 import "./genetic.js";
 
 import store from "./store";
@@ -25,3 +25,6 @@ new Vue({
   store,
   render: h => h(App)
 }).$mount("#app");
+
+//@ts-ignore
+BSN.initCallback(document.body);
