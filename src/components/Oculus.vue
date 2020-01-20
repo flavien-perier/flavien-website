@@ -33,7 +33,7 @@ export default class Oculus extends Vue {
 
 #bot-chat {
   position: fixed;
-  z-index: 1000;
+  z-index: 10000;
   right: 1rem;
   bottom: 6rem;
   height: 35vw;

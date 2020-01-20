@@ -8,6 +8,7 @@ const fs = require("fs");
 const app = express();
 
 const PORT = 8080;
+const IGNORE_CSS = [/#bot-chat.*/];
 
 const files = [
     `http://127.0.0.1:${PORT}/`, 
@@ -17,7 +18,8 @@ const files = [
 ];
 
 const options = {
-    timeout: 5000
+    timeout: 5000,
+    ignore: IGNORE_CSS
 };
 
 app.use(express.static("dist"));
