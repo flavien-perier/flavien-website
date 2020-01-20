@@ -13,6 +13,9 @@ const TTL = 1800;
 const app = express();
 const htmlCache = new NodeCache();
 const html = fs.readFileSync("./dist/index.html", "utf8");
+const jsFiles = fs.readdirSync(JS_LOCATION)
+                .map(name => `${JS_LOCATION}/${name}`)
+                .map(file => fs.readFileSync(file, "utf8"));
 
 function loadPage(req, res) {
     const { originalUrl } = req;
@@ -29,15 +32,14 @@ function loadPage(req, res) {
             runScripts: "outside-only"
         });
         
-        fs.readdirSync(JS_LOCATION).map(name => `${JS_LOCATION}/${name}`).forEach(file => {
-            const js = fs.readFileSync(file, "utf8");
-            dom.window.eval(js);
-        });
+        jsFiles.forEach(js => dom.window.eval(js));
 
-        const computedHtml = dom.window.document.documentElement.outerHTML;
+        setTimeout(() => {
+            const computedHtml = dom.window.document.documentElement.outerHTML;
 
-        htmlCache.set(originalUrl, computedHtml, TTL);
-        res.send(computedHtml);
+            htmlCache.set(originalUrl, computedHtml, TTL);
+            res.send(computedHtml);
+        }, 1000);
     }
 }
 
