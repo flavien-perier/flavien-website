@@ -77,11 +77,6 @@
           <i class="fab fa-github-square"></i>
         </a>
       </li>
-      <li class="nav-item">
-        <a class="nav-link" href="http://wp.flavien.cc/">
-          <i class="fab fa-wordpress"></i>
-        </a>
-      </li>
     </ul>
   </nav>
 </template>

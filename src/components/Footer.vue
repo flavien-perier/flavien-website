@@ -44,12 +44,6 @@
           >
             <i class="fab fa-github-square"></i> GitHub
           </a>
-          <a
-            class="list-group-item list-group-item-secondary list-group-item-action"
-            href="https://wp.flavien.cc/"
-          >
-            <i class="fab fa-wordpress"></i> WordPress
-          </a>
         </div>
       </div>
     </div>
