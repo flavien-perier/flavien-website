@@ -18,8 +18,9 @@ RUN rm -Rf node_modules
 RUN npm install
 RUN npm run build
 RUN npm run clean-css
-RUN rm -Rf node_modules
-RUN npm install --production
+
+RUN apk del build-base g++ libpng libpng-dev jpeg-dev pango-dev cairo-dev giflib-dev python glibc-2.29-r0.apk
+RUN rm glibc-2.29-r0.apk
 
 EXPOSE 80
 
