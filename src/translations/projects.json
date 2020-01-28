@@ -33,7 +33,7 @@
         },
         {
             "name": "Clémentine",
-            "descriptionFr": "Projet de stage de deuxième année en BTS. Mon objectif dans cette mission était de développer des fonctionnalités pour un prototype de chatbot au sein d'Orange. J'ai ainsi pu mettre en place un bon nombre d'APIs (Google translation, Deezer, Page Jaune, Orange APIs...) enriching the possible interactions.",
+            "descriptionFr": "Projet de stage de deuxième année en BTS. Mon objectif dans cette mission était de développer des fonctionnalités pour un prototype de chatbot au sein d'Orange. J'ai ainsi pu mettre en place un bon nombre d'APIs (Google translation, Deezer, Page Jaune, Orange APIs...) dans le but d'enrichir les interactions.",
             "descriptionEn": "Second year internship project in BTS. My objective in this mission was to develop functionalities for a chatbot prototype within Orange. I was thus able to set up a good number of APIs (Google translation, Deezer, Yellow Page, Orange APIs...) enriching the possible interactions.",
             "technos": [
                 "NodeJs",
