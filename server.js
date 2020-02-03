@@ -7,7 +7,7 @@ const { JSDOM } = require("jsdom");
 const fs = require("fs");
 
 const JS_LOCATION = "./dist/js";
-const PORT = 80;
+const PORT = 8080;
 const TTL = 1800;
 
 const app = express();
