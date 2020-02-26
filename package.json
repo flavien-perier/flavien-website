@@ -2,7 +2,7 @@
   "name": "flavien",
   "version": "1.0.0",
   "description": "Flavien website",
-  "author": "Flavien PERIER <perier@flavien.cc>",
+  "author": "Flavien PERIER <perier@flavien.io>",
   "license": "MIT",
   "scripts": {
     "start": "node server",

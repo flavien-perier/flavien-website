@@ -58,7 +58,7 @@
 
     <ul class="nav navbar-nav d-none d-lg-flex">
       <li class="nav-item">
-        <a class="nav-link" href="https://www.facebook.com/flavien.cc">
+        <a class="nav-link" href="https://www.facebook.com/flavien.io">
           <i class="fab fa-facebook-square"></i>
         </a>
       </li>

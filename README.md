@@ -1,3 +1,3 @@
 # Flavien website
 
-[flavien.cc](https://www.flavien.cc)
+[flavien.io](https://www.flavien.io)

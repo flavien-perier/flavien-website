@@ -10,9 +10,9 @@
           <div class="list-group-item list-group-item-dark">{{ contactMe }}:</div>
           <a
             class="list-group-item list-group-item-secondary list-group-item-action"
-            href="mailto:perier@flavien.cc"
+            href="mailto:perier@flavien.io"
           >
-            <i class="fas fa-envelope"></i> perier@flavien.cc
+            <i class="fas fa-envelope"></i> perier@flavien.io
           </a>
           <a
             class="list-group-item list-group-item-secondary list-group-item-action"
@@ -22,7 +22,7 @@
           </a>
           <a
             class="list-group-item list-group-item-secondary list-group-item-action"
-            href="https://www.facebook.com/flavien.cc"
+            href="https://www.facebook.com/flavien.io"
           >
             <i class="fab fa-facebook-square"></i> Facebook
           </a>

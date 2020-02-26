@@ -22,6 +22,7 @@ function loadPage(req, res) {
 
     if (htmlCache.has(originalUrl)) {
         res.send(htmlCache.get(originalUrl));
+        htmlCache.ttl(originalUrl, TTL);
     } else {
         const dom = new JSDOM(html, {
             url: `http://127.0.0.1${originalUrl}`,

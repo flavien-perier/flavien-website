@@ -1,6 +1,6 @@
 FROM node:lts-alpine as builder
 
-LABEL maintainer="Flavien PERIER <perier@flavien.cc>"
+LABEL maintainer="Flavien PERIER <perier@flavien.io>"
 LABEL version="1.0"
 LABEL description="Flavien website"
 
