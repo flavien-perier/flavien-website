@@ -1,10 +1,10 @@
-import CompetenceTypeInterface from "@/model/CompetenceTypeInterface";
+import CompetenceInterface from "@/model/CompetenceInterface";
 
-const { competenceTypes } = require("@/data/competenceTypes.json") as { competenceTypes: CompetenceTypeInterface[] };
+const { competences } = require("@/data/competences.json") as { competences: CompetenceInterface[] }
 
 const state: any = {};
 
-competenceTypes.forEach(c => state[c.id] = true);
+competences.map(c =>  c.type ).filter((value, index, self) => self.indexOf(value) == index).forEach(id => state[id] = true);
 
 const mutations = {
   select: (state: any, competenceId: string) => {
@@ -21,6 +21,9 @@ const actions = {
 const getters = {
   checked: (state: any) => (competenceId: string) => {
     return state[competenceId];
+  },
+  list: (state: any) => {
+    return Object.keys(state);
   }
 };
 

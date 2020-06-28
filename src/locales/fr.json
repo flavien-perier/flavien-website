@@ -1,0 +1,9 @@
+{
+    "framework": "Framework",
+    "language": "Language",
+    "db": "Base de données",
+    "bigData": "Big Data",
+    "os": "Système d'exploitation",
+    "network": "Réseau",
+    "tool": "Outil"
+}

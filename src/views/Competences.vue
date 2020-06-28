@@ -4,15 +4,15 @@
 
     <article class="row">
       <div class="col-12 box bg-box">
-        <h3 class="text-center">{{ $t("titleFilter") }}</h3>
+        <h3 class="text-center">{{ $t("filters") }}</h3>
         <hr />
         <div class="row">
           <CompetenceType
-            v-for="c in competenceTypes"
-            :key="c.id"
-            v-on:check="select(c.id)"
-            :competenceType="c"
-            :selected="checked(c.id)"
+            v-for="id in list"
+            :key="id"
+            v-on:check="select(id)"
+            :competenceTypeId="id"
+            :selected="checked(id)"
           />
         </div>
       </div>
@@ -35,7 +35,6 @@ import Competence from "@/components/Competence.vue";
 import CompetenceType from "@/components/CompetenceType.vue";
 
 const { competences } = require("@/data/competences.json");
-const { competenceTypes } = require("@/data/competenceTypes.json");
 
 export default {
   name: "competences",
@@ -45,7 +44,6 @@ export default {
   },
   data() {
     return {
-      competenceTypes: competenceTypes,
       competences: competences
     };
   },
@@ -53,7 +51,7 @@ export default {
     ...mapActions("competences", ["select"])
   },
   computed: {
-    ...mapGetters("competences", ["checked"])
+    ...mapGetters("competences", ["checked", "list"])
   }
 };
 </script>
@@ -62,11 +60,11 @@ export default {
 {
   "en": {
     "title": "Compétences",
-    "titleFilter": "Filtre"
+    "filters": "Filters"
   },
   "fr": {
     "title": "Competences",
-    "titleFilter": "Filter"
+    "filters": "Filtres"
   }
 }
 </i18n>

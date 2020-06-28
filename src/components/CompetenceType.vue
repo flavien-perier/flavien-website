@@ -6,8 +6,8 @@
       </div>
     </div>
     <div class="input-group-append">
-      <span :class="`competence-title input-group-text bg-color-${competenceType.id}`">
-        {{ message }}
+      <span :class="`competence-title input-group-text bg-color-${competenceTypeId}`">
+        {{ $t(competenceTypeId) }}
       </span>
     </div>
   </div>
@@ -15,16 +15,11 @@
 
 <script lang="ts">
 import { Component, Prop, Vue } from "vue-property-decorator";
-import CompetenceTypeInterface from "../model/CompetenceTypeInterface";
 
 @Component
 export default class CompetenceType extends Vue {
-  @Prop() private competenceType!: CompetenceTypeInterface;
+  @Prop() private competenceTypeId!: string;
   @Prop() private selected!: string;
-
-  private get message() {
-    return this.$i18n.locale == "fr" ? this.competenceType.messageFr : this.competenceType.messageEn;
-  }
 
   private check() {
     this.$emit("check");
