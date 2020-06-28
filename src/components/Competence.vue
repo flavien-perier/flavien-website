@@ -7,19 +7,19 @@
       </div>
 
       <div class="d-none d-lg-block col-6">
-        <h5 class="text-center">{{ commentsTitle }} :</h5>
+        <h5 class="text-center">{{ $t("comments") }} :</h5>
         {{ description }}
       </div>
 
       <div class="d-none d-md-block col-md-12 col-lg-6">
-        <h5 class="text-left text-lg-center">{{ enterprisesTitle }} :</h5>
+        <h5 class="text-left text-lg-center">{{ $t("enterprises") }} :</h5>
         <ul>
           <li v-for="e in competence.experiences" :key="e">{{e}}</li>
         </ul>
       </div>
 
       <div class="col-12">
-        <h5 class="text-left text-lg-center">{{ levelTitle }} :</h5>
+        <h5 class="text-left text-lg-center">{{ $t("level") }} :</h5>
         <div class="progress">
           <div
             :class="`progress-bar progress-bar-animation-${competence.lvl}`"
@@ -37,31 +37,31 @@
 <script lang="ts">
 import { Component, Prop, Vue } from "vue-property-decorator";
 import CompetenceInterface from "@/model/CompetenceInterface";
-import { Language } from "@/model/Language";
-
-const titles = require("@/translations/titles.json");
 
 @Component
 export default class Competence extends Vue {
   @Prop() private competence!: CompetenceInterface;
-  @Prop() private language!: Language;
 
   private get description() {
-    return this.language == Language.FRENCH ? this.competence.descriptionFr : this.competence.descriptionEn;
-  }
-
-  private get commentsTitle() {
-    return this.language == Language.FRENCH ? titles.commentsFr : titles.CommentsEn;
-  }
-
-  private get enterprisesTitle() {
-    return this.language == Language.FRENCH ? titles.enterprisesFr : titles.enterprisesEn;
-  }
-
-  private get levelTitle() {
-    return this.language == Language.FRENCH ? titles.levelFr : titles.levelEn;
+    return this.$i18n.locale == "fr" ? this.competence.descriptionFr : this.competence.descriptionEn;
   }
 }
 </script>
+
+
+<i18n>
+{
+  "en": {
+    "comments": "Comments",
+    "enterprises": "Enterprises",
+    "level": "Level"
+  },
+  "fr": {
+    "comments": "Commentaires",
+    "enterprises": "Entreprises",
+    "level": "Niveau"
+  }
+}
+</i18n>
 
 <style scoped lang="scss" src="../assets/css/progressBarAnimations.scss"></style>

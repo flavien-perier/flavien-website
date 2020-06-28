@@ -31,15 +31,13 @@
 <script lang="ts">
 import { Component, Prop, Vue } from "vue-property-decorator";
 import ExperienceInterface from "@/model/ExperienceInterface";
-import { Language } from "@/model/Language";
 
 @Component
 export default class Experience extends Vue {
   @Prop() private experience!: ExperienceInterface;
-  @Prop() private language!: Language;
 
   private get description() {
-    return this.language == Language.FRENCH ? this.experience.descriptionFr : this.experience.descriptionEn;
+    return this.$i18n.locale == "fr" ? this.experience.descriptionFr : this.experience.descriptionEn;
   }
 }
 </script>

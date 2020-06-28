@@ -27,22 +27,22 @@
       <ul class="navbar-nav">
         <li class="nav-item">
           <router-link class="nav-link" to="/">
-            <i class="fas fa-home"></i> {{ homeTitle }}
+            <i class="fas fa-home"></i> {{ $t("homeTitle") }}
           </router-link>
         </li>
         <li class="nav-item">
           <router-link class="nav-link" to="/competences">
-            <i class="fas fa-list"></i> {{ competencesTitle }}
+            <i class="fas fa-list"></i> {{ $t("competencesTitle") }}
           </router-link>
         </li>
         <li class="nav-item">
           <router-link class="nav-link" to="/experiences">
-            <i class="fas fa-graduation-cap"></i> {{ experiencesTitle }}
+            <i class="fas fa-graduation-cap"></i> {{ $t("experiencesTitle") }}
           </router-link>
         </li>
         <li class="nav-item">
           <router-link class="nav-link" to="/projects">
-            <i class="fas fa-project-diagram"></i> {{ projectsTitle }}
+            <i class="fas fa-project-diagram"></i> {{ $t("projectsTitle") }}
           </router-link>
         </li>
       </ul>
@@ -51,8 +51,9 @@
     <ul class="nav navbar-nav d-none d-lg-block cursor-link mr-5"  @click="changeLanguage()">
       <li class="nav-item">
         <a class="nav-link">
-          <i class="fas fa-flag"></i> {{ language == 0 ? "fr" : "en" }}
+          <i class="fas fa-flag"></i> {{ $i18n.locale }}
         </a>
+
       </li>
     </ul>
 
@@ -83,31 +84,30 @@
 
 <script lang="ts">
 import { Component, Prop, Vue } from "vue-property-decorator";
-import { Language } from "@/model/Language";
-
-const titles = require("@/translations/titles.json");
+import i18n from "@/i18n";
 
 @Component
 export default class Navbar extends Vue {
-  @Prop() private language!: Language;
   private changeLanguage() {
     this.$emit("changeLanguage");
-  }
-
-  private get homeTitle() {
-    return this.language == Language.FRENCH ? titles.homeFr : titles.homeEn;
-  }
-
-  private get competencesTitle() {
-    return this.language == Language.FRENCH ? titles.competencesFr : titles.competencesEn;
-  }
-
-  private get experiencesTitle() {
-    return this.language == Language.FRENCH ? titles.experiencesFr : titles.experiencesEn;
-  }
-
-  private get projectsTitle() {
-    return this.language == Language.FRENCH ? titles.projectsFr : titles.projectsEn;
+    i18n.locale = i18n.locale == "fr" ? "en" : "fr";
   }
 }
 </script>
+
+<i18n>
+{
+  "en": {
+    "homeTitle": "Home",
+    "competencesTitle": "Competences",
+    "experiencesTitle": "Experiences",
+    "projectsTitle": "Projects"
+  },
+  "fr": {
+    "homeTitle": "Accueil",
+    "competencesTitle": "Compétences",
+    "experiencesTitle": "Expériences",
+    "projectsTitle": "Projets"
+  }
+}
+</i18n>

@@ -15,18 +15,16 @@
 
 <script lang="ts">
 import { mapGetters, mapActions } from "vuex";
-import { Component, Prop, Vue } from 'vue-property-decorator';
-import CompetenceTypeInterface from '../model/CompetenceTypeInterface';
-import { Language } from '../model/Language';
+import { Component, Prop, Vue } from "vue-property-decorator";
+import CompetenceTypeInterface from "../model/CompetenceTypeInterface";
 
 @Component
 export default class CompetenceType extends Vue {
   @Prop() private competenceType!: CompetenceTypeInterface;
-  @Prop() private language!: Language;
   @Prop() private selected!: string;
 
   private get message() {
-    return this.language == Language.FRENCH ? this.competenceType.messageFr : this.competenceType.messageEn;
+    return this.$i18n.locale == "fr" ? this.competenceType.messageFr : this.competenceType.messageEn;
   }
 
   private check() {

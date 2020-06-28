@@ -1,13 +1,12 @@
 <template>
   <section class="container">
-    <h2 class="col-12 section-title">{{ title() }}</h2>
+    <h2 class="col-12 section-title">{{ $t("title") }}</h2>
 
     <article class="row">
       <Experience
         v-for="e in experiences"
         :key="e.location"
         :experience="e"
-        :language="language"
       />
     </article>
   </section>
@@ -17,10 +16,8 @@
 import { mapGetters } from "vuex";
 
 import Experience from "@/components/Experience.vue";
-import { Language } from "@/model/Language";
 
-import titles from "@/translations/titles.json";
-import { experiences } from "@/translations/experiences.json";
+import { experiences } from "@/data/experiences.json";
 
 export default {
   name: "experiences",
@@ -31,14 +28,17 @@ export default {
     return {
       experiences: experiences
     };
-  },
-  methods: {
-    title() {
-      return this.$store.getters["language/language"] == Language.FRENCH ? titles.experiencesFr : titles.experiencesEn;
-    }
-  },
-  computed: {
-    ...mapGetters("language", ["language"])
   }
 };
 </script>
+
+<i18n>
+{
+  "en": {
+    "title": "Experiences"
+  },
+  "fr": {
+    "title": "Expériences"
+  }
+}
+</i18n>

@@ -25,18 +25,13 @@
 <script lang="ts">
 import { Component, Prop, Vue } from "vue-property-decorator";
 import ProjectInterface from "@/model/ProjectInterface";
-import { Language } from "@/model/Language";
 
 @Component
 export default class Project extends Vue {
   @Prop() private project!: ProjectInterface;
-  @Prop() private language!: Language;
 
   private get description() {
-    if (this.language == Language.FRENCH) {
-      return this.project.descriptionFr;
-    }
-    return this.project.descriptionEn;
+    return this.$i18n.locale == "fr" ? this.project.descriptionFr : this.project.descriptionEn;
   }
 }
 </script>

@@ -2,12 +2,12 @@
   <div id="app">
     <Oculus />
 
-    <Navbar :language="language" v-on:changeLanguage="changeLanguage()" />
-    <Junbotron :language="language" />
+    <Navbar />
+    <Junbotron />
 
     <router-view class="mt-5 mt-lg-0" />
 
-    <Footer :language="language" />
+    <Footer />
   </div>
 </template>
 
@@ -26,12 +26,6 @@ export default {
     Navbar,
     Junbotron,
     Oculus
-  },
-  methods: {
-    ...mapActions("language", ["changeLanguage"])
-  },
-  computed: {
-    ...mapGetters("language", ["language"])
   }
 };
 </script>
