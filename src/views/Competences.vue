@@ -59,11 +59,11 @@ export default {
 <i18n>
 {
   "en": {
-    "title": "Compétences",
+    "title": "Competences",
     "filters": "Filters"
   },
   "fr": {
-    "title": "Competences",
+    "title": "Compétences",
     "filters": "Filtres"
   }
 }

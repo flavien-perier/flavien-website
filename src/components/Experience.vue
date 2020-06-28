@@ -16,10 +16,10 @@
       <div class="col-12 col-lg-6">
         <h5 class="text-left text-lg-center">{{ $t("Informations") }} :</h5>
         <p>
-          <strong>City:</strong>
+          <strong>{{ $t("city") }}:</strong>
           {{ experience.city }}
           <br />
-          <strong>Period:</strong>
+          <strong>{{ $t("period") }}:</strong>
           {{ experience.start }} - {{ experience.end }}
           <br />
         </p>
@@ -46,11 +46,15 @@ export default class Experience extends Vue {
 {
   "en": {
     "description": "Description",
-    "informations": "Informations"
+    "informations": "Informations",
+    "city": "City",
+    "period": "Period"
   },
   "fr": {
     "description": "Description",
-    "informations": "Informations"
+    "informations": "Informations",
+    "city": "Ville",
+    "period": "Période"
   }
 }
 </i18n>
