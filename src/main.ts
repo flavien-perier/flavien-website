@@ -29,5 +29,4 @@ new Vue({
   render: h => h(App)
 }).$mount("#app");
 
-//@ts-ignore
 BSN.initCallback(document.body);

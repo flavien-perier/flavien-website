@@ -53,7 +53,7 @@ app.use((req, res, next) => {
     console.log(`[${date}] [${ip}] [${userAgent}] ${req.method}: ${req.originalUrl}`);
     next();
 });
-app.get("/", loadPage);
+
 app.use(express.static("dist"));
 app.get("*", loadPage);
 

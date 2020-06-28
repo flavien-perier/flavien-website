@@ -19,18 +19,24 @@ const files = [
 
 const options = {
     timeout: 5000,
-    ignore: IGNORE_CSS
+    ignore: IGNORE_CSS,
+    htmlroot: `${__dirname}/dist/`
 };
 
 app.use(express.static("dist"));
 app.get("*", (req, res) => {
-    res.sendFile(path.join(__dirname + "/dist/index.html"));
+    res.sendFile(path.join(`${__dirname}/dist/index.html`));
 });
 
 const server = app.listen(PORT, () => {
     uncss(files, options, (error, output) => {
-        fs.writeFile("./dist/css/app.css", output, () => {
-            server.close();
-        });
+        if (!error) {
+            fs.writeFile(`${__dirname}/dist/css/app.css`, output, () => {
+                console.log("CSS optimization [OK]")
+                server.close();
+            });
+        } else {
+            console.log("CSS optimization [ERROR]")
+        }
     });
 });
