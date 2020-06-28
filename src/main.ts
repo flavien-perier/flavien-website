@@ -1,6 +1,7 @@
 import Vue from "vue";
 
-import "bootstrap.native/dist/bootstrap-native.js";
+//@ts-ignore
+import BSN from "bootstrap.native/dist/bootstrap-native.js";
 import "./genetic.js";
 
 import store from "./store";
