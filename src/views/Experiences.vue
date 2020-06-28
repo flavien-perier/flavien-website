@@ -13,8 +13,6 @@
 </template>
 
 <script>
-import { mapGetters } from "vuex";
-
 import Experience from "@/components/Experience.vue";
 
 import { experiences } from "@/data/experiences.json";

@@ -33,8 +33,6 @@ import { mapGetters, mapActions } from "vuex";
 
 import Competence from "@/components/Competence.vue";
 import CompetenceType from "@/components/CompetenceType.vue";
-import CompetenceInterface from "@/model/CompetenceInterface";
-import CompetenceTypeInterface from "@/model/CompetenceTypeInterface";
 
 const { competences } = require("@/data/competences.json");
 const { competenceTypes } = require("@/data/competenceTypes.json");

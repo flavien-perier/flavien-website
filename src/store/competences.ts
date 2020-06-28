@@ -1,4 +1,4 @@
-import CompetenceTypeInterface from '@/model/CompetenceTypeInterface';
+import CompetenceTypeInterface from "@/model/CompetenceTypeInterface";
 
 const { competenceTypes } = require("@/data/competenceTypes.json") as { competenceTypes: CompetenceTypeInterface[] };
 

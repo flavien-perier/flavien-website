@@ -12,8 +12,6 @@
 </template>
 
 <script>
-import { mapGetters, mapActions } from "vuex";
-
 import Footer from "@/components/Footer.vue";
 import Navbar from "@/components/Navbar.vue";
 import Junbotron from "@/components/Junbotron.vue";

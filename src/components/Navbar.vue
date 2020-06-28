@@ -83,13 +83,12 @@
 </template>
 
 <script lang="ts">
-import { Component, Prop, Vue } from "vue-property-decorator";
+import { Component, Vue } from "vue-property-decorator";
 import i18n from "@/i18n";
 
 @Component
 export default class Navbar extends Vue {
   private changeLanguage() {
-    this.$emit("changeLanguage");
     i18n.locale = i18n.locale == "fr" ? "en" : "fr";
   }
 }

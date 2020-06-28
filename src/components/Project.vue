@@ -7,15 +7,15 @@
       </h4>
 
       <div class="col-12">
-        <h5 class="text-left">Technos :</h5>
+        <h5 class="text-left">{{ $t("technos") }} :</h5>
         <ul>
           <li v-for="t in project.technos" :key="t">{{t}}</li>
         </ul>
       </div>
 
       <div class="col-12">
-        <h5 class="text-left">Description :</h5>
-        {{ project.experience }} in {{ project.date }} <br />
+        <h5 class="text-left">{{ $t("description") }} :</h5>
+        {{ project.experience }} {{ $t("in") }} {{ project.date }} <br />
         {{ description }}
       </div>
     </div>
@@ -35,3 +35,18 @@ export default class Project extends Vue {
   }
 }
 </script>
+
+<i18n>
+{
+  "en": {
+    "technos": "Technologies",
+    "description": "Description",
+    "in": "in"
+  },
+  "fr": {
+    "technos": "Technologies",
+    "description": "Description",
+    "in": "en"
+  }
+}
+</i18n>

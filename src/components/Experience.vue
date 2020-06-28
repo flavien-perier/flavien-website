@@ -9,12 +9,12 @@
       </div>
 
       <div class="col-12 col-lg-6">
-        <h5 class="text-left text-lg-center">Description :</h5>
+        <h5 class="text-left text-lg-center">{{ $t("description") }} :</h5>
         {{ description }}
       </div>
 
       <div class="col-12 col-lg-6">
-        <h5 class="text-left text-lg-center">Informations :</h5>
+        <h5 class="text-left text-lg-center">{{ $t("Informations") }} :</h5>
         <p>
           <strong>City:</strong>
           {{ experience.city }}
@@ -41,3 +41,16 @@ export default class Experience extends Vue {
   }
 }
 </script>
+
+<i18n>
+{
+  "en": {
+    "description": "Description",
+    "informations": "Informations"
+  },
+  "fr": {
+    "description": "Description",
+    "informations": "Informations"
+  }
+}
+</i18n>
