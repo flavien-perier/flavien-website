@@ -1,6 +1,6 @@
 <template>
   <div class="col-12 col-md-6">
-    <div v-bind:class="`row mx-auto box box-animation box-min-height bg-color-${competence.type}`">
+    <div :class="`row mx-auto box box-animation box-min-height bg-color-${competence.type}`">
       <div class="text-center col-12">
         <h4>{{ competence.label }}</h4>
         <hr />
@@ -22,9 +22,9 @@
         <h5 class="text-left text-lg-center">{{ levelTitle }} :</h5>
         <div class="progress">
           <div
-            v-bind:class="`progress-bar progress-bar-animation-${competence.lvl}`"
+            :class="`progress-bar progress-bar-animation-${competence.lvl}`"
             role="progressbar"
-            v-bind:aria-valuenow="`${competence.lvl}%`"
+            :aria-valuenow="`${competence.lvl}%`"
             aria-valuemin="0"
             aria-valuemax="100"
           >{{ competence.lvl }}%</div>

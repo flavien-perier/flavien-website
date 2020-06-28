@@ -6,8 +6,8 @@
       <Experience
         v-for="e in experiences"
         :key="e.location"
-        v-bind:experience="e"
-        v-bind:language="language"
+        :experience="e"
+        :language="language"
       />
     </article>
   </section>

@@ -11,9 +11,9 @@
             v-for="c in competenceTypes"
             :key="c.id"
             v-on:check="select(c.id)"
-            v-bind:competenceType="c"
-            v-bind:language="language"
-            v-bind:selected="checked(c.id)"
+            :competenceType="c"
+            :language="language"
+            :selected="checked(c.id)"
           />
         </div>
       </div>
@@ -23,8 +23,8 @@
       <Competence
         v-for="c in competences.filter(c => checked(c.type))"
         :key="c.label"
-        v-bind:competence="c"
-        v-bind:language="language"
+        :competence="c"
+        :language="language"
       />
     </article>
   </section>

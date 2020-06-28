@@ -2,7 +2,7 @@
   <div class="col-12 col-lg-6">
     <div class="row mx-auto box box-animation box-min-height bg-box">
       <div class="text-center col-12">
-        <a v-bind:href="experience.url" class="text-dark">
+        <a :href="experience.url" class="text-dark">
           <h4>{{ experience.location }}</h4>
         </a>
         <hr />

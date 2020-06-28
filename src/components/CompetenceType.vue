@@ -6,7 +6,7 @@
       </div>
     </div>
     <div class="input-group-append">
-      <span v-bind:class="`competence-title input-group-text bg-color-${competenceType.id}`">
+      <span :class="`competence-title input-group-text bg-color-${competenceType.id}`">
         {{ message }}
       </span>
     </div>

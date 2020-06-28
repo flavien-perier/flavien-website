@@ -2,12 +2,12 @@
   <div id="app">
     <Oculus />
 
-    <Navbar v-bind:language="language" v-on:changeLanguage="changeLanguage()" />
-    <Junbotron v-bind:language="language" />
+    <Navbar :language="language" v-on:changeLanguage="changeLanguage()" />
+    <Junbotron :language="language" />
 
     <router-view class="mt-5 mt-lg-0" />
 
-    <Footer v-bind:language="language" />
+    <Footer :language="language" />
   </div>
 </template>
 

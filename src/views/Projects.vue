@@ -6,8 +6,8 @@
       <Project
         v-for="p in projects"
         :key="p.location"
-        v-bind:project="p"
-        v-bind:language="language"
+        :project="p"
+        :language="language"
       />
     </article>
   </section>
