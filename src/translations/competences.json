@@ -17,6 +17,7 @@
             "descriptionEn": "Framework frontend JavaScript",
             "type": "framework",
             "experiences": [
+                "Orange",
                 "Personal"
             ],
             "lvl": 50
@@ -282,7 +283,7 @@
                 "Orange",
                 "Personal"
             ],
-            "lvl": 70
+            "lvl": 60
         },
         {
             "label": "Postfix",
@@ -292,7 +293,7 @@
             "experiences": [
                 "Personal"
             ],
-            "lvl": 60
+            "lvl": 50
         },
         {
             "label": "Apache 2",
@@ -304,7 +305,7 @@
                 "3IL",
                 "Personal"
             ],
-            "lvl": 70
+            "lvl": 60
         },
         {
             "label": "NGINX",
@@ -335,7 +336,7 @@
             "experiences": [
                 "Personal"
             ],
-            "lvl": 70
+            "lvl": 50
         },
         {
             "label": "Docker",
@@ -349,6 +350,16 @@
                 "Personal"
             ],
             "lvl": 80
+        },
+        {
+            "label": "Kubernetes",
+            "descriptionFr": "Orchestrateur d'infrastructure conteneurisé",
+            "descriptionEn": "Container infrastructure orchestrator",
+            "type": "tool",
+            "experiences": [
+                "Orange"
+            ],
+            "lvl": 60
         },
         {
             "label": "Visual Studio Code",
@@ -416,7 +427,7 @@
             "experiences": [
                 "Orange"
             ],
-            "lvl": 80
+            "lvl": 70
         }
     ]
 }

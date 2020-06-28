@@ -119,6 +119,28 @@
             ],
             "experience": "Personal",
             "date": "2019"
+        },
+        {
+            "name": "Cobalt cloud",
+            "descriptionFr": "Projet de recherche Orange ayant pour but de mettre en place une plateforme SaaS capable de rajouter des métadonnées de manière automatiques à des médias. Par exemple, générer des sous-titres à une vidéo grâce à sa bande-son.",
+            "descriptionEn": "Orange research project aiming to set up a SaaS platform capable of adding metadata automatically to media. For example, generate subtitles to a video thanks to its soundtrack.",
+            "technos": [
+                "Kubernetes",
+                "Java"
+            ],
+            "experience": "Orange",
+            "date": "2020"
+        },
+        {
+            "name": "Pride",
+            "descriptionFr": "Projet de recherche financé par l'ADME dans lequel Orange devait développer un composant permettant à des collectivités de récupérer les données concernant leurs factures énergétiques Enedis ou GRDF.",
+            "descriptionEn": "Research project funded by ADME in which Orange was to develop a component enabling local authorities to retrieve data concerning their Enedis or GRDF energy bills.",
+            "technos": [
+                "Kotlin",
+                "VueJs"
+            ],
+            "experience": "Orange",
+            "date": "2020"
         }
     ]
 }
