@@ -1,6 +1,6 @@
 import Vue from "vue";
 
-import "bootstrap.native/dist/bootstrap-native-v4.js";
+import "bootstrap.native/dist/bootstrap-native.js";
 import "./genetic.js";
 
 import store from "./store";
@@ -10,7 +10,7 @@ import router from "./router";
 Vue.config.productionTip = false;
 
 console.log(`
-_______ _       _______        ________________ _       
+ _______ _       _______        ________________ _       
 (  ____ ( \\     (  ___  |\\     /\\__   __(  ____ ( (    /|
 | (    \\| (     | (   ) | )   ( |  ) (  | (    \\|  \\  ( |
 | (__   | |     | (___) | |   | |  | |  | (__   |   \\ | |
