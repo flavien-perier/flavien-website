@@ -13,19 +13,16 @@
 </template>
 
 <script>
+import { mapGetters } from "vuex";
 import Project from "@/components/Project.vue";
-
-import { projects } from "@/data/projects.json";
 
 export default {
   name: "projects",
   components: {
     Project
   },
-  data() {
-    return {
-      projects: projects.sort((p1, p2) => p1.date < p2.date)
-    };
+  computed: {
+    ...mapGetters("projects", ["projects"])
   }
 };
 </script>

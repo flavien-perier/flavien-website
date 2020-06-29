@@ -13,19 +13,17 @@
 </template>
 
 <script>
-import Experience from "@/components/Experience.vue";
+import { mapGetters } from "vuex";
 
-import { experiences } from "@/data/experiences.json";
+import Experience from "@/components/Experience.vue";
 
 export default {
   name: "experiences",
   components: {
     Experience
   },
-  data() {
-    return {
-      experiences: experiences
-    };
+  computed: {
+    ...mapGetters("experiences", ["experiences"])
   }
 };
 </script>

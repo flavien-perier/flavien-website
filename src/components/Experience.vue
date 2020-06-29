@@ -14,7 +14,7 @@
       </div>
 
       <div class="col-12 col-lg-6">
-        <h5 class="text-left text-lg-center">{{ $t("Informations") }} :</h5>
+        <h5 class="text-left text-lg-center">{{ $t("informations") }} :</h5>
         <p>
           <strong>{{ $t("city") }}:</strong>
           {{ experience.city }}

@@ -1,14 +1,22 @@
 import CompetenceInterface from "@/model/CompetenceInterface";
-
 const { competences } = require("@/data/competences.json") as { competences: CompetenceInterface[] }
 
-const state: any = {};
+interface State {
+  competences: CompetenceInterface[],
+  competencesCheckbox: any
+}
 
-competences.map(c =>  c.type ).filter((value, index, self) => self.indexOf(value) == index).forEach(id => state[id] = true);
+const state: State = {
+  competences,
+  competencesCheckbox: {}
+};
+
+competences.map(c =>  c.type ).filter((value, index, self) => self.indexOf(value) == index)
+  .forEach(id => state.competencesCheckbox[id] = true);
 
 const mutations = {
-  select: (state: any, competenceId: string) => {
-    state[competenceId] = !state[competenceId];
+  select: (state: State, competenceId: string) => {
+    state.competencesCheckbox[competenceId] = !state.competencesCheckbox[competenceId];
   }
 };
 
@@ -19,11 +27,14 @@ const actions = {
 };
 
 const getters = {
-  checked: (state: any) => (competenceId: string) => {
-    return state[competenceId];
+  checked: (state: State) => (competenceId: string) => {
+    return state.competencesCheckbox[competenceId];
   },
-  list: (state: any) => {
-    return Object.keys(state);
+  list: (state: State) => {
+    return Object.keys(state.competencesCheckbox);
+  },
+  competences: (state: State) => {
+    return state.competences;
   }
 };
 

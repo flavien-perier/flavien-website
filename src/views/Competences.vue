@@ -34,24 +34,17 @@ import { mapGetters, mapActions } from "vuex";
 import Competence from "@/components/Competence.vue";
 import CompetenceType from "@/components/CompetenceType.vue";
 
-const { competences } = require("@/data/competences.json");
-
 export default {
   name: "competences",
   components: {
     Competence,
     CompetenceType
   },
-  data() {
-    return {
-      competences: competences
-    };
-  },
   methods: {
     ...mapActions("competences", ["select"])
   },
   computed: {
-    ...mapGetters("competences", ["checked", "list"])
+    ...mapGetters("competences", ["checked", "list", "competences"])
   }
 };
 </script>
