@@ -1,20 +1,20 @@
 <template>
   <div class="col-12">
     <div class="row mx-auto box bg-box">
-      <h4 class="text-center col-12">
+      <h2 class="text-center col-12">
         {{ project.name }}
         <hr />
-      </h4>
+      </h2>
 
       <div class="col-12">
-        <h5 class="text-left">{{ $t("technos") }} :</h5>
+        <h3 class="text-left">{{ $t("technos") }} :</h3>
         <ul>
           <li v-for="t in project.technos" :key="t">{{t}}</li>
         </ul>
       </div>
 
       <div class="col-12">
-        <h5 class="text-left">{{ $t("description") }} :</h5>
+        <h3 class="text-left">{{ $t("description") }} :</h3>
         {{ project.experience }} {{ $t("in") }} {{ project.date }} <br />
         {{ description }}
       </div>

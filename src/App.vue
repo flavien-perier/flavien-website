@@ -3,7 +3,7 @@
     <Oculus />
 
     <Navbar />
-    <Junbotron />
+    <Header />
 
     <router-view class="mt-5 mt-lg-0" />
 
@@ -14,7 +14,7 @@
 <script>
 import Footer from "@/components/Footer.vue";
 import Navbar from "@/components/Navbar.vue";
-import Junbotron from "@/components/Junbotron.vue";
+import Header from "@/components/Header.vue";
 import Oculus from "@/components/Oculus.vue";
 
 export default {
@@ -22,7 +22,7 @@ export default {
   components: {
     Footer,
     Navbar,
-    Junbotron,
+    Header,
     Oculus
   }
 };

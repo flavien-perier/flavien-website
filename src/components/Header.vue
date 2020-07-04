@@ -1,10 +1,10 @@
 <template>
-  <div class="jumbotron jumbotron-fluid d-none d-lg-block bg-parallax">
+  <header class="jumbotron jumbotron-fluid d-none d-lg-block bg-parallax">
     <div class="container">
       <h1 class="display-4">Flavien PERIER</h1>
       <p class="lead">{{ $t("fullStackDeveloper") }}</p>
     </div>
-  </div>
+  </header>
 </template>
 
 <script lang="ts">

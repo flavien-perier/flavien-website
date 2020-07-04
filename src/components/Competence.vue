@@ -2,24 +2,24 @@
   <div class="col-12 col-md-6">
     <div :class="`row mx-auto box box-animation box-min-height bg-color-${competence.type}`">
       <div class="text-center col-12">
-        <h4>{{ competence.label }}</h4>
+        <h2>{{ competence.label }}</h2>
         <hr />
       </div>
 
       <div class="d-none d-lg-block col-6">
-        <h5 class="text-center">{{ $t("comments") }} :</h5>
-        {{ description }}
+        <h3 class="text-center">{{ $t("comments") }} :</h3>
+        <p>{{ description }}</p>
       </div>
 
       <div class="d-none d-md-block col-md-12 col-lg-6">
-        <h5 class="text-left text-lg-center">{{ $t("enterprises") }} :</h5>
+        <h3 class="text-left text-lg-center">{{ $t("enterprises") }} :</h3>
         <ul>
           <li v-for="e in competence.experiences" :key="e">{{e}}</li>
         </ul>
       </div>
 
       <div class="col-12">
-        <h5 class="text-left text-lg-center">{{ $t("level") }} :</h5>
+        <h3 class="text-left text-lg-center">{{ $t("level") }} :</h3>
         <div class="progress">
           <div
             :class="`progress-bar progress-bar-animation-${competence.lvl}`"

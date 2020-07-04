@@ -1,10 +1,10 @@
 <template>
   <section class="container">
-    <h2 class="col-12 section-title">{{ $t("title") }}</h2>
+    <h1 class="col-12 section-title">{{ $t("title") }}</h1>
 
     <article class="row">
       <div class="col-12 box bg-box">
-        <h3 class="text-center">{{ $t("filters") }}</h3>
+        <h2 class="text-center">{{ $t("filters") }}</h2>
         <hr />
         <div class="row">
           <CompetenceType

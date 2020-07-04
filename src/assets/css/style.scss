@@ -9,18 +9,22 @@ $fa-font-path: "../../../node_modules/@fortawesome/fontawesome-free/webfonts";
 @import "./animations.scss";
 
 @font-face {
-	font-family: 'body';
-	src: url('../fonts/arial.woff') format('woff');
+	font-family: "body";
+	src: url("../fonts/roboto.ttf") format("truetype");
 }
 
 @font-face {
-	font-family: 'title';
-	src: url('../fonts/kenyan-coffee.ttf') format('truetype');
+	font-family: "title";
+	src: url("../fonts/kenyan-coffee.ttf") format("truetype");
+}
+
+@font-face {
+	font-family: "print";
+	src: url("../fonts/ryman-eco.otf") format("opentype");
 }
 
 body {
-  font-family: body;
-  font-size: 12px;
+  font-family: print;
 }
 
 h1, h2, h3, h4, h5 {
@@ -43,7 +47,6 @@ h1, h2, h3, h4, h5 {
 }
 
 .section-title {
-  font-size: 40px;
   color: #fff;
   text-shadow: 0px 0px 8px #000;
   text-align: center;
@@ -57,7 +60,7 @@ h1, h2, h3, h4, h5 {
 }
 
 .box-min-height {
-  min-height: 250px;
+  min-height: 300px;
 }
 
 #bg-canvas {
