@@ -18,7 +18,7 @@ export default class Oculus extends Vue {
 }
 </script>
 
-<style scoped lang="scss">
+<style scoped lang="css">
 #chat-button {
   position: fixed;
   z-index: 1000;

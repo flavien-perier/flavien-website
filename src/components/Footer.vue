@@ -70,7 +70,7 @@ export default class Footer extends Vue {}
 }
 </i18n>
 
-<style scoped lang="scss">
+<style scoped lang="css">
 #qr-code {
   background-color: #fff;
   width: 100%;

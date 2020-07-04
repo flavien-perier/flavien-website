@@ -27,7 +27,7 @@ export default class CompetenceType extends Vue {
 }
 </script>
 
-<style scoped lang="scss">
+<style scoped lang="css">
 .competence-title {
   min-width: 250px;
   cursor: pointer; 

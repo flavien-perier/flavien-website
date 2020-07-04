@@ -25,14 +25,15 @@ export default class Junbotron extends Vue {}
 }
 </i18n>
 
-<style scoped lang="scss">
+<style scoped lang="css">
 h1 {
-  color: #eeeeee;
+  color: #eee;
 }
 p {
-  color: #aaaaaa;
+  color: #bbb;
 }
 .jumbotron {
+  position: relative;
   min-height: 50vh;
   padding-top: 15vh;
 }
