@@ -6,7 +6,7 @@
       </div>
     </div>
     <div class="input-group-append">
-      <span :class="`competence-title input-group-text bg-color-${competenceTypeId}`">
+      <span :class="`competence-title input-group-text bg-competence-${competenceTypeId}`">
         {{ $t(competenceTypeId) }}
       </span>
     </div>

@@ -21,7 +21,7 @@ $color-100: #29ab2e;
   width: 1% * $percent;
   background-color: $color;
   animation-name: progress-bar-animation;
-  animation-duration: 0.5s * ($percent / 10);
+  animation-duration: 0.05s * $percent;
 }
 
 .progress-bar-animation-10 { @include progress-bar-animation-x(10, $color-10) }

@@ -1,6 +1,6 @@
 <template>
   <div class="col-12 col-md-6">
-    <div :class="`row mx-auto box box-animation box-min-height bg-color-${competence.type}`">
+    <div :class="`row mx-auto box box-animation box-min-height bg-competence-${competence.type}`">
       <div class="text-center col-12">
         <h2>{{ competence.label }}</h2>
         <hr />

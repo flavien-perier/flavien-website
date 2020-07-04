@@ -72,7 +72,7 @@
                 "Orange",
                 "Personal"
             ],
-            "lvl": 90
+            "lvl": 80
         },
         {
             "label": "TypeScript",
@@ -83,7 +83,7 @@
                 "Orange",
                 "Personal"
             ],
-            "lvl": 80
+            "lvl": 70
         },
         {
             "label": "Kotlin",
@@ -128,7 +128,7 @@
             "experiences": [
                 "Orange"
             ],
-            "lvl": 70
+            "lvl": 60
         },
         {
             "label": "C++",
@@ -407,7 +407,7 @@
                 "Orange",
                 "Personal"
             ],
-            "lvl": 70
+            "lvl": 60
         },
         {
             "label": "Gitlab",
@@ -417,7 +417,7 @@
             "experiences": [
                 "Orange"
             ],
-            "lvl": 70
+            "lvl": 60
         },
         {
             "label": "GitlabCI",
