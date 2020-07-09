@@ -63,5 +63,3 @@ export default class Competence extends Vue {
   }
 }
 </i18n>
-
-<style scoped lang="scss" src="../assets/css/progressBarAnimations.scss"></style>
