@@ -9,17 +9,17 @@
       </div>
 
       <div class="col-12 col-lg-6">
-        <h3 class="text-left text-lg-center">{{ $t("description") }} :</h3>
+        <h3 class="text-left text-lg-center">{{ $t("description") }}</h3>
         {{ description }}
       </div>
 
       <div class="col-12 col-lg-6">
-        <h3 class="text-left text-lg-center">{{ $t("informations") }} :</h3>
+        <h3 class="text-left text-lg-center">{{ $t("informations") }}</h3>
         <p>
-          <strong>{{ $t("city") }}:</strong>
+          <strong>{{ $t("city") }} :</strong>
           {{ experience.city }}
           <br />
-          <strong>{{ $t("period") }}:</strong>
+          <strong>{{ $t("period") }} :</strong>
           {{ experience.start }} - {{ experience.end }}
           <br />
         </p>

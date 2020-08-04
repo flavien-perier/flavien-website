@@ -1,6 +1,6 @@
 <template>
   <section class="container">
-    <h1 class="col-12 section-title">{{ $t("title") }}</h1>
+    <h1 class="col-12 section-title">{{ $t("home") }}</h1>
 
     <article class="box bg-box text-article" v-html="$t('text')"></article>
   </section>
@@ -15,12 +15,10 @@ export default {
 <i18n>
 {
   "en": {
-    "title": "Home",
-    "text": "Currently on an apprenticeship contract between the 3IL school in Limoges and the Orange company in Toulouse, I am working on various development projects. <br/>During the last few years, I have mainly worked on backend projects in Java or NodeJs with frameworks such as Spring or ExpressJs. However, in the same period of time I also worked on Frontend with Angular, jQuery, VueJs frameworks or directly in native JavaScript. On these same projects, I also had to be interested in continuous deployment issues with GitlabCI and a CloudFoundry platform available within Orange.<br/>I am also interested in how data is managed, whether within traditional relational DBMS such as MySQL or Postgresql, or with NoSQL DBMS such as MongoDB, Reddis and especially Neo4J. I also took a number of DataScience courses during my last year as an engineer, giving me some basics in this field.<br/>This website is currently hosted in a Docker container on a RaspberryPi. I am therefore naturally interested in the issues related to the hosting and security of this environment."
+    "text": "My engineering training in alternation between the 3IL school in Limoges and the Orange company in Toulouse ends in September. I am therefore available for a job from October 2020.<br/>During this apprenticeship, I mainly worked on backend projects in Java/Kotlin with the Spring framework. I also realized some interfaces using the frameworks Vue.js and Angular in JavaScript. For my graduation thesis, I studied the problems of cloud application deployment with Docker and Kubernetes.<br/>During these last years, I had the opportunity to work on very diverse issues both in terms of development and infrastructure. On a more personal level, I'm particularly interested in everything related to ecology."
   },
   "fr": {
-    "title": "Accueil",
-    "text": "Actuellement en contrat d'apprentissage entre l'école 3IL à Limoges et l'entreprise Orange à Toulouse, je travaille sur différents projets de développement. <br/>Durant les dernières années, j'ai essentiellement travaillé sur des projets backends en Java ou NodeJs avec des frameworks tels que Spring ou ExpressJs. Cependant dans le même laps de temps j'ai aussi été amené à travailler sur du Frontend avec les frameworks Angular, jQuery, VueJs ou directement en JavaScript natif. Sur ces mêmes projets, j'ai dû aussi m'intéresser à des problématiques de déploiement continues avec GitlabCI et une plateforme CloudFoundry disponible au sein d'Orange.<br/>Je m'intéresse également aux façons dont sont géré les données que ce soit au sein de SGBD relationnel classique telles que MySQL ou Postgresql, ou avec des SGBD NoSQL tel que MongoDB, Reddis et surtout Neo4J. J'ai également suivi lors de ma dernière année d'ingénieur un certain nombre de cours relatifs à la DataScience, me donnant quelques bases dans ce domaine.<br/>Ce site web est actuellement hébergé dans un conteneur Docker sur une RaspberryPi. Je m'intéresse donc tout naturellement aux problématiques relatives à l'hébergement et à la sécurité de cet environnement."
+    "text": "Ma formation d'ingénieur en alternance entre l'école 3IL à Limoges et l'entreprise Orange à Toulouse se termine en septembre. Je suis donc disponible pour un poste dès octobre 2020.<br/>Pendant cet apprentissage, j'ai essentiellement travaillé sur des projets backend en Java/Kotlin avec le framework Spring. J'ai également réalisé quelques interfaces à l'aide des frameworks Vue.js et Angular en JavaScript. Pour mon mémoire de fin d'études, j'ai étudié les problématiques de déploiement d'application cloud avec Docker et Kubernetes.<br/>Durant ces dernières années, j'ai donc eu l'occasion de travailler sur des problématiques très diverses aussi bien en termes de développement que d'infrastructure. Sur un plan plus personnel, je suis particulièrement intéressé par l'approche écologique."
   }
 }
 </i18n>

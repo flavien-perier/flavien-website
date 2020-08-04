@@ -27,6 +27,31 @@ export default class CompetenceType extends Vue {
 }
 </script>
 
+<i18n>
+{
+  "en": {
+    "framework": "Framework",
+    "language": "Language",
+    "db": "Data Base",
+    "bigData": "Big Data",
+    "os": "Operating System",
+    "network": "Network",
+    "tool": "Tool",
+    "management": "Management"
+  },
+  "fr": {
+    "framework": "Framework",
+    "language": "Language",
+    "db": "Base de données",
+    "bigData": "Big Data",
+    "os": "Système d'exploitation",
+    "network": "Réseau",
+    "tool": "Outil",
+    "management": "Management"
+  }
+}
+</i18n>
+
 <style scoped lang="css">
 .competence-title {
   min-width: 250px;

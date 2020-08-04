@@ -7,7 +7,7 @@
             "type": "framework",
             "experiences": [
                 "Orange",
-                "Personal"
+                "personal"
             ],
             "lvl": 70
         },
@@ -18,7 +18,7 @@
             "type": "framework",
             "experiences": [
                 "Orange",
-                "Personal"
+                "personal"
             ],
             "lvl": 50
         },
@@ -39,7 +39,7 @@
             "type": "framework",
             "experiences": [
                 "3IL",
-                "Personal"
+                "personal"
             ],
             "lvl": 80
         },
@@ -49,7 +49,7 @@
             "descriptionEn": "API designer",
             "type": "framework",
             "experiences": [
-                "Personal"
+                "personal"
             ],
             "lvl": 80
         },
@@ -59,7 +59,7 @@
             "descriptionEn": "Framework backend python",
             "type": "framework",
             "experiences": [
-                "Association Seme Tes Graines"
+                "Association \"Sème tes graines\""
             ],
             "lvl": 50
         },
@@ -70,7 +70,7 @@
             "type": "language",
             "experiences": [
                 "Orange",
-                "Personal"
+                "personal"
             ],
             "lvl": 80
         },
@@ -81,7 +81,7 @@
             "type": "language",
             "experiences": [
                 "Orange",
-                "Personal"
+                "personal"
             ],
             "lvl": 70
         },
@@ -92,7 +92,7 @@
             "type": "language",
             "experiences": [
                 "Orange",
-                "Personal"
+                "personal"
             ],
             "lvl": 60
         },
@@ -104,7 +104,7 @@
             "experiences": [
                 "3IL",
                 "Orange",
-                "Personal"
+                "personal"
             ],
             "lvl": 70
         },
@@ -116,7 +116,7 @@
             "experiences": [
                 "BTS Beaupeyrat",
                 "3IL",
-                "Personal"
+                "personal"
             ],
             "lvl": 70
         },
@@ -137,7 +137,7 @@
             "type": "language",
             "experiences": [
                 "3IL",
-                "Personal"
+                "personal"
             ],
             "lvl": 50
         },
@@ -147,53 +147,53 @@
             "descriptionEn": "Programming language Python",
             "type": "language",
             "experiences": [
-                "Association Seme Tes Graines",
-                "Personal"
+                "Association \"Sème tes graines\"",
+                "personal"
             ],
             "lvl": 70
         },
         {
             "label": "MySQL",
-            "descriptionFr": "Base de données relationnelle",
+            "descriptionFr": "Base de données relationnelles",
             "descriptionEn": "Relational database",
             "type": "db",
             "experiences": [
                 "BTS Beaupeyrat",
                 "3IL",
                 "Orange",
-                "Personal"
+                "personal"
             ],
             "lvl": 80
         },
         {
             "label": "PostgreSQL",
-            "descriptionFr": "Base de données relationnelle",
+            "descriptionFr": "Base de données relationnelles",
             "descriptionEn": "Relational database",
             "type": "db",
             "experiences": [
-                "Personal"
+                "personal"
             ],
             "lvl": 70
         },
         {
             "label": "SQLite",
-            "descriptionFr": "Base de données relationnelle",
+            "descriptionFr": "Base de données relationnelles",
             "descriptionEn": "Relational database",
             "type": "db",
             "experiences": [
                 "BTS Beaupeyrat",
-                "Personal"
+                "personal"
             ],
             "lvl": 70
         },
         {
             "label": "MongoDB",
-            "descriptionFr": "Base de données orientée document",
+            "descriptionFr": "Base de données orientée documents",
             "descriptionEn": "Document database",
             "type": "db",
             "experiences": [
                 "Orange",
-                "Personal"
+                "personal"
             ],
             "lvl": 70
         },
@@ -204,7 +204,7 @@
             "type": "db",
             "experiences": [
                 "Orange",
-                "Personal"
+                "personal"
             ],
             "lvl": 70
         },
@@ -214,7 +214,7 @@
             "descriptionEn": "Key-value database",
             "type": "db",
             "experiences": [
-                "Personal"
+                "personal"
             ],
             "lvl": 60
         },
@@ -230,12 +230,12 @@
         },
         {
             "label": "Apache Spark",
-            "descriptionFr": "Framework de calcul distribué",
+            "descriptionFr": "Framework de calculs distribués",
             "descriptionEn": "Distributed framework",
             "type": "bigData",
             "experiences": [
                 "Orange",
-                "Personal"
+                "personal"
             ],
             "lvl": 30
         },
@@ -268,7 +268,7 @@
                 "BTS Beaupeyrat",
                 "3IL",
                 "Orange",
-                "Personal"
+                "personal"
             ],
             "lvl": 80
         },
@@ -281,40 +281,40 @@
                 "BTS Beaupeyrat",
                 "3IL",
                 "Orange",
-                "Personal"
+                "personal"
             ],
             "lvl": 60
         },
         {
             "label": "Postfix",
-            "descriptionFr": "SMTP (mail) serveur",
+            "descriptionFr": "Serveur (mail) SMTP",
             "descriptionEn": "SMTP (mail) server",
             "type": "network",
             "experiences": [
-                "Personal"
+                "personal"
             ],
             "lvl": 50
         },
         {
             "label": "Apache 2",
-            "descriptionFr": "HTTP serveur",
+            "descriptionFr": "Serveur HTTP",
             "descriptionEn": "HTTP server",
             "type": "network",
             "experiences": [
                 "BTS Beaupeyrat",
                 "3IL",
-                "Personal"
+                "personal"
             ],
             "lvl": 60
         },
         {
             "label": "NGINX",
-            "descriptionFr": "HTTP serveur / Reverse proxy",
+            "descriptionFr": "Serveur HTTP / Reverse proxy",
             "descriptionEn": "HTTP server / Reverse proxy",
             "type": "network",
             "experiences": [
                 "Orange",
-                "Personal"
+                "personal"
             ],
             "lvl": 80
         },
@@ -324,7 +324,7 @@
             "descriptionEn": "DNS",
             "type": "network",
             "experiences": [
-                "Personal"
+                "personal"
             ],
             "lvl": 80
         },
@@ -334,7 +334,7 @@
             "descriptionEn": "Proxy",
             "type": "network",
             "experiences": [
-                "Personal"
+                "personal"
             ],
             "lvl": 50
         },
@@ -347,13 +347,13 @@
                 "BTS Beaupeyrat",
                 "3IL",
                 "Orange",
-                "Personal"
+                "personal"
             ],
-            "lvl": 80
+            "lvl": 85
         },
         {
             "label": "Kubernetes",
-            "descriptionFr": "Orchestrateur d'infrastructure conteneurisé",
+            "descriptionFr": "Orchestrateur d'infrastructures conteneurisées",
             "descriptionEn": "Container infrastructure orchestrator",
             "type": "tool",
             "experiences": [
@@ -370,7 +370,7 @@
                 "BTS Beaupeyrat",
                 "3IL",
                 "Orange",
-                "Personal"
+                "personal"
             ],
             "lvl": 80
         },
@@ -382,14 +382,14 @@
             "experiences": [
                 "3IL",
                 "Orange",
-                "Personal"
+                "personal"
             ],
-            "lvl": 80
+            "lvl": 75
         },
         {
             "label": "CloudFoundry",
-            "descriptionFr": "Plateforme PAAS",
-            "descriptionEn": "PAAS platform",
+            "descriptionFr": "Plateforme PaaS",
+            "descriptionEn": "PaaS platform",
             "type": "tool",
             "experiences": [
                 "Orange"
@@ -405,7 +405,7 @@
                 "BTS Beaupeyrat",
                 "3IL",
                 "Orange",
-                "Personal"
+                "personal"
             ],
             "lvl": 60
         },
@@ -421,9 +421,19 @@
         },
         {
             "label": "GitlabCI",
-            "descriptionFr": "Gestion de pipeline de déploiement continu",
+            "descriptionFr": "Gestion de pipelines de déploiement continu",
             "descriptionEn": "Continuous deployment pipeline management",
             "type": "tool",
+            "experiences": [
+                "Orange"
+            ],
+            "lvl": 70
+        },
+        {
+            "label": "Scrum",
+            "descriptionFr": "Méthode de management dite agile",
+            "descriptionEn": "Agile management method",
+            "type": "management",
             "experiences": [
                 "Orange"
             ],

@@ -1,6 +1,6 @@
 <template>
   <section class="container">
-    <h1 class="col-12 section-title">{{ $t("title") }}</h1>
+    <h1 class="col-12 section-title">{{ $t("competences") }}</h1>
 
     <article class="row">
       <div class="col-12 box bg-box">
@@ -52,11 +52,9 @@ export default {
 <i18n>
 {
   "en": {
-    "title": "Competences",
     "filters": "Filters"
   },
   "fr": {
-    "title": "Compétences",
     "filters": "Filtres"
   }
 }

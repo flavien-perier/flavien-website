@@ -1,18 +1,18 @@
 {
     "experiences": [
         {
-            "location": "Beaupeyrat",
-            "descriptionFr": "BTS SIO (Service Informatique aux Organisations)",
-            "descriptionEn": "BTS SIO (Service Informatique aux Organisations)",
+            "location": "Institut Beaupeyrat",
+            "descriptionFr": "BTS SIO (Service Informatique aux Organisations) option SLAM (Solutions Logicielles et Applications Métier).",
+            "descriptionEn": "BTS SIO (Service Informatique aux Organisations) option SLAM (Solutions Logicielles et Applications Métier).",
             "url": "https://www.beaupeyrat.com/",
             "city": "Limoges",
             "start": "2015",
             "end": "2017"
         },
         {
-            "location": "3IL",
-            "descriptionFr": "Ecole d'ingénieur",
-            "descriptionEn": "Engineering school",
+            "location": "3IL (Institut d'ingénierie informatique de Limoges)",
+            "descriptionFr": "Formation d'ingénieur informatique.",
+            "descriptionEn": "Trained as a computer engineer.",
             "url": "https://www.3il-ingenieurs.fr/",
             "city": "Limoges",
             "start": "2017",
@@ -20,21 +20,21 @@
         },
         {
             "location": "Orange",
-            "descriptionFr": "Développement",
-            "descriptionEn": "Development",
+            "descriptionFr": "Développement d'applications Backend.",
+            "descriptionEn": "Backend Application Development.",
             "url": "https://www.orange.fr/portail",
             "city": "Toulouse",
             "start": "2017",
             "end": "2020"
         },
         {
-            "location": "Henallux",
-            "descriptionFr": "Semestre en erasmus",
-            "descriptionEn": "Semester in erasmus",
+            "location": "Henallux (Haute École de Namur-Liège-Luxembourg)",
+            "descriptionFr": "Semestre en Erasmus. Apprentissage des bases de la DataScience.",
+            "descriptionEn": "Semester in Erasmus. Learning the basics of DataScience.",
             "url": "https://www.henallux.be/departement-technique-de-marche-en-famenne",
-            "city": "Marche-en-famenne (Belgium)",
+            "city": "Marche-en-Famenne (Belgium)",
             "start": "2019",
-            "end": "2019"
+            "end": "2020"
         }
     ]
 }

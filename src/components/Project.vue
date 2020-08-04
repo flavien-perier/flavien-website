@@ -7,15 +7,17 @@
       </h2>
 
       <div class="col-12">
-        <h3 class="text-left">{{ $t("technos") }} :</h3>
+        <h3 class="text-left">{{ $t("technos") }}</h3>
         <ul>
           <li v-for="t in project.technos" :key="t">{{t}}</li>
         </ul>
       </div>
 
       <div class="col-12">
-        <h3 class="text-left">{{ $t("description") }} :</h3>
-        {{ project.experience }} {{ $t("in") }} {{ project.date }} <br />
+        <div>
+          <h3 class="text-left d-inline-block">{{ $t("description") }} </h3>
+          ({{ $t(project.experience) }} {{ $t("in") }} {{ project.date }})
+        </div>
         {{ description }}
       </div>
     </div>

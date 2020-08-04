@@ -7,19 +7,19 @@
       </div>
 
       <div class="d-none d-lg-block col-6">
-        <h3 class="text-center">{{ $t("comments") }} :</h3>
+        <h3 class="text-center">{{ $t("comments") }}</h3>
         <p>{{ description }}</p>
       </div>
 
       <div class="d-none d-md-block col-md-12 col-lg-6">
-        <h3 class="text-left text-lg-center">{{ $t("enterprises") }} :</h3>
+        <h3 class="text-left text-lg-center">{{ $t("enterprises") }}</h3>
         <ul>
-          <li v-for="e in competence.experiences" :key="e">{{e}}</li>
+          <li v-for="e in competence.experiences" :key="e">{{ $t(e) }}</li>
         </ul>
       </div>
 
       <div class="col-12">
-        <h3 class="text-left text-lg-center">{{ $t("level") }} :</h3>
+        <h3 class="text-left text-lg-center">{{ $t("level") }}</h3>
         <div class="progress">
           <div
             :class="`progress-bar progress-bar-animation-${competence.lvl}`"
@@ -47,7 +47,6 @@ export default class Competence extends Vue {
   }
 }
 </script>
-
 
 <i18n>
 {

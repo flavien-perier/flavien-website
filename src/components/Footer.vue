@@ -3,11 +3,11 @@
     <div class="container">
       <div class="row">
         <div class="col-3 d-none d-lg-block my-auto">
-          <h2 class="text-center text-light">{{ $t("scanMe") }} :</h2>
+          <h2 class="text-center text-light">{{ $t("scanMe") }}</h2>
           <img id="qr-code" src="../assets/img/qr-code.png" alt="qr-code" />
         </div>
         <div class="list-group mx-auto col-12 col-lg-9">
-          <div class="list-group-item list-group-item-dark">{{ $t("contactMe") }}:</div>
+          <strong class="list-group-item list-group-item-dark">{{ $t("contactMe") }}</strong>
           <a
             class="list-group-item list-group-item-secondary list-group-item-action"
             href="mailto:perier@flavien.io"
@@ -19,6 +19,12 @@
             href="tel:+33695928250"
           >
             <i class="fas fa-phone"></i> +33 6 95 92 82 50
+          </a>
+          <a
+            class="list-group-item list-group-item-secondary list-group-item-action"
+            href="https://www.openstreetmap.org/#map=12/45.8340/1.2346"
+          >
+            <i class="fas fa-map"></i> Limoges (France)
           </a>
           <a
             class="list-group-item list-group-item-secondary list-group-item-action"

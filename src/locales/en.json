@@ -1,9 +1,7 @@
 {
-    "framework": "Framework",
-    "language": "Language",
-    "db": "Data Base",
-    "bigData": "Big Data",
-    "os": "Operating System",
-    "network": "Network",
-    "tool": "Tool"
+    "competences": "Competences",
+    "experiences": "Experiences",
+    "home": "Home",
+    "projects": "Projects",
+    "personal": "Personal"
 }

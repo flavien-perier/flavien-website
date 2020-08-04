@@ -1,6 +1,6 @@
 <template>
   <section class="container">
-    <h1 class="col-12 section-title">{{ $t("title") }}</h1>
+    <h1 class="col-12 section-title">{{ $t("projects") }}</h1>
 
     <article class="row">
       <Project
@@ -26,14 +26,3 @@ export default {
   }
 };
 </script>
-
-<i18n>
-{
-  "en": {
-    "title": "Projects"
-  },
-  "fr": {
-    "title": "Projets"
-  }
-}
-</i18n>

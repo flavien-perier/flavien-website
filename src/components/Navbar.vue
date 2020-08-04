@@ -27,22 +27,22 @@
       <ul class="navbar-nav">
         <li class="nav-item">
           <router-link class="nav-link" to="/">
-            <i class="fas fa-home"></i> {{ $t("homeTitle") }}
+            <i class="fas fa-home"></i> {{ $t("home") }}
           </router-link>
         </li>
         <li class="nav-item">
           <router-link class="nav-link" to="/competences">
-            <i class="fas fa-list"></i> {{ $t("competencesTitle") }}
+            <i class="fas fa-list"></i> {{ $t("competences") }}
           </router-link>
         </li>
         <li class="nav-item">
           <router-link class="nav-link" to="/experiences">
-            <i class="fas fa-graduation-cap"></i> {{ $t("experiencesTitle") }}
+            <i class="fas fa-graduation-cap"></i> {{ $t("experiences") }}
           </router-link>
         </li>
         <li class="nav-item">
           <router-link class="nav-link" to="/projects">
-            <i class="fas fa-project-diagram"></i> {{ $t("projectsTitle") }}
+            <i class="fas fa-project-diagram"></i> {{ $t("projects") }}
           </router-link>
         </li>
       </ul>
@@ -93,20 +93,3 @@ export default class Navbar extends Vue {
   }
 }
 </script>
-
-<i18n>
-{
-  "en": {
-    "homeTitle": "Home",
-    "competencesTitle": "Competences",
-    "experiencesTitle": "Experiences",
-    "projectsTitle": "Projects"
-  },
-  "fr": {
-    "homeTitle": "Accueil",
-    "competencesTitle": "Compétences",
-    "experiencesTitle": "Expériences",
-    "projectsTitle": "Projets"
-  }
-}
-</i18n>
