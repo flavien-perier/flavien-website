@@ -1,24 +1,24 @@
 <template>
-  <div class="col-12 col-md-6">
-    <div :class="`row mx-auto box box-animation box-min-height bg-competence-${competence.type}`">
+  <a :href="competence.url" class="col-12 col-md-6" style="color: inherit; text-decoration: inherit">
+    <div :class="`row mx-auto box box-animation bg-competence-${competence.type}`">
       <div class="text-center col-12">
         <h2>{{ competence.label }}</h2>
         <hr />
       </div>
 
-      <div class="d-none d-lg-block col-6">
-        <h3 class="text-center">{{ $t("comments") }}</h3>
-        <p>{{ description }}</p>
+      <div class="col-md-12 col-lg-6">
+        <h3 class="text-center">{{ $t("description") }}</h3>
+        <p class="description">{{ description }}</p>
       </div>
 
-      <div class="d-none d-md-block col-md-12 col-lg-6">
+      <div class="d-none d-lg-block col-6">
         <h3 class="text-left text-lg-center">{{ $t("enterprises") }}</h3>
-        <ul>
+        <ul class="description">
           <li v-for="e in competence.experiences" :key="e">{{ $t(e) }}</li>
         </ul>
       </div>
 
-      <div class="col-12">
+      <div class="col-12 mb-2">
         <h3 class="text-left text-lg-center">{{ $t("level") }}</h3>
         <div class="progress">
           <div
@@ -31,7 +31,7 @@
         </div>
       </div>
     </div>
-  </div>
+  </a>
 </template>
 
 <script lang="ts">
@@ -51,14 +51,21 @@ export default class Competence extends Vue {
 <i18n>
 {
   "en": {
-    "comments": "Comments",
+    "description": "Description",
     "enterprises": "Enterprises",
     "level": "Level"
   },
   "fr": {
-    "comments": "Commentaires",
+    "description": "Description",
     "enterprises": "Entreprises",
     "level": "Niveau"
   }
 }
 </i18n>
+
+<style scoped>
+.description {
+  height: 6em;
+  overflow: hidden;
+}
+</style>

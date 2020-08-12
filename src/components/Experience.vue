@@ -1,10 +1,8 @@
 <template>
-  <div class="col-12 col-lg-6">
+  <a :href="experience.url" class="col-12 col-lg-6" style="color: inherit; text-decoration: inherit">
     <div class="row mx-auto box box-animation box-min-height bg-box">
       <div class="text-center col-12">
-        <a :href="experience.url" class="text-dark">
-          <h2>{{ experience.location }}</h2>
-        </a>
+        <h2>{{ experience.location }}</h2>
         <hr />
       </div>
 
@@ -25,7 +23,7 @@
         </p>
       </div>
     </div>
-  </div>
+  </a>
 </template>
 
 <script lang="ts">

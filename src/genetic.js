@@ -76,7 +76,7 @@ class CheckPoint extends Case {
 }
 
 class Color {
-    constructor(red = 0, green = 0, blue = 0) {
+    constructor(red, green, blue) {
         this.red = red;
         this.green = green;
         this.blue = blue;

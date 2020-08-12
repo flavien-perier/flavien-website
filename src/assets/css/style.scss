@@ -29,7 +29,6 @@ $fa-font-path: "../../../node_modules/@fortawesome/fontawesome-free/webfonts";
 @import "bootstrap";
 @import "../../../node_modules/@fortawesome/fontawesome-free/scss/fontawesome.scss";
 @import "../../../node_modules/@fortawesome/fontawesome-free/scss/brands.scss";
-@import "../../../node_modules/@fortawesome/fontawesome-free/scss/regular.scss";
 @import "../../../node_modules/@fortawesome/fontawesome-free/scss/solid.scss";
 @import "./animations.scss";
 
@@ -83,10 +82,6 @@ h1, h2, h3, h4, h5 {
   border-radius: 1px;
   margin-bottom: 25px;
   padding: 4px;
-}
-
-.box-min-height {
-  min-height: 300px;
 }
 
 #bg-canvas {
