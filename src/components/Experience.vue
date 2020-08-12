@@ -56,3 +56,10 @@ export default class Experience extends Vue {
   }
 }
 </i18n>
+
+<style scoped>
+.box {
+  height: 20em;
+  overflow: hidden;
+}
+</style>

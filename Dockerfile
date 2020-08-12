@@ -7,7 +7,7 @@ LABEL description="Flavien website"
 WORKDIR /opt/flavien
 COPY . .
 
-RUN apk add --no-cache build-base g++ python libpng-dev jpeg-dev giflib-dev pango-dev cairo-dev
+RUN apk add --no-cache build-base g++ python libpng-dev jpeg-dev giflib-dev pango-dev cairo-dev git
 
 RUN apk --no-cache add ca-certificates wget  && \
     wget -q -O /etc/apk/keys/sgerrand.rsa.pub https://alpine-pkgs.sgerrand.com/sgerrand.rsa.pub && \
