@@ -17,7 +17,6 @@ RUN apk --no-cache add ca-certificates wget  && \
 RUN rm -Rf node_modules
 RUN npm install && \
     npm run build && \
-    npm run clean-css && \
     chmod -R 750 /opt/flavien
 RUN rm -Rf node_modules
 RUN npm install --production
