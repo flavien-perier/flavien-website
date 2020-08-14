@@ -6,8 +6,7 @@
         "Server": "eco-webserver",
         "Cache-Control": "max-age=86400",
         "X-XSS-Protection": "1;mode=block",
-        "X-Frame-Options": "DENY",
-        "Content-Security-Policy": "default-src 'self'"
+        "X-Frame-Options": "DENY"
     },
     "contentType": {}
 }

@@ -1,16 +1,22 @@
 "use strict";
 
+const CASE_WIDTH = 15;
+const CASE_HEIGHT = 15;
+
+const WORKERS_BY_CHECK_POINT = 5;
+
 class Grid {
     constructor(height, width, context) {
-        this.height = height / Case.height;
-        this.width = width / Case.width;
+        this.height = height / CASE_HEIGHT;
+        this.width = width / CASE_WIDTH;
         this.context = context;
-        this.grid = undefined;
-
         this.grid = new Array(this.width);
-        for (let i=0; i<this.width; i++) {
+
+        this.workerMaximumDistance = Math.sqrt(this.grid.height * this.grid.height * this.grid.width * this.grid.width);
+
+        for (let i=0; i < this.width; i++) {
             this.grid[i] = new Array(this.height);
-            for (let j=0; j<this.height; j++) {
+            for (let j=0; j < this.height; j++) {
                 this.grid[i][j] = new Case(i, j, this.context);
             }
         }
@@ -24,9 +30,6 @@ class Grid {
 }
 
 class Case {
-    static get width() { return 15 };
-    static get height() { return 15 }
-
     constructor(posX, posY, context) {
         this.posX = posX;
         this.posY = posY;
@@ -36,13 +39,11 @@ class Case {
 
     draw() {
         this.context.fillStyle = this.color.getCss();
-        this.context.fillRect(this.posX * Case.width, this.posY * Case.height, Case.width, Case.height);
+        this.context.fillRect(this.posX * CASE_WIDTH, this.posY * CASE_HEIGHT, CASE_WIDTH, CASE_HEIGHT);
     }
 }
 
 class CheckPoint extends Case {
-    static get findersByCheckPoint() { return 5 };
-
     constructor(grid, context) {
         const posX = Math.round(Math.random() * (grid.width - 1));
         const posY = Math.round(Math.random() * (grid.height - 1));
@@ -66,9 +67,9 @@ class CheckPoint extends Case {
                 break;
         }
 
-        this.finders = [];
-        for (let i=0; i<CheckPoint.findersByCheckPoint; i++) {
-            this.finders.push(new Finder(this));
+        this.WORKERS = [];
+        for (let i=0; i < WORKERS_BY_CHECK_POINT; i++) {
+            this.WORKERS.push(new Worker(this));
         }
 
         grid.grid[posX][posY] = this;
@@ -112,13 +113,11 @@ class Color {
     }
 }
 
-class Finder {
+class Worker {
     constructor(checkPoint) {
         this.checkPoint = checkPoint;
-        this.posX = this.checkPoint.posX;
-        this.posY = this.checkPoint.posY;
-        this.history = [];
-        this.history.push([this.posX, this.posY]);
+        this.grid = checkPoint.grid;
+        this.reset();
     }
 
     reset() {
@@ -129,43 +128,41 @@ class Finder {
     }
 
     save() {
-        const {grid} = this.checkPoint;
         this.history.forEach(([x, y]) => {
-            grid.grid[x][y].color.add(this.checkPoint.checkPointType);
-            grid.grid[x][y].draw();
+            this.grid.grid[x][y].color.add(this.checkPoint.checkPointType);
+            this.grid.grid[x][y].draw();
         });
 
         this.reset();
     }
 
+    getDirCase(dir) {
+        switch (dir) {
+            case "t":
+                return this.grid.grid[this.posX][this.posY-1];
+            case "r":
+                return this.grid.grid[this.posX+1][this.posY];
+            case "b":
+                return this.grid.grid[this.posX][this.posY+1];
+            case "l":
+                return this.grid.grid[this.posX-1][this.posY];
+        }
+    }
+
     work() {
-        const {grid} = this.checkPoint;
-        let directions = ["t", "r", "b", "l"]; // top, right, bottom, left
+        const directions = ["t", "r", "b", "l"]; // top, right, bottom, left
 
         const dropDir = (dir) => {
             directions.splice(directions.indexOf(dir), 1);
         }
 
-        const getDirCase = (dir) => {
-            switch (dir) {
-                case "t":
-                    return grid.grid[this.posX][this.posY-1];
-                case "r":
-                    return grid.grid[this.posX+1][this.posY];
-                case "b":
-                    return grid.grid[this.posX][this.posY+1];
-                case "l":
-                    return grid.grid[this.posX-1][this.posY];
-            }
-        }
-
         if (this.posX <= 0) dropDir("l");
         if (this.posY <= 0) dropDir("t");
-        if (this.posX >= (grid.width - 1)) dropDir("r");
-        if (this.posY >= (grid.height - 1)) dropDir("b");
+        if (this.posX >= (this.grid.width - 1)) dropDir("r");
+        if (this.posY >= (this.grid.height - 1)) dropDir("b");
 
         directions.forEach(dir => {
-            const dirCase = getDirCase(dir)
+            const dirCase = this.getDirCase(dir)
             this.history.forEach(([x, y]) => {
                 if (dirCase.posX == x && dirCase.posY == y) {
                     dropDir(dir);
@@ -173,17 +170,17 @@ class Finder {
             });
         });
 
-        let statisticRepartition = 0;
-        directions.forEach(dir => statisticRepartition += getDirCase(dir)
-                .color.get(this.checkPoint.checkPointType));
+        const statisticRepartition = directions.reduce((accumulator, dir) => 
+            accumulator += this.getDirCase(dir).color.get(this.checkPoint.checkPointType), 0
+        );
         
-        const randomChoice = Math.round(Math.random() * statisticRepartition);
-        let actualStaticJauge = 0;
+        const randomChoice = Math.random() * statisticRepartition;
+        let actualStatisticJauge = 0;
         let directionChoice = null;
 
         for (const dir of directions) {
-            actualStaticJauge += getDirCase(dir).color.get(this.checkPoint.checkPointType);
-            if (randomChoice < actualStaticJauge) {
+            actualStatisticJauge += this.getDirCase(dir).color.get(this.checkPoint.checkPointType);
+            if (randomChoice < actualStatisticJauge) {
                 directionChoice = dir;
                 break;
             }
@@ -207,14 +204,14 @@ class Finder {
                 return null;
         }
 
-        if (grid.grid[this.posX][this.posY].checkPointType 
-            && grid.grid[this.posX][this.posY].checkPointType === this.checkPoint.checkPointType) {
+        if (this.grid.grid[this.posX][this.posY].checkPointType 
+            && this.grid.grid[this.posX][this.posY].checkPointType == this.checkPoint.checkPointType) {
             
             this.save();
             return null;
         }
 
-        if (this.history.length > Math.sqrt(grid.height*grid.height*grid.width*grid.width)) {
+        if (this.history.length > this.grid.workerMaximumDistance) {
             this.reset();
             return null;
         }
@@ -231,18 +228,18 @@ function geneticLoader() {
 
     if (canvas && canvas.getContext) {
         const ctx = canvas.getContext("2d");
-        canvas.height = Math.round(window.innerHeight / Case.width)*Case.width;
-        canvas.width = Math.round(window.innerWidth / Case.height)*Case.height;
+        canvas.height = Math.round(window.innerHeight / CASE_WIDTH) * CASE_WIDTH;
+        canvas.width = Math.round(window.innerWidth / CASE_HEIGHT) * CASE_HEIGHT;
         const grid = new Grid(canvas.height, canvas.width, ctx);
     
-        let checkPoints = [];
-        for (let i=0; i<((grid.width/2)*(grid.height/2)); i++) {
+        const checkPoints = [];
+        for (let i=0; i < ((grid.width / 2) * (grid.height / 2)); i++) {
             checkPoints.push(new CheckPoint(grid, ctx));
         }
     
         grid.draw();
         screenLoop = setInterval(() => {
-            checkPoints.forEach(cp => cp.finders.forEach(f => f.work()));
+            checkPoints.forEach(cp => cp.WORKERS.forEach(f => f.work()));
         }, 100);
 
         setTimeout(() => {

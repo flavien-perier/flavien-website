@@ -5,16 +5,20 @@
   "author": "Flavien PERIER <perier@flavien.io>",
   "license": "MIT",
   "scripts": {
-    "start": "eco-webserver",
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
-    "clean-css": "node uncss"
+    "start": "eco-webserver"
   },
   "dependencies": {
     "eco-webserver": "https://github.com/flavien-perier/eco-webserver"
   },
   "devDependencies": {
-    "@fortawesome/fontawesome-free": "5.14.0",
+    "@fortawesome/fontawesome-svg-core": "1.2.30",
+    "@fortawesome/free-brands-svg-icons": "5.14.0",
+    "@fortawesome/free-solid-svg-icons": "5.14.0",
+    "@fortawesome/vue-fontawesome": "0.1.10",
+    "@fullhuman/postcss-purgecss": "2.1.0",
+    "@fullhuman/vue-cli-plugin-purgecss": "2.2.0",
     "@intlify/vue-i18n-loader": "1.0.0",
     "@types/node": "14.0.27",
     "@vue/cli-plugin-router": "4.5.3",
@@ -28,7 +32,6 @@
     "sass-loader": "9.0.3",
     "terser-webpack-plugin": "4.1.0",
     "typescript": "3.9.7",
-    "uncss": "0.17.3",
     "vue": "2.6.11",
     "vue-class-component": "7.2.5",
     "vue-cli-plugin-i18n": "1.0.1",

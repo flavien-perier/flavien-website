@@ -27,22 +27,22 @@
       <ul class="navbar-nav">
         <li class="nav-item">
           <router-link class="nav-link" to="/">
-            <i class="fas fa-home"></i> {{ $t("home") }}
+            <font-awesome-icon icon="home" /> {{ $t("home") }}
           </router-link>
         </li>
         <li class="nav-item">
           <router-link class="nav-link" to="/competences">
-            <i class="fas fa-list"></i> {{ $t("competences") }}
+            <font-awesome-icon icon="list" /> {{ $t("competences") }}
           </router-link>
         </li>
         <li class="nav-item">
           <router-link class="nav-link" to="/experiences">
-            <i class="fas fa-graduation-cap"></i> {{ $t("experiences") }}
+            <font-awesome-icon icon="graduation-cap" /> {{ $t("experiences") }}
           </router-link>
         </li>
         <li class="nav-item">
           <router-link class="nav-link" to="/projects">
-            <i class="fas fa-project-diagram"></i> {{ $t("projects") }}
+            <font-awesome-icon icon="project-diagram" /> {{ $t("projects") }}
           </router-link>
         </li>
       </ul>
@@ -51,7 +51,7 @@
     <ul class="nav navbar-nav d-none d-lg-block cursor-link mr-5"  @click="changeLanguage()">
       <li class="nav-item">
         <a class="nav-link">
-          <i class="fas fa-flag"></i> {{ $i18n.locale }}
+          <font-awesome-icon icon="flag" /> {{ $i18n.locale }}
         </a>
 
       </li>
@@ -60,22 +60,22 @@
     <ul class="nav navbar-nav d-none d-lg-flex">
       <li class="nav-item">
         <a class="nav-link" href="https://www.facebook.com/flavien.io">
-          <i class="fab fa-facebook-square"></i>
+          <font-awesome-icon :icon="['fab', 'facebook-square']" />
         </a>
       </li>
       <li class="nav-item">
         <a class="nav-link" href="https://twitter.com/flavien_perier">
-          <i class="fab fa-twitter-square"></i>
+          <font-awesome-icon :icon="['fab', 'twitter-square']" />
         </a>
       </li>
       <li class="nav-item">
         <a class="nav-link" href="https://www.linkedin.com/in/flavien-perier">
-          <i class="fab fa-linkedin"></i>
+          <font-awesome-icon :icon="['fab', 'linkedin']" />
         </a>
       </li>
       <li class="nav-item">
         <a class="nav-link" href="https://github.com/flavien-perier">
-          <i class="fab fa-github-square"></i>
+          <font-awesome-icon :icon="['fab', 'github-square']" />
         </a>
       </li>
     </ul>

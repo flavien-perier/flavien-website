@@ -12,43 +12,43 @@
             class="list-group-item list-group-item-secondary list-group-item-action"
             href="mailto:perier@flavien.io"
           >
-            <i class="fas fa-envelope"></i> perier@flavien.io
+            <font-awesome-icon icon="envelope" /> perier@flavien.io
           </a>
           <a
             class="list-group-item list-group-item-secondary list-group-item-action"
             href="tel:+33695928250"
           >
-            <i class="fas fa-phone"></i> +33 6 95 92 82 50
+            <font-awesome-icon icon="phone" /> +33 6 95 92 82 50
           </a>
           <a
             class="list-group-item list-group-item-secondary list-group-item-action"
             href="https://www.openstreetmap.org/#map=12/45.8340/1.2346"
           >
-            <i class="fas fa-map"></i> Limoges (France)
+            <font-awesome-icon icon="map" /> Limoges (France)
           </a>
           <a
             class="list-group-item list-group-item-secondary list-group-item-action"
             href="https://www.facebook.com/flavien.io"
           >
-            <i class="fab fa-facebook-square"></i> Facebook
+            <font-awesome-icon :icon="['fab', 'facebook-square']" /> Facebook
           </a>
           <a
             class="list-group-item list-group-item-secondary list-group-item-action"
             href="https://twitter.com/flavien_perier"
           >
-            <i class="fab fa-twitter-square"></i> Twitter
+            <font-awesome-icon :icon="['fab', 'twitter-square']" /> Twitter
           </a>
           <a
             class="list-group-item list-group-item-secondary list-group-item-action"
             href="https://www.linkedin.com/in/flavien-perier"
           >
-            <i class="fab fa-linkedin"></i> LinkedIn
+            <font-awesome-icon :icon="['fab', 'linkedin']" /> LinkedIn
           </a>
           <a
             class="list-group-item list-group-item-secondary list-group-item-action"
             href="https://github.com/flavien-perier"
           >
-            <i class="fab fa-github-square"></i> GitHub
+            <font-awesome-icon :icon="['fab', 'github-square']" /> GitHub
           </a>
         </div>
       </div>

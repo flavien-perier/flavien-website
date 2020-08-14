@@ -21,15 +21,9 @@ $enable-gradients: false;
 $enable-grid-classes: true;
 $enable-print-styles: false;
 
-// Font Awesome configuration
-$fa-font-path: "../../../node_modules/@fortawesome/fontawesome-free/webfonts";
-
 // Imports
 @import "../../../node_modules/normalize.css/normalize.css";
 @import "bootstrap";
-@import "../../../node_modules/@fortawesome/fontawesome-free/scss/fontawesome.scss";
-@import "../../../node_modules/@fortawesome/fontawesome-free/scss/brands.scss";
-@import "../../../node_modules/@fortawesome/fontawesome-free/scss/solid.scss";
 @import "./animations.scss";
 
 // Custom
