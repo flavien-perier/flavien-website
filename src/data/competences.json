@@ -2,6 +2,7 @@
     "competences": [
         {
             "label": "Angular",
+            "faIcon": "fab angular",
             "descriptionFr": "Framework frontend TypeScript",
             "descriptionEn": "Framework frontend TypeScript",
             "url": "https://angular.io/",
@@ -14,6 +15,7 @@
         },
         {
             "label": "VueJS",
+            "faIcon": "fab vuejs",
             "descriptionFr": "Framework frontend JavaScript",
             "descriptionEn": "Framework frontend JavaScript",
             "url": "https://vuejs.org/",
@@ -26,6 +28,7 @@
         },
         {
             "label": "Java spring",
+            "faIcon": "fab spring",
             "descriptionFr": "Framework backend java",
             "descriptionEn": "Framework backend java",
             "url": "https://spring.io/",
@@ -37,6 +40,7 @@
         },
         {
             "label": "JQuery",
+            "faIcon": "fab js",
             "descriptionFr": "Framework frontend JavaScript",
             "descriptionEn": "Framework frontend JavaScript",
             "url": "https://jquery.com/",
@@ -49,6 +53,7 @@
         },
         {
             "label": "Swagger",
+            "faIcon": "fab swagger",
             "descriptionFr": "API designer",
             "descriptionEn": "API designer",
             "url": "https://swagger.io/",
@@ -60,6 +65,7 @@
         },
         {
             "label": "Django",
+            "faIcon": "fab python",
             "descriptionFr": "Framework backend python",
             "descriptionEn": "Framework backend python",
             "url": "https://www.djangoproject.com/",
@@ -71,6 +77,7 @@
         },
         {
             "label": "JavaScript",
+            "faIcon": "fab js",
             "descriptionFr": "Langage de programmation JavaScript",
             "descriptionEn": "Programming language JavaScript",
             "url": "https://developer.mozilla.org/fr/docs/Web/JavaScript",
@@ -83,6 +90,7 @@
         },
         {
             "label": "TypeScript",
+            "faIcon": "fab ts",
             "descriptionFr": "Langage de programmation TypeScript",
             "descriptionEn": "Programming language TypeScript",
             "url": "https://www.typescriptlang.org/",
@@ -95,6 +103,7 @@
         },
         {
             "label": "Kotlin",
+            "faIcon": "fab kotlin",
             "descriptionFr": "Langage de programmation Kotlin",
             "descriptionEn": "Programming language Kotlin",
             "url": "https://kotlinlang.org/",
@@ -107,6 +116,7 @@
         },
         {
             "label": "Java",
+            "faIcon": "fab java",
             "descriptionFr": "Langage de programmation Java",
             "descriptionEn": "Programming language Java",
             "url": "https://www.java.com/fr/",
@@ -120,6 +130,7 @@
         },
         {
             "label": "PHP",
+            "faIcon": "fab php",
             "descriptionFr": "Langage de programmation PHP",
             "descriptionEn": "Programming language PHP",
             "url": "https://www.php.net/",
@@ -133,6 +144,7 @@
         },
         {
             "label": "ANTLR",
+            "faIcon": "fab antlr",
             "descriptionFr": "Framework de construction de compilateurs",
             "descriptionEn": "Framework for compiler construction",
             "url": "https://www.antlr.org/",
@@ -144,6 +156,7 @@
         },
         {
             "label": "C++",
+            "faIcon": "fas microchip",
             "descriptionFr": "Langage de programmation C++",
             "descriptionEn": "Programming language C++",
             "url": "https://isocpp.org/",
@@ -156,6 +169,7 @@
         },
         {
             "label": "Python",
+            "faIcon": "fab python",
             "descriptionFr": "Langage de programmation Python",
             "descriptionEn": "Programming language Python",
             "url": "https://www.python.org/",
@@ -168,6 +182,7 @@
         },
         {
             "label": "MySQL",
+            "faIcon": "fas database",
             "descriptionFr": "Base de données relationnelles",
             "descriptionEn": "Relational database",
             "url": "https://www.mysql.com/",
@@ -182,6 +197,7 @@
         },
         {
             "label": "PostgreSQL",
+            "faIcon": "fas database",
             "descriptionFr": "Base de données relationnelles",
             "descriptionEn": "Relational database",
             "url": "https://www.postgresql.org/",
@@ -193,6 +209,7 @@
         },
         {
             "label": "SQLite",
+            "faIcon": "fas database",
             "descriptionFr": "Base de données relationnelles",
             "descriptionEn": "Relational database",
             "url": "https://sqlite.org/",
@@ -205,6 +222,7 @@
         },
         {
             "label": "MongoDB",
+            "faIcon": "fas database",
             "descriptionFr": "Base de données orientée documents",
             "descriptionEn": "Document database",
             "url": "https://www.mongodb.com/",
@@ -217,6 +235,7 @@
         },
         {
             "label": "Neo4J",
+            "faIcon": "fab neo4j",
             "descriptionFr": "Base de données orientée graphe",
             "descriptionEn": "Graph database",
             "url": "https://neo4j.com/",
@@ -229,6 +248,7 @@
         },
         {
             "label": "Redis",
+            "faIcon": "fas database",
             "descriptionFr": "Base de données clé-valeur",
             "descriptionEn": "Key-value database",
             "url": "https://redis.io/",
@@ -240,6 +260,7 @@
         },
         {
             "label": "Apache Kafka",
+            "faIcon": "fab kafka",
             "descriptionFr": "File de messages asynchrones",
             "descriptionEn": "Asynchronous message queue",
             "url": "https://kafka.apache.org/",
@@ -251,6 +272,7 @@
         },
         {
             "label": "Apache Spark",
+            "faIcon": "fas server",
             "descriptionFr": "Framework de calculs distribués",
             "descriptionEn": "Distributed framework",
             "url": "https://spark.apache.org/",
@@ -263,6 +285,7 @@
         },
         {
             "label": "Apache Ni-Fi",
+            "faIcon": "fas server",
             "descriptionFr": "Framework de gestion de flux",
             "descriptionEn": "Flow management framework",
             "url": "https://nifi.apache.org/",
@@ -274,6 +297,7 @@
         },
         {
             "label": "Apache Hadoop HDFS",
+            "faIcon": "fas server",
             "descriptionFr": "Système de fichiers distribué",
             "descriptionEn": "Hight level distributed file system",
             "url": "https://hadoop.apache.org/",
@@ -285,6 +309,7 @@
         },
         {
             "label": "Linux",
+            "faIcon": "fab linux",
             "descriptionFr": "Système d'exploitation Linux",
             "descriptionEn": "Operating system Linux",
             "url": "https://linux.org/",
@@ -299,6 +324,7 @@
         },
         {
             "label": "Windows",
+            "faIcon": "fab windows",
             "descriptionFr": "Système d'exploitation Windows",
             "descriptionEn": "Operating system Windows",
             "url": "https://www.microsoft.com/fr-fr/windows",
@@ -313,6 +339,7 @@
         },
         {
             "label": "Postfix",
+            "faIcon": "fas envelope",
             "descriptionFr": "Serveur (mail) SMTP",
             "descriptionEn": "SMTP (mail) server",
             "url": "http://www.postfix.org/",
@@ -324,6 +351,7 @@
         },
         {
             "label": "Apache 2",
+            "faIcon": "fas server",
             "descriptionFr": "Serveur HTTP",
             "descriptionEn": "HTTP server",
             "url": "https://httpd.apache.org/",
@@ -337,6 +365,7 @@
         },
         {
             "label": "NGINX",
+            "faIcon": "fab nginx",
             "descriptionFr": "Serveur HTTP / Reverse proxy",
             "descriptionEn": "HTTP server / Reverse proxy",
             "url": "https://nginx.org/",
@@ -349,6 +378,7 @@
         },
         {
             "label": "Bind 9",
+            "faIcon": "fas server",
             "descriptionFr": "DNS",
             "descriptionEn": "DNS",
             "url": "https://www.isc.org/bind/",
@@ -360,6 +390,7 @@
         },
         {
             "label": "Squid",
+            "faIcon": "fas server",
             "descriptionFr": "Proxy",
             "descriptionEn": "Proxy",
             "url": "http://www.squid-cache.org/",
@@ -371,6 +402,7 @@
         },
         {
             "label": "Docker",
+            "faIcon": "fab docker",
             "descriptionFr": "Gestionnaire de conteneurs",
             "descriptionEn": "Container manager",
             "url": "https://www.docker.com/",
@@ -385,6 +417,7 @@
         },
         {
             "label": "Kubernetes",
+            "faIcon": "fab kubernetes",
             "descriptionFr": "Orchestrateur d'infrastructures conteneurisées",
             "descriptionEn": "Container infrastructure orchestrator",
             "url": "https://kubernetes.io/",
@@ -396,6 +429,7 @@
         },
         {
             "label": "Visual Studio Code",
+            "faIcon": "fab vscode",
             "descriptionFr": "IDE JavaScript",
             "descriptionEn": "IDE JavaScript",
             "url": "https://code.visualstudio.com/",
@@ -410,6 +444,7 @@
         },
         {
             "label": "Intellij",
+            "faIcon": "fab intellij",
             "descriptionFr": "IDE Java / Kotlin",
             "descriptionEn": "IDE Java / Kotlin",
             "url": "https://www.jetbrains.com/idea/",
@@ -423,6 +458,7 @@
         },
         {
             "label": "CloudFoundry",
+            "faIcon": "fas server",
             "descriptionFr": "Plateforme PaaS",
             "descriptionEn": "PaaS platform",
             "url": "https://www.cloudfoundry.org/",
@@ -434,6 +470,7 @@
         },
         {
             "label": "GIT",
+            "faIcon": "fab git-alt",
             "descriptionFr": "Logiciel de gestion de versions",
             "descriptionEn": "Ddistributed version control system",
             "url": "https://git-scm.com/",
@@ -448,6 +485,7 @@
         },
         {
             "label": "GitHub",
+            "faIcon": "fab github",
             "descriptionFr": "Implémentation de GIT",
             "descriptionEn": "GIT implementation",
             "url": "https://github.com/",
@@ -460,6 +498,7 @@
         },
         {
             "label": "Gitlab",
+            "faIcon": "fab gitlab",
             "descriptionFr": "Implémentation de GIT",
             "descriptionEn": "GIT implementation",
             "url": "https://about.gitlab.com/",
@@ -471,6 +510,7 @@
         },
         {
             "label": "GitlabCI",
+            "faIcon": "fab gitlab",
             "descriptionFr": "Gestion de pipelines de déploiement continu",
             "descriptionEn": "Continuous deployment pipeline management",
             "url": "https://docs.gitlab.com/ee/ci/",
@@ -482,6 +522,7 @@
         },
         {
             "label": "Scrum",
+            "faIcon": "fas circle-notch",
             "descriptionFr": "Méthode de management dite agile",
             "descriptionEn": "Agile management method",
             "url": "https://www.scrum.org/",

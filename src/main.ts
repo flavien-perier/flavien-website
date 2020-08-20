@@ -5,8 +5,9 @@ import BSN from "bootstrap.native/dist/bootstrap-native.js";
 import "./genetic.js";
 
 import { library } from "@fortawesome/fontawesome-svg-core";
-import { faFlag, faHome, faList, faGraduationCap, faProjectDiagram, faEnvelope, faPhone, faMap } from "@fortawesome/free-solid-svg-icons";
-import { faFacebookSquare, faTwitterSquare, faLinkedin, faGithubSquare } from "@fortawesome/free-brands-svg-icons";
+import { fas } from "@fortawesome/free-solid-svg-icons";
+import { fab } from "@fortawesome/free-brands-svg-icons";
+import { faSpring, faTs, faKotlin, faNginx, faVscode, faAntlr, faKubernetes, faSwagger, faKafka, faIntellij, faNeo4j } from "@/icons";
 import { FontAwesomeIcon } from "@fortawesome/vue-fontawesome";
 
 import store from "./store";
@@ -25,7 +26,8 @@ console.log(`
 |/      (_______|/     \\|  \\_/  \\_______(_______|/    )_)
 `);
 
-library.add(faFlag, faHome, faList, faGraduationCap, faProjectDiagram, faFacebookSquare, faTwitterSquare, faLinkedin, faGithubSquare, faEnvelope, faPhone, faMap);
+//@ts-ignore
+library.add(fas, fab, faSpring, faTs, faKotlin, faNginx, faVscode, faAntlr, faKubernetes, faSwagger, faKafka, faIntellij, faNeo4j);
 Vue.component("font-awesome-icon", FontAwesomeIcon);
 
 Vue.config.productionTip = false;

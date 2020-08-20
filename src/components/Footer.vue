@@ -22,9 +22,15 @@
           </a>
           <a
             class="list-group-item list-group-item-secondary list-group-item-action"
-            href="https://www.openstreetmap.org/#map=12/45.8340/1.2346"
+            href="https://www.openstreetmap.org/relation/114172#map=12/45.8562/1.2500"
           >
-            <font-awesome-icon icon="map" /> Limoges (France)
+            <font-awesome-icon icon="map-marker-alt" /> Limoges (France)
+          </a>
+          <a
+            class="list-group-item list-group-item-secondary list-group-item-action"
+            href="https://www.linkedin.com/in/flavien-perier"
+          >
+            <font-awesome-icon :icon="['fab', 'linkedin']" /> LinkedIn
           </a>
           <a
             class="list-group-item list-group-item-secondary list-group-item-action"
@@ -37,12 +43,6 @@
             href="https://twitter.com/flavien_perier"
           >
             <font-awesome-icon :icon="['fab', 'twitter-square']" /> Twitter
-          </a>
-          <a
-            class="list-group-item list-group-item-secondary list-group-item-action"
-            href="https://www.linkedin.com/in/flavien-perier"
-          >
-            <font-awesome-icon :icon="['fab', 'linkedin']" /> LinkedIn
           </a>
           <a
             class="list-group-item list-group-item-secondary list-group-item-action"

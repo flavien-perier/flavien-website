@@ -31,7 +31,7 @@ export default class CompetenceType extends Vue {
 {
   "en": {
     "framework": "Framework",
-    "language": "Language",
+    "language": "Langage",
     "db": "Data Base",
     "bigData": "Big Data",
     "os": "Operating System",

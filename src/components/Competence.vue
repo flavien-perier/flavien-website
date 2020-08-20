@@ -2,7 +2,7 @@
   <a :href="competence.url" class="col-12 col-md-6" style="color: inherit; text-decoration: inherit">
     <div :class="`row mx-auto box box-animation bg-competence-${competence.type}`">
       <div class="text-center col-12">
-        <h2>{{ competence.label }}</h2>
+        <h2><font-awesome-icon :icon="competence.faIcon.split(' ')" /> {{ competence.label }}</h2>
         <hr />
       </div>
 
