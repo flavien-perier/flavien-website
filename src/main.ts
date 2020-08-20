@@ -5,8 +5,8 @@ import BSN from "bootstrap.native/dist/bootstrap-native.js";
 import "./genetic.js";
 
 import { library } from "@fortawesome/fontawesome-svg-core";
-import { fas } from "@fortawesome/free-solid-svg-icons";
-import { fab } from "@fortawesome/free-brands-svg-icons";
+import { faHome, faList, faGraduationCap, faProjectDiagram, faMicrochip, faDatabase, faServer, faEnvelope, faCircleNotch, faPhone, faMapMarkerAlt, faFlag } from "@fortawesome/free-solid-svg-icons";
+import { faLinkedin, faFacebookSquare, faTwitterSquare, faTwitter, faAngular, faVuejs, faPython, faJs, faJava, faPhp, faLinux, faWindows, faGitAlt, faGithub, faGithubSquare, faGitlab, faDocker } from "@fortawesome/free-brands-svg-icons";
 import { faSpring, faTs, faKotlin, faNginx, faVscode, faAntlr, faKubernetes, faSwagger, faKafka, faIntellij, faNeo4j } from "@/icons";
 import { FontAwesomeIcon } from "@fortawesome/vue-fontawesome";
 
@@ -26,8 +26,10 @@ console.log(`
 |/      (_______|/     \\|  \\_/  \\_______(_______|/    )_)
 `);
 
-//@ts-ignore
-library.add(fas, fab, faSpring, faTs, faKotlin, faNginx, faVscode, faAntlr, faKubernetes, faSwagger, faKafka, faIntellij, faNeo4j);
+library.add(faHome, faList, faGraduationCap, faProjectDiagram, faMicrochip, faDatabase, faServer, faEnvelope, faCircleNotch, faPhone, faMapMarkerAlt, faFlag,
+  faLinkedin, faFacebookSquare, faTwitterSquare, faTwitter, faAngular, faVuejs, faPython, faJs, faJava, faPhp, faLinux, faWindows, faGitAlt, faGithub, faGithubSquare, faGitlab, faDocker,
+  //@ts-ignore
+  faSpring, faTs, faKotlin, faNginx, faVscode, faAntlr, faKubernetes, faSwagger, faKafka, faIntellij, faNeo4j);
 Vue.component("font-awesome-icon", FontAwesomeIcon);
 
 Vue.config.productionTip = false;
