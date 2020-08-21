@@ -8,5 +8,6 @@
         "X-XSS-Protection": "1;mode=block",
         "X-Frame-Options": "DENY"
     },
-    "contentType": {}
+    "contentType": {},
+    "proxy" : {}
 }

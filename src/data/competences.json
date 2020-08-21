@@ -522,7 +522,7 @@
         },
         {
             "label": "Scrum",
-            "faIcon": "fas circle-notch",
+            "faIcon": "fab scrum",
             "descriptionFr": "Méthode de management dite agile",
             "descriptionEn": "Agile management method",
             "url": "https://www.scrum.org/",

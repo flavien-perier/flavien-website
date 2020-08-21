@@ -9,6 +9,7 @@ import faSwagger from "./faSwagger";
 import faKafka from "./faKafka";
 import faIntellij from "./faIntellij";
 import faNeo4j from "./faNeo4j";
+import faScrum from "./faScrum";
 
 export {
     faSpring,
@@ -21,5 +22,6 @@ export {
     faSwagger,
     faKafka,
     faIntellij,
-    faNeo4j
+    faNeo4j,
+    faScrum
 };
