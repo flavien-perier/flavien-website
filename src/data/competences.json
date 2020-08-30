@@ -521,6 +521,19 @@
             "lvl": 70
         },
         {
+            "label": "MobaXterm",
+            "faIcon": "fas terminal",
+            "descriptionFr": "Client SSH, Telnet, RDP, FTP...",
+            "descriptionEn": "SSH, Telnet, RDP, FTP client...",
+            "url": "https://mobaxterm.mobatek.net/",
+            "type": "tool",
+            "experiences": [
+                "Orange",
+                "personal"
+            ],
+            "lvl": 70
+        },
+        {
             "label": "Scrum",
             "faIcon": "fab scrum",
             "descriptionFr": "Méthode de management dite agile",
