@@ -10,7 +10,7 @@
     "start": "eco-webserver"
   },
   "dependencies": {
-    "eco-webserver": "https://github.com/flavien-perier/eco-webserver"
+    "eco-webserver": "1.0.0"
   },
   "devDependencies": {
     "@fortawesome/fontawesome-svg-core": "1.2.30",
