@@ -27,20 +27,22 @@
     <canvas class="d-block mx-auto" id="bg-canvas" width="800" height="450"></canvas>
     <div id="app"></div>
 
+    <script type="text/javascript" src="https://analytics.flavien.io/modules/base/js/owa.tracker-combined-min.js"></script>
     <script type="text/javascript">
-      var owa_baseUrl = "https://analytics.flavien.io/";
-      var owa_cmds = owa_cmds || [];
-      owa_cmds.push(["setDebug", true]);
-      owa_cmds.push(["setSiteId", "12e1b286d171012dfaadf64e0cf76fb3"]);
-      owa_cmds.push(["trackPageView"]);
-      owa_cmds.push(["trackClicks"]);
-      
-      (function() {
-          var _owa = document.createElement("script"); _owa.type = "text/javascript"; _owa.async = true;
-          owa_baseUrl = ("https:" == document.location.protocol ? window.owa_baseSecUrl || owa_baseUrl.replace(/http:/, "https:") : owa_baseUrl );
-          _owa.src = owa_baseUrl + "modules/base/js/owa.tracker-combined-min.js";
-          var _owa_s = document.getElementsByTagName("script")[0]; _owa_s.parentNode.insertBefore(_owa, _owa_s);
-      }());
-      </script>
+      if (navigator.doNotTrack != 1) {
+        try {
+          OWA.setSetting("baseUrl", "https://analytics.flavien.io/");
+          const OWATracker = new OWA.tracker();
+          OWATracker.setSiteId("12e1b286d171012dfaadf64e0cf76fb3");
+          OWATracker.trackPageView();
+          OWATracker.trackClicks();
+          OWATracker.trackDomStream();
+        } catch(err) {
+          console.error("Error with OWA");
+        }
+      } else {
+        console.info("The 'Do not track' function is activated. OWA is not enabled.");
+      }
+    </script>
   </body>
 </html>
