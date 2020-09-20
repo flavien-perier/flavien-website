@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html lang="fr">
   <head>
+    <meta charset="utf-8" />
     <title>Flavien PERIER</title>
     <link rel="icon" href="<%= BASE_URL %>favicon.ico">
-    <meta charset="utf-8">
 
     <meta name="author" content="Flavien PERIER" />
     <meta name="publisher" content="Flavien PERIER" />
@@ -29,7 +29,9 @@
 
     <script type="text/javascript" src="https://analytics.flavien.io/modules/base/js/owa.tracker-combined-min.js"></script>
     <script type="text/javascript">
-      if (navigator.doNotTrack != 1) {
+      if (window.doNotTrack == "1" || navigator.doNotTrack == "yes") {
+        console.info("The 'Do not track' function is activated. OWA is not enabled.");
+      } else {
         try {
           OWA.setSetting("baseUrl", "https://analytics.flavien.io/");
           const OWATracker = new OWA.tracker();
@@ -40,8 +42,6 @@
         } catch(err) {
           console.error("Error with OWA");
         }
-      } else {
-        console.info("The 'Do not track' function is activated. OWA is not enabled.");
       }
     </script>
   </body>
