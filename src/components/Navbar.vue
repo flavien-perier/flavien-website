@@ -1,6 +1,6 @@
 <template>
   <nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-parallax">
-    <router-link class="navbar-brand" to="/">
+    <router-link class="navbar-brand" :to="{ name: 'home'}">
       <img
         class="d-inline-block align-top"
         src="../assets/img/logo.svg"
@@ -26,23 +26,28 @@
     <div class="collapse navbar-collapse" id="navbar">
       <ul class="navbar-nav">
         <li class="nav-item">
-          <router-link class="nav-link" to="/">
+          <router-link class="nav-link" :to="{ name: 'home'}">
             <font-awesome-icon icon="home" /> {{ $t("home") }}
           </router-link>
         </li>
         <li class="nav-item">
-          <router-link class="nav-link" to="/competences">
+          <router-link class="nav-link" :to="{ name: 'competences'}">
             <font-awesome-icon icon="list" /> {{ $t("competences") }}
           </router-link>
         </li>
         <li class="nav-item">
-          <router-link class="nav-link" to="/experiences">
+          <router-link class="nav-link" :to="{ name: 'experiences'}">
             <font-awesome-icon icon="graduation-cap" /> {{ $t("experiences") }}
           </router-link>
         </li>
         <li class="nav-item">
-          <router-link class="nav-link" to="/projects">
+          <router-link class="nav-link" :to="{ name: 'projects'}">
             <font-awesome-icon icon="project-diagram" /> {{ $t("projects") }}
+          </router-link>
+        </li>
+        <li class="nav-item">
+          <router-link class="nav-link" :to="{ name: 'documentations'}">
+            <font-awesome-icon icon="book" /> {{ $t("documentations") }}
           </router-link>
         </li>
       </ul>
