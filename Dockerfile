@@ -4,22 +4,21 @@ LABEL maintainer="Flavien PERIER <perier@flavien.io>"
 LABEL version="1.0"
 LABEL description="Flavien website"
 
+RUN apk add --no-cache build-base g++ python libpng-dev jpeg-dev giflib-dev pango-dev cairo-dev git ca-certificates wget
+
 WORKDIR /opt/flavien
 COPY . .
 
-RUN apk add --no-cache build-base g++ python libpng-dev jpeg-dev giflib-dev pango-dev cairo-dev git
-
-RUN apk --no-cache add ca-certificates wget  && \
-    wget -q -O /etc/apk/keys/sgerrand.rsa.pub https://alpine-pkgs.sgerrand.com/sgerrand.rsa.pub && \
+RUN wget -q -O /etc/apk/keys/sgerrand.rsa.pub https://alpine-pkgs.sgerrand.com/sgerrand.rsa.pub && \
     wget https://github.com/sgerrand/alpine-pkg-glibc/releases/download/2.29-r0/glibc-2.29-r0.apk && \
-    apk add glibc-2.29-r0.apk
-
-RUN rm -Rf node_modules
-RUN npm install && \
+    apk add glibc-2.29-r0.apk && \
+    rm -Rf node_modules && \
+    npm install && \
     npm run build && \
-    chmod -R 750 /opt/flavien
-RUN rm -Rf node_modules
-RUN npm install --production
+    chmod -R 750 /opt/flavien && \
+    rm -Rf node_modules && \
+    npm install --production && \
+    rm -Rf src public postcss.config.js vue.config.js .env*
 
 FROM node:lts-alpine
 
