@@ -23,6 +23,7 @@ $enable-print-styles: false;
 
 // Imports
 @import "../../../node_modules/normalize.css/normalize.css";
+@import "../../../node_modules/@fortawesome/fontawesome-svg-core/styles.css";
 @import "bootstrap";
 @import "./animations.scss";
 

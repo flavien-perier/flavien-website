@@ -12,7 +12,6 @@
 </template>
 
 <script>
-import * as path from "path";
 import marked from "marked";
 
 import axios from "axios";
@@ -29,7 +28,7 @@ export default {
     };
   },
   created() {
-    axios.get(path.join(process.env["VUE_APP_MARKDOWN_BACKEND"], this.fileName))
+    axios.get(process.env["VUE_APP_MARKDOWN_BACKEND"] + this.fileName)
       .then(file => {
         const patternMatching = /^---(.*)---(.*)$/s.exec(file.data);
         const header = patternMatching[1];
