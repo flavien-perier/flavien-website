@@ -29,7 +29,7 @@ export default {
     };
   },
   created() {
-    axios.get(path.join(process.env["VUE_APP_MARKDOWN_BACKEND"], "files", this.$route.params.fileName))
+    axios.get(path.join(process.env["VUE_APP_MARKDOWN_BACKEND"], this.fileName))
       .then(file => {
         const patternMatching = /^---(.*)---(.*)$/s.exec(file.data);
         const header = patternMatching[1];
