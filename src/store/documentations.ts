@@ -1,16 +1,19 @@
 import MarkdownHeader from "@/model/MarkdownHeader";
+import SearchResult from "@/model/SearchResult";
 import axios from "axios";
 
 const BACKEND_URL = process.env["VUE_APP_MARKDOWN_BACKEND"] as string;
 
 interface State {
   headers: MarkdownHeader[],
-  page: number
+  page: number,
+  numberOfPages: number
 }
 
 const state: State = {
   headers: [],
-  page: 1
+  page: 1,
+  numberOfPages: 1
 };
 
 const mutations = {
@@ -25,7 +28,10 @@ const mutations = {
         type: "DOCUMENTATION"
       }
     }).then(response => {
-      state.headers = response.data;
+      const data = response.data as SearchResult;
+
+      state.headers = data.files;
+      state.numberOfPages = data.pages;
     });
   }
 };
@@ -39,7 +45,8 @@ const actions = {
 
 const getters = {
   headers: (state: State) => state.headers,
-  page: (state: State) => state.page
+  page: (state: State) => state.page,
+  numberOfPages: (state: State) => state.numberOfPages
 };
 
 export default {
