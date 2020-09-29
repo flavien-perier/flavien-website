@@ -13,7 +13,6 @@
 
 <script>
 import marked from "marked";
-
 import axios from "axios";
 
 export default {
