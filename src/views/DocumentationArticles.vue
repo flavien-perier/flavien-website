@@ -4,7 +4,7 @@
     <article class="box bg-box text-article">
       <div v-html="contentOftheArticle"></div>
 
-      <div>
+      <div class="col-12 text-right">
         {{ author }} - {{ date }}
       </div>
     </article>

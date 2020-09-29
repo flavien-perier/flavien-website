@@ -26,6 +26,7 @@ $enable-print-styles: false;
 @import "../../../node_modules/@fortawesome/fontawesome-svg-core/styles.css";
 @import "bootstrap";
 @import "./animations.scss";
+@import "./article.scss";
 
 // Custom
 @font-face {
@@ -49,17 +50,6 @@ body {
 
 h1, h2, h3, h4, h5 {
   font-family: title;
-}
-
-.text-article {
-  text-align: justify;
-  padding: 10px !important;
-  line-height: 1.75;
-}
-
-.text-article br {
-  display: block;
-  margin: 5px;
 }
 
 .cursor-link {

@@ -14,9 +14,10 @@ class Grid {
 
         this.workerMaximumDistance = Math.sqrt(this.grid.height * this.grid.height * this.grid.width * this.grid.width);
 
-        for (let i=0; i < this.width; i++) {
+        let i, j;
+        for (i=0; i < this.width; i++) {
             this.grid[i] = new Array(this.height);
-            for (let j=0; j < this.height; j++) {
+            for (j=0; j < this.height; j++) {
                 this.grid[i][j] = new Case(i, j, this.context);
             }
         }
