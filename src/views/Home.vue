@@ -20,7 +20,6 @@ export default {
     axios.get(process.env["VUE_APP_MARKDOWN_BACKEND"] + "home.md")
       .then(file => {
         const patternMatching = /^---.*---(.*)$/s.exec(file.data);
-        console.log(patternMatching)
         this.content = marked(patternMatching[1]);
       });
   }

@@ -26,9 +26,15 @@
 }
 
 .text-article code {
-  display: block;
-  width: 100%;
-  padding: 8px;
+  padding: 3px;
+  border-radius: 3px;
   background-color: #222;
   color: #fff;
+}
+
+.text-article pre {
+  display: block;
+  padding: 8px;
+  border-radius: 3px;
+  background-color: #222;
 }

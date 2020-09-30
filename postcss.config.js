@@ -8,10 +8,16 @@ const whitelist = competencesLevels.map(level => "progress-bar-animation-" + lev
 const configuration = {
 	content: ["./public/**/*.html", "./src/**/*.vue"],
 	defaultExtractor(content) {
-		const contentWithoutStyleBlocks = content.replace(/<style[^]+?<\/style>/gi, "")
-		return contentWithoutStyleBlocks.match(/[A-Za-z0-9-_/:]*[A-Za-z0-9-_/]+/g) || []
+		return content
+			.replace(/<style.+?<\/style>/gis, "")
+			.replace(/<script.+?<\/script>/gis, "")
+			.match(/[a-z0-9-_/:]+/gi) || [];
 	},
-	whitelist: whitelist,
+	whitelist: [
+		...whitelist,
+		"h1", "h2", "h3", "h4", "h5", "p", "a", "strong",
+		"code", "pre"
+	],
 	whitelistPatterns: [
 		/-(leave|enter|appear)(|-(to|from|active))$/, 
 		/^(?!(|.*?:)cursor-move).+-move$/, 
@@ -19,7 +25,6 @@ const configuration = {
 		/data-v-.*/, 
 		/svg.*/, 
 		/fa.*/,
-		/text-article.*/
 	]
 };
 
