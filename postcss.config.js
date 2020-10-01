@@ -15,7 +15,7 @@ const configuration = {
 	},
 	whitelist: [
 		...whitelist,
-		"h1", "h2", "h3", "h4", "h5", "p", "a", "strong",
+		"h1", "h2", "h3", "h4", "h5", "p", "a", "img", "strong",
 		"code", "pre"
 	],
 	whitelistPatterns: [
