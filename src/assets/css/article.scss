@@ -28,7 +28,12 @@
 .text-article img {
   display: block;
   margin: auto;
+  max-width: 60%;
+}
+
+.text-article img:hover {
   max-width: 100%;
+  transition: max-width 1s;
 }
 
 .text-article code {
