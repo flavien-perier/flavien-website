@@ -22,6 +22,7 @@ export default {
       fileName: this.$route.params.fileName,
       title: "",
       author: "",
+      description: "",
       date: "",
       contentOftheArticle: ""
     };
@@ -34,8 +35,13 @@ export default {
 
         this.title = /^title: ?(.*)$/m.exec(header)[1];
         this.author = /^author: ?(.*)$/m.exec(header)[1];
+        this.description = /^description: ?(.*)$/m.exec(header)[1];
         this.date = /^date: ?(.*)$/m.exec(header)[1];
         this.contentOftheArticle = marked(patternMatching[2]);
+
+        document.title = `Flavien PERIER - ${this.title}`;
+        document.querySelector("meta[name=\"description\"]").setAttribute("content", this.description);
+        document.querySelector("meta[name=\"author\"]").setAttribute("content", this.author);
       });
   }
 };
