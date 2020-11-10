@@ -5,8 +5,8 @@ import BSN from "bootstrap.native/dist/bootstrap-native.js";
 import "./genetic.js";
 
 import { library } from "@fortawesome/fontawesome-svg-core";
-import { faHome, faList, faGraduationCap, faProjectDiagram, faBook, faMicrochip, faDatabase, faServer, faEnvelope, faPhone, faMapMarkerAlt, faFlag, faTerminal } from "@fortawesome/free-solid-svg-icons";
-import { faLinkedin, faFacebookSquare, faTwitterSquare, faTwitter, faAngular, faVuejs, faPython, faJs, faJava, faPhp, faLinux, faWindows, faGitAlt, faGithub, faGithubSquare, faGitlab, faDocker } from "@fortawesome/free-brands-svg-icons";
+import { faHome, faList, faGraduationCap, faProjectDiagram, faBook, faMicrochip, faDatabase, faServer, faEnvelope, faPhone, faMapMarkerAlt, faFlag, faTerminal, faCode } from "@fortawesome/free-solid-svg-icons";
+import { faLinkedin, faFacebookSquare, faAngular, faVuejs, faPython, faJs, faJava, faPhp, faLinux, faWindows, faGitAlt, faGithub, faGithubSquare, faGitlab, faDocker } from "@fortawesome/free-brands-svg-icons";
 import { faSpring, faTs, faKotlin, faNginx, faVscode, faAntlr, faKubernetes, faSwagger, faKafka, faIntellij, faNeo4j, faScrum } from "@/icons";
 import { FontAwesomeIcon } from "@fortawesome/vue-fontawesome";
 
@@ -26,8 +26,8 @@ console.log(`
 |/      (_______|/     \\|  \\_/  \\_______(_______|/    )_)
 `);
 
-library.add(faHome, faList, faGraduationCap, faProjectDiagram, faBook, faMicrochip, faDatabase, faServer, faEnvelope, faPhone, faMapMarkerAlt, faFlag, faTerminal,
-  faLinkedin, faFacebookSquare, faTwitterSquare, faTwitter, faAngular, faVuejs, faPython, faJs, faJava, faPhp, faLinux, faWindows, faGitAlt, faGithub, faGithubSquare, faGitlab, faDocker,
+library.add(faHome, faList, faGraduationCap, faProjectDiagram, faBook, faMicrochip, faDatabase, faServer, faEnvelope, faPhone, faMapMarkerAlt, faFlag, faTerminal, faCode,
+  faLinkedin, faFacebookSquare, faAngular, faVuejs, faPython, faJs, faJava, faPhp, faLinux, faWindows, faGitAlt, faGithub, faGithubSquare, faGitlab, faDocker,
   //@ts-ignore
   faSpring, faTs, faKotlin, faNginx, faVscode, faAntlr, faKubernetes, faSwagger, faKafka, faIntellij, faNeo4j, faScrum);
 Vue.component("font-awesome-icon", FontAwesomeIcon);

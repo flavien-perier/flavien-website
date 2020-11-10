@@ -2,6 +2,7 @@ module.exports = {
     port: 8080,
     cacheCycle: 1800,
     distDir: "dist",
+    logDir: "~/eco-webserver.log",
     enableIsomorphic: true,
     header: {
         "Cache-Control": "max-age=86400",

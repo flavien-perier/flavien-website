@@ -28,6 +28,12 @@
           </a>
           <a
             class="list-group-item list-group-item-secondary list-group-item-action"
+            href="https://github.com/flavien-perier"
+          >
+            <font-awesome-icon :icon="['fab', 'github-square']" /> GitHub
+          </a>
+          <a
+            class="list-group-item list-group-item-secondary list-group-item-action"
             href="https://www.linkedin.com/in/flavien-perier"
           >
             <font-awesome-icon :icon="['fab', 'linkedin']" /> LinkedIn
@@ -37,18 +43,6 @@
             href="https://www.facebook.com/flavien.io"
           >
             <font-awesome-icon :icon="['fab', 'facebook-square']" /> Facebook
-          </a>
-          <a
-            class="list-group-item list-group-item-secondary list-group-item-action"
-            href="https://twitter.com/flavien_perier"
-          >
-            <font-awesome-icon :icon="['fab', 'twitter-square']" /> Twitter
-          </a>
-          <a
-            class="list-group-item list-group-item-secondary list-group-item-action"
-            href="https://github.com/flavien-perier"
-          >
-            <font-awesome-icon :icon="['fab', 'github-square']" /> GitHub
           </a>
         </div>
       </div>

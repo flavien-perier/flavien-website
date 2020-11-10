@@ -64,6 +64,11 @@
 
     <ul class="nav navbar-nav d-none d-lg-flex">
       <li class="nav-item">
+        <a class="nav-link" href="https://github.com/flavien-perier">
+          <font-awesome-icon :icon="['fab', 'github-square']" />
+        </a>
+      </li>
+      <li class="nav-item">
         <a class="nav-link" href="https://www.linkedin.com/in/flavien-perier">
           <font-awesome-icon :icon="['fab', 'linkedin']" />
         </a>
@@ -71,16 +76,6 @@
       <li class="nav-item">
         <a class="nav-link" href="https://www.facebook.com/flavien.io">
           <font-awesome-icon :icon="['fab', 'facebook-square']" />
-        </a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="https://twitter.com/flavien_perier">
-          <font-awesome-icon :icon="['fab', 'twitter-square']" />
-        </a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="https://github.com/flavien-perier">
-          <font-awesome-icon :icon="['fab', 'github-square']" />
         </a>
       </li>
     </ul>

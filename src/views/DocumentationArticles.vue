@@ -2,11 +2,22 @@
   <section class="container">
     <h1 class="col-12 section-title">{{ title }}</h1>
     <article class="box bg-box text-article">
-      <div v-html="contentOftheArticle"></div>
+      <h2>{{ $t("tableOfContents") }}</h2>
 
-      <div class="col-12 text-right">
-        {{ author }} - {{ date }}
+      <div class="row">
+        <div class="col-12 col-md-8">
+          <TableOfContents class="box" :htmlContent="contentOftheArticle" />
+        </div>
+
+        <div class="col-4">
+          <div class="box">
+            <strong>{{ $t("author") }}</strong>: {{ author }} <br/>
+            <strong>{{ $t("date") }}</strong>: {{ date }}
+          </div>
+        </div>
       </div>
+
+      <div v-html="contentOftheArticle"></div>
     </article>
   </section>
 </template>
@@ -15,8 +26,13 @@
 import marked from "marked";
 import axios from "axios";
 
+import TableOfContents from "@/components/TableOfContents.vue";
+
 export default {
   name: "documentationArticles",
+  components: {
+    TableOfContents
+  },
   data() {
     return {
       fileName: this.$route.params.fileName,
@@ -46,3 +62,18 @@ export default {
   }
 };
 </script>
+
+<i18n>
+{
+  "en": {
+    "author": "Author",
+    "date": "Date",
+    "tableOfContents": "Table Of Contents"
+  },
+  "fr": {
+    "author": "Auteur",
+    "date": "Date",
+    "tableOfContents": "Table des matières"
+  }
+}
+</i18n>

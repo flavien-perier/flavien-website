@@ -33,7 +33,9 @@ COPY --from=builder /opt/flavien .
 
 RUN addgroup -g $DOCKER_GID flavien && \
     adduser -G flavien -D -H -h /opt/flavien -u $DOCKER_UID flavien && \
-    chown -R flavien:flavien /opt/flavien
+    chown -R flavien:flavien /opt/flavien && \
+    mkdir /var/log/flavien && \
+    chown flavien:flavien /var/log/flavien
 
 USER flavien
 EXPOSE 8080
