@@ -46,8 +46,8 @@
           </router-link>
         </li>
         <li class="nav-item">
-          <router-link class="nav-link" :to="{ name: 'documentations'}">
-            <font-awesome-icon icon="book" /> {{ $t("documentations") }}
+          <router-link class="nav-link" :to="{ name: 'documentation'}">
+            <font-awesome-icon icon="book" /> {{ $t("documentation") }}
           </router-link>
         </li>
       </ul>
@@ -76,6 +76,11 @@
       <li class="nav-item">
         <a class="nav-link" href="https://www.facebook.com/flavien.io">
           <font-awesome-icon :icon="['fab', 'facebook-square']" />
+        </a>
+      </li>
+      <li>
+        <a class="nav-link" href="https://mastodon.social/web/accounts/156466">
+          <font-awesome-icon :icon="['fab', 'mastodon']" />
         </a>
       </li>
     </ul>

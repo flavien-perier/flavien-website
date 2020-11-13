@@ -6,7 +6,7 @@
           <h2 class="text-center text-light">{{ $t("scanMe") }}</h2>
           <img id="qr-code" src="../assets/img/qr-code.png" alt="qr-code" />
         </div>
-        <div class="list-group mx-auto col-12 col-lg-9">
+        <div class="list-group mx-auto col-7 col-lg-6">
           <strong class="list-group-item list-group-item-dark">{{ $t("contactMe") }}</strong>
           <a
             class="list-group-item list-group-item-secondary list-group-item-action"
@@ -28,21 +28,48 @@
           </a>
           <a
             class="list-group-item list-group-item-secondary list-group-item-action"
-            href="https://github.com/flavien-perier"
-          >
-            <font-awesome-icon :icon="['fab', 'github-square']" /> GitHub
-          </a>
-          <a
-            class="list-group-item list-group-item-secondary list-group-item-action"
             href="https://www.linkedin.com/in/flavien-perier"
           >
-            <font-awesome-icon :icon="['fab', 'linkedin']" /> LinkedIn
+            <font-awesome-icon :icon="['fab', 'linkedin']" /> Flavien PERIER
           </a>
           <a
             class="list-group-item list-group-item-secondary list-group-item-action"
             href="https://www.facebook.com/flavien.io"
           >
-            <font-awesome-icon :icon="['fab', 'facebook-square']" /> Facebook
+            <font-awesome-icon :icon="['fab', 'facebook-square']" /> Flavien PERIER
+          </a>
+          <a
+            class="list-group-item list-group-item-secondary list-group-item-action"
+            href="https://mastodon.social/web/accounts/156466"
+          >
+            <font-awesome-icon :icon="['fab', 'mastodon']" /> @flavien_perier@mastodon.social
+          </a>
+          <a
+            class="list-group-item list-group-item-secondary list-group-item-action"
+            href="https://www.discord.com"
+          >
+            <font-awesome-icon :icon="['fab', 'discord']" /> F|_4\/13/\/#4113
+          </a>
+        </div>
+        <div class="list-group mx-auto col-5 col-lg-3">
+          <strong class="list-group-item list-group-item-dark">{{ $t("followMe") }}</strong>
+          <a
+            class="list-group-item list-group-item-secondary list-group-item-action"
+            href="https://github.com/flavien-perier"
+          >
+            <font-awesome-icon :icon="['fab', 'github-square']" /> flavien-perier
+          </a>
+          <a
+            class="list-group-item list-group-item-secondary list-group-item-action"
+            href="https://hub.docker.com/u/flavienperier"
+          >
+            <font-awesome-icon :icon="['fab', 'docker']" /> flavienperier
+          </a>
+          <a
+            class="list-group-item list-group-item-secondary list-group-item-action"
+            href="https://www.npmjs.com/~flavien-perier"
+          >
+            <font-awesome-icon :icon="['fab', 'npm']" /> flavien-perier
           </a>
         </div>
       </div>
@@ -61,10 +88,12 @@ export default class Footer extends Vue {}
 {
   "en": {
     "contactMe": "Contact me",
+    "followMe": "Follow me",
     "scanMe": "Scan me"
   },
   "fr": {
     "contactMe": "Contactez-moi",
+    "followMe": "Suivez-moi",
     "scanMe": "Scannez-moi"
   }
 }

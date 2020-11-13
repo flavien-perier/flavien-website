@@ -1,6 +1,6 @@
 <template>
   <section class="container">
-    <h1 class="col-12 section-title">{{ $t("documentations") }}</h1>
+    <h1 class="col-12 section-title">{{ $t("documentation") }}</h1>
 
     <article class="row">
       <ArticleLink
@@ -26,7 +26,7 @@ import { mapGetters, mapActions } from "vuex";
 import ArticleLink from "@/components/ArticleLink.vue";
 
 export default {
-  name: "documentations",
+  name: "documentation",
   components: {
     ArticleLink
   },
@@ -34,10 +34,10 @@ export default {
     this.loadPage(1);
   },
   methods: {
-    ...mapActions("documentations", ["loadPage"]),
+    ...mapActions("documentation", ["loadPage"]),
   },
   computed: {
-    ...mapGetters("documentations", ["headers", "page", "numberOfPages"])
+    ...mapGetters("documentation", ["headers", "page", "numberOfPages"])
   }
 };
 </script>

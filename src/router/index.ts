@@ -38,15 +38,15 @@ const routes = [
     component: () => import("../views/Projects.vue")
   },
   {
-    path: "/documentations",
-    name: "documentations",
+    path: "/documentation",
+    name: "documentation",
     meta: {
-      title: "Flavien PERIER - Documentations"
+      title: "Flavien PERIER - Documentation"
     },
-    component: () => import("../views/Documentations.vue")
+    component: () => import("../views/Documentation.vue")
   },
   {
-    path: "/documentations/:fileName",
+    path: "/documentation/:fileName",
     name: "documentationArticles",
     meta: {
       title: "Flavien PERIER - Documentation Articles"
