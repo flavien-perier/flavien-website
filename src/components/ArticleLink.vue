@@ -1,6 +1,10 @@
 <template>
-  <router-link :to="{ name: 'documentationArticles', params: { fileName: header.fileName }}" class="col-12 col-md-6" style="color: inherit; text-decoration: inherit">
-    <div class="box bg-box text-article col-12">
+  <router-link 
+    :to="{ name: 'documentationArticles', params: { fileName: header.fileName }}" 
+    class="col-12 col-md-6" 
+    style="color: inherit; text-decoration: inherit"
+  >
+    <div class="box box-animation bg-box text-article col-12">
       <h2 class="text-center">{{ header.title }}</h2>
       <hr />
       <p>{{ header.description }}</p>

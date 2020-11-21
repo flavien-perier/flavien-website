@@ -58,7 +58,6 @@
         <a class="nav-link">
           <font-awesome-icon icon="flag" /> {{ $i18n.locale }}
         </a>
-
       </li>
     </ul>
 
@@ -79,7 +78,7 @@
         </a>
       </li>
       <li>
-        <a class="nav-link" href="https://mastodon.social/web/accounts/156466">
+        <a class="nav-link" href="https://mastodon.social/@flavien_perier">
           <font-awesome-icon :icon="['fab', 'mastodon']" />
         </a>
       </li>

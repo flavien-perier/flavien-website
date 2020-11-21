@@ -40,7 +40,7 @@
           </a>
           <a
             class="list-group-item list-group-item-secondary list-group-item-action"
-            href="https://mastodon.social/web/accounts/156466"
+            href="https://mastodon.social/@flavien_perier"
           >
             <font-awesome-icon :icon="['fab', 'mastodon']" /> @flavien_perier@mastodon.social
           </a>

@@ -21,13 +21,7 @@
       <div class="col-12 mb-2">
         <h3 class="text-left text-lg-center">{{ $t("level") }}</h3>
         <div class="progress">
-          <div
-            :class="`progress-bar progress-bar-animation-${competence.lvl}`"
-            role="progressbar"
-            :aria-valuenow="`${competence.lvl}%`"
-            aria-valuemin="0"
-            aria-valuemax="100"
-          >{{ competence.lvl }}%</div>
+          <div :class="`progress-bar progress-bar-animation-${competence.lvl}`">{{ competence.lvl }}%</div>
         </div>
       </div>
     </div>

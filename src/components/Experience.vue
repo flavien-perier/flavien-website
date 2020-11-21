@@ -1,6 +1,6 @@
 <template>
   <a :href="experience.url" class="col-12 col-lg-6" style="color: inherit; text-decoration: inherit">
-    <div class="row mx-auto box box-animation box-min-height bg-box">
+    <div class="row mx-auto box box-animation bg-box">
       <div class="text-center col-12">
         <h2>{{ experience.location }}</h2>
         <hr />
@@ -59,7 +59,7 @@ export default class Experience extends Vue {
 
 <style scoped>
 .box {
-  height: 20em;
+  height: 17em;
   overflow: hidden;
 }
 </style>
