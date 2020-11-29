@@ -27,21 +27,17 @@ $enable-print-styles: false;
 @import "bootstrap";
 @import "./animations.scss";
 @import "./article.scss";
+@import "./print.scss";
 
 // Custom
 @font-face {
 	font-family: "body";
-	src: url("../fonts/roboto.ttf") format("truetype");
+	src: url("../fonts/roboto.woff2") format("woff2");
 }
 
 @font-face {
 	font-family: "title";
-	src: url("../fonts/kenyan-coffee.ttf") format("truetype");
-}
-
-@font-face {
-	font-family: "print";
-	src: url("../fonts/ryman-eco.otf") format("opentype");
+	src: url("../fonts/kenyan-coffee.woff2") format("woff2");
 }
 
 body {
