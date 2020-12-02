@@ -10,10 +10,15 @@
 <script lang="ts">
 import { Component, Prop, Vue } from "vue-property-decorator";
 import TitleDescription from "@/model/TitleDescription";
+import marked from "marked";
 
 @Component
 export default class TableOfContents extends Vue {
-  @Prop() private htmlContent!: string;
+  @Prop() private markdownContent!: string;
+
+  get htmlContent() {
+    return marked(this.markdownContent);
+  }
 
   private get titles(): TitleDescription[] {
     return (this.htmlContent.match(/<h[0-6] id=".*?">.*?<\/h[0-6]>/mgsu) || []).map(titleString => {

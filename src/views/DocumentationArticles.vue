@@ -6,7 +6,7 @@
       <div class="row">
         <div class="col-12 col-lg-8">
           <h2 class="text-left text-lg-center">{{ $t("tableOfContents") }}</h2>
-          <TableOfContents class="box" :htmlContent="contentOftheArticle" />
+          <TableOfContents class="box" :markdownContent="articleContent" />
         </div>
 
         <div class="col-12 col-lg-4">
@@ -18,8 +18,8 @@
         </div>
       </div>
 
-      <div v-html="contentOftheArticle"></div>
     </article>
+    <MarkdownViewer class="box bg-box text-article" :markdown="articleContent" /> 
   </section>
 </template>
 
@@ -28,11 +28,13 @@ import marked from "marked";
 import axios from "axios";
 
 import TableOfContents from "@/components/TableOfContents.vue";
+import MarkdownViewer from "@/components/MarkdownViewer.vue";
 
 export default {
   name: "documentationArticles",
   components: {
-    TableOfContents
+    TableOfContents,
+    MarkdownViewer
   },
   data() {
     return {
@@ -41,20 +43,21 @@ export default {
       author: "",
       description: "",
       date: "",
-      contentOftheArticle: ""
+      articleContent: ""
     };
   },
   created() {
     axios.get(process.env["VUE_APP_MARKDOWN_BACKEND"] + this.fileName)
       .then(file => {
-        const patternMatching = /^---(.*)---(.*)$/s.exec(file.data);
+        const patternMatching = /^---(.*)---.*$/s.exec(file.data);
         const header = patternMatching[1];
 
         this.title = /^title: ?(.*)$/m.exec(header)[1];
         this.author = /^author: ?(.*)$/m.exec(header)[1];
         this.description = /^description: ?(.*)$/m.exec(header)[1];
         this.date = /^date: ?(.*)$/m.exec(header)[1];
-        this.contentOftheArticle = marked(patternMatching[2]);
+
+        this.articleContent = file.data;
 
         document.title = `Flavien PERIER - ${this.title}`;
         document.querySelector("meta[name=\"description\"]").setAttribute("content", this.description);

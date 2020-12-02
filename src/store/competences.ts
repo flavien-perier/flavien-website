@@ -1,39 +1,41 @@
+import { ActionTree, GetterTree, Module, MutationTree } from "vuex";
+
 import CompetenceInterface from "@/model/CompetenceInterface";
 const { competences } = require("@/data/competences.json") as { competences: CompetenceInterface[] }
 
-interface State {
+interface CompetenceState {
   competences: CompetenceInterface[],
   competencesCheckbox: any
 }
 
-const state: State = {
+const state: CompetenceState = {
   competences,
   competencesCheckbox: {}
 };
 
-competences.map(c =>  c.type ).filter((value, index, self) => self.indexOf(value) == index)
+competences.map(c => c.type ).filter((value, index, self) => self.indexOf(value) == index)
   .forEach(id => state.competencesCheckbox[id] = true);
 
-const mutations = {
-  select: (state: State, competenceId: string) => {
+const mutations: MutationTree<CompetenceState> = {
+  select: (state, competenceId: string) => {
     state.competencesCheckbox[competenceId] = !state.competencesCheckbox[competenceId];
   }
 };
 
-const actions = {
-  select: ({ commit }: any, competenceId: string) => {
+const actions: ActionTree<CompetenceState, string> = {
+  select: ({ commit }, competenceId: string) => {
     commit("select", competenceId);
   }
 };
 
-const getters = {
-  checked: (state: State) => (competenceId: string) => {
+const getters: GetterTree<CompetenceState, string> = {
+  checked: (state) => (competenceId: string) => {
     return state.competencesCheckbox[competenceId];
   },
-  list: (state: State) => {
+  list: (state) => {
     return Object.keys(state.competencesCheckbox);
   },
-  competences: (state: State) => {
+  competences: (state) => {
     return state.competences;
   }
 };
@@ -44,4 +46,4 @@ export default {
   mutations,
   actions,
   getters
-};
+} as Module<CompetenceState, string>;

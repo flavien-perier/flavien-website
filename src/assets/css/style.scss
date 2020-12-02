@@ -32,12 +32,14 @@ $enable-print-styles: false;
 // Custom
 @font-face {
 	font-family: "body";
-	src: url("../fonts/roboto.woff2") format("woff2");
+  src: local('roboto'), url("../fonts/roboto.woff2") format("woff2");
+  font-display: swap;
 }
 
 @font-face {
 	font-family: "title";
-	src: url("../fonts/kenyan-coffee.woff2") format("woff2");
+  src: local('kenyan-coffee'), local('kenyan coffee'), url("../fonts/kenyan-coffee.woff2") format("woff2");
+  font-display: swap;
 }
 
 body {

@@ -1,22 +1,22 @@
+import { ActionTree, GetterTree, Module, MutationTree } from "vuex";
+
 import ExperienceInterface from "@/model/ExperienceInterface";
 const { experiences } = require("@/data/experiences.json") as { experiences: ExperienceInterface[] };
 
-interface State {
+interface ExperienceState {
     experiences: ExperienceInterface[]
 }
 
-const state = {
+const state: ExperienceState = {
     experiences
-} as State;
+};
 
-const mutations = {};
+const mutations: MutationTree<ExperienceState> = {};
 
-const actions = {};
+const actions: ActionTree<ExperienceState, string> = {};
 
-const getters = {
-  experiences: (state: State) => {
-    return state.experiences;
-  }
+const getters: GetterTree<ExperienceState, string> = {
+  experiences: (state) => state.experiences
 };
 
 export default {
@@ -25,4 +25,4 @@ export default {
   mutations,
   actions,
   getters
-};
+} as Module<ExperienceState, string>;
