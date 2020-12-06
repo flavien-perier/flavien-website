@@ -1,4 +1,4 @@
-const competences = require("./src/data/competences.json").competences;
+const competences = require("./public/data/competences.json").competences;
 const competencesLevels = competences.map(competence => competence.lvl).filter((value, index, self) => self.indexOf(value) === index);
 const competencesTypes = competences.map(competence => competence.type).filter((value, index, self) => self.indexOf(value) === index);
 

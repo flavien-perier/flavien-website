@@ -8,11 +8,11 @@
         <hr />
         <div class="row">
           <CompetenceType
-            v-for="id in list"
+            v-for="id in competencesTypes"
             :key="id"
-            v-on:check="select(id)"
+            v-on:check="selectCompetence(id)"
             :competenceTypeId="id"
-            :selected="checked(id)"
+            :selected="competenceIsChecked(id)"
           />
         </div>
       </div>
@@ -20,7 +20,7 @@
 
     <article class="row">
       <Competence
-        v-for="c in competences.filter(c => checked(c.type))"
+        v-for="c in competences.filter(c => competenceIsChecked(c.type))"
         :key="c.label"
         :competence="c"
       />
@@ -40,11 +40,14 @@ export default {
     Competence,
     CompetenceType
   },
+  created() {
+    this.loadCompetences();
+  },
   methods: {
-    ...mapActions("competences", ["select"])
+    ...mapActions("competences", ["loadCompetences", "selectCompetence"])
   },
   computed: {
-    ...mapGetters("competences", ["checked", "list", "competences"])
+    ...mapGetters("competences", ["competences", "competencesTypes", "competenceIsChecked"])
   }
 };
 </script>

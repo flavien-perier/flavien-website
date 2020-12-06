@@ -12,9 +12,9 @@
 
     <div class="container">
       <p class="col-12 section-title">
-        <span class="cursor-link" v-if="page > 1" @click="loadPage(page - 1)">{{ $t("previous") }} -</span>
+        <span class="cursor-link" v-if="page > 1" @click="loadArticles(page - 1)">{{ $t("previous") }} -</span>
         {{ $t("page") }}: {{ page }}/{{ numberOfPages }}
-        <span class="cursor-link" v-if="page < numberOfPages" @click="loadPage(page + 1)">- {{ $t("next") }}</span>
+        <span class="cursor-link" v-if="page < numberOfPages" @click="loadArticles(page + 1)">- {{ $t("next") }}</span>
       </p>
     </div>
   </section>
@@ -31,10 +31,10 @@ export default {
     ArticleLink
   },
   created() {
-    this.loadPage(1);
+    this.loadArticles(1);
   },
   methods: {
-    ...mapActions("documentation", ["loadPage"]),
+    ...mapActions("documentation", ["loadArticles"])
   },
   computed: {
     ...mapGetters("documentation", ["headers", "page", "numberOfPages"])

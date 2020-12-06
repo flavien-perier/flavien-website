@@ -13,7 +13,7 @@
 </template>
 
 <script>
-import { mapGetters } from "vuex";
+import { mapGetters, mapActions } from "vuex";
 
 import Experience from "@/components/Experience.vue";
 
@@ -21,6 +21,12 @@ export default {
   name: "experiences",
   components: {
     Experience
+  },
+  created() {
+    this.loadExperiences();
+  },
+  methods: {
+    ...mapActions("experiences", ["loadExperiences"])
   },
   computed: {
     ...mapGetters("experiences", ["experiences"])

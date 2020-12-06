@@ -1,15 +1,18 @@
 import Vue from "vue";
 import VueRouter from "vue-router";
-import Home from "../views/Home.vue";
 
-Vue.use(VueRouter)
+import store from "@/store";
+import i18n from "@/i18n";
+import Home from "@/views/Home.vue";
+
+Vue.use(VueRouter);
 
 const routes = [
   {
     path: "/",
     name: "home",
     meta: {
-      title: "Flavien PERIER - Home"
+      title: "home"
     },
     component: Home
   },
@@ -17,42 +20,42 @@ const routes = [
     path: "/competences",
     name: "competences",
     meta: {
-      title: "Flavien PERIER - Competences"
+      title: "competences"
     },
-    component: () => import("../views/Competences.vue")
+    component: () => import("@/views/Competences.vue")
   },
   {
     path: "/experiences",
     name: "experiences",
     meta: {
-      title: "Flavien PERIER - Experiences"
+      title: "experiences"
     },
-    component: () => import("../views/Experiences.vue")
+    component: () => import("@/views/Experiences.vue")
   },
   {
     path: "/projects",
     name: "projects",
     meta: {
-      title: "Flavien PERIER - Projects"
+      title: "projects"
     },
-    component: () => import("../views/Projects.vue")
+    component: () => import("@/views/Projects.vue")
   },
   {
     path: "/documentation",
     name: "documentation",
     meta: {
-      title: "Flavien PERIER - Documentation"
+      title: "documentation"
     },
-    component: () => import("../views/Documentation.vue")
+    component: () => import("@/views/Documentation.vue")
   },
   {
     path: "/documentation/:fileName",
     name: "documentationArticles",
     meta: {
-      title: "Flavien PERIER - Documentation Articles"
+      title: "Documentation Articles"
     },
-    component: () => import("../views/DocumentationArticles.vue")
-  },
+    component: () => import("@/views/DocumentationArticle.vue")
+  }
 ]
 
 const router = new VueRouter({
@@ -62,10 +65,8 @@ const router = new VueRouter({
 });
 
 router.beforeEach((to, from, next) => {
-  document.title = to.meta["title"] || "Flavien PERIER";
-
+  store.commit("application/changeTitle", i18n.t(to.meta["title"]));
   next();
 });
 
 export default router;
-

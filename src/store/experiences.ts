@@ -1,22 +1,35 @@
 import { ActionTree, GetterTree, Module, MutationTree } from "vuex";
+import axios from "axios";
 
 import ExperienceInterface from "@/model/ExperienceInterface";
-const { experiences } = require("@/data/experiences.json") as { experiences: ExperienceInterface[] };
 
 interface ExperienceState {
     experiences: ExperienceInterface[]
 }
 
 const state: ExperienceState = {
-    experiences
+    experiences: []
 };
 
-const mutations: MutationTree<ExperienceState> = {};
+const mutations: MutationTree<ExperienceState> = {
+  loadExperiences: state => {
+    if (state.experiences.length == 0) {
+      axios.get("data/experiences.json")
+        .then(markdownContent => {
+          state.experiences = (markdownContent.data as { experiences: ExperienceInterface[] }).experiences;
+        });
+    }
+  }
+};
 
-const actions: ActionTree<ExperienceState, string> = {};
+const actions: ActionTree<ExperienceState, string> = {
+  loadExperiences: ({ commit }) => {
+    commit("loadExperiences");
+  }
+};
 
 const getters: GetterTree<ExperienceState, string> = {
-  experiences: (state) => state.experiences
+  experiences: state => state.experiences
 };
 
 export default {

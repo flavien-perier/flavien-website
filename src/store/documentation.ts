@@ -1,8 +1,8 @@
 import { ActionTree, GetterTree, Module, MutationTree } from "vuex";
+import axios from "axios";
 
 import MarkdownHeader from "@/model/MarkdownHeader";
 import SearchResult from "@/model/SearchResult";
-import axios from "axios";
 
 const BACKEND_URL = process.env["VUE_APP_MARKDOWN_BACKEND"] as string;
 
@@ -19,10 +19,8 @@ const state: DocumentationState = {
 };
 
 const mutations: MutationTree<DocumentationState> = {
-  changePage: (state, page: number) => {
+  loadArticles: (state, page: number) => {
     state.page = page;
-  },
-  loadPage: (state, page: number) => {
     axios.get(BACKEND_URL, {
       params: {
         p: page,
@@ -39,16 +37,15 @@ const mutations: MutationTree<DocumentationState> = {
 };
 
 const actions: ActionTree<DocumentationState, string> = {
-  loadPage: ({ commit }, page: number) => {
-    commit("changePage", page);
-    commit("loadPage", page);
+  loadArticles: ({ commit }, page: number) => {
+    commit("loadArticles", page);
   }
 };
 
 const getters: GetterTree<DocumentationState, string> = {
-  headers: (state) => state.headers,
-  page: (state) => state.page,
-  numberOfPages: (state) => state.numberOfPages
+  headers: state => state.headers,
+  page: state => state.page,
+  numberOfPages: state => state.numberOfPages
 };
 
 export default {

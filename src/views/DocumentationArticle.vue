@@ -6,7 +6,7 @@
       <div class="row">
         <div class="col-12 col-lg-8">
           <h2 class="text-left text-lg-center">{{ $t("tableOfContents") }}</h2>
-          <TableOfContents class="box" :markdownContent="articleContent" />
+          <TableOfContents class="box" :markdownContent="content" />
         </div>
 
         <div class="col-12 col-lg-4">
@@ -19,13 +19,12 @@
       </div>
 
     </article>
-    <MarkdownViewer class="box bg-box text-article" :markdown="articleContent" /> 
+    <MarkdownViewer class="box bg-box text-article" :markdown="content" /> 
   </section>
 </template>
 
 <script>
-import marked from "marked";
-import axios from "axios";
+import { mapGetters, mapActions } from "vuex";
 
 import TableOfContents from "@/components/TableOfContents.vue";
 import MarkdownViewer from "@/components/MarkdownViewer.vue";
@@ -38,31 +37,17 @@ export default {
   },
   data() {
     return {
-      fileName: this.$route.params.fileName,
-      title: "",
-      author: "",
-      description: "",
-      date: "",
-      articleContent: ""
+      fileName: this.$route.params.fileName
     };
   },
   created() {
-    axios.get(process.env["VUE_APP_MARKDOWN_BACKEND"] + this.fileName)
-      .then(file => {
-        const patternMatching = /^---(.*)---.*$/s.exec(file.data);
-        const header = patternMatching[1];
-
-        this.title = /^title: ?(.*)$/m.exec(header)[1];
-        this.author = /^author: ?(.*)$/m.exec(header)[1];
-        this.description = /^description: ?(.*)$/m.exec(header)[1];
-        this.date = /^date: ?(.*)$/m.exec(header)[1];
-
-        this.articleContent = file.data;
-
-        document.title = `Flavien PERIER - ${this.title}`;
-        document.querySelector("meta[name=\"description\"]").setAttribute("content", this.description);
-        document.querySelector("meta[name=\"author\"]").setAttribute("content", this.author);
-      });
+    this.loadArticle(this.fileName);
+  },
+  methods: {
+    ...mapActions("documentationArticle", ["loadArticle"])
+  },
+  computed: {
+    ...mapGetters("documentationArticle", ["content", "title", "author", "date"])
   }
 };
 </script>

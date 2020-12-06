@@ -6,7 +6,8 @@
 </template>
 
 <script>
-import axios from "axios";
+import { mapGetters, mapActions } from "vuex";
+
 import MarkdownViewer from "@/components/MarkdownViewer.vue";
 
 export default {
@@ -14,16 +15,14 @@ export default {
   components: {
     MarkdownViewer
   },
-  data() {
-    return {
-      markdownContent: ""
-    }
-  },
   created() {
-    axios.get(process.env["VUE_APP_MARKDOWN_BACKEND"] + "home.md")
-      .then(markdownContent => {
-        this.markdownContent = markdownContent.data;
-      });
+    this.loadMarkdown();
+  },
+  methods: {
+    ...mapActions("home", ["loadMarkdown"])
+  },
+  computed: {
+    ...mapGetters("home", ["markdownContent"])
   }
 };
 </script>

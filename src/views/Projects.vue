@@ -13,13 +13,19 @@
 </template>
 
 <script>
-import { mapGetters } from "vuex";
+import { mapGetters, mapActions } from "vuex";
 import Project from "@/components/Project.vue";
 
 export default {
   name: "projects",
   components: {
     Project
+  },
+    created() {
+    this.loadProjects();
+  },
+  methods: {
+    ...mapActions("projects", ["loadProjects"])
   },
   computed: {
     ...mapGetters("projects", ["projects"])

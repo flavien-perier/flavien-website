@@ -1,43 +1,50 @@
 import { ActionTree, GetterTree, Module, MutationTree } from "vuex";
+import axios from "axios";
 
 import CompetenceInterface from "@/model/CompetenceInterface";
-const { competences } = require("@/data/competences.json") as { competences: CompetenceInterface[] }
 
 interface CompetenceState {
   competences: CompetenceInterface[],
-  competencesCheckbox: any
+  competencesCheckbox: {[key: string]: boolean}
 }
 
 const state: CompetenceState = {
-  competences,
+  competences: [],
   competencesCheckbox: {}
 };
 
-competences.map(c => c.type ).filter((value, index, self) => self.indexOf(value) == index)
-  .forEach(id => state.competencesCheckbox[id] = true);
-
 const mutations: MutationTree<CompetenceState> = {
-  select: (state, competenceId: string) => {
+  loadCompetences: state => {
+    if (state.competences.length == 0) {
+      axios.get("data/competences.json")
+        .then(markdownContent => {
+          state.competences = (markdownContent.data as { competences: CompetenceInterface[] }).competences;
+
+          const competencesCheckbox: {[key: string]: boolean} = {};
+          state.competences.map(c => c.type ).filter((value, index, self) => self.indexOf(value) == index)
+            .forEach(id => competencesCheckbox[id] = true);
+          state.competencesCheckbox = competencesCheckbox;
+        });
+    }
+  },
+  selectCompetence: (state, competenceId: string) => {
     state.competencesCheckbox[competenceId] = !state.competencesCheckbox[competenceId];
   }
 };
 
 const actions: ActionTree<CompetenceState, string> = {
-  select: ({ commit }, competenceId: string) => {
-    commit("select", competenceId);
+  loadCompetences: ({ commit }) => {
+    commit("loadCompetences");
+  },
+  selectCompetence: ({ commit }, competenceId: string) => {
+    commit("selectCompetence", competenceId);
   }
 };
 
 const getters: GetterTree<CompetenceState, string> = {
-  checked: (state) => (competenceId: string) => {
-    return state.competencesCheckbox[competenceId];
-  },
-  list: (state) => {
-    return Object.keys(state.competencesCheckbox);
-  },
-  competences: (state) => {
-    return state.competences;
-  }
+  competences: state => state.competences,
+  competencesTypes: state => Object.keys(state.competencesCheckbox),
+  competenceIsChecked: state => (competenceId: string) => state.competencesCheckbox[competenceId]
 };
 
 export default {
