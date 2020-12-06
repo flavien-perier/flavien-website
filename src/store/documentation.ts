@@ -20,19 +20,21 @@ const state: DocumentationState = {
 
 const mutations: MutationTree<DocumentationState> = {
   loadArticles: (state, page: number) => {
-    state.page = page;
-    axios.get(BACKEND_URL, {
-      params: {
-        p: page,
-        n: 10,
-        type: "DOCUMENTATION"
-      }
-    }).then(response => {
-      const data = response.data as SearchResult;
-
-      state.headers = data.files;
-      state.numberOfPages = data.pages;
-    });
+    if (state.headers.length == 0 || state.page !== page) {
+      state.page = page;
+      axios.get(BACKEND_URL, {
+        params: {
+          p: page,
+          n: 10,
+          type: "DOCUMENTATION"
+        }
+      }).then(response => {
+        const data = response.data as SearchResult;
+  
+        state.headers = data.files;
+        state.numberOfPages = data.pages;
+      });
+    }
   }
 };
 

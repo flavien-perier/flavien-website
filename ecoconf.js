@@ -5,7 +5,7 @@ module.exports = {
     logDir: "/tmp/eco-webserver.log",
     enableIsomorphic: true,
     header: {
-        "Cache-Control": "max-age=86400",
+        "Cache-Control": "max-age=604800",
         "X-XSS-Protection": "1;mode=block",
         "X-Frame-Options": "DENY"
     },
