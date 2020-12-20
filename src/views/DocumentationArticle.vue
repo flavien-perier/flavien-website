@@ -18,8 +18,8 @@
         </div>
       </div>
 
+      <div v-html="content"></div>
     </article>
-    <MarkdownViewer class="box bg-box text-article" :markdown="content" /> 
   </section>
 </template>
 
@@ -27,13 +27,10 @@
 import { mapGetters, mapActions } from "vuex";
 
 import TableOfContents from "@/components/TableOfContents.vue";
-import MarkdownViewer from "@/components/MarkdownViewer.vue";
-
 export default {
   name: "documentationArticles",
   components: {
-    TableOfContents,
-    MarkdownViewer
+    TableOfContents
   },
   data() {
     return {

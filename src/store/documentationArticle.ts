@@ -1,6 +1,7 @@
 import { ActionTree, GetterTree, Module, MutationTree } from "vuex";
 import axios from "axios";
 import YAML from "yaml";
+import marked from "marked";
 
 import store from "@/store";
 import MarkdownHeader from "@/model/MarkdownHeader";
@@ -24,12 +25,15 @@ const mutations: MutationTree<DocumentationArticleState> = {
     if (name !== state.articleName) {
       axios.get(BACKEND_URL + name).then(response => {
         state.articleName = name;
-        state.content = response.data;
         
-        const headerString = /^---(.*)---.*$/s.exec(response.data)![1];
-        state.header = YAML.parse(headerString);
+        const pattern = /^---(.*)---(.*)$/s.exec(response.data)!;
+        state.header = YAML.parse(pattern[1]);
+        state.content = marked(pattern[2]);
+
         store.commit("application/changeTitle", state.header!.title);
       });
+    } else {
+      store.commit("application/changeTitle", state.header!.title);
     }
   }
 };

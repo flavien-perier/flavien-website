@@ -10,7 +10,7 @@
     "start": "eco-webserver"
   },
   "dependencies": {
-    "eco-webserver": "1.0.5"
+    "eco-webserver": "1.0.6"
   },
   "devDependencies": {
     "@fortawesome/fontawesome-svg-core": "1.2.30",

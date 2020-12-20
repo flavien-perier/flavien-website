@@ -2,7 +2,6 @@ import Vue from "vue";
 
 //@ts-ignore
 import BSN from "bootstrap.native/dist/bootstrap-native.js";
-import "./genetic.js";
 
 import { library } from "@fortawesome/fontawesome-svg-core";
 import { faHome, faList, faGraduationCap, faProjectDiagram, faBook, faMicrochip, faDatabase, faServer, faEnvelope, faPhone, faMapMarkerAlt, faFlag, faTerminal, faCode } from "@fortawesome/free-solid-svg-icons";

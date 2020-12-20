@@ -1,20 +1,23 @@
 import { ActionTree, GetterTree, Module, MutationTree } from "vuex";
+import marked from "marked";
 import axios from "axios";
 
 interface HomeState {
-  markdownContent: string
+  content: string
 }
 
 const state: HomeState = {
-  markdownContent: ""
+  content: ""
 };
 
 const mutations: MutationTree<HomeState> = {
   loadMarkdown: state => {
-    if (!state.markdownContent) {
+    if (!state.content) {
       axios.get(process.env["VUE_APP_MARKDOWN_BACKEND"] + "home.md")
-        .then(markdownContent => {
-          state.markdownContent = markdownContent.data;
+        .then(response => {
+          const pattern = /^---.*---(.*)$/s.exec(response.data)!;
+
+          state.content = marked(pattern[1]);
         });
     }
   }
@@ -27,7 +30,7 @@ const actions: ActionTree<HomeState, string> = {
 };
 
 const getters: GetterTree<HomeState, string> = {
-  markdownContent: state => state.markdownContent,
+  content: state => state.content,
 };
 
 export default {

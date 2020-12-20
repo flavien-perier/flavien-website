@@ -5,6 +5,43 @@ const CASE_HEIGHT = 15;
 
 const WORKERS_BY_CHECK_POINT = 5;
 
+class Color {
+    constructor(red, green, blue) {
+        this.red = red;
+        this.green = green;
+        this.blue = blue;
+    }
+
+    add(color) {
+        switch(color) {
+            case "r":
+                if (this.red < 255) this.red++;
+                break;
+            case "g":
+                if (this.green < 255) this.green++;
+                break;
+            case "b":
+                if (this.blue < 255) this.blue++;
+                break;
+        }
+    }
+
+    get(color) {
+        switch(color) {
+            case "r":
+                return this.red;
+            case "g":
+                return this.green;
+            case "b":
+                return this.blue;
+        }
+    }
+
+    getCss() {
+        return `rgb(${this.red},${this.green},${this.blue})`;
+    }
+}
+
 class Grid {
     constructor(height, width, context) {
         this.height = height / CASE_HEIGHT;
@@ -68,49 +105,12 @@ class CheckPoint extends Case {
                 break;
         }
 
-        this.WORKERS = [];
+        this.workers = [];
         for (let i=0; i < WORKERS_BY_CHECK_POINT; i++) {
-            this.WORKERS.push(new Worker(this));
+            this.workers.push(new Worker(this));
         }
 
         grid.grid[posX][posY] = this;
-    }
-}
-
-class Color {
-    constructor(red, green, blue) {
-        this.red = red;
-        this.green = green;
-        this.blue = blue;
-    }
-
-    add(color) {
-        switch(color) {
-            case "r":
-                if (this.red < 255) this.red++;
-                break;
-            case "g":
-                if (this.green < 255) this.green++;
-                break;
-            case "b":
-                if (this.blue < 255) this.blue++;
-                break;
-        }
-    }
-
-    get(color) {
-        switch(color) {
-            case "r":
-                return this.red;
-            case "g":
-                return this.green;
-            case "b":
-                return this.blue;
-        }
-    }
-
-    getCss() {
-        return `rgb(${this.red},${this.green},${this.blue})`;
     }
 }
 
@@ -151,31 +151,33 @@ class Worker {
     }
 
     work() {
-        const directions = ["t", "r", "b", "l"]; // top, right, bottom, left
+        const directions = new Set(["t", "r", "b", "l"]); // top, right, bottom, left
 
-        const dropDir = (dir) => {
-            directions.splice(directions.indexOf(dir), 1);
-        }
+        // Removes travel possibilities within the map limits.
+        if (this.posX <= 0) directions.delete("l");
+        if (this.posY <= 0) directions.delete("t");
+        if (this.posX >= (this.grid.width - 1)) directions.delete("r");
+        if (this.posY >= (this.grid.height - 1)) directions.delete("b");
 
-        if (this.posX <= 0) dropDir("l");
-        if (this.posY <= 0) dropDir("t");
-        if (this.posX >= (this.grid.width - 1)) dropDir("r");
-        if (this.posY >= (this.grid.height - 1)) dropDir("b");
-
+        // Prevents a worker from being in the same place twice.
         directions.forEach(dir => {
             const dirCase = this.getDirCase(dir)
             this.history.forEach(([x, y]) => {
                 if (dirCase.posX == x && dirCase.posY == y) {
-                    dropDir(dir);
+                    directions.delete(dir);
                 }
             });
         });
 
-        const statisticRepartition = directions.reduce((accumulator, dir) => 
+        // The sum of all the values of the case on which it is possible to move it.
+        const sumCase = [...directions].reduce((accumulator, dir) => 
             accumulator += this.getDirCase(dir).color.get(this.checkPoint.checkPointType), 0
         );
         
-        const randomChoice = Math.random() * statisticRepartition;
+        // A random value between 0 and `sumCase`.
+        const randomChoice = Math.random() * sumCase;
+
+        // Determines the direction according to the `randomChoice`.
         let actualStatisticJauge = 0;
         let directionChoice = null;
 
@@ -205,6 +207,7 @@ class Worker {
                 return null;
         }
 
+        // Test if the case found is a checkpoint and if it is of the same type as the one you came from.
         if (this.grid.grid[this.posX][this.posY].checkPointType 
             && this.grid.grid[this.posX][this.posY].checkPointType == this.checkPoint.checkPointType) {
             
@@ -212,6 +215,7 @@ class Worker {
             return null;
         }
 
+        // Test if the worker has covered too much distance.
         if (this.history.length > this.grid.workerMaximumDistance) {
             this.reset();
             return null;
@@ -234,13 +238,13 @@ function geneticLoader() {
         const grid = new Grid(canvas.height, canvas.width, ctx);
     
         const checkPoints = [];
-        for (let i=0; i < ((grid.width / 2) * (grid.height / 2)); i++) {
+        for (let i=0; i < (grid.width * grid.height * 0.2); i++) {
             checkPoints.push(new CheckPoint(grid, ctx));
         }
     
         grid.draw();
         screenLoop = setInterval(() => {
-            checkPoints.forEach(cp => cp.WORKERS.forEach(f => f.work()));
+            checkPoints.forEach(cp => cp.workers.forEach(f => f.work()));
         }, 100);
 
         setTimeout(() => {

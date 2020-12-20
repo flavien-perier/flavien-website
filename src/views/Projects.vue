@@ -21,7 +21,7 @@ export default {
   components: {
     Project
   },
-    created() {
+  created() {
     this.loadProjects();
   },
   methods: {
