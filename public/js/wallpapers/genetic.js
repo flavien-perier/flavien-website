@@ -247,11 +247,9 @@ function geneticLoader() {
             checkPoints.forEach(cp => cp.workers.forEach(f => f.work()));
         }, 100);
 
-        setTimeout(() => {
-            clearInterval(screenLoop);
-        }, 30000);
+        setTimeout(() => clearInterval(screenLoop), 30000);
     }
 }
 
 geneticLoader();
-window.addEventListener("resize", () => geneticLoader());
+window.addEventListener("resize", geneticLoader);

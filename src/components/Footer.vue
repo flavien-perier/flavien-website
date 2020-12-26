@@ -11,66 +11,46 @@
           <a
             class="list-group-item list-group-item-secondary list-group-item-action"
             href="mailto:perier@flavien.io"
-          >
-            <font-awesome-icon icon="envelope" /> perier@flavien.io
-          </a>
+          ><font-awesome-icon icon="envelope" /> perier@flavien.io</a>
           <a
             class="list-group-item list-group-item-secondary list-group-item-action"
             href="tel:+33695928250"
-          >
-            <font-awesome-icon icon="phone" /> +33 6 95 92 82 50
-          </a>
+          ><font-awesome-icon icon="phone" /> +33 6 95 92 82 50</a>
           <a
             class="list-group-item list-group-item-secondary list-group-item-action"
             href="https://www.openstreetmap.org/relation/114172#map=12/45.8562/1.2500"
-          >
-            <font-awesome-icon icon="map-marker-alt" /> Limoges (France)
-          </a>
+          ><font-awesome-icon icon="map-marker-alt" /> Limoges (France)</a>
           <a
             class="list-group-item list-group-item-secondary list-group-item-action"
             href="https://www.linkedin.com/in/flavien-perier"
-          >
-            <font-awesome-icon :icon="['fab', 'linkedin']" /> Flavien PERIER
-          </a>
+          ><font-awesome-icon :icon="['fab', 'linkedin']" /> Flavien PERIER</a>
           <a
             class="list-group-item list-group-item-secondary list-group-item-action"
             href="https://www.facebook.com/flavien.io"
-          >
-            <font-awesome-icon :icon="['fab', 'facebook-square']" /> Flavien PERIER
-          </a>
+          ><font-awesome-icon :icon="['fab', 'facebook-square']" /> Flavien PERIER</a>
           <a
             class="list-group-item list-group-item-secondary list-group-item-action"
             href="https://mastodon.social/@flavien_perier"
-          >
-            <font-awesome-icon :icon="['fab', 'mastodon']" /> @flavien_perier@mastodon.social
-          </a>
+          ><font-awesome-icon :icon="['fab', 'mastodon']" /> @flavien_perier@mastodon.social</a>
           <a
             class="list-group-item list-group-item-secondary list-group-item-action"
             href="https://www.discord.com"
-          >
-            <font-awesome-icon :icon="['fab', 'discord']" /> F|_4\/13/\/#4113
-          </a>
+          ><font-awesome-icon :icon="['fab', 'discord']" /> F|_4\/13/\/#4113</a>
         </div>
         <div class="list-group mx-auto col-5 col-lg-3">
           <strong class="list-group-item list-group-item-dark">{{ $t("followMe") }}</strong>
           <a
             class="list-group-item list-group-item-secondary list-group-item-action"
             href="https://github.com/flavien-perier"
-          >
-            <font-awesome-icon :icon="['fab', 'github-square']" /> flavien-perier
-          </a>
+          ><font-awesome-icon :icon="['fab', 'github-square']" /> flavien-perier</a>
           <a
             class="list-group-item list-group-item-secondary list-group-item-action"
             href="https://hub.docker.com/u/flavienperier"
-          >
-            <font-awesome-icon :icon="['fab', 'docker']" /> flavienperier
-          </a>
+          ><font-awesome-icon :icon="['fab', 'docker']" /> flavienperier</a>
           <a
             class="list-group-item list-group-item-secondary list-group-item-action"
             href="https://www.npmjs.com/~flavien-perier"
-          >
-            <font-awesome-icon :icon="['fab', 'npm']" /> flavien-perier
-          </a>
+          ><font-awesome-icon :icon="['fab', 'npm']" /> flavien-perier</a>
         </div>
       </div>
     </div>
@@ -101,7 +81,6 @@ export default class Footer extends Vue {}
 
 <style scoped lang="css">
 #qr-code {
-  background-color: #fff;
   width: 100%;
 }
 </style>

@@ -1,3 +1,6 @@
+$red: #dc3545;
+$green: #29ab2e;
+
 @keyframes boxHover {
   0% { transform: rotate(0deg) }
   25% { transform: rotate(-1deg) }
@@ -22,7 +25,7 @@
 
 @mixin progress-bar-animation-x($percent) {
   width: 1% * $percent;
-  background-color: mix(#29ab2e, #dc3545, $percent * 1%);
+  background-color: mix($green, $red, $percent * 1%);
   animation-name: progress-bar-animation;
   animation-duration: 0.05s * $percent;
 }
