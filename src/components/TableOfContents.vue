@@ -14,11 +14,7 @@ import marked from "marked";
 
 @Component
 export default class TableOfContents extends Vue {
-  @Prop() private markdownContent!: string;
-
-  get htmlContent() {
-    return marked(this.markdownContent);
-  }
+  @Prop() private htmlContent!: string;
 
   private get titles(): TitleDescription[] {
     return (this.htmlContent.match(/<h[0-6] id=".*?">.*?<\/h[0-6]>/mgsu) || []).map(titleString => {

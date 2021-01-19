@@ -141,6 +141,17 @@
             ],
             "experience": "Orange",
             "date": "2020"
+        },
+        {
+            "name": "Pilact",
+            "descriptionFr": "Outil de pilotage d'activité interne à l'ASP (Agence de Service et de Paiement).",
+            "descriptionEn": "Internal activity management tool for ASP (Agence de Service et de Paiement).",
+            "technos": [
+                "Spring",
+                "Angular"
+            ],
+            "experience": "NéoSoft",
+            "date": "2020"
         }
     ]
 }

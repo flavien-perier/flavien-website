@@ -35,6 +35,15 @@
             "city": "Marche-en-Famenne (Belgium)",
             "start": "2019",
             "end": "2020"
+        },
+        {
+            "location": "NéoSoft",
+            "descriptionFr": "Développeur full stack.",
+            "descriptionEn": "Full stack developer.",
+            "url": "https://www.neo-soft.fr/",
+            "city": "Limoges",
+            "start": "2020",
+            "end": "*"
         }
     ]
 }

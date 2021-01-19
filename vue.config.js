@@ -22,7 +22,6 @@ module.exports = {
         sourceMap: false,
         terserOptions: {
           cache: true,
-          parallel: true,
           output: {
             comments: false
           }

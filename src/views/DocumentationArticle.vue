@@ -6,7 +6,7 @@
       <div class="row">
         <div class="col-12 col-lg-8">
           <h2 class="text-left text-lg-center">{{ $t("tableOfContents") }}</h2>
-          <TableOfContents class="box" :markdownContent="content" />
+          <TableOfContents class="box" :htmlContent="content" />
         </div>
 
         <div class="col-12 col-lg-4">
