@@ -26,7 +26,7 @@ const mutations: MutationTree<DocumentationArticleState> = {
       axios.get(BACKEND_URL + name).then(response => {
         state.articleName = name;
         
-        const pattern = /^---(.*)---(.*)$/s.exec(response.data)!;
+        const pattern = /^---(.*?)---(.*)$/s.exec(response.data)!;
         state.header = YAML.parse(pattern[1]);
         state.content = marked(pattern[2]);
 
