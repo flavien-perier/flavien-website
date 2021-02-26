@@ -46,8 +46,8 @@
           </router-link>
         </li>
         <li class="nav-item">
-          <router-link class="nav-link" :to="{ name: 'documentation'}">
-            <font-awesome-icon icon="book" /> {{ $t("documentation") }}
+          <router-link class="nav-link" :to="{ name: 'wiki'}">
+            <font-awesome-icon icon="book" /> {{ $t("wiki") }}
           </router-link>
         </li>
       </ul>

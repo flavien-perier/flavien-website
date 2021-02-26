@@ -28,7 +28,7 @@ import { mapGetters, mapActions } from "vuex";
 
 import TableOfContents from "@/components/TableOfContents.vue";
 export default {
-  name: "documentationArticles",
+  name: "wikiArticle",
   components: {
     TableOfContents
   },
@@ -41,10 +41,10 @@ export default {
     this.loadArticle(this.fileName);
   },
   methods: {
-    ...mapActions("documentationArticle", ["loadArticle"])
+    ...mapActions("wikiArticle", ["loadArticle"])
   },
   computed: {
-    ...mapGetters("documentationArticle", ["content", "title", "author", "date"])
+    ...mapGetters("wikiArticle", ["content", "title", "author", "date"])
   }
 };
 </script>

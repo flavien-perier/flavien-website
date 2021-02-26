@@ -8,19 +8,19 @@ import MarkdownHeader from "@/model/MarkdownHeader";
 
 const BACKEND_URL = process.env["VUE_APP_MARKDOWN_BACKEND"] as string;
 
-interface DocumentationArticleState {
+interface WikiArticleState {
   articleName: string,
   header: MarkdownHeader | null,
   content: string
 }
 
-const state: DocumentationArticleState = {
+const state: WikiArticleState = {
   articleName: "",
   header: null,
   content: ""
 };
 
-const mutations: MutationTree<DocumentationArticleState> = {
+const mutations: MutationTree<WikiArticleState> = {
   loadArticle: (state, name: string) => {
     if (name !== state.articleName) {
       axios.get(BACKEND_URL + name).then(response => {
@@ -38,13 +38,13 @@ const mutations: MutationTree<DocumentationArticleState> = {
   }
 };
 
-const actions: ActionTree<DocumentationArticleState, string> = {
+const actions: ActionTree<WikiArticleState, string> = {
   loadArticle: ({ commit }, name: number) => {
     commit("loadArticle", name);
   }
 };
 
-const getters: GetterTree<DocumentationArticleState, string> = {
+const getters: GetterTree<WikiArticleState, string> = {
   content: state => state.content,
   title: state => state.header ? state.header.title : "",
   author: state => state.header ? state.header.author : "",
@@ -58,4 +58,4 @@ export default {
   mutations,
   actions,
   getters
-} as Module<DocumentationArticleState, string>;
+} as Module<WikiArticleState, string>;

@@ -6,19 +6,19 @@ import SearchResult from "@/model/SearchResult";
 
 const BACKEND_URL = process.env["VUE_APP_MARKDOWN_BACKEND"] as string;
 
-interface DocumentationState {
+interface WikiState {
   headers: MarkdownHeader[],
   page: number,
   numberOfPages: number
 }
 
-const state: DocumentationState = {
+const state: WikiState = {
   headers: [],
   page: 1,
   numberOfPages: 1
 };
 
-const mutations: MutationTree<DocumentationState> = {
+const mutations: MutationTree<WikiState> = {
   loadArticles: (state, page: number) => {
     if (state.headers.length == 0 || state.page !== page) {
       state.page = page;
@@ -26,7 +26,7 @@ const mutations: MutationTree<DocumentationState> = {
         params: {
           p: page,
           n: 10,
-          type: "DOCUMENTATION"
+          type: "WIKI"
         }
       }).then(response => {
         const data = response.data as SearchResult;
@@ -38,13 +38,13 @@ const mutations: MutationTree<DocumentationState> = {
   }
 };
 
-const actions: ActionTree<DocumentationState, string> = {
+const actions: ActionTree<WikiState, string> = {
   loadArticles: ({ commit }, page: number) => {
     commit("loadArticles", page);
   }
 };
 
-const getters: GetterTree<DocumentationState, string> = {
+const getters: GetterTree<WikiState, string> = {
   headers: state => state.headers,
   page: state => state.page,
   numberOfPages: state => state.numberOfPages
@@ -56,4 +56,4 @@ export default {
   mutations,
   actions,
   getters
-} as Module<DocumentationState, string>;
+} as Module<WikiState, string>;

@@ -41,20 +41,20 @@ const routes = [
     component: () => import("@/views/Projects.vue")
   },
   {
-    path: "/documentation",
-    name: "documentation",
+    path: "/wiki",
+    name: "wiki",
     meta: {
       title: "documentation"
     },
-    component: () => import("@/views/Documentation.vue")
+    component: () => import("@/views/Wiki.vue")
   },
   {
-    path: "/documentation/:fileName",
-    name: "documentationArticles",
+    path: "/wiki/:fileName",
+    name: "wikiArticle",
     meta: {
       title: "Documentation Articles"
     },
-    component: () => import("@/views/DocumentationArticle.vue")
+    component: () => import("@/views/WikiArticle.vue")
   }
 ]
 
