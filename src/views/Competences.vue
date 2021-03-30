@@ -2,19 +2,17 @@
   <section class="container">
     <h1 class="col-12 section-title">{{ $t("competences") }}</h1>
 
-    <article class="row">
-      <div class="col-12 box bg-box">
-        <h2 class="text-center">{{ $t("filters") }}</h2>
-        <hr />
-        <div class="row">
-          <CompetenceType
-            v-for="id in competencesTypes"
-            :key="id"
-            v-on:check="selectCompetence(id)"
-            :competenceTypeId="id"
-            :selected="competenceIsChecked(id)"
-          />
-        </div>
+    <article class="box bg-box">
+      <h2 class="text-center">{{ $t("filters") }}</h2>
+      <hr />
+      <div class="row">
+        <CompetenceType
+          v-for="id in competencesTypes"
+          :key="id"
+          v-on:check="selectCompetence(id)"
+          :competenceTypeId="id"
+          :selected="competenceIsChecked(id)"
+        />
       </div>
     </article>
 

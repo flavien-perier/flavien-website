@@ -20,7 +20,6 @@
 
 <script lang="ts">
 import { Component, Prop, Vue } from "vue-property-decorator";
-import ExperienceInterface from "@/model/ExperienceInterface";
 import MarkdownHeader from "@/model/MarkdownHeader";
 
 @Component
