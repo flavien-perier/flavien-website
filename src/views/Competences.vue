@@ -2,7 +2,7 @@
   <section class="container">
     <h1 class="col-12 section-title">{{ $t("competences") }}</h1>
 
-    <article class="box bg-box">
+    <article class="box bg-box container">
       <h2 class="text-center">{{ $t("filters") }}</h2>
       <hr />
       <div class="row">

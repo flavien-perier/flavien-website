@@ -11,7 +11,7 @@
     </article>
 
     <div class="container">
-      <p class="col-12 section-title">
+      <p class="col-12 page-indicator">
         <span class="cursor-link" v-if="page > 1" @click="loadArticles(page - 1)">{{ $t("previous") }} -</span>
         {{ $t("page") }}: {{ page }}/{{ numberOfPages }}
         <span class="cursor-link" v-if="page < numberOfPages" @click="loadArticles(page + 1)">- {{ $t("next") }}</span>

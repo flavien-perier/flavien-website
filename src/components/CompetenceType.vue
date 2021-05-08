@@ -1,12 +1,10 @@
 <template>
-  <div class="input-group mb-3 col-lg-4 col-md-6 col-sm-12" @click="check()">
-    <div class="input-group-prepend">
+  <div class="mb-3 col-lg-4 col-md-6 col-sm-12" @click="check()">
+    <div class="input-group">
       <div class="input-group-text">
         <input type="checkbox" :checked="selected" />
       </div>
-    </div>
-    <div class="input-group-append">
-      <span :class="`competence-title input-group-text bg-competence-${competenceTypeId}`">
+      <span :class="`input-group-text competence-title bg-competence-${competenceTypeId}`">
         {{ $t(competenceTypeId) }}
       </span>
     </div>

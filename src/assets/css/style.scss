@@ -1,5 +1,7 @@
 // Bootstrap configuration
 $theme-colors: (
+  dark: #343a40,
+  light: #f8f9fa,
   box: #e5e5e5,
   competence-framework: #e8b6b6,
   competence-language: #d7d4ff,
@@ -8,18 +10,19 @@ $theme-colors: (
   competence-os: #fad9bf,
   competence-network: #fffddc,
   competence-tool: #dcfdff,
-  competence-management: #cfb7cf
+  competence-management: #cfb7cf,
 );
 
 $container-max-widths: (
-  xl: 1400px
+  xl: 1400px,
+  xxl: 1400px,
 );
 
 $enable-rounded: false;
-$enable-shadows: false;
-$enable-gradients: false;
 $enable-grid-classes: true;
-$enable-print-styles: false;
+
+$list-group-item-padding-y: .75rem;
+$list-group-item-padding-x: 1.25rem;
 
 // Imports
 @import "../../../node_modules/@fortawesome/fontawesome-svg-core/styles.css";
@@ -54,7 +57,18 @@ h1, h2, h3, h4, h5 {
 }
 
 .section-title {
+  color: #fff;
+  text-shadow: 0px 0px 8px #000;
   text-align: center;
+}
+
+@media screen and (max-width: map-get($grid-breakpoints, "lg")) {
+  .section-title {
+    margin-top: 3.5rem;
+  }
+}
+
+.page-indicator {
   color: #fff;
   text-shadow: 0px 0px 8px #000;
   text-align: center;
@@ -62,9 +76,9 @@ h1, h2, h3, h4, h5 {
 
 .box {
   border: 1px solid #000;
-  border-radius: 1px;
-  margin-bottom: 25px;
-  padding: 4px;
+  border-radius: 3px;
+  margin-bottom: 1.5rem;
+  padding: 0.5rem;
 }
 
 #bg-canvas {

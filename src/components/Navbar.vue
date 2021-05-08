@@ -1,5 +1,5 @@
 <template>
-  <nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-parallax">
+  <nav class="navbar navbar-dark fixed-top navbar-expand-lg bg-parallax container-fluid">
     <router-link class="navbar-brand" :to="{ name: 'home'}">
       <img
         class="d-inline-block align-top"
@@ -53,7 +53,7 @@
       </ul>
     </div>
 
-    <ul class="nav navbar-nav d-none d-lg-block cursor-link mr-5"  @click="changeLanguage()">
+    <ul class="nav navbar-nav d-none d-lg-block cursor-link me-5"  @click="changeLanguage()">
       <li class="nav-item">
         <a class="nav-link">
           <font-awesome-icon icon="flag" /> {{ $i18n.locale }}

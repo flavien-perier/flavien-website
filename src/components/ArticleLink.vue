@@ -8,7 +8,7 @@
       <h2 class="text-center">{{ header.title }}</h2>
       <hr />
       <p>{{ header.description }}</p>
-      <span class="ml-1"
+      <span class="ms-1"
         v-for="categ in header.categories"
         :key="categ"
         :title="categ[0].toUpperCase() + categ.substr(1)">
