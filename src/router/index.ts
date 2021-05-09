@@ -44,7 +44,7 @@ const routes = [
     path: "/wiki",
     name: "wiki",
     meta: {
-      title: "documentation"
+      title: "wiki"
     },
     component: () => import("@/views/Wiki.vue")
   },
@@ -52,7 +52,7 @@ const routes = [
     path: "/wiki/:fileName",
     name: "wikiArticle",
     meta: {
-      title: "Documentation Articles"
+      title: "Wiki Articles"
     },
     component: () => import("@/views/WikiArticle.vue")
   }

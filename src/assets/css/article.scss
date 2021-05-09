@@ -2,52 +2,52 @@
   text-align: justify;
   padding: .75rem !important;
   line-height: 1.75;
-}
 
-.text-article br {
-  display: block;
-  margin: .5rem;
-}
+  br {
+    display: block;
+    margin: .5rem;
+  }
 
-.text-article h2 {
-  margin-left: 0rem;
-}
+  h2 {
+    margin-left: 0rem;
+  }
 
-.text-article h3 {
-  margin-left: 1.5rem;
-}
+  h3 {
+    margin-left: 1.5rem;
+  }
 
-.text-article h4 {
-  margin-left: 3rem;
-}
+  h4 {
+    margin-left: 3rem;
+  }
 
-.text-article h5 {
-  margin-left: 4.5rem;
-}
+  h5 {
+    margin-left: 4.5rem;
+  }
 
-.text-article img {
-  display: block;
-  margin: auto;
-  max-width: 60%;
-}
+  img {
+    display: block;
+    margin: auto;
+    max-width: 60%;
+  }
 
-.text-article img:hover {
-  max-width: 100%;
-  transition: max-width 1s;
-}
+  img:hover {
+    max-width: 100%;
+    transition: max-width 1s;
+  }
 
-.text-article code {
-  padding: .1rem;
-  border-radius: 3px;
-  background-color: #222;
-  color: #fff;
-}
+  code {
+    padding: .1rem;
+    border-radius: 3px;
+    background-color: #222;
+    color: #fff;
+  }
 
-.text-article pre {
-  display: block;
-  padding: .5rem;
-  border-radius: 3px;
-  background-color: #222;
-  max-height: 35rem;
-  overflow: auto;
+  pre {
+    display: block;
+    padding: .5rem;
+    border-radius: 3px;
+    background-color: #222;
+    max-height: 35rem;
+    overflow: auto;
+  }
 }
