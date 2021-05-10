@@ -6,7 +6,7 @@
           <h2 class="text-center text-light">{{ $t("scanMe") }}</h2>
           <img id="qr-code" src="../assets/img/qr-code.png" alt="qr-code" />
         </div>
-        <div class="list-group mx-auto col-7 col-lg-6">
+        <div class="list-group mx-auto col-12 col-lg-6">
           <strong class="list-group-item list-group-item-dark">{{ $t("contactMe") }}</strong>
           <a
             class="list-group-item list-group-item-secondary list-group-item-action"
@@ -37,7 +37,7 @@
             href="https://www.discord.com"
           ><font-awesome-icon :icon="['fab', 'discord']" /> F|_4\/13/\/#4113</a>
         </div>
-        <div class="list-group mx-auto col-5 col-lg-3">
+        <div class="list-group mx-auto col-12 col-lg-3">
           <strong class="list-group-item list-group-item-dark">{{ $t("followMe") }}</strong>
           <a
             class="list-group-item list-group-item-secondary list-group-item-action"
