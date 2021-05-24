@@ -64,18 +64,19 @@ import { Component, Vue } from "vue-property-decorator";
 export default class Footer extends Vue {}
 </script>
 
-<i18n>
+<i18n locale="fr">
 {
-  "en": {
-    "contactMe": "Contact me",
-    "followMe": "Follow me",
-    "scanMe": "Scan me"
-  },
-  "fr": {
-    "contactMe": "Contactez-moi",
-    "followMe": "Suivez-moi",
-    "scanMe": "Scannez-moi"
-  }
+  "contactMe": "Contactez-moi",
+  "followMe": "Suivez-moi",
+  "scanMe": "Scannez-moi"
+}
+</i18n>
+
+<i18n locale="en">
+{
+  "contactMe": "Contact me",
+  "followMe": "Follow me",
+  "scanMe": "Scan me"
 }
 </i18n>
 

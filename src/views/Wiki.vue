@@ -42,17 +42,18 @@ export default {
 };
 </script>
 
-<i18n>
+<i18n locale="fr">
 {
-  "en": {
-    "page": "Page",
-    "next": "Next",
-    "previous": "Previous"
-  },
-  "fr": {
-    "page": "Page",
-    "next": "Next",
-    "previous": "Précédent"
-  }
+  "page": "Page",
+  "next": "Suivant",
+  "previous": "Précédent"
+}
+</i18n>
+
+<i18n locale="en">
+{
+  "page": "Page",
+  "next": "Next",
+  "previous": "Previous"
 }
 </i18n>

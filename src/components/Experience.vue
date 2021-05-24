@@ -40,20 +40,21 @@ export default class Experience extends Vue {
 }
 </script>
 
-<i18n>
+<i18n locale="fr">
 {
-  "en": {
-    "description": "Description",
-    "informations": "Informations",
-    "city": "City",
-    "period": "Period"
-  },
-  "fr": {
-    "description": "Description",
-    "informations": "Informations",
-    "city": "Ville",
-    "period": "Période"
-  }
+  "description": "Description",
+  "informations": "Informations",
+  "city": "Ville",
+  "period": "Période"
+}
+</i18n>
+
+<i18n locale="en">
+{
+  "description": "Description",
+  "informations": "Informations",
+  "city": "City",
+  "period": "Period"
 }
 </i18n>
 

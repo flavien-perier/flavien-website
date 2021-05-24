@@ -14,11 +14,8 @@
     <button
       class="navbar-toggler"
       type="button"
-      data-toggle="collapse"
-      data-target="#navbar"
-      aria-controls="navbar"
-      aria-expanded="false"
-      aria-label="Navigation"
+      data-bs-toggle="collapse"
+      data-bs-target="#navbar"
     >
       <span class="navbar-toggler-icon"></span>
     </button>

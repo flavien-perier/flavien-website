@@ -36,17 +36,18 @@ export default class Project extends Vue {
 }
 </script>
 
-<i18n>
+<i18n locale="fr">
 {
-  "en": {
-    "technos": "Technologies",
-    "description": "Description",
-    "in": "in"
-  },
-  "fr": {
-    "technos": "Technologies",
-    "description": "Description",
-    "in": "en"
-  }
+  "technos": "Technologies",
+  "description": "Description",
+  "in": "en"
+}
+</i18n>
+
+<i18n locale="en">
+{
+  "technos": "Technologies",
+  "description": "Description",
+  "in": "in"
 }
 </i18n>

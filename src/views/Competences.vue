@@ -50,13 +50,14 @@ export default {
 };
 </script>
 
-<i18n>
+<i18n locale="fr">
 {
-  "en": {
-    "filters": "Filters"
-  },
-  "fr": {
-    "filters": "Filtres"
-  }
+  "filters": "Filtres"
+}
+</i18n>
+
+<i18n locale="en">
+{
+  "filters": "Filters"
 }
 </i18n>

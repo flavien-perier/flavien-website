@@ -1,8 +1,5 @@
 import Vue from "vue";
 
-//@ts-ignore
-import BSN from "bootstrap.native/dist/bootstrap-native.js";
-
 import { library } from "@fortawesome/fontawesome-svg-core";
 import { faHome, faList, faGraduationCap, faProjectDiagram, faBook, faMicrochip, faDatabase, faServer, faEnvelope, faPhone, faMapMarkerAlt, faFlag, faTerminal, faCode } from "@fortawesome/free-solid-svg-icons";
 import { faLinkedin, faFacebookSquare, faMastodon, faDiscord, faAngular, faVuejs, faPython, faJs, faNpm, faJava, faPhp, faLinux, faWindows, faGitAlt, faGithub, faGithubSquare, faGitlab, faDocker } from "@fortawesome/free-brands-svg-icons";
@@ -13,6 +10,7 @@ import store from "./store";
 import App from "./App.vue";
 import router from "./router";
 import i18n from "./i18n";
+import BSN from "./bootstrap";
 
 console.log(`
  _______ _       _______        ________________ _       

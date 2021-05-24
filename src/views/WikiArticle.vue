@@ -49,19 +49,20 @@ export default {
 };
 </script>
 
-<i18n>
+<i18n locale="fr">
 {
-  "en": {
-    "tableOfContents": "Table of contents",
-    "informations": "Informations",
-    "author": "Author",
-    "date": "Date"
-  },
-  "fr": {
-    "tableOfContents": "Table des matières",
-    "informations": "Informations",
-    "author": "Auteur",
-    "date": "Date"
-  }
+  "tableOfContents": "Table des matières",
+  "informations": "Informations",
+  "author": "Auteur",
+  "date": "Date"
+}
+</i18n>
+
+<i18n locale="en">
+{
+  "tableOfContents": "Table of contents",
+  "informations": "Informations",
+  "author": "Author",
+  "date": "Date"
 }
 </i18n>

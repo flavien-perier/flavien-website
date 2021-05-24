@@ -26,23 +26,6 @@
     <canvas class="d-block mx-auto" id="bg-canvas" width="800" height="450"></canvas>
     <div id="app"></div>
 
-    <script type="text/javascript" src="https://analytics.flavien.io/modules/base/js/owa.tracker-combined-min.js"></script>
     <script type="text/javascript" src="/js/wallpapers/genetic.js" defer></script>
-    <script type="text/javascript">
-      if (window.doNotTrack == "1" || navigator.doNotTrack == "yes") {
-        console.info("The 'Do not track' function is activated. OWA is not enabled.");
-      } else {
-        try {
-          OWA.setSetting("baseUrl", "https://analytics.flavien.io/");
-          const OWATracker = new OWA.tracker();
-          OWATracker.setSiteId("12e1b286d171012dfaadf64e0cf76fb3");
-          OWATracker.trackPageView();
-          OWATracker.trackClicks();
-          OWATracker.trackDomStream();
-        } catch(err) {
-          console.error("Error with OWA");
-        }
-      }
-    </script>
   </body>
 </html>

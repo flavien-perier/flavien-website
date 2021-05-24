@@ -5,7 +5,6 @@
 
     <router-view class="mt-5 mt-lg-0" />
 
-    <CookieInformation />
     <Footer />
   </div>
 </template>
@@ -13,7 +12,6 @@
 <script>
 import Navbar from "@/components/Navbar.vue";
 import Header from "@/components/Header.vue";
-import CookieInformation from "@/components/CookieInformation.vue";
 import Footer from "@/components/Footer.vue";
 
 export default {
@@ -21,7 +19,6 @@ export default {
   components: {
     Footer,
     Navbar,
-    CookieInformation,
     Header
   }
 };

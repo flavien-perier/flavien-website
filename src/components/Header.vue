@@ -14,14 +14,15 @@ import { Component, Vue } from "vue-property-decorator";
 export default class Junbotron extends Vue {}
 </script>
 
-<i18n>
+<i18n locale="fr">
 {
-  "en": {
-    "fullStackDeveloper": "Full stack developer"
-  },
-  "fr": {
-    "fullStackDeveloper": "Développeur full stack"
-  }
+  "fullStackDeveloper": "Développeur full stack"
+}
+</i18n>
+
+<i18n locale="en">
+{
+  "fullStackDeveloper": "Full stack developer"
 }
 </i18n>
 

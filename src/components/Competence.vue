@@ -42,18 +42,19 @@ export default class Competence extends Vue {
 }
 </script>
 
-<i18n>
+<i18n locale="fr">
 {
-  "en": {
-    "description": "Description",
-    "enterprises": "Enterprises",
-    "level": "Level"
-  },
-  "fr": {
-    "description": "Description",
-    "enterprises": "Entreprises",
-    "level": "Niveau"
-  }
+  "description": "Description",
+  "enterprises": "Entreprises",
+  "level": "Niveau"
+}
+</i18n>
+
+<i18n locale="en">
+{
+  "description": "Description",
+  "enterprises": "Enterprises",
+  "level": "Level"
 }
 </i18n>
 

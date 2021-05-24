@@ -25,28 +25,29 @@ export default class CompetenceType extends Vue {
 }
 </script>
 
-<i18n>
+<i18n locale="fr">
 {
-  "en": {
-    "framework": "Framework",
-    "language": "Language",
-    "db": "Data Base",
-    "bigData": "Big Data",
-    "os": "Operating System",
-    "network": "Network",
-    "tool": "Tool",
-    "management": "Management"
-  },
-  "fr": {
-    "framework": "Framework",
-    "language": "Langage",
-    "db": "Base de données",
-    "bigData": "Big Data",
-    "os": "Système d'exploitation",
-    "network": "Réseau",
-    "tool": "Outil",
-    "management": "Management"
-  }
+  "framework": "Framework",
+  "language": "Langage",
+  "db": "Base de données",
+  "bigData": "Big Data",
+  "os": "Système d'exploitation",
+  "network": "Réseau",
+  "tool": "Outil",
+  "management": "Management"
+}
+</i18n>
+
+<i18n locale="en">
+{
+  "framework": "Framework",
+  "language": "Language",
+  "db": "Data Base",
+  "bigData": "Big Data",
+  "os": "Operating System",
+  "network": "Network",
+  "tool": "Tool",
+  "management": "Management"
 }
 </i18n>
 
