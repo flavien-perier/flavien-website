@@ -24,7 +24,10 @@ $enable-grid-classes: true;
 $list-group-item-padding-y: .75rem;
 $list-group-item-padding-x: 1.25rem;
 
+$font-family-sans-serif: "body";
+
 // Imports
+@import "./fonts.scss";
 @import "../../../node_modules/@fortawesome/fontawesome-svg-core/styles.css";
 @import "~bootstrap";
 @import "./animations.scss";
@@ -32,23 +35,7 @@ $list-group-item-padding-x: 1.25rem;
 @import "./print.scss";
 
 // Custom
-@font-face {
-	font-family: "body";
-  src: local('roboto'), url("../fonts/roboto.woff2") format("woff2");
-  font-display: swap;
-}
-
-@font-face {
-	font-family: "title";
-  src: local('kenyan-coffee'), local('kenyan coffee'), url("../fonts/kenyan-coffee.woff2") format("woff2");
-  font-display: swap;
-}
-
-body {
-  font-family: body;
-}
-
-h1, h2, h3, h4, h5 {
+h1, h2, h3, h4, h5, h6 {
   font-family: title;
 }
 
@@ -58,7 +45,7 @@ h1, h2, h3, h4, h5 {
 
 .section-title {
   color: #fff;
-  text-shadow: 0px 0px 8px #000;
+  text-shadow: 0rem 0rem .5rem #000;
   text-align: center;
 }
 
@@ -70,7 +57,7 @@ h1, h2, h3, h4, h5 {
 
 .page-indicator {
   color: #fff;
-  text-shadow: 0px 0px 8px #000;
+  text-shadow: 0rem 0rem .5rem #000;
   text-align: center;
 }
 
@@ -78,7 +65,7 @@ h1, h2, h3, h4, h5 {
   border: 1px solid #000;
   border-radius: 3px;
   margin-bottom: 1.5rem;
-  padding: 0.5rem;
+  padding: .5rem;
 }
 
 #bg-canvas {

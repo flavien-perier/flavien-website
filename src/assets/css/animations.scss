@@ -1,20 +1,7 @@
+// Progress bar
+
 $red: #dc3545;
 $green: #29ab2e;
-
-@keyframes boxHover {
-  0% { transform: rotate(0deg) }
-  25% { transform: rotate(-1deg) }
-  75% { transform: rotate(1deg) }
-  100% { transform: rotate(0deg) }
-}
-
-@keyframes competenceTitleHover {
-  0% { min-width: 250px }
-  20% { min-width: 300px }
-  50% { min-width: 275px }
-  80% { min-width: 300px }
-  100% { min-width: 250px }
-}
 
 @keyframes progress-bar-animation {
   0% {
@@ -34,13 +21,31 @@ $green: #29ab2e;
   .progress-bar-animation-#{$i} { @include progress-bar-animation-x($i) }
 }
 
+// .box-animation:hover
+
+@keyframes boxAnimationHover {
+  0% { transform: rotate(0deg) }
+  25% { transform: rotate(-1deg) }
+  75% { transform: rotate(1deg) }
+  100% { transform: rotate(0deg) }
+}
+
 .box-animation:hover {
-  animation-name: boxHover;
+  animation-name: boxAnimationHover;
   animation-duration: 1s;
 }
 
+// .competence-title:hover
+
+@keyframes competenceTitleHover {
+  0% { min-width: 15rem }
+  20% { min-width: 18.5rem }
+  50% { min-width: 17rem }
+  80% { min-width: 18.5rem }
+  100% { min-width: 15rem }
+}
+
 .competence-title:hover {
-  min-width: 275px;
   animation-name: competenceTitleHover;
   animation-duration: 1s;
 }

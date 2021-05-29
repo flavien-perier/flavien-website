@@ -1,6 +1,6 @@
 import Vue from "vue";
 
-import { library } from "@fortawesome/fontawesome-svg-core";
+import { library, config } from "@fortawesome/fontawesome-svg-core";
 import { faHome, faList, faGraduationCap, faProjectDiagram, faBook, faMicrochip, faDatabase, faServer, faEnvelope, faPhone, faMapMarkerAlt, faFlag, faTerminal, faCode } from "@fortawesome/free-solid-svg-icons";
 import { faLinkedin, faFacebookSquare, faMastodon, faDiscord, faAngular, faVuejs, faPython, faJs, faNpm, faJava, faPhp, faLinux, faWindows, faGitAlt, faGithub, faGithubSquare, faGitlab, faDocker } from "@fortawesome/free-brands-svg-icons";
 import { faSpring, faTs, faKotlin, faNginx, faVscode, faAntlr, faKubernetes, faSwagger, faKafka, faIntellij, faNeo4j, faScrum } from "@/icons";
@@ -22,6 +22,8 @@ console.log(`
 | )     | (____/| )   ( | \\   / ___) (__| (____/| )  \\  |
 |/      (_______|/     \\|  \\_/  \\_______(_______|/    )_)
 `);
+
+config.autoAddCss = false;
 
 library.add(faHome, faList, faGraduationCap, faProjectDiagram, faBook, faMicrochip, faDatabase, faServer, faEnvelope, faPhone, faMapMarkerAlt, faFlag, faTerminal, faCode,
   faLinkedin, faFacebookSquare, faMastodon, faDiscord, faAngular, faVuejs, faPython, faJs, faNpm, faJava, faPhp, faLinux, faWindows, faGitAlt, faGithub, faGithubSquare, faGitlab, faDocker,

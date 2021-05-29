@@ -64,6 +64,12 @@ import { Component, Vue } from "vue-property-decorator";
 export default class Footer extends Vue {}
 </script>
 
+<style scoped lang="css">
+#qr-code {
+  width: 100%;
+}
+</style>
+
 <i18n locale="fr">
 {
   "contactMe": "Contactez-moi",
@@ -79,9 +85,3 @@ export default class Footer extends Vue {}
   "scanMe": "Scan me"
 }
 </i18n>
-
-<style scoped lang="css">
-#qr-code {
-  width: 100%;
-}
-</style>

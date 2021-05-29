@@ -25,7 +25,7 @@ module.exports = {
             comments: false
           }
         }
-      })]
+      })],
     },
     plugins: [
       new DeadCodePlugin({
@@ -36,14 +36,14 @@ module.exports = {
           "**/*.(stories|test|spec).(js|ts)",
         ],
       })
-    ]
+    ],
   },
   pluginOptions: {
     i18n: {
       locale: "fr",
       fallbackLocale: "fr",
       localeDir: "locales",
-      enableInSFC: true
+      enableInSFC: true,
     }
   }
 }

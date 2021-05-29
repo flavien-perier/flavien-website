@@ -1,18 +1,9 @@
-@font-face {
-  font-family: "print";
-  src: url("../fonts/ryman-eco.woff2") format("woff2");
-}
-
 @media print {
   nav, footer, #bg-canvas {
     display: none !important;
   }
 
-  body {
-    font-family: print !important;
-  }
-
-  h1, h2, h3, h4, h5 {
+  body, h1, h2, h3, h4, h5 {
     font-family: print !important;
     text-shadow: none !important;
   }

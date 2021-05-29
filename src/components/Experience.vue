@@ -40,6 +40,13 @@ export default class Experience extends Vue {
 }
 </script>
 
+<style scoped>
+.box {
+  height: 17em;
+  overflow: hidden;
+}
+</style>
+
 <i18n locale="fr">
 {
   "description": "Description",
@@ -57,10 +64,3 @@ export default class Experience extends Vue {
   "period": "Period"
 }
 </i18n>
-
-<style scoped>
-.box {
-  height: 17em;
-  overflow: hidden;
-}
-</style>

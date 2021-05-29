@@ -42,6 +42,13 @@ export default class Competence extends Vue {
 }
 </script>
 
+<style scoped>
+.description {
+  height: 6em;
+  overflow: hidden;
+}
+</style>
+
 <i18n locale="fr">
 {
   "description": "Description",
@@ -57,10 +64,3 @@ export default class Competence extends Vue {
   "level": "Level"
 }
 </i18n>
-
-<style scoped>
-.description {
-  height: 6em;
-  overflow: hidden;
-}
-</style>

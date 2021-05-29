@@ -14,18 +14,6 @@ import { Component, Vue } from "vue-property-decorator";
 export default class Junbotron extends Vue {}
 </script>
 
-<i18n locale="fr">
-{
-  "fullStackDeveloper": "Développeur full stack"
-}
-</i18n>
-
-<i18n locale="en">
-{
-  "fullStackDeveloper": "Full stack developer"
-}
-</i18n>
-
 <style scoped lang="css">
 h1 {
   color: #eee;
@@ -39,3 +27,16 @@ p {
   padding-top: 15vh;
 }
 </style>
+
+<i18n locale="fr">
+{
+  "fullStackDeveloper": "Développeur full stack"
+}
+</i18n>
+
+<i18n locale="en">
+{
+  "fullStackDeveloper": "Full stack developer"
+}
+</i18n>
+

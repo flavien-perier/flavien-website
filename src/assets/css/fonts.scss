@@ -1,0 +1,16 @@
+@font-face {
+  font-family: "title";
+  src: local("kenyan-coffee"), local("kenyan coffee"), url("../fonts/kenyan-coffee.woff2") format("woff2");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "body";
+  src: local("roboto"), url("../fonts/roboto.woff2") format("woff2");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "print";
+  src: local("ryman-eco"), local("ryman eco"), url("../fonts/ryman-eco.woff2") format("woff2");
+}

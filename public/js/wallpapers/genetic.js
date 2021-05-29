@@ -169,6 +169,12 @@ class Worker {
             });
         });
 
+        // If all directions have been deleted reset.
+        if (directions.size == 0) {
+            this.reset();
+            return;
+        }
+
         // The sum of all the values of the case on which it is possible to move it.
         const sumCase = [...directions].reduce((accumulator, dir) => 
             accumulator += this.getDirCase(dir).color.get(this.checkPoint.checkPointType), 0
@@ -183,7 +189,7 @@ class Worker {
 
         for (const dir of directions) {
             actualStatisticJauge += this.getDirCase(dir).color.get(this.checkPoint.checkPointType);
-            if (randomChoice < actualStatisticJauge) {
+            if (randomChoice <= actualStatisticJauge) {
                 directionChoice = dir;
                 break;
             }
@@ -202,9 +208,6 @@ class Worker {
             case "l":
                 this.posX--;
                 break;
-            default:
-                this.reset();
-                return null;
         }
 
         // Test if the case found is a checkpoint and if it is of the same type as the one you came from.
@@ -212,13 +215,13 @@ class Worker {
             && this.grid.grid[this.posX][this.posY].checkPointType == this.checkPoint.checkPointType) {
             
             this.save();
-            return null;
+            return;
         }
 
         // Test if the worker has covered too much distance.
         if (this.history.length > this.grid.workerMaximumDistance) {
             this.reset();
-            return null;
+            return;
         }
 
         this.history.push([this.posX, this.posY]);

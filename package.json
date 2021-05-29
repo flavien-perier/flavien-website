@@ -10,7 +10,7 @@
     "start": "eco-webserver"
   },
   "dependencies": {
-    "eco-webserver": "1.0.7"
+    "eco-webserver": "1.0.8"
   },
   "devDependencies": {
     "@fortawesome/fontawesome-svg-core": "1.2.35",
@@ -20,7 +20,7 @@
     "@fullhuman/postcss-purgecss": "3.0.0",
     "@fullhuman/vue-cli-plugin-purgecss": "3.0.1",
     "@intlify/vue-i18n-loader": "1.1.0",
-    "@types/marked": "2.0.0",
+    "@types/marked": "2.0.3",
     "@types/node": "14.14.31",
     "@vue/cli-plugin-router": "4.5.13",
     "@vue/cli-plugin-typescript": "4.5.13",
@@ -28,8 +28,8 @@
     "axios": "0.21.1",
     "bootstrap": "5.0.1",
     "bootstrap.native": "3.0.15",
-    "core-js": "3.12.1",
-    "marked": "2.0.5",
+    "core-js": "3.13.1",
+    "marked": "2.0.6",
     "node-sass": "5.0.0",
     "sass-loader": "10.1.1",
     "terser-webpack-plugin": "4.2.3",

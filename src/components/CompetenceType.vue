@@ -25,6 +25,13 @@ export default class CompetenceType extends Vue {
 }
 </script>
 
+<style scoped lang="css">
+.competence-title {
+  min-width: 15rem;
+  cursor: pointer; 
+}
+</style>
+
 <i18n locale="fr">
 {
   "framework": "Framework",
@@ -50,10 +57,3 @@ export default class CompetenceType extends Vue {
   "management": "Management"
 }
 </i18n>
-
-<style scoped lang="css">
-.competence-title {
-  min-width: 250px;
-  cursor: pointer; 
-}
-</style>
