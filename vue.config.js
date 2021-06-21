@@ -35,7 +35,7 @@ module.exports = {
         exclude: [
           "**/*.(stories|test|spec).(js|ts)",
         ],
-      })
+      }),
     ],
   },
   pluginOptions: {
