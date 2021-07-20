@@ -8,8 +8,8 @@ module.exports = {
   header: {
     "Cache-Control": "max-age=604800",
     "X-XSS-Protection": "1;mode=block",
-    "X-Frame-Options": "DENY"
+    "X-Frame-Options": "DENY",
   },
   contentType: {},
-  proxy: {}
+  proxy: {},
 }

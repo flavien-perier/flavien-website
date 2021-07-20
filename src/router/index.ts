@@ -65,7 +65,7 @@ const router = new VueRouter({
 });
 
 router.beforeEach((to, from, next) => {
-  store.commit("application/changeTitle", i18n.t(to.meta["title"]));
+  store.commit("application/changeTitle", i18n.t(to.meta!["title"]));
   next();
 });
 
