@@ -18,7 +18,7 @@ RUN wget -q -O /etc/apk/keys/sgerrand.rsa.pub https://alpine-pkgs.sgerrand.com/s
     chmod -R 750 /opt/flavien && \
     rm -Rf node_modules && \
     npm install --production && \
-    rm -Rf src public postcss.config.js vue.config.js tsconfig.json package.json package-lock.json .env*
+    rm -Rf src public postcss.config.js vue.config.js tsconfig.json .env*
 
 FROM node:lts-alpine
 
