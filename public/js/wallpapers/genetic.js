@@ -5,6 +5,12 @@ const CASE_HEIGHT = 15;
 
 const WORKERS_BY_CHECK_POINT = 5;
 
+const REDUCE_GRID_VALUE = 3;
+
+const WORKERS_LOOP_INTERVAL = 100;
+const REDUCE_GRID_WEIGHT_LOOP_INTERVAL = 3000;
+const MANAGE_CHECK_POINTS_LOOP_INTERVAL = 2000;
+
 class Color {
     constructor(red, green, blue) {
         this.red = red;
@@ -24,6 +30,12 @@ class Color {
                 if (this.blue < 255) this.blue++;
                 break;
         }
+    }
+
+    minusAll(value) {
+        this.red = this.red > 1 + value ? this.red - value : 1;
+        this.green = this.green > 1 + value ? this.green - value : 1;
+        this.blue = this.blue > 1 + value ? this.blue - value : 1;
     }
 
     get(color) {
@@ -62,6 +74,10 @@ class Grid {
         this.draw();
     }
 
+    get(x, y) {
+        return this.grid[x][y];
+    }
+
     draw() {
         this.grid.forEach(column => column.forEach(element => element.draw()));
     }
@@ -79,12 +95,23 @@ class Case {
         this.context.fillStyle = this.color.getCss();
         this.context.fillRect(this.posX * CASE_WIDTH, this.posY * CASE_HEIGHT, CASE_WIDTH, CASE_HEIGHT);
     }
+
+    isCheckPoint() {
+        return false;
+    }
 }
 
 class CheckPoint extends Case {
     constructor(grid, context) {
-        const posX = Math.round(Math.random() * (grid.width - 1));
-        const posY = Math.round(Math.random() * (grid.height - 1));
+        let posX;
+        let posY;
+
+        // Test if the selected position is not a CheckPoint.
+        do {
+            posX = Math.round(Math.random() * (grid.width - 1));
+            posY = Math.round(Math.random() * (grid.height - 1));
+        } while(grid.get(posX, posY).isCheckPoint());
+        
         super(posX, posY, context);
         this.grid = grid;
 
@@ -112,6 +139,14 @@ class CheckPoint extends Case {
 
         grid.grid[posX][posY] = this;
     }
+
+    isCheckPoint() {
+        return true;
+    }
+
+    work() {
+        this.workers.forEach(f => f.work())
+    }
 }
 
 class Worker {
@@ -130,8 +165,8 @@ class Worker {
 
     save() {
         this.history.forEach(([x, y]) => {
-            this.grid.grid[x][y].color.add(this.checkPoint.checkPointType);
-            this.grid.grid[x][y].draw();
+            this.grid.get(x, y).color.add(this.checkPoint.checkPointType);
+            this.grid.get(x, y).draw();
         });
 
         this.reset();
@@ -140,13 +175,13 @@ class Worker {
     getDirCase(dir) {
         switch (dir) {
             case "t":
-                return this.grid.grid[this.posX][this.posY-1];
+                return this.grid.get(this.posX, this.posY-1);
             case "r":
-                return this.grid.grid[this.posX+1][this.posY];
+                return this.grid.get(this.posX+1, this.posY);
             case "b":
-                return this.grid.grid[this.posX][this.posY+1];
+                return this.grid.get(this.posX, this.posY+1);
             case "l":
-                return this.grid.grid[this.posX-1][this.posY];
+                return this.grid.get(this.posX-1, this.posY);
         }
     }
 
@@ -206,13 +241,12 @@ class Worker {
                 this.posY++;
                 break;
             case "l":
-                this.posX--;
-                break;
+                this.posX--;reduceGridWeights
         }
 
         // Test if the case found is a checkpoint and if it is of the same type as the one you came from.
-        if (this.grid.grid[this.posX][this.posY].checkPointType 
-            && this.grid.grid[this.posX][this.posY].checkPointType == this.checkPoint.checkPointType) {
+        if (this.grid.get(this.posX, this.posY).isCheckPoint()
+            && this.grid.get(this.posX, this.posY).checkPointType == this.checkPoint.checkPointType) {
             
             this.save();
             return;
@@ -228,11 +262,40 @@ class Worker {
     }
 }
 
+function reduceGridWeights(grid) {
+    grid.grid.forEach(column => column.forEach(element => {
+        if (!element.isCheckPoint()) {
+            element.color.minusAll(REDUCE_GRID_VALUE);
+        }
+    }));
+    grid.draw();
+}
+
+function manageCheckPoints(checkPoints, grid, ctx) {
+    // Create new checkpoint, or delete an existing checkpoint.
+    if (Math.random() > 0.5) {
+        checkPoints.push(new CheckPoint(grid, ctx));
+    } else {
+        const deletedCheckPointIndex = Math.floor(Math.random() * checkPoints.length);
+        const posX = checkPoints[deletedCheckPointIndex].posX;
+        const posY = checkPoints[deletedCheckPointIndex].posY;
+
+        grid.grid[posX][posY] = new Case(posX, posY, ctx);
+
+        delete checkPoints[deletedCheckPointIndex];
+        grid.grid[posX][posY].draw();
+    }
+}
+
 const canvas = document.getElementById("bg-canvas");
-let screenLoop;
+let workersLoop;
+let reduceGridWeightLoop;
+let manageCheckPointsLoop;
 
 function geneticLoader() {
-    clearInterval(screenLoop);
+    clearInterval(workersLoop);
+    clearInterval(reduceGridWeightLoop);
+    clearInterval(manageCheckPointsLoop);
 
     if (canvas && canvas.getContext) {
         const ctx = canvas.getContext("2d");
@@ -240,17 +303,27 @@ function geneticLoader() {
         canvas.width = Math.round(window.innerWidth / CASE_HEIGHT) * CASE_HEIGHT;
         const grid = new Grid(canvas.height, canvas.width, ctx);
     
-        const checkPoints = [];
-        for (let i=0; i < (grid.width * grid.height * 0.2); i++) {
+        let checkPoints = [];
+        for (let i=0; i < (grid.width * grid.height * 0.1); i++) {
             checkPoints.push(new CheckPoint(grid, ctx));
         }
     
         grid.draw();
-        screenLoop = setInterval(() => {
-            checkPoints.forEach(cp => cp.workers.forEach(f => f.work()));
-        }, 100);
 
-        setTimeout(() => clearInterval(screenLoop), 30000);
+        workersLoop = setInterval(() => {
+            checkPoints.forEach(cp => cp.work());
+        }, WORKERS_LOOP_INTERVAL);
+
+        reduceGridWeightLoop = setInterval(() => {
+            reduceGridWeights(grid);
+        }, REDUCE_GRID_WEIGHT_LOOP_INTERVAL);
+
+        manageCheckPointsLoop = setInterval(() => {
+            manageCheckPoints(checkPoints, grid, ctx);
+
+            // We only keep the CheckPoints that are not removed.
+            checkPoints = checkPoints.filter(cp => cp);
+        }, MANAGE_CHECK_POINTS_LOOP_INTERVAL);
     }
 }
 
