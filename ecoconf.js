@@ -9,7 +9,7 @@ module.exports = {
     "Cache-Control": "max-age=604800",
     "X-XSS-Protection": "1;mode=block",
     "X-Frame-Options": "DENY",
-    "Content-Security-Policy": "default-src 'self' *.flavien.io",
+    "Content-Security-Policy": "default-src 'self' *.flavien.io data:",
   },
   contentType: {},
   proxy: {},
