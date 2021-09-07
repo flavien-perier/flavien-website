@@ -3,13 +3,12 @@
 const CASE_WIDTH = 15;
 const CASE_HEIGHT = 15;
 
-const WORKERS_BY_CHECK_POINT = 5;
-
-const REDUCE_GRID_VALUE = 3;
+const WORKERS_BY_CHECK_POINT = 3;
+const CHECK_POINT_DENSITY = 0.1;
 
 const WORKERS_LOOP_INTERVAL = 100;
 const REDUCE_GRID_WEIGHT_LOOP_INTERVAL = 3000;
-const MANAGE_CHECK_POINTS_LOOP_INTERVAL = 2000;
+const MANAGE_CHECK_POINTS_LOOP_INTERVAL = 10000;
 
 class Color {
     constructor(red, green, blue) {
@@ -30,12 +29,6 @@ class Color {
                 if (this.blue < 255) this.blue++;
                 break;
         }
-    }
-
-    minusAll(value) {
-        this.red = this.red > 1 + value ? this.red - value : 1;
-        this.green = this.green > 1 + value ? this.green - value : 1;
-        this.blue = this.blue > 1 + value ? this.blue - value : 1;
     }
 
     get(color) {
@@ -91,13 +84,19 @@ class Case {
         this.color = new Color(1, 1, 1);
     }
 
-    draw() {
-        this.context.fillStyle = this.color.getCss();
-        this.context.fillRect(this.posX * CASE_WIDTH, this.posY * CASE_HEIGHT, CASE_WIDTH, CASE_HEIGHT);
+    minus() {
+        this.color.red -= Math.round(Math.log(this.color.red));
+        this.color.green -= Math.round(Math.log(this.color.green));
+        this.color.blue -= Math.round(Math.log(this.color.blue));
     }
 
     isCheckPoint() {
         return false;
+    }
+
+    draw() {
+        this.context.fillStyle = this.color.getCss();
+        this.context.fillRect(this.posX * CASE_WIDTH, this.posY * CASE_HEIGHT, CASE_WIDTH, CASE_HEIGHT);
     }
 }
 
@@ -120,15 +119,15 @@ class CheckPoint extends Case {
         switch(randomCheckPointType) {
             case 0: // red
                 this.checkPointType = "r";
-                this.color = new Color(255, 0, 0);
+                this.color.red = 255;
                 break;
             case 1: // green
             this.checkPointType = "g";
-                this.color = new Color(0, 255, 0);
+                this.color.green = 255;
                 break;
             case 2: // blue
                 this.checkPointType = "b";
-                this.color = new Color(0, 0, 255);
+                this.color.blue = 255;
                 break;
         }
 
@@ -138,6 +137,18 @@ class CheckPoint extends Case {
         }
 
         grid.grid[posX][posY] = this;
+    }
+
+    minus() {
+        if (this.checkPointType != "r") {
+            this.color.red -= Math.round(Math.log(this.color.red));
+        }
+        if (this.checkPointType != "g") {
+            this.color.green -= Math.round(Math.log(this.color.green));
+        }
+        if (this.checkPointType != "b") {
+            this.color.blue -= Math.round(Math.log(this.color.blue));
+        }
     }
 
     isCheckPoint() {
@@ -263,11 +274,7 @@ class Worker {
 }
 
 function reduceGridWeights(grid) {
-    grid.grid.forEach(column => column.forEach(element => {
-        if (!element.isCheckPoint()) {
-            element.color.minusAll(REDUCE_GRID_VALUE);
-        }
-    }));
+    grid.grid.forEach(column => column.forEach(element => element.minus()));
     grid.draw();
 }
 
@@ -304,7 +311,7 @@ function geneticLoader() {
         const grid = new Grid(canvas.height, canvas.width, ctx);
     
         let checkPoints = [];
-        for (let i=0; i < (grid.width * grid.height * 0.1); i++) {
+        for (let i=0; i < (grid.width * grid.height * CHECK_POINT_DENSITY); i++) {
             checkPoints.push(new CheckPoint(grid, ctx));
         }
     
