@@ -10,6 +10,8 @@ const WORKERS_LOOP_INTERVAL = 100;
 const REDUCE_GRID_WEIGHT_LOOP_INTERVAL = 3000;
 const MANAGE_CHECK_POINTS_LOOP_INTERVAL = 10000;
 
+const ANIMATION_DURATION = 60000;
+
 class Color {
     constructor(red, green, blue) {
         this.red = red;
@@ -304,7 +306,7 @@ function geneticLoader() {
     clearInterval(reduceGridWeightLoop);
     clearInterval(manageCheckPointsLoop);
 
-    if (canvas && canvas.getContext) {
+    if (canvas && canvas.getContext && window.name !== "nodejs") {
         const ctx = canvas.getContext("2d");
         canvas.height = Math.round(window.innerHeight / CASE_WIDTH) * CASE_WIDTH;
         canvas.width = Math.round(window.innerWidth / CASE_HEIGHT) * CASE_HEIGHT;
@@ -331,6 +333,9 @@ function geneticLoader() {
             // We only keep the CheckPoints that are not removed.
             checkPoints = checkPoints.filter(cp => cp);
         }, MANAGE_CHECK_POINTS_LOOP_INTERVAL);
+
+
+
     }
 }
 
