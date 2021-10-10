@@ -1,7 +1,9 @@
 Dockerfile
+.dockerignore
 .gitignore
+.git
+.github
 README.md
-
 node_modules
 package-lock.json
 .idea
