@@ -306,7 +306,7 @@ function geneticLoader() {
     clearInterval(reduceGridWeightLoop);
     clearInterval(manageCheckPointsLoop);
 
-    if (canvas && canvas.getContext && window.name !== "nodejs") {
+    if (canvas && canvas.getContext && navigator.userAgent !== "internal-eco-webserver") {
         const ctx = canvas.getContext("2d");
         canvas.height = Math.round(window.innerHeight / CASE_WIDTH) * CASE_WIDTH;
         canvas.width = Math.round(window.innerWidth / CASE_HEIGHT) * CASE_HEIGHT;
