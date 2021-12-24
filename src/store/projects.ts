@@ -15,8 +15,8 @@ const mutations: MutationTree<ProjectState> = {
   loadProjects: state => {
     if (state.projects.length == 0) {
       axios.get("data/projects.json")
-        .then(markdownContent => {
-          state.projects = (markdownContent.data as { projects: ProjectInterface[] }).projects;
+        .then(response => {
+          state.projects = (response.data as { projects: ProjectInterface[] }).projects;
         });
     }
   }
@@ -29,7 +29,7 @@ const actions: ActionTree<ProjectState, string> = {
 };
 
 const getters: GetterTree<ProjectState, string> = {
-  projects: state => state.projects.sort((p1, p2) => parseInt(p2.date) - parseInt(p1.date))
+  projects: state => state.projects.sort((p1, p2) => (p2.end || p2.start + 100) - (p1.end || p1.start + 100))
 };
 
 export default {

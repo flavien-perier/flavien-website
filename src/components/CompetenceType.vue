@@ -36,9 +36,12 @@ export default class CompetenceType extends Vue {
 {
   "framework": "Framework",
   "language": "Langage",
+  "ide": "EDI",
   "db": "Base de données",
   "bigData": "Big Data",
+  "dataScience": "Science des données", 
   "os": "Système d'exploitation",
+  "infra": "Infrastructure",
   "network": "Réseau",
   "tool": "Outil",
   "management": "Management"
@@ -49,9 +52,12 @@ export default class CompetenceType extends Vue {
 {
   "framework": "Framework",
   "language": "Language",
+  "ide": "IDE",
   "db": "Data Base",
   "bigData": "Big Data",
+  "dataScience": "Data Science",
   "os": "Operating System",
+  "infra": "Infrastructure",
   "network": "Network",
   "tool": "Tool",
   "management": "Management"

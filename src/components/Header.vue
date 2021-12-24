@@ -30,13 +30,13 @@ p {
 
 <i18n locale="fr">
 {
-  "fullStackDeveloper": "Développeur full stack"
+  "fullStackDeveloper": "Développeur Full-Stack"
 }
 </i18n>
 
 <i18n locale="en">
 {
-  "fullStackDeveloper": "Full stack developer"
+  "fullStackDeveloper": "Full Stack Developer"
 }
 </i18n>
 

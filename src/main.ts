@@ -1,7 +1,7 @@
 import Vue from "vue";
 
 import { library, config } from "@fortawesome/fontawesome-svg-core";
-import { faHome, faList, faGraduationCap, faProjectDiagram, faBook, faMicrochip, faDatabase, faServer, faEnvelope, faPhone, faMapMarkerAlt, faFlag, faTerminal, faCode } from "@fortawesome/free-solid-svg-icons";
+import { faHome, faList, faGraduationCap, faProjectDiagram, faBook, faMicrochip, faDatabase, faServer, faEnvelope, faPhone, faMapMarkerAlt, faFlag, faTerminal, faCode, faFile } from "@fortawesome/free-solid-svg-icons";
 import { faLinkedin, faFacebookSquare, faMastodon, faDiscord, faAngular, faVuejs, faPython, faJs, faNpm, faJava, faPhp, faLinux, faWindows, faGitAlt, faGithub, faGithubSquare, faGitlab, faDocker } from "@fortawesome/free-brands-svg-icons";
 import { faSpring, faTs, faKotlin, faNginx, faVscode, faAntlr, faKubernetes, faSwagger, faKafka, faIntellij, faNeo4j, faScrum } from "@/icons";
 import { FontAwesomeIcon } from "@fortawesome/vue-fontawesome";
@@ -25,7 +25,7 @@ console.log(`
 
 config.autoAddCss = false;
 
-library.add(faHome, faList, faGraduationCap, faProjectDiagram, faBook, faMicrochip, faDatabase, faServer, faEnvelope, faPhone, faMapMarkerAlt, faFlag, faTerminal, faCode,
+library.add(faHome, faList, faGraduationCap, faProjectDiagram, faBook, faMicrochip, faDatabase, faServer, faEnvelope, faPhone, faMapMarkerAlt, faFlag, faTerminal, faCode, faFile,
   faLinkedin, faFacebookSquare, faMastodon, faDiscord, faAngular, faVuejs, faPython, faJs, faNpm, faJava, faPhp, faLinux, faWindows, faGitAlt, faGithub, faGithubSquare, faGitlab, faDocker,
   //@ts-ignore
   faSpring, faTs, faKotlin, faNginx, faVscode, faAntlr, faKubernetes, faSwagger, faKafka, faIntellij, faNeo4j, faScrum);

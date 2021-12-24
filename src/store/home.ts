@@ -1,5 +1,5 @@
 import { ActionTree, GetterTree, Module, MutationTree } from "vuex";
-import marked from "marked";
+import { marked } from "marked";
 import axios from "axios";
 
 interface HomeState {

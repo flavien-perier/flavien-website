@@ -1,7 +1,7 @@
 import { ActionTree, GetterTree, Module, MutationTree } from "vuex";
 import axios from "axios";
 import YAML from "yaml";
-import marked from "marked";
+import { marked } from "marked";
 
 import store from "@/store";
 import MarkdownHeader from "@/model/MarkdownHeader";

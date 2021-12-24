@@ -6,8 +6,8 @@
             "descriptionEn": "BTS SIO (Service Informatique aux Organisations) option SLAM (Solutions Logicielles et Applications Métier).",
             "url": "https://www.beaupeyrat.com/",
             "city": "Limoges",
-            "start": "2015",
-            "end": "2017"
+            "start": 2015,
+            "end": 2017
         },
         {
             "location": "3IL (Institut d'ingénierie informatique de Limoges)",
@@ -15,8 +15,8 @@
             "descriptionEn": "Trained as a computer engineer.",
             "url": "https://www.3il-ingenieurs.fr/",
             "city": "Limoges",
-            "start": "2017",
-            "end": "2020"
+            "start": 2017,
+            "end": 2020
         },
         {
             "location": "Orange",
@@ -24,8 +24,8 @@
             "descriptionEn": "Backend Application Development.",
             "url": "https://www.orange.fr/portail",
             "city": "Toulouse",
-            "start": "2017",
-            "end": "2020"
+            "start": 2017,
+            "end": 2020
         },
         {
             "location": "Henallux (Haute École de Namur-Liège-Luxembourg)",
@@ -33,8 +33,8 @@
             "descriptionEn": "Semester in Erasmus. Learning the basics of DataScience.",
             "url": "https://www.henallux.be/departement-technique-de-marche-en-famenne",
             "city": "Marche-en-Famenne (Belgium)",
-            "start": "2019",
-            "end": "2020"
+            "start": 2019,
+            "end": 2020
         },
         {
             "location": "NéoSoft",
@@ -42,8 +42,7 @@
             "descriptionEn": "Full stack developer.",
             "url": "https://www.neo-soft.fr/",
             "city": "Limoges",
-            "start": "2020",
-            "end": "*"
+            "start": 2020
         }
     ]
 }

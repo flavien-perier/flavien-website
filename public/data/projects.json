@@ -9,7 +9,8 @@
                 "MySQL"
             ],
             "experience": "personal",
-            "date": "2015"
+            "start": 2015,
+            "end": 2016
         },
         {
             "name": "Raspberry server",
@@ -18,6 +19,7 @@
             "technos": [
                 "Raspberry Pi",
                 "Rasbian",
+                "Docker",
                 "Squid proxy",
                 "Bind9",
                 "Postfix",
@@ -26,10 +28,11 @@
                 "Nginx",
                 "Apache2",
                 "Wordpress",
+                "NextCloud",
                 "Letsencrypt"
             ],
             "experience": "personal",
-            "date": "2015"
+            "start": 2015
         },
         {
             "name": "Clémentine",
@@ -41,7 +44,8 @@
                 "Microsoft BotFramework"
             ],
             "experience": "Orange",
-            "date": "2016"
+            "start": 2016,
+            "end": 2016
         },
         {
             "name": "Oculus",
@@ -53,7 +57,8 @@
                 "MongoDB"
             ],
             "experience": "personal",
-            "date": "2016"
+            "start": 2016,
+            "end": 2016
         },
         {
             "name": "Voyager",
@@ -68,7 +73,8 @@
                 "CloudFoundry"
             ],
             "experience": "Orange",
-            "date": "2017"
+            "start": 2017,
+            "end": 2018
         },
         {
             "name": "DbSelection",
@@ -82,7 +88,8 @@
                 "CloudFoundry"
             ],
             "experience": "Orange",
-            "date": "2018"
+            "start": 2018,
+            "end": 2020
         },
         {
             "name": "Girafe",
@@ -94,7 +101,8 @@
                 "Neo4j"
             ],
             "experience": "Orange",
-            "date": "2019"
+            "start": 2019,
+            "end": 2019
         },
         {
             "name": "Sparkle",
@@ -107,7 +115,8 @@
                 "Docker"
             ],
             "experience": "Orange",
-            "date": "2019"
+            "start": 2019,
+            "end": 2019
         },
         {
             "name": "Personal website",
@@ -118,7 +127,7 @@
                 "VueJs"
             ],
             "experience": "personal",
-            "date": "2019"
+            "start": 2019
         },
         {
             "name": "Cobalt cloud",
@@ -129,7 +138,8 @@
                 "Java"
             ],
             "experience": "Orange",
-            "date": "2020"
+            "start": 2020,
+            "end": 2020
         },
         {
             "name": "Pride",
@@ -140,7 +150,8 @@
                 "VueJs"
             ],
             "experience": "Orange",
-            "date": "2020"
+            "start": 2020,
+            "end": 2020
         },
         {
             "name": "Pilact",
@@ -151,7 +162,7 @@
                 "Angular"
             ],
             "experience": "NéoSoft",
-            "date": "2020"
+            "start": 2020
         }
     ]
 }

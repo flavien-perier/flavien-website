@@ -5,5 +5,6 @@ export default interface ProjectInterface {
     img: String;
     technos: string[];
     experience: string;
-    date: string;
+    start: number;
+    end: number;
 }

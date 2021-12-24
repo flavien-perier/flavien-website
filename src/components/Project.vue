@@ -15,7 +15,7 @@
     <div class="col-12">
       <div>
         <h3 class="text-left d-inline-block">{{ $t("description") }} </h3>
-        ({{ $t(project.experience) }} {{ $t("in") }} {{ project.date }})
+        ({{ $t(project.experience) }} {{ $t("in") }} {{ project.start }} - {{ project.end || "*" }})
       </div>
       {{ description }}
     </div>

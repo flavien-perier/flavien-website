@@ -3,11 +3,12 @@
         {
             "label": "Angular",
             "faIcon": "fab angular",
-            "descriptionFr": "Framework frontend TypeScript",
-            "descriptionEn": "Framework frontend TypeScript",
+            "descriptionFr": "Framework frontend TypeScript.",
+            "descriptionEn": "Framework frontend TypeScript.",
             "url": "https://angular.io/",
             "type": "framework",
             "experiences": [
+                "Néo-Soft",
                 "Orange",
                 "personal"
             ],
@@ -16,8 +17,8 @@
         {
             "label": "VueJS",
             "faIcon": "fab vuejs",
-            "descriptionFr": "Framework frontend JavaScript",
-            "descriptionEn": "Framework frontend JavaScript",
+            "descriptionFr": "Framework frontend JavaScript.",
+            "descriptionEn": "Framework frontend JavaScript.",
             "url": "https://vuejs.org/",
             "type": "framework",
             "experiences": [
@@ -29,11 +30,12 @@
         {
             "label": "Java spring",
             "faIcon": "fab spring",
-            "descriptionFr": "Framework backend java",
-            "descriptionEn": "Framework backend java",
+            "descriptionFr": "Framework backend java.",
+            "descriptionEn": "Framework backend java.",
             "url": "https://spring.io/",
             "type": "framework",
             "experiences": [
+                "Néo-Soft",
                 "Orange"
             ],
             "lvl": 70
@@ -41,33 +43,34 @@
         {
             "label": "JQuery",
             "faIcon": "fab js",
-            "descriptionFr": "Framework frontend JavaScript",
-            "descriptionEn": "Framework frontend JavaScript",
+            "descriptionFr": "Framework frontend JavaScript.",
+            "descriptionEn": "Framework frontend JavaScript.",
             "url": "https://jquery.com/",
             "type": "framework",
             "experiences": [
-                "3IL",
-                "personal"
+                "personal",
+                "3IL"
             ],
-            "lvl": 80
+            "lvl": 65
         },
         {
             "label": "Swagger",
             "faIcon": "fab swagger",
-            "descriptionFr": "API designer",
-            "descriptionEn": "API designer",
+            "descriptionFr": "API designer.",
+            "descriptionEn": "API designer.",
             "url": "https://swagger.io/",
             "type": "framework",
             "experiences": [
+                "Néo-Soft",
                 "personal"
             ],
-            "lvl": 80
+            "lvl": 70
         },
         {
             "label": "Django",
             "faIcon": "fab python",
-            "descriptionFr": "Framework backend python",
-            "descriptionEn": "Framework backend python",
+            "descriptionFr": "Framework backend python.",
+            "descriptionEn": "Framework backend python.",
             "url": "https://www.djangoproject.com/",
             "type": "framework",
             "experiences": [
@@ -76,155 +79,241 @@
             "lvl": 50
         },
         {
-            "label": "JavaScript",
-            "faIcon": "fab js",
-            "descriptionFr": "Langage de programmation JavaScript",
-            "descriptionEn": "Programming language JavaScript",
-            "url": "https://developer.mozilla.org/fr/docs/Web/JavaScript",
-            "type": "language",
-            "experiences": [
-                "Orange",
-                "personal"
-            ],
-            "lvl": 80
-        },
-        {
-            "label": "TypeScript",
-            "faIcon": "fab ts",
-            "descriptionFr": "Langage de programmation TypeScript",
-            "descriptionEn": "Programming language TypeScript",
-            "url": "https://www.typescriptlang.org/",
-            "type": "language",
-            "experiences": [
-                "Orange",
-                "personal"
-            ],
-            "lvl": 70
-        },
-        {
             "label": "Kotlin",
             "faIcon": "fab kotlin",
-            "descriptionFr": "Langage de programmation Kotlin",
-            "descriptionEn": "Programming language Kotlin",
+            "descriptionFr": "Langage de programmation Kotlin.",
+            "descriptionEn": "Programming language Kotlin.",
             "url": "https://kotlinlang.org/",
             "type": "language",
             "experiences": [
                 "Orange",
-                "personal"
+                "personal",
+                "Henallux"
             ],
             "lvl": 60
         },
         {
             "label": "Java",
             "faIcon": "fab java",
-            "descriptionFr": "Langage de programmation Java",
-            "descriptionEn": "Programming language Java",
+            "descriptionFr": "Langage de programmation Java.",
+            "descriptionEn": "Programming language Java.",
             "url": "https://www.java.com/fr/",
             "type": "language",
             "experiences": [
-                "3IL",
+                "Néo-Soft",
                 "Orange",
-                "personal"
+                "personal",
+                "Henallux",
+                "3IL"
+            ],
+            "lvl": 85
+        },
+        {
+            "label": "JavaScript",
+            "faIcon": "fab js",
+            "descriptionFr": "Langage de programmation JavaScript.",
+            "descriptionEn": "Programming language JavaScript.",
+            "url": "https://developer.mozilla.org/fr/docs/Web/JavaScript",
+            "type": "language",
+            "experiences": [
+                "Néo-Soft",
+                "Orange",
+                "personal",
+                "Henallux"
+            ],
+            "lvl": 80
+        },
+        {
+            "label": "TypeScript",
+            "faIcon": "fab ts",
+            "descriptionFr": "Langage de programmation TypeScript.",
+            "descriptionEn": "Programming language TypeScript.",
+            "url": "https://www.typescriptlang.org/",
+            "type": "language",
+            "experiences": [
+                "Néo-Soft",
+                "Orange",
+                "personal",
+                "Henallux"
+            ],
+            "lvl": 70
+        },
+        {
+            "label": "Python",
+            "faIcon": "fab python",
+            "descriptionFr": "Langage de programmation Python.",
+            "descriptionEn": "Programming language Python.",
+            "url": "https://www.python.org/",
+            "type": "language",
+            "experiences": [
+                "Association \"Sème tes graines\"",
+                "personal",
+                "Henallux"
             ],
             "lvl": 70
         },
         {
             "label": "PHP",
             "faIcon": "fab php",
-            "descriptionFr": "Langage de programmation PHP",
-            "descriptionEn": "Programming language PHP",
+            "descriptionFr": "Langage de programmation PHP.",
+            "descriptionEn": "Programming language PHP.",
             "url": "https://www.php.net/",
             "type": "language",
             "experiences": [
+                "personal",
                 "BTS Beaupeyrat",
-                "3IL",
-                "personal"
+                "3IL"
             ],
-            "lvl": 70
+            "lvl": 50
         },
         {
             "label": "ANTLR",
             "faIcon": "fab antlr",
-            "descriptionFr": "Framework de construction de compilateurs",
-            "descriptionEn": "Framework for compiler construction",
+            "descriptionFr": "Framework de construction de compilateurs.",
+            "descriptionEn": "Framework for compiler construction.",
             "url": "https://www.antlr.org/",
             "type": "language",
             "experiences": [
                 "Orange"
             ],
-            "lvl": 60
+            "lvl": 50
         },
         {
-            "label": "C++",
+            "label": "C / C++",
             "faIcon": "fas microchip",
-            "descriptionFr": "Langage de programmation C++",
-            "descriptionEn": "Programming language C++",
+            "descriptionFr": "Langage de programmation C++.",
+            "descriptionEn": "Programming language C++.",
             "url": "https://isocpp.org/",
             "type": "language",
             "experiences": [
+                "personal",
                 "3IL",
-                "personal"
+                "Henallux"
             ],
             "lvl": 50
         },
         {
-            "label": "Python",
-            "faIcon": "fab python",
-            "descriptionFr": "Langage de programmation Python",
-            "descriptionEn": "Programming language Python",
-            "url": "https://www.python.org/",
-            "type": "language",
+            "label": "Intellij",
+            "faIcon": "fab intellij",
+            "descriptionFr": "EDI Java/Kotlin développé par JetBrains.",
+            "descriptionEn": "Java / Kotlin IDE developed by JetBrains.",
+            "url": "https://www.jetbrains.com/idea/",
+            "type": "ide",
             "experiences": [
-                "Association \"Sème tes graines\"",
+                "Néo-Soft",
+                "Orange",
+                "personal",
+                "Henallux",
+                "3IL"
+            ],
+            "lvl": 80
+        },
+        {
+            "label": "WebStorm",
+            "faIcon": "fab intellij",
+            "descriptionFr": "EDI web développé par JetBrains.",
+            "descriptionEn": "Web IDE developed by JetBrains.",
+            "url": "https://www.jetbrains.com/webstorm/",
+            "type": "ide",
+            "experiences": [
+                "Néo-Soft",
                 "personal"
+            ],
+            "lvl": 80
+        },
+        {
+            "label": "Visual Studio Code",
+            "faIcon": "fab vscode",
+            "descriptionFr": "EDI universel minimaliste.",
+            "descriptionEn": "Minimalist universal IDE.",
+            "url": "https://code.visualstudio.com/",
+            "type": "ide",
+            "experiences": [
+                "Néo-Soft",
+                "Orange",
+                "personal",
+                "Henallux",
+                "BTS Beaupeyrat",
+                "3IL"
             ],
             "lvl": 70
         },
         {
+            "label": "VI",
+            "faIcon": "fas server",
+            "descriptionFr": "EDI en ligne de commandes.",
+            "descriptionEn": "Command line IDE.",
+            "url": "http://ex-vi.sourceforge.net/",
+            "type": "ide",
+            "experiences": [
+                "Orange",
+                "personal",
+                "Henallux",
+                "3IL"
+            ],
+            "lvl": 70
+        },
+        {
+            "label": "Jupyter",
+            "faIcon": "fas server",
+            "descriptionFr": "EDI en ligne très utilisé dans le monde de la DataScience.",
+            "descriptionEn": "Online IDE widely used in the DataScience world.",
+            "url": "https://jupyter.org/",
+            "type": "ide",
+            "experiences": [
+                "personal",
+                "Henallux"
+            ],
+            "lvl": 80
+        },
+        {
             "label": "MySQL",
             "faIcon": "fas database",
-            "descriptionFr": "Base de données relationnelles",
-            "descriptionEn": "Relational database",
+            "descriptionFr": "Base de données relationnelles.",
+            "descriptionEn": "Relational database.",
             "url": "https://www.mysql.com/",
             "type": "db",
             "experiences": [
-                "BTS Beaupeyrat",
-                "3IL",
                 "Orange",
-                "personal"
+                "personal",
+                "BTS Beaupeyrat",
+                "3IL"
             ],
             "lvl": 80
         },
         {
             "label": "PostgreSQL",
             "faIcon": "fas database",
-            "descriptionFr": "Base de données relationnelles",
-            "descriptionEn": "Relational database",
+            "descriptionFr": "Base de données relationnelles.",
+            "descriptionEn": "Relational database.",
             "url": "https://www.postgresql.org/",
             "type": "db",
             "experiences": [
-                "personal"
+                "Néo-Soft",
+                "Orange",
+                "personal",
+                "Henallux"
             ],
             "lvl": 70
         },
         {
             "label": "SQLite",
             "faIcon": "fas database",
-            "descriptionFr": "Base de données relationnelles",
-            "descriptionEn": "Relational database",
+            "descriptionFr": "Base de données relationnelles.",
+            "descriptionEn": "Relational database.",
             "url": "https://sqlite.org/",
             "type": "db",
             "experiences": [
-                "BTS Beaupeyrat",
-                "personal"
+                "personal",
+                "BTS Beaupeyrat"
             ],
             "lvl": 70
         },
         {
             "label": "MongoDB",
             "faIcon": "fas database",
-            "descriptionFr": "Base de données orientée documents",
-            "descriptionEn": "Document database",
+            "descriptionFr": "Base de données orientée documents.",
+            "descriptionEn": "Document database.",
             "url": "https://www.mongodb.com/",
             "type": "db",
             "experiences": [
@@ -236,8 +325,8 @@
         {
             "label": "Neo4J",
             "faIcon": "fab neo4j",
-            "descriptionFr": "Base de données orientée graphe",
-            "descriptionEn": "Graph database",
+            "descriptionFr": "Base de données orientée graphe.",
+            "descriptionEn": "Graph database.",
             "url": "https://neo4j.com/",
             "type": "db",
             "experiences": [
@@ -249,8 +338,8 @@
         {
             "label": "Redis",
             "faIcon": "fas database",
-            "descriptionFr": "Base de données clé-valeur",
-            "descriptionEn": "Key-value database",
+            "descriptionFr": "Base de données clé-valeur.",
+            "descriptionEn": "Key-value database.",
             "url": "https://redis.io/",
             "type": "db",
             "experiences": [
@@ -261,8 +350,8 @@
         {
             "label": "Apache Kafka",
             "faIcon": "fab kafka",
-            "descriptionFr": "File de messages asynchrones",
-            "descriptionEn": "Asynchronous message queue",
+            "descriptionFr": "File de messages asynchrones.",
+            "descriptionEn": "Asynchronous message queue.",
             "url": "https://kafka.apache.org/",
             "type": "bigData",
             "experiences": [
@@ -273,8 +362,8 @@
         {
             "label": "Apache Spark",
             "faIcon": "fas server",
-            "descriptionFr": "Framework de calculs distribués",
-            "descriptionEn": "Distributed framework",
+            "descriptionFr": "Framework de calculs distribués.",
+            "descriptionEn": "Distributed framework.",
             "url": "https://spark.apache.org/",
             "type": "bigData",
             "experiences": [
@@ -286,8 +375,8 @@
         {
             "label": "Apache Ni-Fi",
             "faIcon": "fas server",
-            "descriptionFr": "Framework de gestion de flux",
-            "descriptionEn": "Flow management framework",
+            "descriptionFr": "Framework de gestion de flux.",
+            "descriptionEn": "Flow management framework.",
             "url": "https://nifi.apache.org/",
             "type": "bigData",
             "experiences": [
@@ -298,101 +387,314 @@
         {
             "label": "Apache Hadoop HDFS",
             "faIcon": "fas server",
-            "descriptionFr": "Système de fichiers distribué",
-            "descriptionEn": "Hight level distributed file system",
+            "descriptionFr": "Système de fichiers distribué.",
+            "descriptionEn": "Hight level distributed file system.",
             "url": "https://hadoop.apache.org/",
             "type": "bigData",
             "experiences": [
-                "Orange"
+                "Orange",
+                "Henallux"
             ],
             "lvl": 40
         },
         {
-            "label": "Linux",
-            "faIcon": "fab linux",
-            "descriptionFr": "Système d'exploitation Linux",
-            "descriptionEn": "Operating system Linux",
-            "url": "https://linux.org/",
+            "label": "Pandas",
+            "faIcon": "fas database",
+            "descriptionFr": "Bibliothèque de gestion de DataSet en Python.",
+            "descriptionEn": "DataSet management library in Python.",
+            "url": "https://pandas.pydata.org/",
+            "type": "dataScience",
+            "experiences": [
+                "personal",
+                "Henallux"
+            ],
+            "lvl": 65
+        },
+        {
+            "label": "NumPy",
+            "faIcon": "fas database",
+            "descriptionFr": "Bibliothèque d'outils mathématique en Python.",
+            "descriptionEn": "Library of mathematical tools in Python.",
+            "url": "https://numpy.org/",
+            "type": "dataScience",
+            "experiences": [
+                "personal",
+                "Henallux"
+            ],
+            "lvl": 50
+        },
+        {
+            "label": "ScyPy",
+            "faIcon": "fas database",
+            "descriptionFr": "Bibliothèque d'outils mathématique en Python.",
+            "descriptionEn": "Library of mathematical tools in Python.",
+            "url": "https://scipy.org/",
+            "type": "dataScience",
+            "experiences": [
+                "personal",
+                "Henallux"
+            ],
+            "lvl": 50
+        },
+        {
+            "label": "Keras",
+            "faIcon": "fas database",
+            "descriptionFr": "Surcouche à TensorFlow pour la création de réseau de neurones en python.",
+            "descriptionEn": "TensorFlow overlay for neural network creation in python.",
+            "url": "https://keras.io/",
+            "type": "dataScience",
+            "experiences": [
+                "personal",
+                "Henallux"
+            ],
+            "lvl": 40
+        },
+        {
+            "label": "Windows 7/10/11",
+            "faIcon": "fab windows",
+            "descriptionFr": "Système d'exploitation Windows.",
+            "descriptionEn": "Windows operating system.",
+            "url": "https://www.microsoft.com/fr-fr/windows",
             "type": "os",
             "experiences": [
-                "BTS Beaupeyrat",
-                "3IL",
+                "Néo-Soft",
                 "Orange",
+                "personal",
+                "Henallux",
+                "BTS Beaupeyrat",
+                "3IL"
+            ],
+            "lvl": 70
+        },
+        {
+            "label": "Windows Server",
+            "faIcon": "fab windows",
+            "descriptionFr": "Système d'exploitation Windows.",
+            "descriptionEn": "Windows operating system.",
+            "url": "https://www.microsoft.com/fr-fr/windows",
+            "type": "os",
+            "experiences": [
+                "personal",
+                "Henallux"
+            ],
+            "lvl": 60
+        },
+        {
+            "label": "Debian",
+            "faIcon": "fab linux",
+            "descriptionFr": "Système d'exploitation Linux.",
+            "descriptionEn": "Linux operating system.",
+            "url": "https://www.debian.org/",
+            "type": "os",
+            "experiences": [
+                "Néo-Soft",
+                "Orange",
+                "personal",
+                "Henallux",
+                "BTS Beaupeyrat",
+                "3IL"
+            ],
+            "lvl": 80
+        },
+        {
+            "label": "Ubuntu",
+            "faIcon": "fab linux",
+            "descriptionFr": "Système d'exploitation Linux basé sur Debian.",
+            "descriptionEn": "Debian-based Linux operating system.",
+            "url": "https://ubuntu.com/",
+            "type": "os",
+            "experiences": [
+                "Orange",
+                "personal",
+                "Henallux"
+            ],
+            "lvl": 70
+        },
+        {
+            "label": "Kali",
+            "faIcon": "fab linux",
+            "descriptionFr": "Système d'exploitation Linux basé sur Debian, orienté test de sécurité.",
+            "descriptionEn": "Debian-based Linux operating system, focused on pentesting.",
+            "url": "https://www.kali.org/",
+            "type": "os",
+            "experiences": [
+                "personal"
+            ],
+            "lvl": 40
+        },
+        {
+            "label": "Arch",
+            "faIcon": "fab linux",
+            "descriptionFr": "Système d'exploitation Linux.",
+            "descriptionEn": "Linux operating system.",
+            "url": "https://archlinux.org/",
+            "type": "os",
+            "experiences": [
+                "personal"
+            ],
+            "lvl": 70
+        },
+        {
+            "label": "Manjaro",
+            "faIcon": "fab linux",
+            "descriptionFr": "Système d'exploitation Linux basé sur Arch.",
+            "descriptionEn": "Arch-based Linux operating system.",
+            "url": "https://manjaro.org/",
+            "type": "os",
+            "experiences": [
                 "personal"
             ],
             "lvl": 80
         },
         {
-            "label": "Windows",
-            "faIcon": "fab windows",
-            "descriptionFr": "Système d'exploitation Windows",
-            "descriptionEn": "Operating system Windows",
-            "url": "https://www.microsoft.com/fr-fr/windows",
+            "label": "Fedora",
+            "faIcon": "fab linux",
+            "descriptionFr": "Système d'exploitation Linux basé sur RedHat.",
+            "descriptionEn": "RedHat-based Linux operating system.",
+            "url": "https://getfedora.org/",
             "type": "os",
             "experiences": [
-                "BTS Beaupeyrat",
-                "3IL",
-                "Orange",
                 "personal"
             ],
             "lvl": 60
         },
         {
+            "label": "CentOS",
+            "faIcon": "fab linux",
+            "descriptionFr": "Système d'exploitation Linux basé sur RedHat.",
+            "descriptionEn": "RedHat-based Linux operating system.",
+            "url": "https://www.centos.org/",
+            "type": "os",
+            "experiences": [
+                "personal"
+            ],
+            "lvl": 60
+        },
+        {
+            "label": "Rocky",
+            "faIcon": "fab linux",
+            "descriptionFr": "Système d'exploitation Linux basé sur RedHat.",
+            "descriptionEn": "RedHat-based Linux operating system.",
+            "url": "https://rockylinux.org/",
+            "type": "os",
+            "experiences": [
+                "personal"
+            ],
+            "lvl": 60
+        },
+        {
+            "label": "Alpine",
+            "faIcon": "fab linux",
+            "descriptionFr": "Système d'exploitation Linux optimisé pour conteneurs Docker.",
+            "descriptionEn": "Linux operating system optimized for Docker containers.",
+            "url": "https://www.alpinelinux.org/",
+            "type": "os",
+            "experiences": [
+                "Orange",
+                "personal",
+                "Henallux"
+            ],
+            "lvl": 60
+        },
+        {
+            "label": "Docker",
+            "faIcon": "fab docker",
+            "descriptionFr": "Gestionnaire de conteneurs.",
+            "descriptionEn": "Container manager.",
+            "url": "https://www.docker.com/",
+            "type": "infra",
+            "experiences": [
+                "Néo-Soft",
+                "Orange",
+                "personal",
+                "Henallux",
+                "BTS Beaupeyrat",
+                "3IL"
+            ],
+            "lvl": 85
+        },
+        {
+            "label": "Kubernetes",
+            "faIcon": "fab kubernetes",
+            "descriptionFr": "Orchestrateur d'infrastructures conteneurisées.",
+            "descriptionEn": "Container infrastructure orchestrator.",
+            "url": "https://kubernetes.io/",
+            "type": "infra",
+            "experiences": [
+                "Orange"
+            ],
+            "lvl": 60
+        },
+        {
+            "label": "CloudFoundry",
+            "faIcon": "fas server",
+            "descriptionFr": "Plateforme PaaS.",
+            "descriptionEn": "PaaS platform.",
+            "url": "https://www.cloudfoundry.org/",
+            "type": "infra",
+            "experiences": [
+                "Orange"
+            ],
+            "lvl": 70
+        },
+        {
             "label": "Postfix",
             "faIcon": "fas envelope",
-            "descriptionFr": "Serveur (mail) SMTP",
-            "descriptionEn": "SMTP (mail) server",
+            "descriptionFr": "Serveur (mail) SMTP.",
+            "descriptionEn": "SMTP (mail) server.",
             "url": "http://www.postfix.org/",
             "type": "network",
             "experiences": [
-                "personal"
+                "personal",
+                "Henallux"
             ],
             "lvl": 50
         },
         {
             "label": "Apache 2",
             "faIcon": "fas server",
-            "descriptionFr": "Serveur HTTP",
-            "descriptionEn": "HTTP server",
+            "descriptionFr": "Serveur HTTP.",
+            "descriptionEn": "HTTP server.",
             "url": "https://httpd.apache.org/",
             "type": "network",
             "experiences": [
+                "personal",
                 "BTS Beaupeyrat",
-                "3IL",
-                "personal"
+                "3IL"
             ],
             "lvl": 50
         },
         {
             "label": "NGINX",
             "faIcon": "fab nginx",
-            "descriptionFr": "Serveur HTTP / Reverse proxy",
-            "descriptionEn": "HTTP server / Reverse proxy",
+            "descriptionFr": "Serveur HTTP / Reverse proxy.",
+            "descriptionEn": "HTTP server / Reverse proxy.",
             "url": "https://nginx.org/",
             "type": "network",
             "experiences": [
                 "Orange",
-                "personal"
+                "personal",
+                "Henallux"
             ],
-            "lvl": 80
+            "lvl": 70
         },
         {
             "label": "Bind 9",
             "faIcon": "fas server",
-            "descriptionFr": "DNS",
-            "descriptionEn": "DNS",
+            "descriptionFr": "DNS.",
+            "descriptionEn": "DNS.",
             "url": "https://www.isc.org/bind/",
             "type": "network",
             "experiences": [
                 "personal"
             ],
-            "lvl": 80
+            "lvl": 70
         },
         {
             "label": "Squid",
             "faIcon": "fas server",
-            "descriptionFr": "Proxy",
-            "descriptionEn": "Proxy",
+            "descriptionFr": "Proxy.",
+            "descriptionEn": "Proxy.",
             "url": "http://www.squid-cache.org/",
             "type": "network",
             "experiences": [
@@ -401,93 +703,27 @@
             "lvl": 50
         },
         {
-            "label": "Docker",
-            "faIcon": "fab docker",
-            "descriptionFr": "Gestionnaire de conteneurs",
-            "descriptionEn": "Container manager",
-            "url": "https://www.docker.com/",
-            "type": "tool",
-            "experiences": [
-                "BTS Beaupeyrat",
-                "3IL",
-                "Orange",
-                "personal"
-            ],
-            "lvl": 85
-        },
-        {
-            "label": "Kubernetes",
-            "faIcon": "fab kubernetes",
-            "descriptionFr": "Orchestrateur d'infrastructures conteneurisées",
-            "descriptionEn": "Container infrastructure orchestrator",
-            "url": "https://kubernetes.io/",
-            "type": "tool",
-            "experiences": [
-                "Orange"
-            ],
-            "lvl": 60
-        },
-        {
-            "label": "Visual Studio Code",
-            "faIcon": "fab vscode",
-            "descriptionFr": "IDE JavaScript",
-            "descriptionEn": "IDE JavaScript",
-            "url": "https://code.visualstudio.com/",
-            "type": "tool",
-            "experiences": [
-                "BTS Beaupeyrat",
-                "3IL",
-                "Orange",
-                "personal"
-            ],
-            "lvl": 80
-        },
-        {
-            "label": "Intellij",
-            "faIcon": "fab intellij",
-            "descriptionFr": "IDE Java / Kotlin",
-            "descriptionEn": "IDE Java / Kotlin",
-            "url": "https://www.jetbrains.com/idea/",
-            "type": "tool",
-            "experiences": [
-                "3IL",
-                "Orange",
-                "personal"
-            ],
-            "lvl": 75
-        },
-        {
-            "label": "CloudFoundry",
-            "faIcon": "fas server",
-            "descriptionFr": "Plateforme PaaS",
-            "descriptionEn": "PaaS platform",
-            "url": "https://www.cloudfoundry.org/",
-            "type": "tool",
-            "experiences": [
-                "Orange"
-            ],
-            "lvl": 80
-        },
-        {
             "label": "GIT",
             "faIcon": "fab git-alt",
-            "descriptionFr": "Logiciel de gestion de versions",
-            "descriptionEn": "Ddistributed version control system",
+            "descriptionFr": "Logiciel de gestion de versions.",
+            "descriptionEn": "Ddistributed version control system.",
             "url": "https://git-scm.com/",
             "type": "tool",
             "experiences": [
-                "BTS Beaupeyrat",
-                "3IL",
+                "Néo-Soft",
                 "Orange",
-                "personal"
+                "personal",
+                "Henallux",
+                "BTS Beaupeyrat",
+                "3IL"
             ],
             "lvl": 60
         },
         {
             "label": "GitHub",
             "faIcon": "fab github",
-            "descriptionFr": "Implémentation de GIT",
-            "descriptionEn": "GIT implementation",
+            "descriptionFr": "Implémentation de GIT.",
+            "descriptionEn": "GIT implementation.",
             "url": "https://github.com/",
             "type": "tool",
             "experiences": [
@@ -499,20 +735,23 @@
         {
             "label": "Gitlab",
             "faIcon": "fab gitlab",
-            "descriptionFr": "Implémentation de GIT",
-            "descriptionEn": "GIT implementation",
+            "descriptionFr": "Implémentation de GIT.",
+            "descriptionEn": "GIT implementation.",
             "url": "https://about.gitlab.com/",
             "type": "tool",
             "experiences": [
-                "Orange"
+                "Néo-Soft",
+                "Orange",
+                "personal",
+                "Henallux"
             ],
             "lvl": 60
         },
         {
             "label": "GitlabCI",
             "faIcon": "fab gitlab",
-            "descriptionFr": "Gestion de pipelines de déploiement continu",
-            "descriptionEn": "Continuous deployment pipeline management",
+            "descriptionFr": "Gestion de pipelines de déploiement continu.",
+            "descriptionEn": "Continuous deployment pipeline management.",
             "url": "https://docs.gitlab.com/ee/ci/",
             "type": "tool",
             "experiences": [
@@ -521,26 +760,46 @@
             "lvl": 70
         },
         {
+            "label": "Microsoft Office",
+            "faIcon": "fas file",
+            "descriptionFr": "Word, PowerPoint, Excel.",
+            "descriptionEn": "Word, PowerPoint, Excel.",
+            "url": "https://www.office.com/",
+            "type": "tool",
+            "experiences": [
+                "Néo-Soft",
+                "Orange",
+                "personal",
+                "Henallux",
+                "BTS Beaupeyrat",
+                "3IL"
+            ],
+            "lvl": 70
+        },
+        {
             "label": "MobaXterm",
             "faIcon": "fas terminal",
-            "descriptionFr": "Client SSH, Telnet, RDP, FTP...",
-            "descriptionEn": "SSH, Telnet, RDP, FTP client...",
+            "descriptionFr": "Client SSH, Telnet, RDP, FTP....",
+            "descriptionEn": "SSH, Telnet, RDP, FTP client....",
             "url": "https://mobaxterm.mobatek.net/",
             "type": "tool",
             "experiences": [
+                "Néo-Soft",
                 "Orange",
-                "personal"
+                "personal",
+                "Henallux"
             ],
             "lvl": 70
         },
         {
             "label": "Scrum",
             "faIcon": "fab scrum",
-            "descriptionFr": "Méthode de management dite agile",
-            "descriptionEn": "Agile management method",
+            "descriptionFr": "Méthode de management dite agile.",
+            "descriptionEn": "Agile management method.",
             "url": "https://www.scrum.org/",
             "type": "management",
             "experiences": [
+                "Néo-Soft",
                 "Orange"
             ],
             "lvl": 60

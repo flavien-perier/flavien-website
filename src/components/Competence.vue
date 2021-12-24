@@ -44,8 +44,8 @@ export default class Competence extends Vue {
 
 <style scoped>
 .description {
-  height: 6em;
-  overflow: hidden;
+  height: 7em;
+  overflow: auto;
 }
 </style>
 

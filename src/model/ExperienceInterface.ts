@@ -4,6 +4,6 @@ export default interface ExperienceInterface {
     descriptionEn: string;
     url: string,
     city: string;
-    start: string;
-    end: string;
+    start: number;
+    end: number;
 }

@@ -18,7 +18,7 @@
           {{ experience.city }}
           <br />
           <strong>{{ $t("period") }} :</strong>
-          {{ experience.start }} - {{ experience.end }}
+          {{ experience.start }} - {{ experience.end || "*" }}
           <br />
         </p>
       </div>

@@ -17,8 +17,8 @@ const mutations: MutationTree<CompetenceState> = {
   loadCompetences: state => {
     if (state.competences.length == 0) {
       axios.get("data/competences.json")
-        .then(markdownContent => {
-          state.competences = (markdownContent.data as { competences: CompetenceInterface[] }).competences;
+        .then(response => {
+          state.competences = (response.data as { competences: CompetenceInterface[] }).competences;
 
           const competencesCheckbox: {[key: string]: boolean} = {};
           state.competences.map(c => c.type ).filter((value, index, self) => self.indexOf(value) == index)
@@ -29,7 +29,17 @@ const mutations: MutationTree<CompetenceState> = {
   },
   selectCompetence: (state, competenceId: string) => {
     state.competencesCheckbox[competenceId] = !state.competencesCheckbox[competenceId];
-  }
+  },
+  selectAllCompetences: state => {
+    console.log("test")
+    const competencesIds = Object.keys(state.competencesCheckbox);
+
+    const allChecked = competencesIds.every(competenceId => state.competencesCheckbox[competenceId]);
+
+    competencesIds.forEach(competenceId => {
+      state.competencesCheckbox[competenceId] = !allChecked;
+    });
+  },
 };
 
 const actions: ActionTree<CompetenceState, string> = {
@@ -38,13 +48,17 @@ const actions: ActionTree<CompetenceState, string> = {
   },
   selectCompetence: ({ commit }, competenceId: string) => {
     commit("selectCompetence", competenceId);
+  },
+  selectAllCompetences: ({ commit }) => {
+    commit("selectAllCompetences");
   }
 };
 
 const getters: GetterTree<CompetenceState, string> = {
   competences: state => state.competences,
   competencesTypes: state => Object.keys(state.competencesCheckbox),
-  competenceIsChecked: state => (competenceId: string) => state.competencesCheckbox[competenceId]
+  competenceIsChecked: state => (competenceId: string) => state.competencesCheckbox[competenceId],
+  allCompetencesIsChecked: state => Object.keys(state.competencesCheckbox).every(competenceId => state.competencesCheckbox[competenceId])
 };
 
 export default {

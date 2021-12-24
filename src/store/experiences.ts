@@ -15,8 +15,8 @@ const mutations: MutationTree<ExperienceState> = {
   loadExperiences: state => {
     if (state.experiences.length == 0) {
       axios.get("data/experiences.json")
-        .then(markdownContent => {
-          state.experiences = (markdownContent.data as { experiences: ExperienceInterface[] }).experiences;
+        .then(response => {
+          state.experiences = (response.data as { experiences: ExperienceInterface[] }).experiences;
         });
     }
   }
@@ -29,7 +29,7 @@ const actions: ActionTree<ExperienceState, string> = {
 };
 
 const getters: GetterTree<ExperienceState, string> = {
-  experiences: state => state.experiences
+  experiences: state => state.experiences.sort((p1, p2) => (p2.end || p2.start + 100) - (p1.end || p1.start + 100))
 };
 
 export default {

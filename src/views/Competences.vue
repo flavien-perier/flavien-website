@@ -2,9 +2,16 @@
   <section class="container">
     <h1 class="col-12 section-title">{{ $t("competences") }}</h1>
 
-    <article class="box bg-box container">
+    <article class="box bg-box container position-relative">
+      <div id="select-all" class="custom-control custom-checkbox" @click="selectAllCompetences()">
+        <input type="checkbox" class="custom-control-input" :checked="allCompetencesIsChecked" />
+        <span class="custom-control-label select-all-text">
+          {{ allCompetencesIsChecked ? $t("unselectAll") : $t("selectAll") }}
+        </span>
+      </div>
       <h2 class="text-center">{{ $t("filters") }}</h2>
       <hr />
+
       <div class="row">
         <CompetenceType
           v-for="id in competencesTypes"
@@ -42,22 +49,35 @@ export default {
     this.loadCompetences();
   },
   methods: {
-    ...mapActions("competences", ["loadCompetences", "selectCompetence"])
+    ...mapActions("competences", ["loadCompetences", "selectCompetence", "selectAllCompetences"])
   },
   computed: {
-    ...mapGetters("competences", ["competences", "competencesTypes", "competenceIsChecked"])
+    ...mapGetters("competences", ["competences", "competencesTypes", "competenceIsChecked", "allCompetencesIsChecked"])
   }
 };
 </script>
 
+<style scoped lang="css">
+#select-all {
+  position: absolute;
+  cursor: pointer;
+  left: 1.4rem;
+  top: 1.2rem;
+}
+</style>
+
 <i18n locale="fr">
 {
-  "filters": "Filtres"
+  "filters": "Filtres",
+  "selectAll": "Sélectionner tout",
+  "unselectAll": "Désélectionner tout"
 }
 </i18n>
 
 <i18n locale="en">
 {
-  "filters": "Filters"
+  "filters": "Filters",
+  "selectAll": "Select all",
+  "unselectAll": "Unselect all"
 }
 </i18n>
