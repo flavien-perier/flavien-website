@@ -5,7 +5,7 @@
     <article class="box bg-box container position-relative">
       <div id="select-all" class="custom-control custom-checkbox" @click="selectAllCompetences()">
         <input type="checkbox" class="custom-control-input" :checked="allCompetencesIsChecked" />
-        <span class="custom-control-label select-all-text">
+        <span class="custom-control-label select-all-text d-none d-sm-inline">
           {{ allCompetencesIsChecked ? $t("unselectAll") : $t("selectAll") }}
         </span>
       </div>

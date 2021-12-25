@@ -90,7 +90,7 @@
                 "personal",
                 "Henallux"
             ],
-            "lvl": 60
+            "lvl": 65
         },
         {
             "label": "Java",
@@ -136,7 +136,7 @@
                 "personal",
                 "Henallux"
             ],
-            "lvl": 70
+            "lvl": 80
         },
         {
             "label": "Python",
@@ -482,8 +482,8 @@
         {
             "label": "Debian",
             "faIcon": "fab linux",
-            "descriptionFr": "Système d'exploitation Linux.",
-            "descriptionEn": "Linux operating system.",
+            "descriptionFr": "Distribution Linux.",
+            "descriptionEn": "Linux distribution.",
             "url": "https://www.debian.org/",
             "type": "os",
             "experiences": [
@@ -499,8 +499,8 @@
         {
             "label": "Ubuntu",
             "faIcon": "fab linux",
-            "descriptionFr": "Système d'exploitation Linux basé sur Debian.",
-            "descriptionEn": "Debian-based Linux operating system.",
+            "descriptionFr": "Distribution Linux basé sur Debian.",
+            "descriptionEn": "Debian-based Linux distribution.",
             "url": "https://ubuntu.com/",
             "type": "os",
             "experiences": [
@@ -513,8 +513,8 @@
         {
             "label": "Kali",
             "faIcon": "fab linux",
-            "descriptionFr": "Système d'exploitation Linux basé sur Debian, orienté test de sécurité.",
-            "descriptionEn": "Debian-based Linux operating system, focused on pentesting.",
+            "descriptionFr": "Distribution Linux basé sur Debian, orienté test de sécurité.",
+            "descriptionEn": "Debian-based Linux distribution, focused on pentesting.",
             "url": "https://www.kali.org/",
             "type": "os",
             "experiences": [
@@ -525,8 +525,8 @@
         {
             "label": "Arch",
             "faIcon": "fab linux",
-            "descriptionFr": "Système d'exploitation Linux.",
-            "descriptionEn": "Linux operating system.",
+            "descriptionFr": "Distribution Linux.",
+            "descriptionEn": "Linux distribution.",
             "url": "https://archlinux.org/",
             "type": "os",
             "experiences": [
@@ -537,8 +537,8 @@
         {
             "label": "Manjaro",
             "faIcon": "fab linux",
-            "descriptionFr": "Système d'exploitation Linux basé sur Arch.",
-            "descriptionEn": "Arch-based Linux operating system.",
+            "descriptionFr": "Distribution Linux basé sur Arch.",
+            "descriptionEn": "Arch-based Linux distribution.",
             "url": "https://manjaro.org/",
             "type": "os",
             "experiences": [
@@ -549,8 +549,8 @@
         {
             "label": "Fedora",
             "faIcon": "fab linux",
-            "descriptionFr": "Système d'exploitation Linux basé sur RedHat.",
-            "descriptionEn": "RedHat-based Linux operating system.",
+            "descriptionFr": "Distribution Linux basé sur RedHat.",
+            "descriptionEn": "RedHat-based Linux distribution.",
             "url": "https://getfedora.org/",
             "type": "os",
             "experiences": [
@@ -561,8 +561,8 @@
         {
             "label": "CentOS",
             "faIcon": "fab linux",
-            "descriptionFr": "Système d'exploitation Linux basé sur RedHat.",
-            "descriptionEn": "RedHat-based Linux operating system.",
+            "descriptionFr": "Distribution Linux basé sur RedHat.",
+            "descriptionEn": "RedHat-based Linux distribution.",
             "url": "https://www.centos.org/",
             "type": "os",
             "experiences": [
@@ -573,8 +573,8 @@
         {
             "label": "Rocky",
             "faIcon": "fab linux",
-            "descriptionFr": "Système d'exploitation Linux basé sur RedHat.",
-            "descriptionEn": "RedHat-based Linux operating system.",
+            "descriptionFr": "Distribution Linux basé sur RedHat.",
+            "descriptionEn": "RedHat-based Linux distribution.",
             "url": "https://rockylinux.org/",
             "type": "os",
             "experiences": [
@@ -585,8 +585,8 @@
         {
             "label": "Alpine",
             "faIcon": "fab linux",
-            "descriptionFr": "Système d'exploitation Linux optimisé pour conteneurs Docker.",
-            "descriptionEn": "Linux operating system optimized for Docker containers.",
+            "descriptionFr": "Distribution Linux optimisé pour conteneurs Docker.",
+            "descriptionEn": "Linux distribution optimized for Docker containers.",
             "url": "https://www.alpinelinux.org/",
             "type": "os",
             "experiences": [
