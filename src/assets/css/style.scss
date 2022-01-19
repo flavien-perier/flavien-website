@@ -1,24 +1,24 @@
 // Bootstrap configuration
 $theme-colors: (
-  dark: #343a40,
-  light: #f8f9fa,
-  box: #e5e5e5,
-  competence-framework: #e8b6b6,
-  competence-language: #d7d4ff,
-  competence-ide: #fff0d4,
-  competence-db: #b6e8d4,
-  competence-bigData: #edc4ff,
-  competence-dataScience: #c4ecff,
-  competence-os: #fad9bf,
-  competence-infra: #bfd2fa,
-  competence-network: #fffddc,
-  competence-tool: #dcfdff,
-  competence-management: #cfb7cf,
+        dark: #343a40,
+        light: #f8f9fa,
+        box: #e5e5e5,
+        competence-framework: #e8b6b6,
+        competence-language: #d7d4ff,
+        competence-ide: #fff0d4,
+        competence-db: #b6e8d4,
+        competence-bigData: #edc4ff,
+        competence-dataScience: #c4ecff,
+        competence-os: #fad9bf,
+        competence-infra: #bfd2fa,
+        competence-network: #fffddc,
+        competence-tool: #dcfdff,
+        competence-management: #cfb7cf,
 );
 
 $container-max-widths: (
-  xl: 1400px,
-  xxl: 1400px,
+        xl: 1400px,
+        xxl: 1400px,
 );
 
 $enable-rounded: false;
@@ -46,7 +46,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .section-title {
   color: #fff;
-  text-shadow: 0rem 0rem .5rem #000;
+  text-shadow: 0 0 .5rem #000;
   text-align: center;
 }
 
@@ -58,7 +58,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .page-indicator {
   color: #fff;
-  text-shadow: 0rem 0rem .5rem #000;
+  text-shadow: 0 0 .5rem #000;
   text-align: center;
 }
 

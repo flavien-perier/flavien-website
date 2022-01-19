@@ -2,8 +2,11 @@
   <a :href="competence.url" class="col-12 col-md-6" style="color: inherit; text-decoration: inherit">
     <div :class="`row mx-auto box box-animation bg-competence-${competence.type}`">
       <div class="text-center col-12">
-        <h2><font-awesome-icon :icon="competence.faIcon.split(' ')" /> {{ competence.label }}</h2>
-        <hr />
+        <h2>
+          <font-awesome-icon :icon="competence.faIcon.split(' ')"/>
+          {{ competence.label }}
+        </h2>
+        <hr/>
       </div>
 
       <div class="col-md-12 col-lg-6">
@@ -29,7 +32,7 @@
 </template>
 
 <script lang="ts">
-import { Component, Prop, Vue } from "vue-property-decorator";
+import {Component, Prop, Vue} from "vue-property-decorator";
 import CompetenceInterface from "@/model/CompetenceInterface";
 
 @Component

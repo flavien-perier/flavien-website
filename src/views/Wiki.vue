@@ -4,24 +4,24 @@
 
     <article class="row">
       <ArticleLink
-        v-for="h in headers"
-        :key="h.date"
-        :header="h"
+          v-for="h in headers"
+          :key="h.date"
+          :header="h"
       />
     </article>
 
     <div class="container">
       <p class="col-12 page-indicator">
-        <span class="cursor-link" v-if="page > 1" @click="loadArticles(page - 1)">{{ $t("previous") }} -</span>
+        <span v-if="page > 1" class="cursor-link" @click="loadArticles(page - 1)">{{ $t("previous") }} -</span>
         {{ $t("page") }}: {{ page }}/{{ numberOfPages }}
-        <span class="cursor-link" v-if="page < numberOfPages" @click="loadArticles(page + 1)">- {{ $t("next") }}</span>
+        <span v-if="page < numberOfPages" class="cursor-link" @click="loadArticles(page + 1)">- {{ $t("next") }}</span>
       </p>
     </div>
   </section>
 </template>
 
 <script>
-import { mapGetters, mapActions } from "vuex";
+import {mapActions, mapGetters} from "vuex";
 
 import ArticleLink from "@/components/ArticleLink.vue";
 

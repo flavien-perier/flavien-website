@@ -4,37 +4,37 @@
 
     <article class="box bg-box container position-relative">
       <div id="select-all" class="custom-control custom-checkbox" @click="selectAllCompetences()">
-        <input type="checkbox" class="custom-control-input" :checked="allCompetencesIsChecked" />
+        <input :checked="allCompetencesIsChecked" class="custom-control-input" type="checkbox"/>
         <span class="custom-control-label select-all-text d-none d-sm-inline">
           {{ allCompetencesIsChecked ? $t("unselectAll") : $t("selectAll") }}
         </span>
       </div>
       <h2 class="text-center">{{ $t("filters") }}</h2>
-      <hr />
+      <hr/>
 
       <div class="row">
         <CompetenceType
-          v-for="id in competencesTypes"
-          :key="id"
-          v-on:check="selectCompetence(id)"
-          :competenceTypeId="id"
-          :selected="competenceIsChecked(id)"
+            v-for="id in competencesTypes"
+            :key="id"
+            :competenceTypeId="id"
+            :selected="competenceIsChecked(id)"
+            v-on:check="selectCompetence(id)"
         />
       </div>
     </article>
 
     <article class="row">
       <Competence
-        v-for="c in competences.filter(c => competenceIsChecked(c.type))"
-        :key="c.label"
-        :competence="c"
+          v-for="c in competences.filter(c => competenceIsChecked(c.type))"
+          :key="c.label"
+          :competence="c"
       />
     </article>
   </section>
 </template>
 
 <script>
-import { mapGetters, mapActions } from "vuex";
+import {mapActions, mapGetters} from "vuex";
 
 import Competence from "@/components/Competence.vue";
 import CompetenceType from "@/components/CompetenceType.vue";
@@ -57,7 +57,7 @@ export default {
 };
 </script>
 
-<style scoped lang="css">
+<style lang="css" scoped>
 #select-all {
   position: absolute;
   cursor: pointer;

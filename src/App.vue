@@ -1,11 +1,11 @@
 <template>
   <div id="app">
-    <Navbar />
-    <Header />
+    <Navbar/>
+    <Header/>
 
-    <router-view class="mt-5 mt-lg-0" />
+    <router-view class="mt-5 mt-lg-0"/>
 
-    <Footer />
+    <Footer/>
   </div>
 </template>
 

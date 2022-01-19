@@ -2,7 +2,7 @@ export default {
     prefix: "fab",
     iconName: "kafka",
     icon: [
-        26.458, 
+        26.458,
         42.333,
         [],
         "",

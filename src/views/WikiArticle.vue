@@ -6,7 +6,7 @@
       <div class="row">
         <div class="col-12 col-lg-8">
           <h2 class="text-left text-lg-center">{{ $t("tableOfContents") }}</h2>
-          <TableOfContents class="box" :htmlContent="content" />
+          <TableOfContents :htmlContent="content" class="box"/>
         </div>
 
         <div class="col-12 col-lg-4">
@@ -24,9 +24,10 @@
 </template>
 
 <script>
-import { mapGetters, mapActions } from "vuex";
+import {mapActions, mapGetters} from "vuex";
 
 import TableOfContents from "@/components/TableOfContents.vue";
+
 export default {
   name: "wikiArticle",
   components: {

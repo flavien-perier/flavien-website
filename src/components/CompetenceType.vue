@@ -2,7 +2,7 @@
   <div class="mb-3 col-lg-4 col-md-6 col-sm-12" @click="check()">
     <div class="input-group">
       <div class="input-group-text">
-        <input type="checkbox" :checked="selected" />
+        <input :checked="selected" type="checkbox"/>
       </div>
       <span :class="`input-group-text competence-title bg-competence-${competenceTypeId}`">
         {{ $t(competenceTypeId) }}
@@ -12,7 +12,7 @@
 </template>
 
 <script lang="ts">
-import { Component, Prop, Vue } from "vue-property-decorator";
+import {Component, Prop, Vue} from "vue-property-decorator";
 
 @Component
 export default class CompetenceType extends Vue {
@@ -25,10 +25,10 @@ export default class CompetenceType extends Vue {
 }
 </script>
 
-<style scoped lang="css">
+<style lang="css" scoped>
 .competence-title {
   min-width: 15rem;
-  cursor: pointer; 
+  cursor: pointer;
 }
 </style>
 
@@ -39,7 +39,7 @@ export default class CompetenceType extends Vue {
   "ide": "EDI",
   "db": "Base de données",
   "bigData": "Big Data",
-  "dataScience": "Science des données", 
+  "dataScience": "Science des données",
   "os": "Système d'exploitation",
   "infra": "Infrastructure",
   "network": "Réseau",

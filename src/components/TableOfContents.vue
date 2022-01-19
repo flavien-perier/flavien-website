@@ -1,17 +1,16 @@
 <template>
   <div id="tableOfContents">
-    <div 
-      v-for="title in titles"
-      :key="title.order"
-      :style="`margin-left:${title.level}em`"
+    <div
+        v-for="title in titles"
+        :key="title.order"
+        :style="`margin-left:${title.level}em`"
     >- <a :href="'#' + title.id">{{ title.title }}</a></div>
   </div>
 </template>
 
 <script lang="ts">
-import { Component, Prop, Vue } from "vue-property-decorator";
+import {Component, Prop, Vue} from "vue-property-decorator";
 import TitleDescription from "@/model/TitleDescription";
-import marked from "marked";
 
 @Component
 export default class TableOfContents extends Vue {

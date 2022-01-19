@@ -4,16 +4,16 @@
 
     <article class="row">
       <Project
-        v-for="p in projects"
-        :key="p.location"
-        :project="p"
+          v-for="p in projects"
+          :key="p.location"
+          :project="p"
       />
     </article>
   </section>
 </template>
 
 <script>
-import { mapGetters, mapActions } from "vuex";
+import {mapActions, mapGetters} from "vuex";
 import Project from "@/components/Project.vue";
 
 export default {

@@ -3,7 +3,7 @@
     <div class="row mx-auto box box-animation bg-box">
       <div class="text-center col-12">
         <h2>{{ experience.location }}</h2>
-        <hr />
+        <hr/>
       </div>
 
       <div class="col-12 col-lg-6">
@@ -16,10 +16,10 @@
         <p>
           <strong>{{ $t("city") }} :</strong>
           {{ experience.city }}
-          <br />
+          <br/>
           <strong>{{ $t("period") }} :</strong>
           {{ experience.start }} - {{ experience.end || "*" }}
-          <br />
+          <br/>
         </p>
       </div>
     </div>
@@ -27,7 +27,7 @@
 </template>
 
 <script lang="ts">
-import { Component, Prop, Vue } from "vue-property-decorator";
+import {Component, Prop, Vue} from "vue-property-decorator";
 import ExperienceInterface from "@/model/ExperienceInterface";
 
 @Component

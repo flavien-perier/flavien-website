@@ -20,7 +20,7 @@ class Color {
     }
 
     add(color) {
-        switch(color) {
+        switch (color) {
             case "r":
                 if (this.red < 255) this.red++;
                 break;
@@ -34,7 +34,7 @@ class Color {
     }
 
     get(color) {
-        switch(color) {
+        switch (color) {
             case "r":
                 return this.red;
             case "g":
@@ -59,9 +59,9 @@ class Grid {
         this.workerMaximumDistance = Math.sqrt(this.grid.height * this.grid.height * this.grid.width * this.grid.width);
 
         let i, j;
-        for (i=0; i < this.width; i++) {
+        for (i = 0; i < this.width; i++) {
             this.grid[i] = new Array(this.height);
-            for (j=0; j < this.height; j++) {
+            for (j = 0; j < this.height; j++) {
                 this.grid[i][j] = new Case(i, j, this.context);
             }
         }
@@ -111,20 +111,20 @@ class CheckPoint extends Case {
         do {
             posX = Math.round(Math.random() * (grid.width - 1));
             posY = Math.round(Math.random() * (grid.height - 1));
-        } while(grid.get(posX, posY).isCheckPoint());
-        
+        } while (grid.get(posX, posY).isCheckPoint());
+
         super(posX, posY, context);
         this.grid = grid;
 
         const randomCheckPointType = Math.round(Math.random() * 3 - 0.5);
 
-        switch(randomCheckPointType) {
+        switch (randomCheckPointType) {
             case 0: // red
                 this.checkPointType = "r";
                 this.color.red = 255;
                 break;
             case 1: // green
-            this.checkPointType = "g";
+                this.checkPointType = "g";
                 this.color.green = 255;
                 break;
             case 2: // blue
@@ -134,7 +134,7 @@ class CheckPoint extends Case {
         }
 
         this.workers = [];
-        for (let i=0; i < WORKERS_BY_CHECK_POINT; i++) {
+        for (let i = 0; i < WORKERS_BY_CHECK_POINT; i++) {
             this.workers.push(new Worker(this));
         }
 
@@ -188,13 +188,13 @@ class Worker {
     getDirCase(dir) {
         switch (dir) {
             case "t":
-                return this.grid.get(this.posX, this.posY-1);
+                return this.grid.get(this.posX, this.posY - 1);
             case "r":
-                return this.grid.get(this.posX+1, this.posY);
+                return this.grid.get(this.posX + 1, this.posY);
             case "b":
-                return this.grid.get(this.posX, this.posY+1);
+                return this.grid.get(this.posX, this.posY + 1);
             case "l":
-                return this.grid.get(this.posX-1, this.posY);
+                return this.grid.get(this.posX - 1, this.posY);
         }
     }
 
@@ -224,10 +224,10 @@ class Worker {
         }
 
         // The sum of all the values of the case on which it is possible to move it.
-        const sumCase = [...directions].reduce((accumulator, dir) => 
+        const sumCase = [...directions].reduce((accumulator, dir) =>
             accumulator += this.getDirCase(dir).color.get(this.checkPoint.checkPointType), 0
         );
-        
+
         // A random value between 0 and `sumCase`.
         const randomChoice = Math.random() * sumCase;
 
@@ -254,13 +254,14 @@ class Worker {
                 this.posY++;
                 break;
             case "l":
-                this.posX--;reduceGridWeights
+                this.posX--;
+                reduceGridWeights
         }
 
         // Test if the case found is a checkpoint and if it is of the same type as the one you came from.
         if (this.grid.get(this.posX, this.posY).isCheckPoint()
             && this.grid.get(this.posX, this.posY).checkPointType == this.checkPoint.checkPointType) {
-            
+
             this.save();
             return;
         }
@@ -311,12 +312,12 @@ function geneticLoader() {
         canvas.height = Math.round(window.innerHeight / CASE_WIDTH) * CASE_WIDTH;
         canvas.width = Math.round(window.innerWidth / CASE_HEIGHT) * CASE_HEIGHT;
         const grid = new Grid(canvas.height, canvas.width, ctx);
-    
+
         let checkPoints = [];
-        for (let i=0; i < (grid.width * grid.height * CHECK_POINT_DENSITY); i++) {
+        for (let i = 0; i < (grid.width * grid.height * CHECK_POINT_DENSITY); i++) {
             checkPoints.push(new CheckPoint(grid, ctx));
         }
-    
+
         grid.draw();
 
         workersLoop = setInterval(() => {
@@ -333,7 +334,6 @@ function geneticLoader() {
             // We only keep the CheckPoints that are not removed.
             checkPoints = checkPoints.filter(cp => cp);
         }, MANAGE_CHECK_POINTS_LOOP_INTERVAL);
-
 
 
     }

@@ -4,16 +4,16 @@
 
     <article class="row">
       <Experience
-        v-for="e in experiences"
-        :key="e.location"
-        :experience="e"
+          v-for="e in experiences"
+          :key="e.location"
+          :experience="e"
       />
     </article>
   </section>
 </template>
 
 <script>
-import { mapGetters, mapActions } from "vuex";
+import {mapActions, mapGetters} from "vuex";
 
 import Experience from "@/components/Experience.vue";
 

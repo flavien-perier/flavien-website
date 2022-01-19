@@ -1,168 +1,168 @@
 {
-    "projects": [
-        {
-            "name": "PHP forum",
-            "descriptionFr": "Premier développement web, avec intégration d'un forum. Il a été principalement utilisé comme plateforme de communication pour les étudiants de ma classe pendant mes deux années de BTS.",
-            "descriptionEn": "First web development, with integration of a forum. It was mainly used as a communication platform for the students of my class during my two years of BTS.",
-            "technos": [
-                "PHP",
-                "MySQL"
-            ],
-            "experience": "personal",
-            "start": 2015,
-            "end": 2016
-        },
-        {
-            "name": "Raspberry server",
-            "descriptionFr": "Infrastructure serveur basée sur Raspberry Pi que j'ai déployé à mon domicile afin d'héberger mon site web et un certain nombre d'autres services. La plupart de ces démons sont toujours en cours d'exécution après 4 années même si j'ai décidé d'en supprimer certains (comme la stack mail), ou de remplacer certains services par des équivalents (remplacement du serveur Apache2 par un serveur Nginx).",
-            "descriptionEn": "Server infrastructure based on Raspberry Pi that I deployed at my home to host my website and a number of other services. Most of these daemons are still running after 4 years even if I decided to remove some of them (like the mail stack), or to replace some services by equivalents (replacement of the Apache2 server by a Nginx server).",
-            "technos": [
-                "Raspberry Pi",
-                "Rasbian",
-                "Docker",
-                "Squid proxy",
-                "Bind9",
-                "Postfix",
-                "Courier",
-                "Nextcloud",
-                "Nginx",
-                "Apache2",
-                "Wordpress",
-                "NextCloud",
-                "Letsencrypt"
-            ],
-            "experience": "personal",
-            "start": 2015
-        },
-        {
-            "name": "Clémentine",
-            "descriptionFr": "Projet de stage de deuxième année en BTS. Mon objectif dans cette mission était de développer des fonctionnalités pour un prototype de chatbot au sein d'Orange. J'ai ainsi pu mettre en place un bon nombre d'APIs (Google translation, Deezer, Pages Jaunes, Orange APIs...) dans le but d'enrichir les interactions.",
-            "descriptionEn": "Second year internship project in BTS. My objective in this mission was to develop functionalities for a chatbot prototype within Orange. I was thus able to implement a good number of APIs (Google translation, Deezer, Pages Jaunes, Orange APIs...) in order to enrich interactions.",
-            "technos": [
-                "NodeJs",
-                "Microsoft LUIS",
-                "Microsoft BotFramework"
-            ],
-            "experience": "Orange",
-            "start": 2016,
-            "end": 2016
-        },
-        {
-            "name": "Oculus",
-            "descriptionFr": "Après avoir travaillé sur Clémentine, j'ai essayé de développer un framework qui permettrait de créer facilement des Chatbots.",
-            "descriptionEn": "After working on Clementine, I tried to develop a framework that would allow to easily create Chatbots.",
-            "technos": [
-                "NodeJs",
-                "ExpressJs",
-                "MongoDB"
-            ],
-            "experience": "personal",
-            "start": 2016,
-            "end": 2016
-        },
-        {
-            "name": "Voyager",
-            "descriptionFr": "Voyageur est une application Orange qui calcule l'effet d'une relocalisation de bâtiments de travail sur le temps de déplacement du personnel.",
-            "descriptionEn": "Voyageur is an Orange application that calculates the effect of relocating work buildings on staff travel time.",
-            "technos": [
-                "TypeScript",
-                "Angular",
-                "Java",
-                "Spring",
-                "MongoDB",
-                "CloudFoundry"
-            ],
-            "experience": "Orange",
-            "start": 2017,
-            "end": 2018
-        },
-        {
-            "name": "DbSelection",
-            "descriptionFr": "Outil pour guider sur le choix d'une base de données pour un nouveau projet. Cette application a eu beaucoup de visibilité en interne, on m'a alors chargé de développer de nouvelles versions. Il existe donc maintenant dbSelection, dataVizSelection (un équivalent pour choisir un outil dataViz), distribuSelection (un outil pour choisir une distribution BigData) et enfin cloudSelection (un équivalent pour choisir le cloud interne ou externe le plus adapté à notre architecture) qui est devenu une application interne au niveau groupe.",
-            "descriptionEn": "Tool to guide on the choice of a database for a new project. This application had a lot of visibility internally, so I was asked to develop new versions. So there is now dbSelection, dataVizSelection (an equivalent to choose a dataViz tool), distribuSelection (a tool to choose a BigData distribution) and finally cloudSelection (an equivalent to choose the internal or external cloud best suited to our architecture) which has become an internal application at group level.",
-            "technos": [
-                "TypeScript",
-                "ExpressJs",
-                "Angular",
-                "MySQL",
-                "CloudFoundry"
-            ],
-            "experience": "Orange",
-            "start": 2018,
-            "end": 2020
-        },
-        {
-            "name": "Girafe",
-            "descriptionFr": "Une application pour créer un graph (Neo4j) de dépendance entre les différents champs d'une base de données (DataLineage). Pour ce faire, l'application prend en entrée des fichiers Microsoft DTSX et analyse le XML et le SQL qu'ils contiennent, afin de déduire les actions qui sont effectuées sur la base de données. Pour ma part, je me suis principalement concentré sur l'implémentation d'un analyseur SQL utilisant le framework ANTLR.",
-            "descriptionEn": "An application to create a graph (Neo4j) of dependency between the different fields of a database (DataLineage). To do this, the application takes Microsoft DTSX files as input and analyzes the XML and SQL they contain, in order to deduce the actions that are performed on the database. For my part, I mainly focused on the implementation of an SQL parser using the ANTLR framework.",
-            "technos": [
-                "Kotlin",
-                "Antlr",
-                "Neo4j"
-            ],
-            "experience": "Orange",
-            "start": 2019,
-            "end": 2019
-        },
-        {
-            "name": "Sparkle",
-            "descriptionFr": "Sparkle est un framework d'analyse de flux de données. L'objectif de ce framework est d'offrir à l'utilisateur la possibilité de développer des modules qui peuvent être placés dans un pipeline de traitement de flux. L'avantage de cette approche modulaire est que chaque module peut ensuite être testé individuellement. Ceci garantit une certaine fiabilité dans notre workflow.",
-            "descriptionEn": "Sparkle is a framework for data flow analysis. The objective of this framework is to offer the user the possibility to develop modules that can be placed in a flow processing pipeline. The advantage of this modular approach is that each module can then be tested individually. This guarantees a certain reliability in our workflow.",
-            "technos": [
-                "Java",
-                "Vertex",
-                "Java 9 Modules",
-                "Docker"
-            ],
-            "experience": "Orange",
-            "start": 2019,
-            "end": 2019
-        },
-        {
-            "name": "Personal website",
-            "descriptionFr": "Ce site web a été développé en TypeScript grâce au framework VueJs. Lors du développement, je me suis intéressé aux problématiques d'optimisation de la transpilation afin de minimiser le poids du fichier transmis au client, sans impacter la qualité du code. L'arrière-plan du site est généré côté client, dans un canvas, grâce à un algorithme génétique développé en JavaScript.",
-            "descriptionEn": "This website has been developed in TypeScript using the VueJs framework. During the development, I was interested in the optimization of the transpilation in order to minimize the weight of the file transmitted to the client, without impacting the quality of the code. The background of the site is generated on the client side, in a canvas, thanks to a genetic algorithm developed in JavaScript.",
-            "technos": [
-                "TypeScript",
-                "VueJs"
-            ],
-            "experience": "personal",
-            "start": 2019
-        },
-        {
-            "name": "Cobalt cloud",
-            "descriptionFr": "Projet de recherche Orange ayant pour but de mettre en place une plateforme SaaS, capable de rajouter des métadonnées de manière automatique à des médias. Par exemple, générer des sous-titres pour une vidéo grâce à sa bande-son.",
-            "descriptionEn": "Orange research project aiming to set up a SaaS platform, capable of adding metadata automatically to media. For example, generate subtitles for a video thanks to its soundtrack.",
-            "technos": [
-                "Kubernetes",
-                "Java"
-            ],
-            "experience": "Orange",
-            "start": 2020,
-            "end": 2020
-        },
-        {
-            "name": "Pride",
-            "descriptionFr": "Projet de recherche financé par l'ADEME (Agence de la transition écologique) dans lequel Orange a développé un composant permettant à des collectivités de récupérer les données concernant leurs factures énergétiques Enedis ou GRDF.",
-            "descriptionEn": "Research project funded by ADEME (Agence de la transition écologique) in which Orange has developed a component enabling local authorities to retrieve data concerning their Enedis or GRDF energy bills.",
-            "technos": [
-                "Kotlin",
-                "VueJs"
-            ],
-            "experience": "Orange",
-            "start": 2020,
-            "end": 2020
-        },
-        {
-            "name": "Pilact",
-            "descriptionFr": "Outil de pilotage d'activité interne à l'ASP (Agence de Service et de Paiement).",
-            "descriptionEn": "Internal activity management tool for ASP (Agence de Service et de Paiement).",
-            "technos": [
-                "Spring",
-                "Angular"
-            ],
-            "experience": "NéoSoft",
-            "start": 2020
-        }
-    ]
+  "projects": [
+    {
+      "name": "PHP forum",
+      "descriptionFr": "Premier développement web, avec intégration d'un forum. Il a été principalement utilisé comme plateforme de communication pour les étudiants de ma classe pendant mes deux années de BTS.",
+      "descriptionEn": "First web development, with integration of a forum. It was mainly used as a communication platform for the students of my class during my two years of BTS.",
+      "technos": [
+        "PHP",
+        "MySQL"
+      ],
+      "experience": "personal",
+      "start": 2015,
+      "end": 2016
+    },
+    {
+      "name": "Raspberry server",
+      "descriptionFr": "Infrastructure serveur basée sur Raspberry Pi que j'ai déployé à mon domicile afin d'héberger mon site web et un certain nombre d'autres services. La plupart de ces démons sont toujours en cours d'exécution après 4 années même si j'ai décidé d'en supprimer certains (comme la stack mail), ou de remplacer certains services par des équivalents (remplacement du serveur Apache2 par un serveur Nginx).",
+      "descriptionEn": "Server infrastructure based on Raspberry Pi that I deployed at my home to host my website and a number of other services. Most of these daemons are still running after 4 years even if I decided to remove some of them (like the mail stack), or to replace some services by equivalents (replacement of the Apache2 server by a Nginx server).",
+      "technos": [
+        "Raspberry Pi",
+        "Rasbian",
+        "Docker",
+        "Squid proxy",
+        "Bind9",
+        "Postfix",
+        "Courier",
+        "Nextcloud",
+        "Nginx",
+        "Apache2",
+        "Wordpress",
+        "NextCloud",
+        "Letsencrypt"
+      ],
+      "experience": "personal",
+      "start": 2015
+    },
+    {
+      "name": "Clémentine",
+      "descriptionFr": "Projet de stage de deuxième année en BTS. Mon objectif dans cette mission était de développer des fonctionnalités pour un prototype de chatbot au sein d'Orange. J'ai ainsi pu mettre en place un bon nombre d'APIs (Google translation, Deezer, Pages Jaunes, Orange APIs...) dans le but d'enrichir les interactions.",
+      "descriptionEn": "Second year internship project in BTS. My objective in this mission was to develop functionalities for a chatbot prototype within Orange. I was thus able to implement a good number of APIs (Google translation, Deezer, Pages Jaunes, Orange APIs...) in order to enrich interactions.",
+      "technos": [
+        "NodeJs",
+        "Microsoft LUIS",
+        "Microsoft BotFramework"
+      ],
+      "experience": "Orange",
+      "start": 2016,
+      "end": 2016
+    },
+    {
+      "name": "Oculus",
+      "descriptionFr": "Après avoir travaillé sur Clémentine, j'ai essayé de développer un framework qui permettrait de créer facilement des Chatbots.",
+      "descriptionEn": "After working on Clementine, I tried to develop a framework that would allow to easily create Chatbots.",
+      "technos": [
+        "NodeJs",
+        "ExpressJs",
+        "MongoDB"
+      ],
+      "experience": "personal",
+      "start": 2016,
+      "end": 2016
+    },
+    {
+      "name": "Voyager",
+      "descriptionFr": "Voyageur est une application Orange qui calcule l'effet d'une relocalisation de bâtiments de travail sur le temps de déplacement du personnel.",
+      "descriptionEn": "Voyageur is an Orange application that calculates the effect of relocating work buildings on staff travel time.",
+      "technos": [
+        "TypeScript",
+        "Angular",
+        "Java",
+        "Spring",
+        "MongoDB",
+        "CloudFoundry"
+      ],
+      "experience": "Orange",
+      "start": 2017,
+      "end": 2018
+    },
+    {
+      "name": "DbSelection",
+      "descriptionFr": "Outil pour guider sur le choix d'une base de données pour un nouveau projet. Cette application a eu beaucoup de visibilité en interne, on m'a alors chargé de développer de nouvelles versions. Il existe donc maintenant dbSelection, dataVizSelection (un équivalent pour choisir un outil dataViz), distribuSelection (un outil pour choisir une distribution BigData) et enfin cloudSelection (un équivalent pour choisir le cloud interne ou externe le plus adapté à notre architecture) qui est devenu une application interne au niveau groupe.",
+      "descriptionEn": "Tool to guide on the choice of a database for a new project. This application had a lot of visibility internally, so I was asked to develop new versions. So there is now dbSelection, dataVizSelection (an equivalent to choose a dataViz tool), distribuSelection (a tool to choose a BigData distribution) and finally cloudSelection (an equivalent to choose the internal or external cloud best suited to our architecture) which has become an internal application at group level.",
+      "technos": [
+        "TypeScript",
+        "ExpressJs",
+        "Angular",
+        "MySQL",
+        "CloudFoundry"
+      ],
+      "experience": "Orange",
+      "start": 2018,
+      "end": 2020
+    },
+    {
+      "name": "Girafe",
+      "descriptionFr": "Une application pour créer un graph (Neo4j) de dépendance entre les différents champs d'une base de données (DataLineage). Pour ce faire, l'application prend en entrée des fichiers Microsoft DTSX et analyse le XML et le SQL qu'ils contiennent, afin de déduire les actions qui sont effectuées sur la base de données. Pour ma part, je me suis principalement concentré sur l'implémentation d'un analyseur SQL utilisant le framework ANTLR.",
+      "descriptionEn": "An application to create a graph (Neo4j) of dependency between the different fields of a database (DataLineage). To do this, the application takes Microsoft DTSX files as input and analyzes the XML and SQL they contain, in order to deduce the actions that are performed on the database. For my part, I mainly focused on the implementation of an SQL parser using the ANTLR framework.",
+      "technos": [
+        "Kotlin",
+        "Antlr",
+        "Neo4j"
+      ],
+      "experience": "Orange",
+      "start": 2019,
+      "end": 2019
+    },
+    {
+      "name": "Sparkle",
+      "descriptionFr": "Sparkle est un framework d'analyse de flux de données. L'objectif de ce framework est d'offrir à l'utilisateur la possibilité de développer des modules qui peuvent être placés dans un pipeline de traitement de flux. L'avantage de cette approche modulaire est que chaque module peut ensuite être testé individuellement. Ceci garantit une certaine fiabilité dans notre workflow.",
+      "descriptionEn": "Sparkle is a framework for data flow analysis. The objective of this framework is to offer the user the possibility to develop modules that can be placed in a flow processing pipeline. The advantage of this modular approach is that each module can then be tested individually. This guarantees a certain reliability in our workflow.",
+      "technos": [
+        "Java",
+        "Vertex",
+        "Java 9 Modules",
+        "Docker"
+      ],
+      "experience": "Orange",
+      "start": 2019,
+      "end": 2019
+    },
+    {
+      "name": "Personal website",
+      "descriptionFr": "Ce site web a été développé en TypeScript grâce au framework VueJs. Lors du développement, je me suis intéressé aux problématiques d'optimisation de la transpilation afin de minimiser le poids du fichier transmis au client, sans impacter la qualité du code. L'arrière-plan du site est généré côté client, dans un canvas, grâce à un algorithme génétique développé en JavaScript.",
+      "descriptionEn": "This website has been developed in TypeScript using the VueJs framework. During the development, I was interested in the optimization of the transpilation in order to minimize the weight of the file transmitted to the client, without impacting the quality of the code. The background of the site is generated on the client side, in a canvas, thanks to a genetic algorithm developed in JavaScript.",
+      "technos": [
+        "TypeScript",
+        "VueJs"
+      ],
+      "experience": "personal",
+      "start": 2019
+    },
+    {
+      "name": "Cobalt cloud",
+      "descriptionFr": "Projet de recherche Orange ayant pour but de mettre en place une plateforme SaaS, capable de rajouter des métadonnées de manière automatique à des médias. Par exemple, générer des sous-titres pour une vidéo grâce à sa bande-son.",
+      "descriptionEn": "Orange research project aiming to set up a SaaS platform, capable of adding metadata automatically to media. For example, generate subtitles for a video thanks to its soundtrack.",
+      "technos": [
+        "Kubernetes",
+        "Java"
+      ],
+      "experience": "Orange",
+      "start": 2020,
+      "end": 2020
+    },
+    {
+      "name": "Pride",
+      "descriptionFr": "Projet de recherche financé par l'ADEME (Agence de la transition écologique) dans lequel Orange a développé un composant permettant à des collectivités de récupérer les données concernant leurs factures énergétiques Enedis ou GRDF.",
+      "descriptionEn": "Research project funded by ADEME (Agence de la transition écologique) in which Orange has developed a component enabling local authorities to retrieve data concerning their Enedis or GRDF energy bills.",
+      "technos": [
+        "Kotlin",
+        "VueJs"
+      ],
+      "experience": "Orange",
+      "start": 2020,
+      "end": 2020
+    },
+    {
+      "name": "Pilact",
+      "descriptionFr": "Outil de pilotage d'activité interne à l'ASP (Agence de Service et de Paiement).",
+      "descriptionEn": "Internal activity management tool for ASP (Agence de Service et de Paiement).",
+      "technos": [
+        "Spring",
+        "Angular"
+      ],
+      "experience": "NéoSoft",
+      "start": 2020
+    }
+  ]
 }

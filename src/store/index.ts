@@ -11,13 +11,13 @@ import wikiArticle from "./wikiArticle";
 Vue.use(Vuex);
 
 export default new Vuex.Store({
-  modules: {
-    application,
-    home,
-    competences,
-    experiences,
-    projects,
-    wiki,
-    wikiArticle
-  }
+    modules: {
+        application,
+        home,
+        competences,
+        experiences,
+        projects,
+        wiki,
+        wikiArticle
+    }
 });

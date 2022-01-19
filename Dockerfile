@@ -9,7 +9,7 @@ RUN apk add --no-cache build-base g++ python2 libpng-dev jpeg-dev giflib-dev pan
     wget https://github.com/sgerrand/alpine-pkg-glibc/releases/download/2.29-r0/glibc-2.29-r0.apk && \
     apk add glibc-2.29-r0.apk && \
     rm glibc-2.29-r0.apk && \
-    npm install && \
+    npm ci && \
     npm run build && \
     chmod -R 750 /opt/flavien && \
     rm -Rf node_modules && \
