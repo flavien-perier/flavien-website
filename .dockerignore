@@ -5,6 +5,5 @@ Dockerfile
 .github
 README.md
 node_modules
-package-lock.json
 .idea
 dist
