@@ -51,11 +51,11 @@ import {
   faSwagger,
   faTs,
   faVscode
-} from "@/icons";
+} from "@/icon";
 import {FontAwesomeIcon} from "@fortawesome/vue-fontawesome";
 
 import store from "./store";
-import App from "./App.vue";
+import App from "./application/application.view.vue";
 import router from "./router";
 import i18n from "./i18n";
 import BSN from "./bootstrap";
