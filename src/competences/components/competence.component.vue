@@ -33,7 +33,7 @@
 
 <script lang="ts">
 import {Component, Prop, Vue} from "vue-property-decorator";
-import CompetenceModel from "@/competence/model/competence.model";
+import CompetenceModel from "@/competences/model/competence.model";
 
 @Component
 export default class Competence extends Vue {

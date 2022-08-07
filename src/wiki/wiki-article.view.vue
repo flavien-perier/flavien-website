@@ -12,8 +12,12 @@
         <div class="col-12 col-lg-4">
           <h2 class="text-left text-lg-center">{{ $t("informations") }}</h2>
           <div class="box">
-            <strong>{{ $t("author") }}</strong>: {{ author }} <br/>
-            <strong>{{ $t("date") }}</strong>: {{ date }}
+            <div>
+              <strong>{{ $t("author") }}</strong>: {{ author }}
+            </div>
+            <div>
+              <strong>{{ $t("date") }}</strong>: {{ date }}
+            </div>
           </div>
         </div>
       </div>
@@ -26,7 +30,7 @@
 <script>
 import {mapActions, mapGetters} from "vuex";
 
-import TableOfContents from "./component/table-of-contents.component";
+import TableOfContents from "./components/table-of-contents.component";
 
 export default {
   name: "wikiArticle",

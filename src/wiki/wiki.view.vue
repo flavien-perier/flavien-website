@@ -23,7 +23,7 @@
 <script>
 import {mapActions, mapGetters} from "vuex";
 
-import ArticleLink from "./component/article-link.component";
+import ArticleLink from "./components/article-link.component";
 
 export default {
   name: "wiki",

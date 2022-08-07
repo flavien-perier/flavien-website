@@ -1,7 +1,7 @@
 import {ActionTree, GetterTree, Module, MutationTree} from "vuex";
 import axios from "axios";
 
-import ExperienceModel from "@/experience/model/experience.model";
+import ExperienceModel from "@/experiences/model/experience.model";
 
 interface ExperienceState {
     experiences: ExperienceModel[]

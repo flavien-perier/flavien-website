@@ -24,7 +24,7 @@
 
 <script lang="ts">
 import {Component, Prop, Vue} from "vue-property-decorator";
-import ProjectModel from "@/project/model/project.model";
+import ProjectModel from "@/projects/model/project.model";
 
 @Component
 export default class Project extends Vue {

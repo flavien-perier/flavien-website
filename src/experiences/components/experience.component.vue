@@ -28,7 +28,7 @@
 
 <script lang="ts">
 import {Component, Prop, Vue} from "vue-property-decorator";
-import ExperienceModel from "@/experience/model/experience.model";
+import ExperienceModel from "@/experiences/model/experience.model";
 
 @Component
 export default class Experience extends Vue {

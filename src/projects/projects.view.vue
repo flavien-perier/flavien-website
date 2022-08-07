@@ -14,7 +14,7 @@
 
 <script>
 import {mapActions, mapGetters} from "vuex";
-import Project from "./component/project.component";
+import Project from "./components/project.component";
 
 export default {
   name: "project",
@@ -25,10 +25,10 @@ export default {
     this.loadProjects();
   },
   methods: {
-    ...mapActions("project", ["loadProjects"])
+    ...mapActions("projects", ["loadProjects"])
   },
   computed: {
-    ...mapGetters("project", ["projects"])
+    ...mapGetters("projects", ["projects"])
   }
 };
 </script>

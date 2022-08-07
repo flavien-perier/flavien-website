@@ -1,7 +1,7 @@
 import {ActionTree, GetterTree, Module, MutationTree} from "vuex";
 import axios from "axios";
 
-import ProjectModel from "@/project/model/project.model";
+import ProjectModel from "@/projects/model/project.model";
 
 interface ProjectState {
     projects: ProjectModel[]

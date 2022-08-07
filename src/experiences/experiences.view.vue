@@ -15,7 +15,7 @@
 <script>
 import {mapActions, mapGetters} from "vuex";
 
-import Experience from "./component/experience.component";
+import Experience from "./components/experience.component";
 
 export default {
   name: "experience",
@@ -26,10 +26,10 @@ export default {
     this.loadExperiences();
   },
   methods: {
-    ...mapActions("experience", ["loadExperiences"])
+    ...mapActions("experiences", ["loadExperiences"])
   },
   computed: {
-    ...mapGetters("experience", ["experiences"])
+    ...mapGetters("experiences", ["experiences"])
   }
 };
 </script>

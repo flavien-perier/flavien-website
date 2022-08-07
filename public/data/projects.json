@@ -147,7 +147,8 @@
       "descriptionEn": "Research project funded by ADEME (Agence de la transition écologique) in which Orange has developed a component enabling local authorities to retrieve data concerning their Enedis or GRDF energy bills.",
       "technos": [
         "Kotlin",
-        "VueJs"
+        "VueJs",
+        "Apache Kafka"
       ],
       "experience": "Orange",
       "start": 2020,
@@ -158,11 +159,25 @@
       "descriptionFr": "Outil de pilotage d'activité interne à l'ASP (Agence de Service et de Paiement).",
       "descriptionEn": "Internal activity management tool for ASP (Agence de Service et de Paiement).",
       "technos": [
+        "Java",
         "Spring",
-        "Angular"
+        "Angular",
+        "PostgreSQL"
       ],
       "experience": "NéoSoft",
-      "start": 2020
+      "start": 2020,
+      "end": 2022
+    },
+    {
+      "name": "Tixeo",
+      "descriptionFr": "Solution de visioconférence sécurisée.",
+      "descriptionEn": "Secure video conferencing solution.",
+      "technos": [
+        "Java",
+        "Spring"
+      ],
+      "experience": "NéoSoft",
+      "start": 2022
     }
   ]
 }

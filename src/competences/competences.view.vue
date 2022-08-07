@@ -36,8 +36,8 @@
 <script>
 import {mapActions, mapGetters} from "vuex";
 
-import Competence from "./component/competence.component";
-import CompetenceType from "./component/competence-type.component";
+import Competence from "./components/competence.component";
+import CompetenceType from "./components/competence-type.component";
 
 export default {
   name: "competence",
@@ -49,10 +49,10 @@ export default {
     this.loadCompetences();
   },
   methods: {
-    ...mapActions("competence", ["loadCompetences", "selectCompetence", "selectAllCompetences"])
+    ...mapActions("competences", ["loadCompetences", "selectCompetence", "selectAllCompetences"])
   },
   computed: {
-    ...mapGetters("competence", ["competences", "competencesTypes", "competenceIsChecked", "allCompetencesIsChecked"])
+    ...mapGetters("competences", ["competences", "competencesTypes", "competenceIsChecked", "allCompetencesIsChecked"])
   }
 };
 </script>

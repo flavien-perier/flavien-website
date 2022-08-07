@@ -22,10 +22,10 @@
             +33 6 95 92 82 50</a>
           <a
               class="list-group-item list-group-item-secondary list-group-item-action"
-              href="https://www.openstreetmap.org/relation/114172#map=12/45.8562/1.2500"
+              href="https://www.openstreetmap.org/relation/114172#map=12/45.9837/4.7084"
           >
             <font-awesome-icon icon="map-marker-alt"/>
-            Limoges (France)</a>
+            Villefranche-sur-Saône (France)</a>
           <a
               class="list-group-item list-group-item-secondary list-group-item-action"
               href="https://www.linkedin.com/in/flavien-perier"
@@ -88,6 +88,8 @@ export default class Footer extends Vue {
 <style lang="css" scoped>
 #qr-code {
   width: 100%;
+  border: 10px solid #fff;
+  image-resolution: 20dpi;
 }
 </style>
 

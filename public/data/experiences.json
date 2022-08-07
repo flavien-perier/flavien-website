@@ -42,7 +42,16 @@
       "descriptionEn": "Full stack developer.",
       "url": "https://www.neo-soft.fr/",
       "city": "Limoges",
-      "start": 2020
+      "start": 2020,
+      "end": 2022
+    },
+    {
+      "location": "Tixeo",
+      "descriptionFr": "Développeur recherche et développement.",
+      "descriptionEn": "Research and development developer.",
+      "url": "https://www.tixeo.com/",
+      "city": "Villefranche-sur-Saône",
+      "start": 2022
     }
   ]
 }

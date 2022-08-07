@@ -2,9 +2,9 @@ import Vue from "vue";
 import Vuex from "vuex";
 import application from "./application/application.store";
 import home from "./home/home.store";
-import competence from "./competence/competence.store";
-import experience from "./experience/experience.store";
-import project from "./project/project.store";
+import competences from "./competences/competences.store";
+import experiences from "./experiences/experiences.store";
+import projects from "./projects/projects.store";
 import wiki from "./wiki/wiki.store";
 import wikiArticle from "./wiki/wiki-article.store";
 
@@ -14,9 +14,9 @@ export default new Vuex.Store({
     modules: {
         application,
         home,
-        competence,
-        experience,
-        project,
+        competences,
+        experiences,
+        projects,
         wiki,
         wikiArticle
     }

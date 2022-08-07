@@ -18,7 +18,7 @@ $theme-colors: (
 
 $container-max-widths: (
         xl: 1400px,
-        xxl: 1400px,
+        xxl: 1500px,
 );
 
 $enable-rounded: false;
@@ -27,7 +27,9 @@ $enable-grid-classes: true;
 $list-group-item-padding-y: .75rem;
 $list-group-item-padding-x: 1.25rem;
 
-// Imports
+$navbar-padding-x: .75rem;
+
+  // Imports
 @import "./fonts.scss";
 @import "../../../node_modules/@fortawesome/fontawesome-svg-core/styles.css";
 @import "~bootstrap";

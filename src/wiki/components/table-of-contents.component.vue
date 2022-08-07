@@ -10,7 +10,7 @@
 
 <script lang="ts">
 import {Component, Prop, Vue} from "vue-property-decorator";
-import TitleDescriptionModel from "@/project/model/title-description.model";
+import TitleDescriptionModel from "@/projects/model/title-description.model";
 
 @Component
 export default class TableOfContents extends Vue {

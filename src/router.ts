@@ -17,28 +17,28 @@ const routes = [
         component: Home
     },
     {
-        path: "/competence",
-        name: "competence",
+        path: "/competences",
+        name: "competences",
         meta: {
             title: "competences"
         },
-        component: () => import("@/competence/competence.view.vue")
+        component: () => import("@/competences/competences.view.vue")
     },
     {
-        path: "/experience",
-        name: "experience",
+        path: "/experiences",
+        name: "experiences",
         meta: {
             title: "experiences"
         },
-        component: () => import("@/experience/experience.view.vue")
+        component: () => import("@/experiences/experiences.view.vue")
     },
     {
-        path: "/project",
-        name: "project",
+        path: "/projects",
+        name: "projects",
         meta: {
             title: "projects"
         },
-        component: () => import("@/project/project.view.vue")
+        component: () => import("@/projects/projects.view.vue")
     },
     {
         path: "/wiki",

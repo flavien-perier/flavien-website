@@ -29,19 +29,19 @@
           </router-link>
         </li>
         <li class="nav-item">
-          <router-link :to="{ name: 'competence'}" class="nav-link">
+          <router-link :to="{ name: 'competences'}" class="nav-link">
             <font-awesome-icon icon="list"/>
             {{ $t("competences") }}
           </router-link>
         </li>
         <li class="nav-item">
-          <router-link :to="{ name: 'experience'}" class="nav-link">
+          <router-link :to="{ name: 'experiences'}" class="nav-link">
             <font-awesome-icon icon="graduation-cap"/>
             {{ $t("experiences") }}
           </router-link>
         </li>
         <li class="nav-item">
-          <router-link :to="{ name: 'project'}" class="nav-link">
+          <router-link :to="{ name: 'projects'}" class="nav-link">
             <font-awesome-icon icon="project-diagram"/>
             {{ $t("projects") }}
           </router-link>

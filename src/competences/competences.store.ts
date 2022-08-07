@@ -1,7 +1,7 @@
 import {ActionTree, GetterTree, Module, MutationTree} from "vuex";
 import axios from "axios";
 
-import CompetenceModel from "@/competence/model/competence.model";
+import CompetenceModel from "@/competences/model/competence.model";
 
 interface CompetenceState {
     competences: CompetenceModel[],

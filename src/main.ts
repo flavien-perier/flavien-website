@@ -51,7 +51,7 @@ import {
   faSwagger,
   faTs,
   faVscode
-} from "@/icon";
+} from "@/icons";
 import {FontAwesomeIcon} from "@fortawesome/vue-fontawesome";
 
 import store from "./store";
@@ -59,17 +59,6 @@ import App from "./application/application.view.vue";
 import router from "./router";
 import i18n from "./i18n";
 import BSN from "./bootstrap";
-
-console.log(`
- _______ _       _______        ________________ _       
-(  ____ ( \\     (  ___  |\\     /\\__   __(  ____ ( (    /|
-| (    \\| (     | (   ) | )   ( |  ) (  | (    \\|  \\  ( |
-| (__   | |     | (___) | |   | |  | |  | (__   |   \\ | |
-|  __)  | |     |  ___  ( (   ) )  | |  |  __)  | (\\ \\) |
-| (     | |     | (   ) |\\ \\_/ /   | |  | (     | | \\   |
-| )     | (____/| )   ( | \\   / ___) (__| (____/| )  \\  |
-|/      (_______|/     \\|  \\_/  \\_______(_______|/    )_)
-`);
 
 config.autoAddCss = false;
 
