@@ -58,7 +58,6 @@ import store from "./store";
 import App from "./application/application.view.vue";
 import router from "./router";
 import i18n from "./i18n";
-import BSN from "./bootstrap";
 
 config.autoAddCss = false;
 
@@ -76,5 +75,3 @@ new Vue({
     router,
     render: h => h(App)
 }).$mount("#app");
-
-BSN.initCallback(document.body);

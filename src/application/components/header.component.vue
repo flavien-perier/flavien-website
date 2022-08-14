@@ -7,14 +7,6 @@
   </header>
 </template>
 
-<script lang="ts">
-import {Component, Vue} from "vue-property-decorator";
-
-@Component
-export default class Junbotron extends Vue {
-}
-</script>
-
 <style lang="css" scoped>
 h1 {
   color: #eee;

@@ -11,16 +11,11 @@
       Flavien
     </router-link>
 
-    <button
-        class="navbar-toggler"
-        data-bs-target="#navbar"
-        data-bs-toggle="collapse"
-        type="button"
-    >
+    <button class="navbar-toggler" type="button" @click="collapse()">
       <span class="navbar-toggler-icon"></span>
     </button>
 
-    <div id="navbar" class="collapse navbar-collapse">
+    <div class="navbar-collapse" v-show="showNavbar">
       <ul class="navbar-nav">
         <li class="nav-item">
           <router-link :to="{ name: 'home'}" class="nav-link">
@@ -95,8 +90,15 @@ import i18n from "@/i18n";
 
 @Component
 export default class Navbar extends Vue {
+
+  private showNavbar = false;
+
   private changeLanguage() {
     i18n.locale = i18n.locale === "fr" ? "en" : "fr";
+  }
+
+  private collapse() {
+    this.showNavbar = !this.showNavbar;
   }
 }
 </script>
