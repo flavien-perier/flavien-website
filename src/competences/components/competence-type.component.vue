@@ -11,18 +11,16 @@
   </div>
 </template>
 
-<script lang="ts">
-import {Component, Prop, Vue} from "vue-property-decorator";
-
-@Component
-export default class CompetenceType extends Vue {
-  @Prop() private competenceTypeId!: string;
-  @Prop() private selected!: string;
-
-  private check() {
-    this.$emit("check");
+<script>
+export default {
+  name: "CompetenceType",
+  props: ["competenceTypeId", "selected"],
+  methods: {
+    check: function() {
+      this.$emit("check");
+    },
   }
-}
+};
 </script>
 
 <style lang="css" scoped>

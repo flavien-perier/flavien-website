@@ -84,21 +84,21 @@
   </nav>
 </template>
 
-<script lang="ts">
-import {Component, Vue} from "vue-property-decorator";
-import i18n from "@/i18n";
-
-@Component
-export default class Navbar extends Vue {
-
-  private showNavbar = false;
-
-  private changeLanguage() {
-    i18n.locale = i18n.locale === "fr" ? "en" : "fr";
+<script>
+export default {
+  name: "Navbar",
+  data() {
+    return {
+      showNavbar: false,
+    };
+  },
+  methods: {
+    changeLanguage: function() {
+      this.$i18n.locale = this.$i18n.locale === "fr" ? "en" : "fr";
+    },
+    collapse: function() {
+      this.showNavbar = !this.showNavbar;
+    }
   }
-
-  private collapse() {
-    this.showNavbar = !this.showNavbar;
-  }
-}
+};
 </script>

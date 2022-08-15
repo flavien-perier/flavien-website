@@ -11,7 +11,7 @@
 
       <div class="col-md-12 col-lg-6">
         <h3 class="text-center">{{ $t("description") }}</h3>
-        <p class="description">{{ description }}</p>
+        <p class="description">{{ description() }}</p>
       </div>
 
       <div class="d-none d-lg-block col-6">
@@ -31,18 +31,20 @@
   </a>
 </template>
 
-<script lang="ts">
-import {Component, Prop, Vue} from "vue-property-decorator";
+<script>
 import CompetenceModel from "@/competences/model/competence.model";
 
-@Component
-export default class Competence extends Vue {
-  @Prop() private competence!: CompetenceModel;
-
-  private get description() {
-    return this.$i18n.locale == "fr" ? this.competence.descriptionFr : this.competence.descriptionEn;
+export default {
+  name: "Competence",
+  props: {
+    competence: CompetenceModel
+  },
+  methods: {
+    description: function() {
+      return this.$i18n.locale === "fr" ? this.competence.descriptionFr : this.competence.descriptionEn;
+    },
   }
-}
+};
 </script>
 
 <style scoped>

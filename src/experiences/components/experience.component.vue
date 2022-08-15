@@ -8,7 +8,7 @@
 
       <div class="col-12 col-lg-6">
         <h3 class="text-left text-lg-center">{{ $t("description") }}</h3>
-        {{ description }}
+        {{ description() }}
       </div>
 
       <div class="col-12 col-lg-6">
@@ -26,18 +26,20 @@
   </a>
 </template>
 
-<script lang="ts">
-import {Component, Prop, Vue} from "vue-property-decorator";
+<script>
 import ExperienceModel from "@/experiences/model/experience.model";
 
-@Component
-export default class Experience extends Vue {
-  @Prop() private experience!: ExperienceModel;
-
-  private get description() {
-    return this.$i18n.locale == "fr" ? this.experience.descriptionFr : this.experience.descriptionEn;
+export default {
+  name: "Experience",
+  props: {
+    experience: ExperienceModel
+  },
+  methods: {
+    description: function() {
+      return this.$i18n.locale === "fr" ? this.experience.descriptionFr : this.experience.descriptionEn;
+    },
   }
-}
+};
 </script>
 
 <style scoped>

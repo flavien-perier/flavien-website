@@ -17,23 +17,25 @@
         <h3 class="text-left d-inline-block">{{ $t("description") }} </h3>
         ({{ $t(project.experience) }} {{ $t("in") }} {{ project.start }} - {{ project.end || "*" }})
       </div>
-      {{ description }}
+      {{ description() }}
     </div>
   </div>
 </template>
 
-<script lang="ts">
-import {Component, Prop, Vue} from "vue-property-decorator";
+<script>
 import ProjectModel from "@/projects/model/project.model";
 
-@Component
-export default class Project extends Vue {
-  @Prop() private project!: ProjectModel;
-
-  private get description() {
-    return this.$i18n.locale == "fr" ? this.project.descriptionFr : this.project.descriptionEn;
+export default {
+  name: "Project",
+  props: {
+    project: ProjectModel
+  },
+  methods: {
+    description: function() {
+      return this.$i18n.locale === "fr" ? this.project.descriptionFr : this.project.descriptionEn;
+    },
   }
-}
+};
 </script>
 
 <i18n locale="fr">

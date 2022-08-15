@@ -18,21 +18,23 @@
   </router-link>
 </template>
 
-<script lang="ts">
-import {Component, Prop, Vue} from "vue-property-decorator";
+<script>
 import MarkdownModel from "@/wiki/model/markdown.model";
 
-@Component
-export default class ArticleLink extends Vue {
-  @Prop() private header!: MarkdownModel;
-
-  categToFa(categ: string) {
-    switch (categ) {
-      case "system":
-        return ["fa", "terminal"]
-      case "code":
-        return ["fa", "code"]
-    }
+export default {
+  name: "ArticleLink",
+  props: {
+    header: MarkdownModel
+  },
+  methods: {
+    categToFa: function(categ) {
+      switch (categ) {
+        case "system":
+          return ["fa", "terminal"]
+        case "code":
+          return ["fa", "code"]
+      }
+    },
   }
-}
+};
 </script>
