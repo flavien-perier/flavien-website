@@ -1,6 +1,6 @@
-import Vue from "vue";
+import { createApp, markRaw } from "vue";
+import { createPinia } from "pinia";
 
-import {config, library} from "@fortawesome/fontawesome-svg-core";
 import {
   faBook,
   faCode,
@@ -16,7 +16,7 @@ import {
   faPhone,
   faProjectDiagram,
   faServer,
-  faTerminal
+  faTerminal,
 } from "@fortawesome/free-solid-svg-icons";
 import {
   faAngular,
@@ -36,7 +36,7 @@ import {
   faPhp,
   faPython,
   faVuejs,
-  faWindows
+  faWindows,
 } from "@fortawesome/free-brands-svg-icons";
 import {
   faAntlr,
@@ -50,28 +50,75 @@ import {
   faSpring,
   faSwagger,
   faTs,
-  faVscode
+  faVscode,
 } from "@/icons";
-import {FontAwesomeIcon} from "@fortawesome/vue-fontawesome";
+import { FontAwesomeIcon } from "@fortawesome/vue-fontawesome";
+import { config, library } from "@fortawesome/fontawesome-svg-core";
 
-import store from "./store";
 import App from "./application/application.view.vue";
-import router from "./router";
 import i18n from "./i18n";
+import router from "./router";
 
 config.autoAddCss = false;
 
-library.add(faHome, faList, faGraduationCap, faProjectDiagram, faBook, faMicrochip, faDatabase, faServer, faEnvelope, faPhone, faMapMarkerAlt, faFlag, faTerminal, faCode, faFile,
-    faLinkedin, faFacebookSquare, faMastodon, faDiscord, faAngular, faVuejs, faPython, faJs, faNpm, faJava, faPhp, faLinux, faWindows, faGitAlt, faGithub, faGithubSquare, faGitlab, faDocker,
-    //@ts-ignore
-    faSpring, faTs, faKotlin, faNginx, faVscode, faAntlr, faKubernetes, faSwagger, faKafka, faIntellij, faNeo4j, faScrum);
-Vue.component("font-awesome-icon", FontAwesomeIcon);
+library.add(
+  faHome,
+  faList,
+  faGraduationCap,
+  faProjectDiagram,
+  faBook,
+  faMicrochip,
+  faDatabase,
+  faServer,
+  faEnvelope,
+  faPhone,
+  faMapMarkerAlt,
+  faFlag,
+  faTerminal,
+  faCode,
+  faFile,
+  faLinkedin,
+  faFacebookSquare,
+  faMastodon,
+  faDiscord,
+  faAngular,
+  faVuejs,
+  faPython,
+  faJs,
+  faNpm,
+  faJava,
+  faPhp,
+  faLinux,
+  faWindows,
+  faGitAlt,
+  faGithub,
+  faGithubSquare,
+  faGitlab,
+  faDocker,
+  //@ts-ignore
+  faSpring,
+  faTs,
+  faKotlin,
+  faNginx,
+  faVscode,
+  faAntlr,
+  faKubernetes,
+  faSwagger,
+  faKafka,
+  faIntellij,
+  faNeo4j,
+  faScrum
+);
 
-Vue.config.productionTip = false;
+const pinia = createPinia();
+pinia.use(({ store }) => {
+  store.$router = markRaw(router);
+  store.$i18n = i18n.global;
+});
 
-new Vue({
-    store,
-    i18n,
-    router,
-    render: h => h(App)
-}).$mount("#app");
+createApp(App)
+  .component("font-awesome-icon", FontAwesomeIcon)
+  .use(pinia)
+  .use(router)
+  .use(i18n)
+  .mount("#app");

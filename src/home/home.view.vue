@@ -5,19 +5,12 @@
   </section>
 </template>
 
-<script>
-import {mapActions, mapGetters} from "vuex";
+<script setup lang="ts">
+import { useHomeStore } from "@/home/home.store";
+import { storeToRefs } from "pinia";
 
-export default {
-  name: "home",
-  created() {
-    this.loadMarkdown();
-  },
-  methods: {
-    ...mapActions("home", ["loadMarkdown"])
-  },
-  computed: {
-    ...mapGetters("home", ["content"])
-  }
-};
+const homeStore = useHomeStore();
+const { content } = storeToRefs(homeStore);
+
+homeStore.loadMarkdown();
 </script>

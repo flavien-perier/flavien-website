@@ -1,12 +1,18 @@
 <template>
-  <a :href="competence.url" class="col-12 col-md-6" style="color: inherit; text-decoration: inherit">
-    <div :class="`row mx-auto box box-animation bg-competence-${competence.type}`">
+  <a
+    :href="competence.url"
+    class="col-12 col-md-6"
+    style="color: inherit; text-decoration: inherit"
+  >
+    <div
+      :class="`row mx-auto box box-animation bg-competence-${competence.type}`"
+    >
       <div class="text-center col-12">
         <h2>
-          <font-awesome-icon :icon="competence.faIcon.split(' ')"/>
+          <font-awesome-icon :icon="competence.faIcon.split(' ')" />
           {{ competence.label }}
         </h2>
-        <hr/>
+        <hr />
       </div>
 
       <div class="col-md-12 col-lg-6">
@@ -24,48 +30,38 @@
       <div class="col-12 mb-2">
         <h3 class="text-left text-lg-center">{{ $t("level") }}</h3>
         <div class="progress">
-          <div :class="`progress-bar progress-bar-animation-${competence.lvl}`">{{ competence.lvl }}%</div>
+          <div :class="`progress-bar progress-bar-animation-${competence.lvl}`">
+            {{ competence.lvl }}%
+          </div>
         </div>
       </div>
     </div>
   </a>
 </template>
 
-<script>
+<script setup lang="ts">
 import CompetenceModel from "@/competences/model/competence.model";
+import { defineProps, PropType, toRefs } from "vue";
+import { useI18n } from "vue-i18n";
 
-export default {
-  name: "Competence",
-  props: {
-    competence: CompetenceModel
-  },
-  methods: {
-    description: function() {
-      return this.$i18n.locale === "fr" ? this.competence.descriptionFr : this.competence.descriptionEn;
-    },
-  }
-};
+const i18n = useI18n();
+
+const props = defineProps({
+  competence: { type: Object as PropType<CompetenceModel>, required: true },
+});
+const { competence } = toRefs(props);
+
+function description(): string {
+  const competenceValue = competence?.value as CompetenceModel;
+  return i18n.locale.value === "fr"
+    ? competenceValue.descriptionFr
+    : competenceValue.descriptionEn;
+}
 </script>
 
-<style scoped>
+<style lang="scss" scoped>
 .description {
   height: 7em;
   overflow: auto;
 }
 </style>
-
-<i18n locale="fr">
-{
-  "description": "Description",
-  "enterprises": "Entreprises",
-  "level": "Niveau"
-}
-</i18n>
-
-<i18n locale="en">
-{
-  "description": "Description",
-  "enterprises": "Enterprises",
-  "level": "Level"
-}
-</i18n>

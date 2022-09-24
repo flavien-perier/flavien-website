@@ -1,4 +1,4 @@
-FROM node:fermium-alpine as builder
+FROM node:gallium-alpine as builder
 
 WORKDIR /opt/flavien
 
@@ -16,7 +16,7 @@ RUN apk add --no-cache build-base g++ python3 libpng-dev jpeg-dev giflib-dev pan
     npm install --production && \
     rm -Rf src public postcss.config.js vue.config.js tsconfig.json .env*
 
-FROM node:fermium-alpine
+FROM node:gallium-alpine
 
 LABEL maintainer="Flavien PERIER <perier@flavien.io>" \
     version="1.0.0" \

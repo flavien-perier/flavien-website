@@ -1,61 +1,40 @@
-import {ActionTree, GetterTree, Module, MutationTree} from "vuex";
+import { defineStore } from "pinia";
 import axios from "axios";
+import type MarkdownModel from "@/wiki/model/markdown.model";
+import { useApplicationStore } from "@/application/application.store";
+import { marked } from "marked";
 import YAML from "yaml";
-import {marked} from "marked";
 
-import store from "@/store";
-import MarkdownModel from "@/wiki/model/markdown.model";
-
-const BACKEND_URL = process.env["VUE_APP_MARKDOWN_BACKEND"] as string;
-
-interface WikiArticleState {
-    articleName: string,
-    header: MarkdownModel | null,
-    content: string
-}
-
-const state: WikiArticleState = {
+export const useWikiArticleStore = defineStore({
+  id: "wikiArticle",
+  state: () => ({
     articleName: "",
-    header: null,
-    content: ""
-};
+    header: null as MarkdownModel | null,
+    content: "",
+  }),
+  getters: {
+    title: (state) => (state.header ? state.header.title : ""),
+    author: (state) => (state.header ? state.header.author : ""),
+    date: (state) =>
+      state.header ? new Date(state.header.date).toLocaleDateString() : "",
+  },
+  actions: {
+    loadArticle(name: string) {
+      const applicationStore = useApplicationStore();
 
-const mutations: MutationTree<WikiArticleState> = {
-    loadArticle: (state: WikiArticleState, name: string) => {
-        if (name !== state.articleName) {
-            axios.get(BACKEND_URL + name).then(response => {
-                state.articleName = name;
+      if (name !== this.articleName) {
+        axios.get(import.meta.env.VITE_BASE_PATH + name).then((response) => {
+          this.articleName = name;
 
-                const pattern = /^---(.*?)---(.*)$/s.exec(response.data)!;
-                state.header = YAML.parse(pattern[1]);
-                state.content = marked(pattern[2]);
+          const pattern = /^---(.*?)---(.*)$/s.exec(response.data)!;
+          this.header = YAML.parse(pattern[1]);
+          this.content = marked(pattern[2]) as string;
 
-                store.commit("application/changeTitle", state.header!.title);
-            });
-        } else {
-            store.commit("application/changeTitle", state.header!.title);
-        }
-    }
-};
-
-const actions: ActionTree<WikiArticleState, string> = {
-    loadArticle: ({commit}, name: number) => {
-        commit("loadArticle", name);
-    }
-};
-
-const getters: GetterTree<WikiArticleState, string> = {
-    content: (state: WikiArticleState) => state.content,
-    title: (state: WikiArticleState) => state.header ? state.header.title : "",
-    author: (state: WikiArticleState) => state.header ? state.header.author : "",
-    date: (state: WikiArticleState) => state.header ? new Date(state.header.date).toLocaleDateString() : "",
-};
-
-
-export default {
-    namespaced: true,
-    state,
-    mutations,
-    actions,
-    getters
-} as Module<WikiArticleState, string>;
+          applicationStore.changeTitle(this.header!.title);
+        });
+      } else {
+        applicationStore.changeTitle(this.header!.title);
+      }
+    },
+  },
+});

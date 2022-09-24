@@ -3,32 +3,18 @@
     <h1 class="col-12 section-title">{{ $t("projects") }}</h1>
 
     <article class="row">
-      <Project
-          v-for="p in projects"
-          :key="p.location"
-          :project="p"
-      />
+      <Project v-for="p in projectsSorted" :key="p.location" :project="p" />
     </article>
   </section>
 </template>
 
-<script>
-import {mapActions, mapGetters} from "vuex";
-import Project from "./components/project.component";
+<script setup lang="ts">
+import Project from "@/projects/components/project.component.vue";
+import { useProjectsStore } from "@/projects/projects.store";
+import { storeToRefs } from "pinia";
 
-export default {
-  name: "project",
-  components: {
-    Project
-  },
-  created() {
-    this.loadProjects();
-  },
-  methods: {
-    ...mapActions("projects", ["loadProjects"])
-  },
-  computed: {
-    ...mapGetters("projects", ["projects"])
-  }
-};
+const projectsStore = useProjectsStore();
+const { projectsSorted } = storeToRefs(projectsStore);
+
+projectsStore.loadProjects();
 </script>

@@ -1,13 +1,15 @@
-import Vue from "vue";
-import VueI18n from "vue-i18n";
+import { createI18n } from "vue-i18n";
+import fr from "@/locales/fr.json";
+import en from "@/locales/en.json";
 
-Vue.use(VueI18n);
-
-export default new VueI18n({
-    locale: process.env.VUE_APP_I18N_LOCALE || "fr",
-    fallbackLocale: process.env.VUE_APP_I18N_FALLBACK_LOCALE || "fr",
-    messages: {
-        fr: require("@/locale/fr.json"),
-        en: require("@/locale/en.json")
-    }
+const i18n = createI18n({
+  locale: "fr",
+  fallbackLocale: "fr",
+  allowComposition: true,
+  messages: {
+    fr,
+    en,
+  },
 });
+
+export default i18n;
