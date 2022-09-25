@@ -1,4 +1,4 @@
-FROM node:gallium-alpine as builder
+FROM node:lts-alpine as builder
 
 WORKDIR /opt/flavien
 
@@ -16,7 +16,7 @@ RUN apk add --no-cache build-base g++ python3 libpng-dev jpeg-dev giflib-dev pan
     npm install --production && \
     rm -Rf src public postcss.config.js vue.config.js tsconfig.json .env*
 
-FROM node:gallium-alpine
+FROM node:lts-alpine
 
 LABEL maintainer="Flavien PERIER <perier@flavien.io>" \
     version="1.0.0" \
@@ -39,4 +39,4 @@ USER flavien
 
 EXPOSE 8080
 
-CMD npm start
+CMD yarn start
