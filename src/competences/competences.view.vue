@@ -3,81 +3,71 @@
     <h1 class="col-12 section-title">{{ $t("competences") }}</h1>
 
     <article class="box bg-box container position-relative">
-      <div id="select-all" class="custom-control custom-checkbox" @click="selectAllCompetences()">
-        <input :checked="allCompetencesIsChecked" class="custom-control-input" type="checkbox"/>
+      <div
+        id="select-all"
+        class="custom-control custom-checkbox"
+        @click="competencesStore.selectAllCompetences()"
+      >
+        <input
+          :checked="allCompetencesIsChecked"
+          class="custom-control-input"
+          type="checkbox"
+        />
         <span class="custom-control-label select-all-text d-none d-sm-inline">
           {{ allCompetencesIsChecked ? $t("unselectAll") : $t("selectAll") }}
         </span>
       </div>
       <h2 class="text-center">{{ $t("filters") }}</h2>
-      <hr/>
+      <hr />
 
       <div class="row">
         <CompetenceType
-            v-for="id in competencesTypes"
-            :key="id"
-            :competenceTypeId="id"
-            :selected="competenceIsChecked(id)"
-            v-on:check="selectCompetence(id)"
+          v-for="id in competencesTypes"
+          :key="id"
+          :competenceTypeId="id"
+          :selected="competenceIsChecked(id)"
+          v-on:check="competencesStore.selectCompetence(id)"
         />
       </div>
     </article>
 
     <article class="row">
       <Competence
-          v-for="c in competences.filter(c => competenceIsChecked(c.type))"
-          :key="c.label"
-          :competence="c"
+        v-for="c in competences.filter((c) => competenceIsChecked(c.type))"
+        :key="c.label"
+        :competence="c"
       />
     </article>
   </section>
 </template>
 
-<script>
-import {mapActions, mapGetters} from "vuex";
+<script setup lang="ts">
+import { useCompetencesStore } from "@/competences/competences.store";
+import CompetenceType from "@/competences/components/competence-type.component.vue";
+import Competence from "@/competences/components/competence.component.vue";
+import { storeToRefs } from "pinia";
 
-import Competence from "./components/competence.component";
-import CompetenceType from "./components/competence-type.component";
+const competencesStore = useCompetencesStore();
 
-export default {
-  name: "competence",
-  components: {
-    Competence,
-    CompetenceType
-  },
-  created() {
-    this.loadCompetences();
-  },
-  methods: {
-    ...mapActions("competences", ["loadCompetences", "selectCompetence", "selectAllCompetences"])
-  },
-  computed: {
-    ...mapGetters("competences", ["competences", "competencesTypes", "competenceIsChecked", "allCompetencesIsChecked"])
-  }
-};
+const {
+  competences,
+  allCompetencesIsChecked,
+  competencesTypes,
+  competenceIsChecked,
+} = storeToRefs(competencesStore);
+
+competencesStore.loadCompetences();
 </script>
 
-<style lang="css" scoped>
+<style lang="scss" scoped>
 #select-all {
   position: absolute;
   cursor: pointer;
   left: 1.4rem;
   top: 1.2rem;
+
+  input {
+    margin-right: 0.5rem;
+  }
 }
 </style>
-
-<i18n locale="fr">
-{
-  "filters": "Filtres",
-  "selectAll": "Sélectionner tout",
-  "unselectAll": "Désélectionner tout"
-}
-</i18n>
-
-<i18n locale="en">
-{
-  "filters": "Filters",
-  "selectAll": "Select all",
-  "unselectAll": "Unselect all"
-}
-</i18n>

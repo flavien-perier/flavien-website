@@ -7,7 +7,7 @@
   </header>
 </template>
 
-<style lang="css" scoped>
+<style lang="scss" scoped>
 h1 {
   color: #eee;
 }
@@ -19,19 +19,7 @@ p {
 .jumbotron {
   position: relative;
   min-height: 50vh;
+  max-height: 540px;
   padding-top: 15vh;
 }
 </style>
-
-<i18n locale="fr">
-{
-  "fullStackDeveloper": "Développeur Full-Stack"
-}
-</i18n>
-
-<i18n locale="en">
-{
-  "fullStackDeveloper": "Full Stack Developer"
-}
-</i18n>
-

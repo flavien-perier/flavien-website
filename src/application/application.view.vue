@@ -1,27 +1,18 @@
 <template>
-  <div id="app">
-    <Navbar/>
-    <Header/>
+  <Navbar />
+  <Header />
 
-    <router-view class="mt-5 mt-lg-0"/>
+  <RouterView class="mt-5 mt-lg-0" />
 
-    <Footer/>
-  </div>
+  <Footer />
 </template>
 
-<script>
-import Navbar from "./components/navbar.component";
-import Header from "./components/header.component";
-import Footer from "./components/footer.component";
+<script setup lang="ts">
+import Navbar from "@/application/components/navbar.component.vue";
+import Header from "@/application/components/header.component.vue";
+import Footer from "@/application/components/footer.component.vue";
 
-export default {
-  name: "App",
-  components: {
-    Footer,
-    Navbar,
-    Header
-  }
-};
+import { RouterView } from "vue-router";
 </script>
 
-<style lang="scss" src="../assets/css/style.scss"></style>
+<style lang="scss" src="../assets/scss/style.scss" />

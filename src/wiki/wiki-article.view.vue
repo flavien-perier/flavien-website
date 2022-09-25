@@ -2,21 +2,22 @@
   <section class="container">
     <h1 class="col-12 section-title">{{ title }}</h1>
     <article class="box bg-box text-article">
-
       <div class="row">
         <div class="col-12 col-lg-8">
           <h2 class="text-left text-lg-center">{{ $t("tableOfContents") }}</h2>
-          <TableOfContents :htmlContent="content" class="box"/>
+          <TableOfContents :htmlContent="content" class="box" />
         </div>
 
         <div class="col-12 col-lg-4">
           <h2 class="text-left text-lg-center">{{ $t("informations") }}</h2>
           <div class="box">
             <div>
-              <strong>{{ $t("author") }}</strong>: {{ author }}
+              <strong>{{ $t("author") }}</strong
+              >: {{ author }}
             </div>
             <div>
-              <strong>{{ $t("date") }}</strong>: {{ date }}
+              <strong>{{ $t("date") }}</strong
+              >: {{ date }}
             </div>
           </div>
         </div>
@@ -27,47 +28,15 @@
   </section>
 </template>
 
-<script>
-import {mapActions, mapGetters} from "vuex";
+<script setup lang="ts">
+import { useRoute } from "vue-router";
+import TableOfContents from "@/wiki/components/table-of-contents.component.vue";
+import { useWikiArticleStore } from "@/wiki/wiki-article.store";
+import { storeToRefs } from "pinia";
 
-import TableOfContents from "./components/table-of-contents.component";
+const route = useRoute();
+const wikiArticleStore = useWikiArticleStore();
+const { title, author, date, content } = storeToRefs(wikiArticleStore);
 
-export default {
-  name: "wikiArticle",
-  components: {
-    TableOfContents
-  },
-  data() {
-    return {
-      fileName: this.$route.params.fileName
-    };
-  },
-  created() {
-    this.loadArticle(this.fileName);
-  },
-  methods: {
-    ...mapActions("wikiArticle", ["loadArticle"])
-  },
-  computed: {
-    ...mapGetters("wikiArticle", ["content", "title", "author", "date"])
-  }
-};
+wikiArticleStore.loadArticle(route.params.fileName as string);
 </script>
-
-<i18n locale="fr">
-{
-  "tableOfContents": "Table des matières",
-  "informations": "Informations",
-  "author": "Auteur",
-  "date": "Date"
-}
-</i18n>
-
-<i18n locale="en">
-{
-  "tableOfContents": "Table of contents",
-  "informations": "Informations",
-  "author": "Author",
-  "date": "Date"
-}
-</i18n>

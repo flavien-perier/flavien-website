@@ -29,10 +29,10 @@ $list-group-item-padding-x: 1.25rem;
 
 $navbar-padding-x: .75rem;
 
-  // Imports
-@import "./fonts.scss";
+// Imports
 @import "../../../node_modules/@fortawesome/fontawesome-svg-core/styles.css";
-@import "~bootstrap";
+@import "../../../node_modules/bootstrap/scss/bootstrap.scss";
+@import "./fonts.scss";
 @import "./animations.scss";
 @import "./article.scss";
 @import "./print.scss";
@@ -84,5 +84,5 @@ h1, h2, h3, h4, h5, h6 {
   background-attachment: fixed;
   background-position: top;
   background-repeat: no-repeat;
-  background-size: 1920px 540px;
+  background-size: 100%;
 }

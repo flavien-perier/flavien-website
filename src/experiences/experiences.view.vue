@@ -4,32 +4,21 @@
 
     <article class="row">
       <Experience
-          v-for="e in experiences"
-          :key="e.location"
-          :experience="e"
+        v-for="e in experiencesSorted"
+        :key="e.location"
+        :experience="e"
       />
     </article>
   </section>
 </template>
 
-<script>
-import {mapActions, mapGetters} from "vuex";
+<script setup lang="ts">
+import { useExperiencesStore } from "./experiences.store";
+import Experience from "@/experiences/components/experience.component.vue";
+import { storeToRefs } from "pinia";
 
-import Experience from "./components/experience.component";
+const experiencesStore = useExperiencesStore();
+const { experiencesSorted } = storeToRefs(experiencesStore);
 
-export default {
-  name: "experience",
-  components: {
-    Experience
-  },
-  created() {
-    this.loadExperiences();
-  },
-  methods: {
-    ...mapActions("experiences", ["loadExperiences"])
-  },
-  computed: {
-    ...mapGetters("experiences", ["experiences"])
-  }
-};
+experiencesStore.loadExperiences();
 </script>

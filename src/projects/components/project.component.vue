@@ -2,7 +2,7 @@
   <div class="col-12 box bg-box">
     <div class="text-center col-12">
       <h2>{{ project.name }}</h2>
-      <hr/>
+      <hr />
     </div>
 
     <div class="col-12">
@@ -14,42 +14,31 @@
 
     <div class="col-12">
       <div>
-        <h3 class="text-left d-inline-block">{{ $t("description") }} </h3>
-        ({{ $t(project.experience) }} {{ $t("in") }} {{ project.start }} - {{ project.end || "*" }})
+        <h3 class="text-left d-inline-block">{{ $t("description") }}</h3>
+        ({{ $t(project.experience) }} {{ $t("in") }} {{ project.start }} -
+        {{ project.end || "*" }})
       </div>
       {{ description() }}
     </div>
   </div>
 </template>
 
-<script>
-import ProjectModel from "@/projects/model/project.model";
+<script setup lang="ts">
+import { defineProps, PropType, toRefs } from "vue";
+import type ProjectModel from "@/projects/model/project.model";
+import { useI18n } from "vue-i18n";
 
-export default {
-  name: "Project",
-  props: {
-    project: ProjectModel
-  },
-  methods: {
-    description: function() {
-      return this.$i18n.locale === "fr" ? this.project.descriptionFr : this.project.descriptionEn;
-    },
-  }
-};
+const i18n = useI18n();
+
+const props = defineProps({
+  project: { type: Object as PropType<ProjectModel>, required: true },
+});
+const { project } = toRefs(props);
+
+function description(): string {
+  const projectValue = project?.value as ProjectModel;
+  return i18n.locale.value === "fr"
+    ? projectValue.descriptionFr
+    : projectValue.descriptionEn;
+}
 </script>
-
-<i18n locale="fr">
-{
-  "technos": "Technologies",
-  "description": "Description",
-  "in": "en"
-}
-</i18n>
-
-<i18n locale="en">
-{
-  "technos": "Technologies",
-  "description": "Description",
-  "in": "in"
-}
-</i18n>
