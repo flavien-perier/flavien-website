@@ -174,9 +174,12 @@
       "descriptionEn": "Secure video conferencing solution.",
       "technos": [
         "Java",
-        "Spring"
+        "Spring",
+        "PostgreSQL",
+        "Vue3",
+        "Docker"
       ],
-      "experience": "NéoSoft",
+      "experience": "Tixeo",
       "start": 2022
     }
   ]

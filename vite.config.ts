@@ -2,10 +2,9 @@ import { fileURLToPath, URL } from "url";
 
 import { defineConfig } from "vite";
 import vue from "@vitejs/plugin-vue";
-import postcssNesting from "postcss-nesting";
 
 export default defineConfig({
-  plugins: [vue(), postcssNesting],
+  plugins: [vue()],
   build: {
     minify: "terser",
     target: "es6",

@@ -220,6 +220,7 @@
       "url": "https://www.jetbrains.com/webstorm/",
       "type": "ide",
       "experiences": [
+        "Tixeo",
         "Néo-Soft",
         "personal"
       ],
@@ -611,6 +612,7 @@
       "url": "https://www.alpinelinux.org/",
       "type": "os",
       "experiences": [
+        "Tixeo",
         "Orange",
         "personal",
         "Henallux"
