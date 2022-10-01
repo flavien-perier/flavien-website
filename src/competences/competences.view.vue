@@ -26,7 +26,7 @@
           :key="id"
           :competenceTypeId="id"
           :selected="competenceIsChecked(id)"
-          v-on:check="competencesStore.selectCompetence(id)"
+          @check="competencesStore.selectCompetence(id)"
         />
       </div>
     </article>
