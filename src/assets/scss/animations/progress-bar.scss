@@ -1,0 +1,22 @@
+$progress-bar-red: #dc3545;
+$progress-bar-green: #29ab2e;
+
+@keyframes progress-bar-animation {
+  0% {
+    background-color: $progress-bar-red;
+    width: 0;
+  }
+}
+
+@mixin progress-bar-animation-x($percent) {
+  width: 1% * $percent;
+  background-color: mix($progress-bar-green, $progress-bar-red, $percent * 1%);
+  animation-name: progress-bar-animation;
+  animation-duration: 0.05s * $percent;
+}
+
+@for $i from 0 through 100 {
+  .progress-bar-animation-#{$i} {
+    @include progress-bar-animation-x($i)
+  }
+}

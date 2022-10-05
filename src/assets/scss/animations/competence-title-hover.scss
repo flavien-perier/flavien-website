@@ -1,0 +1,22 @@
+@keyframes competenceTitleHover {
+  0% {
+    min-width: 15rem
+  }
+  20% {
+    min-width: 18.5rem
+  }
+  50% {
+    min-width: 17rem
+  }
+  80% {
+    min-width: 18.5rem
+  }
+  100% {
+    min-width: 15rem
+  }
+}
+
+.competence-title:hover {
+  animation-name: competenceTitleHover;
+  animation-duration: 1s;
+}

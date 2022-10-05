@@ -14,5 +14,3 @@ import Footer from "@/application/components/footer.component.vue";
 
 import { RouterView } from "vue-router";
 </script>
-
-<style lang="scss" src="../assets/scss/style.scss" />

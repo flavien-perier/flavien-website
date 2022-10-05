@@ -4,7 +4,7 @@
       class="col-12 col-md-6"
       style="color: inherit; text-decoration: inherit"
   >
-    <div class="box box-animation text-article col-12">
+    <div class="box box-hover text-article col-12">
       <h2 class="text-center">{{ header.title }}</h2>
       <hr/>
       <div class="content">{{ header.description }}</div>

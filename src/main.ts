@@ -1,5 +1,6 @@
 import { createApp, markRaw } from "vue";
 import { createPinia } from "pinia";
+import "@/assets/scss/index.scss";
 
 import {
   faBook,

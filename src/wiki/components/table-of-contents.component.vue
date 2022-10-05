@@ -1,5 +1,5 @@
 <template>
-  <div class="table-of-content bg-article-information">
+  <div class="table-of-content shadow bg-article-information">
     <div
       v-for="title in titles()"
       :key="title.order"

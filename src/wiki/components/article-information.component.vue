@@ -1,5 +1,5 @@
 <template>
-  <div class="information bg-article-information">
+  <div class="information shadow bg-article-information">
     <div class="keys">
       <span>{{ $t("author") }}</span>
       <span>{{ $t("date") }}</span>
