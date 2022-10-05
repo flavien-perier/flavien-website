@@ -1,4 +1,4 @@
-@keyframes competenceTitleHover {
+@keyframes competence-title-hover {
   0% {
     min-width: 15rem
   }
@@ -17,6 +17,6 @@
 }
 
 .competence-title:hover {
-  animation-name: competenceTitleHover;
+  animation-name: competence-title-hover;
   animation-duration: 1s;
 }

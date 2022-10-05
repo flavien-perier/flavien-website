@@ -1,5 +1,4 @@
-$progress-bar-red: #dc3545;
-$progress-bar-green: #29ab2e;
+@import "../variables";
 
 @keyframes progress-bar-animation {
   0% {
@@ -10,7 +9,7 @@ $progress-bar-green: #29ab2e;
 
 @mixin progress-bar-animation-x($percent) {
   width: 1% * $percent;
-  background-color: mix($progress-bar-green, $progress-bar-red, $percent * 1%);
+  background-color: mix($progress-bar-green, $progress-bar-red, $percent * 1%) !important;
   animation-name: progress-bar-animation;
   animation-duration: 0.05s * $percent;
 }

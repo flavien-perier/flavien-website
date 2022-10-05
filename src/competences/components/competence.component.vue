@@ -5,7 +5,7 @@
     style="color: inherit; text-decoration: inherit"
   >
     <div
-      :class="`row mx-auto box box-animation bg-competence-${competence.type}`"
+      :class="`row mx-auto box box-hover bg-competence-${competence.type}`"
     >
       <div class="text-center col-12">
         <h2>

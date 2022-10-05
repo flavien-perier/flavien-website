@@ -1,4 +1,4 @@
-@keyframes boxAnimationHover {
+@keyframes box-hover {
   0% {
     transform: rotate(0deg)
   }
@@ -14,6 +14,6 @@
 }
 
 .box-hover:hover {
-  animation-name: boxAnimationHover;
+  animation-name: box-hover;
   animation-duration: 0.5s;
 }
