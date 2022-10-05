@@ -1,5 +1,5 @@
 <template>
-  <div class="col-12 box bg-box">
+  <div class="col-12 box">
     <div class="text-center col-12">
       <h2>{{ project.name }}</h2>
       <hr />

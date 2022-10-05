@@ -30,10 +30,10 @@ $green: #29ab2e;
     transform: rotate(0deg)
   }
   25% {
-    transform: rotate(-1deg)
+    transform: rotate(-.5deg)
   }
   75% {
-    transform: rotate(1deg)
+    transform: rotate(.5deg)
   }
   100% {
     transform: rotate(0deg)
@@ -42,7 +42,7 @@ $green: #29ab2e;
 
 .box-animation:hover {
   animation-name: boxAnimationHover;
-  animation-duration: 1s;
+  animation-duration: 0.5s;
 }
 
 // .competence-title:hover

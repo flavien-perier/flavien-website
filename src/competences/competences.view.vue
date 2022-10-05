@@ -2,7 +2,7 @@
   <section class="container">
     <h1 class="col-12 section-title">{{ $t("competences") }}</h1>
 
-    <article class="box bg-box container position-relative">
+    <article class="box container position-relative">
       <div
         id="select-all"
         class="custom-control custom-checkbox"
@@ -63,7 +63,7 @@ competencesStore.loadCompetences();
 #select-all {
   position: absolute;
   cursor: pointer;
-  left: 1.4rem;
+  left: 1.6rem;
   top: 1.2rem;
 
   input {

@@ -12,15 +12,17 @@
           v-if="page > 1"
           class="cursor-link"
           @click="wikiStore.loadArticles(page - 1)"
-          >{{ $t("previous") }} -</span
         >
+          {{ $t("previous") }} -
+        </span>
         {{ $t("page") }}: {{ page }}/{{ numberOfPages }}
         <span
           v-if="page < numberOfPages"
           class="cursor-link"
           @click="wikiStore.loadArticles(page + 1)"
-          >- {{ $t("next") }}</span
         >
+          - {{ $t("next") }}
+        </span>
       </p>
     </div>
   </section>

@@ -1,25 +1,28 @@
 <template>
-  <header class="jumbotron jumbotron-fluid d-none d-lg-block bg-parallax">
-    <div class="container">
-      <h1 class="display-4">Flavien PERIER</h1>
-      <p class="lead">{{ $t("fullStackDeveloper") }}</p>
-    </div>
+  <header class="d-none d-lg-flex bg-parallax">
+    <h1 class="display-4">Flavien PERIER</h1>
+    <p class="lead">{{ $t("fullStackDeveloper") }}</p>
   </header>
 </template>
 
 <style lang="scss" scoped>
-h1 {
-  color: #eee;
-}
+header {
+  flex-direction: column;
+  justify-content: center;
 
-p {
-  color: #bbb;
-}
+  height: 28.125vw;
+  max-height: 50vh;
+  padding-left: 10rem;
 
-.jumbotron {
-  position: relative;
-  min-height: 50vh;
-  max-height: 540px;
-  padding-top: 15vh;
+  text-shadow: 0 0 0.2rem #000;
+
+  h1 {
+    color: #fff;
+  }
+
+  p {
+    color: #eee;
+    margin-left: 1.5rem;
+  }
 }
 </style>

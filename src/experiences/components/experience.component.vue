@@ -4,7 +4,7 @@
     class="col-12 col-lg-6"
     style="color: inherit; text-decoration: inherit"
   >
-    <div class="row mx-auto box box-animation bg-box">
+    <div class="row mx-auto box box-animation">
       <div class="text-center col-12">
         <h2>{{ experience.location }}</h2>
         <hr />

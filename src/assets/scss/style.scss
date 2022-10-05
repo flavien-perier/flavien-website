@@ -2,18 +2,18 @@
 $theme-colors: (
         dark: #343a40,
         light: #f8f9fa,
-        box: #e5e5e5,
-        competence-framework: #e8b6b6,
-        competence-language: #d7d4ff,
-        competence-ide: #fff0d4,
-        competence-db: #b6e8d4,
-        competence-bigData: #edc4ff,
-        competence-dataScience: #c4ecff,
-        competence-os: #fad9bf,
-        competence-infra: #bfd2fa,
-        competence-network: #fffddc,
-        competence-tool: #dcfdff,
-        competence-management: #cfb7cf,
+        article-information: #f9f9ff,
+        competence-framework: #e8b6b6d7,
+        competence-language: #d7d4ffd7,
+        competence-ide: #fff0d4d7,
+        competence-db: #b6e8d4d7,
+        competence-bigData: #edc4ffd7,
+        competence-dataScience: #c4ecffd7,
+        competence-os: #fad9bfd7,
+        competence-infra: #bfd2fad7,
+        competence-network: #fffddcd7,
+        competence-tool: #dcfdffd7,
+        competence-management: #cfb7cfd7,
 );
 
 $container-max-widths: (
@@ -50,10 +50,9 @@ h1, h2, h3, h4, h5, h6 {
   color: #fff;
   text-shadow: 0 0 .5rem #000;
   text-align: center;
-}
+  margin-top: 0.5rem;
 
-@media screen and (max-width: map-get($grid-breakpoints, "lg")) {
-  .section-title {
+  @media screen and (max-width: map-get($grid-breakpoints, "lg")) {
     margin-top: 3.5rem;
   }
 }
@@ -65,10 +64,11 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .box {
-  border: 1px solid #000;
-  border-radius: 3px;
+  border-radius: 1rem;
   margin-bottom: 1.5rem;
-  padding: .5rem;
+  background-color: #ffffffd7;
+  padding: .75rem;
+  backdrop-filter: blur(8px);
 }
 
 #bg-canvas {
@@ -84,5 +84,17 @@ h1, h2, h3, h4, h5, h6 {
   background-attachment: fixed;
   background-position: top;
   background-repeat: no-repeat;
-  background-size: 100%;
+  background-size: 100vw;
+
+  @media screen and (max-width: map-get($grid-breakpoints, "lg")) {
+    background-size: 125vw;
+  }
+
+  @media screen and (max-width: map-get($grid-breakpoints, "md")) {
+    background-size: 150vw;
+  }
+
+  @media screen and (max-width: map-get($grid-breakpoints, "sm")) {
+    background-size: 200vw;
+  }
 }
