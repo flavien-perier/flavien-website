@@ -4,9 +4,7 @@
     class="col-12 col-md-6"
     style="color: inherit; text-decoration: inherit"
   >
-    <div
-      :class="`row mx-auto box box-hover bg-competence-${competence.type}`"
-    >
+    <div :class="`row mx-auto box box-hover bg-competence-${competence.type}`">
       <div class="text-center col-12">
         <h2>
           <font-awesome-icon :icon="competence.faIcon.split(' ')" />

@@ -10,10 +10,7 @@
 
         <div class="col-12 col-lg-4">
           <h2 class="text-left text-lg-center">{{ $t("information") }}</h2>
-          <ArticleInformation
-            :author="author"
-            :date="date"
-          />
+          <ArticleInformation :author="author" :date="date" />
         </div>
       </div>
 

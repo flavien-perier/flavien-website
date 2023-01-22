@@ -18,6 +18,7 @@ import {
   faProjectDiagram,
   faServer,
   faTerminal,
+  faLock,
 } from "@fortawesome/free-solid-svg-icons";
 import {
   faAngular,
@@ -96,6 +97,7 @@ library.add(
   faGithubSquare,
   faGitlab,
   faDocker,
+  faLock,
   //@ts-ignore
   faSpring,
   faTs,
