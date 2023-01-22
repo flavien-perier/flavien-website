@@ -5,10 +5,6 @@ WORKDIR /opt/flavien
 COPY --chown=root:root . .
 
 RUN apk add --no-cache build-base g++ python3 libpng-dev jpeg-dev giflib-dev pango-dev cairo-dev git ca-certificates wget && \
-    wget -q -O /etc/apk/keys/sgerrand.rsa.pub https://alpine-pkgs.sgerrand.com/sgerrand.rsa.pub && \
-    wget https://github.com/sgerrand/alpine-pkg-glibc/releases/download/2.29-r0/glibc-2.29-r0.apk && \
-    apk add glibc-2.29-r0.apk && \
-    rm glibc-2.29-r0.apk && \
     npm ci && \
     npm run build && \
     chmod -R 750 /opt/flavien && \
