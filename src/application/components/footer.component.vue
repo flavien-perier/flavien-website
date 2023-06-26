@@ -57,7 +57,7 @@
             href="https://www.discord.com"
           >
             <font-awesome-icon :icon="['fab', 'discord']" />
-            F|_4\/13/\/#4113
+            fl4v13n
           </a>
         </div>
         <div class="list-group mx-auto col-12 col-lg-3 mt-2 mt-lg-0">
