@@ -75,14 +75,19 @@
           <font-awesome-icon :icon="['fab', 'linkedin']" />
         </a>
       </li>
+      <li>
+        <a class="nav-link" href="https://mastodon.social/@flavien_perier">
+          <font-awesome-icon :icon="['fab', 'mastodon']" />
+        </a>
+      </li>
       <li class="nav-item">
         <a class="nav-link" href="https://www.facebook.com/flavien.io">
           <font-awesome-icon :icon="['fab', 'facebook-square']" />
         </a>
       </li>
-      <li>
-        <a class="nav-link" href="https://mastodon.social/@flavien_perier">
-          <font-awesome-icon :icon="['fab', 'mastodon']" />
+      <li class="nav-item">
+        <a class="nav-link" href="https://www.instagram.com/flavien.perier">
+          <font-awesome-icon :icon="['fab', 'instagram-square']" />
         </a>
       </li>
     </ul>

@@ -39,6 +39,13 @@
             Flavien PERIER
           </a>
           <a
+              class="list-group-item list-group-item-secondary list-group-item-action"
+              href="https://mastodon.social/@flavien_perier"
+          >
+            <font-awesome-icon :icon="['fab', 'mastodon']" />
+            @flavien_perier@mastodon.social
+          </a>
+          <a
             class="list-group-item list-group-item-secondary list-group-item-action"
             href="https://www.facebook.com/flavien.io"
           >
@@ -46,11 +53,11 @@
             Flavien PERIER
           </a>
           <a
-            class="list-group-item list-group-item-secondary list-group-item-action"
-            href="https://mastodon.social/@flavien_perier"
+              class="list-group-item list-group-item-secondary list-group-item-action"
+              href="https://www.instagram.com/flavien.perier"
           >
-            <font-awesome-icon :icon="['fab', 'mastodon']" />
-            @flavien_perier@mastodon.social
+            <font-awesome-icon :icon="['fab', 'instagram-square']" />
+            Flavien PERIER
           </a>
           <a
             class="list-group-item list-group-item-secondary list-group-item-action"
@@ -101,3 +108,5 @@
   margin-right: auto;
 }
 </style>
+<script setup>
+</script>
