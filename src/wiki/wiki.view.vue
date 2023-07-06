@@ -1,6 +1,6 @@
 <template>
   <section class="container">
-    <h1 class="col-12 section-title">{{ $t("wiki") }}</h1>
+    <h1 class="col-12 section-title" v-t="'wiki'" />
 
     <article class="row">
       <ArticleLink v-for="h in headers" :key="h.date" :header="h" />

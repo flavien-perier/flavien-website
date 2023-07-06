@@ -1,6 +1,6 @@
 <template>
   <section class="container">
-    <h1 class="col-12 section-title">{{ $t("experiences") }}</h1>
+    <h1 class="col-12 section-title" v-t="'experiences'" />
 
     <article class="row">
       <Experience

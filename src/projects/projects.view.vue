@@ -1,6 +1,6 @@
 <template>
   <section class="container">
-    <h1 class="col-12 section-title">{{ $t("projects") }}</h1>
+    <h1 class="col-12 section-title" v-t="'projects'" />
 
     <article class="row">
       <Project v-for="p in projectsSorted" :key="p.location" :project="p" />
