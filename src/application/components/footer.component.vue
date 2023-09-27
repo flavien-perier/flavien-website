@@ -26,7 +26,7 @@
           </a>
           <a
             class="list-group-item list-group-item-secondary list-group-item-action"
-            href="https://www.openstreetmap.org/relation/114172#map=12/45.9837/4.7084"
+            href="https://www.openstreetmap.org/#map=13/45.9921/4.7104"
           >
             <font-awesome-icon icon="map-marker-alt" />
             Villefranche-sur-Saône (France)

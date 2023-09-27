@@ -36,7 +36,7 @@ function categoryToFa(category: string) {
       return ["fa", "terminal"];
     case "security":
       return ["fa", "lock"];
-    case "code":
+    case "development":
       return ["fa", "code"];
   }
 }
