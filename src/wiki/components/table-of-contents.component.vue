@@ -1,5 +1,5 @@
 <template>
-  <div class="table-of-content shadow bg-article-information">
+  <div class="table-of-content bg-article-information">
     <div
       v-for="title in titles()"
       :key="title.order"
@@ -43,6 +43,7 @@ function titles() {
 <style lang="scss" scoped>
 .table-of-content {
   overflow: auto;
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
   max-height: 30rem;
   border-radius: 0.5rem;
   margin-bottom: 2rem;

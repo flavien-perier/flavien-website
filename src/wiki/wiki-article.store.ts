@@ -5,6 +5,12 @@ import { useApplicationStore } from "@/application/application.store";
 import { marked } from "marked";
 import YAML from "yaml";
 
+const renderer = new marked.Renderer();
+renderer.heading = (text, level, raw) => {
+  const id = text.toLowerCase().replace(/ |\"/g, "_");
+  return `<h${level} id="${id}">${text}</h${level}>`
+};
+
 export const useWikiArticleStore = defineStore({
   id: "wikiArticle",
   state: () => ({
@@ -28,7 +34,7 @@ export const useWikiArticleStore = defineStore({
 
           const pattern = /^---(.*?)---(.*)$/s.exec(response.data)!;
           this.header = YAML.parse(pattern[1]);
-          this.content = marked(pattern[2]) as string;
+          this.content = marked(pattern[2], { renderer }) as string;
 
           applicationStore.changeTitle(this.header!.title);
         });

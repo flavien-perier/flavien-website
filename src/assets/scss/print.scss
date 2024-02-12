@@ -3,17 +3,21 @@
     display: none !important;
   }
 
-  body, h1, h2, h3, h4, h5 {
+  * {
     font-family: print !important;
     text-shadow: none !important;
-  }
-
-  a {
+    text-decoration: none !important;
     color: #000 !important;
-  }
-
-  div, .text-article pre {
+    background-color: #fff !important;
     max-height: none !important;
     white-space: normal !important;
+    border: none !important;
+    box-shadow: none !important;
+  }
+
+  code {
+    all: unset;
+    display: block !important;
+    white-space: pre !important;
   }
 }

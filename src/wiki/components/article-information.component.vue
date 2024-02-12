@@ -1,5 +1,5 @@
 <template>
-  <div class="information shadow bg-article-information">
+  <div class="information bg-article-information">
     <div class="keys">
       <span>{{ $t("author") }}</span>
       <span>{{ $t("date") }}</span>
@@ -23,6 +23,7 @@ const props = defineProps({
 <style lang="scss" scoped>
 .information {
   display: flex;
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
   flex-direction: row;
   padding: 0.5rem;
   border-radius: 0.5rem;

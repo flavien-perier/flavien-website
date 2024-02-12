@@ -6,8 +6,7 @@ import vue from "@vitejs/plugin-vue";
 export default defineConfig({
   plugins: [vue()],
   build: {
-    minify: "terser",
-    target: "es6",
+    target: "es2019",
   },
   resolve: {
     alias: {
