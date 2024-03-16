@@ -7,7 +7,9 @@ import YAML from "yaml";
 
 const renderer = new marked.Renderer();
 renderer.heading = (text, level, raw) => {
-  const id = text.toLowerCase().replace(/ |\"/g, "_");
+  const id = text.toLowerCase()
+    .replace(/<.*?>/g, "")
+    .replace(/ |"|'/g, "_");
   return `<h${level} id="${id}">${text}</h${level}>`
 };
 
