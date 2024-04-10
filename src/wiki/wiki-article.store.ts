@@ -9,7 +9,8 @@ const renderer = new marked.Renderer();
 renderer.heading = (text, level, raw) => {
   const id = text.toLowerCase()
     .replace(/<.*?>/g, "")
-    .replace(/ |"|'/g, "_");
+    .normalize("NFD").replace(/[\u0300-\u036f]/g, "")
+    .replace(/[^a-zA-Z]+/g, "_");
   return `<h${level} id="${id}">${text}</h${level}>`
 };
 

@@ -19,17 +19,10 @@
           </a>
           <a
             class="list-group-item list-group-item-secondary list-group-item-action"
-            href="tel:+33695928250"
-          >
-            <font-awesome-icon icon="phone" />
-            +33 6 95 92 82 50
-          </a>
-          <a
-            class="list-group-item list-group-item-secondary list-group-item-action"
-            href="https://www.openstreetmap.org/#map=13/45.9921/4.7104"
+            href="https://www.openstreetmap.org/#map=13/45.7584/4.8213"
           >
             <font-awesome-icon icon="map-marker-alt" />
-            Villefranche-sur-Saône (France)
+            Lyon (France)
           </a>
           <a
             class="list-group-item list-group-item-secondary list-group-item-action"
