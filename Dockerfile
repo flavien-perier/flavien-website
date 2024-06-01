@@ -26,4 +26,4 @@ WORKDIR /opt/flavien
 COPY --chown=nginx:nginx --chmod=550 --from=builder /opt/flavien/dist .
 COPY --chown=root:root --chmod=400 ./nginx.conf /etc/nginx/nginx.conf
 
-EXPOSE 8080
+EXPOSE 80
