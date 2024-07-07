@@ -2,8 +2,8 @@
   <section class="container">
     <h1 class="col-12 section-title" v-t="'projects'" />
 
-    <article class="row">
-      <Project v-for="p in projectsSorted" :key="p.location" :project="p" />
+    <article class="row px-2">
+      <Project v-for="p in projectsSorted" :key="p.name" :project="p" />
     </article>
   </section>
 </template>
