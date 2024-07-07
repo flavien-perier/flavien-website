@@ -1,12 +1,12 @@
 <template>
-  <footer class="bg-dark py-2 mt-5">
+  <footer class="bg-dark p-2 mt-5">
     <div class="container">
       <div class="row">
         <div class="col-3 d-none d-lg-block my-auto">
           <h2 class="text-center text-light">{{ $t("scanMe") }}</h2>
           <img id="qr-code" alt="qr-code" src="../../assets/img/qr-code.png" />
         </div>
-        <div class="list-group mx-auto col-12 col-lg-6">
+        <div class="list-group mx-auto col-12 pe-0 col-lg-6 pe-lg-2">
           <strong class="list-group-item list-group-item-dark">{{
             $t("contactMe")
           }}</strong>
@@ -60,7 +60,7 @@
             fl4v13n
           </a>
         </div>
-        <div class="list-group mx-auto col-12 col-lg-3 mt-2 mt-lg-0">
+        <div class="list-group mx-auto col-12 pe-0 mt-2 col-lg-3 mt-lg-0">
           <strong class="list-group-item list-group-item-dark">{{
             $t("followMe")
           }}</strong>
