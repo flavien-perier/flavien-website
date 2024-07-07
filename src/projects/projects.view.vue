@@ -2,7 +2,7 @@
   <section class="container">
     <h1 class="col-12 section-title" v-t="'projects'" />
 
-    <article class="row px-2">
+    <article>
       <Project v-for="p in projectsSorted" :key="p.name" :project="p" />
     </article>
   </section>
