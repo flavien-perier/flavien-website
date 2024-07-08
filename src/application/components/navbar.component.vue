@@ -53,7 +53,7 @@
     </div>
 
     <ul class="nav navbar-nav d-none d-lg-flex">
-      <li class="nav-item cursor-link me-5" @click="changeLanguage()">
+      <li class="nav-item cursor-pointer me-5" @click="changeLanguage()">
         <a class="nav-link">
           <font-awesome-icon icon="flag" />
           {{ $i18n.locale }}

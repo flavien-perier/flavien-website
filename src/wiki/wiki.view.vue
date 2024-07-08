@@ -10,7 +10,7 @@
       <p class="col-12 page-indicator">
         <span
           v-if="page > 1"
-          class="cursor-link"
+          class="cursor-pointer"
           @click="wikiStore.loadArticles(page - 1)"
         >
           {{ $t("previous") }} -
@@ -18,7 +18,7 @@
         {{ $t("page") }}: {{ page }}/{{ numberOfPages }}
         <span
           v-if="page < numberOfPages"
-          class="cursor-link"
+          class="cursor-pointer"
           @click="wikiStore.loadArticles(page + 1)"
         >
           - {{ $t("next") }}
