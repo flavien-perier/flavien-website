@@ -6,12 +6,14 @@ import { marked } from "marked";
 import YAML from "yaml";
 
 const renderer = new marked.Renderer();
-renderer.heading = (text, level, raw) => {
+renderer.heading = ({ tokens, depth }) => {
+  const text = tokens[0].raw;
+
   const id = text.toLowerCase()
     .replace(/<.*?>/g, "")
     .normalize("NFD").replace(/[\u0300-\u036f]/g, "")
     .replace(/[^a-zA-Z]+/g, "_");
-  return `<h${level} id="${id}">${text}</h${level}>`
+  return `<h${depth} id="${id}">${text}</h${depth}>`
 };
 
 export const useWikiArticleStore = defineStore({
