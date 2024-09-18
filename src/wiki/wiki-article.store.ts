@@ -3,17 +3,24 @@ import axios from "axios";
 import type MarkdownModel from "@/wiki/model/markdown.model";
 import { useApplicationStore } from "@/application/application.store";
 import { marked } from "marked";
+import type { Tokens } from "marked";
 import YAML from "yaml";
 
 const renderer = new marked.Renderer();
 renderer.heading = ({ tokens, depth }) => {
-  const text = tokens[0].raw;
+  const raw = tokens[0] as (Tokens.Text | Tokens.Link);
+  
+  const { text } = raw;
+  const href = raw.type === "link" ? raw.href : null;
 
   const id = text.toLowerCase()
     .replace(/<.*?>/g, "")
     .normalize("NFD").replace(/[\u0300-\u036f]/g, "")
     .replace(/[^a-zA-Z]+/g, "_");
-  return `<h${depth} id="${id}">${text}</h${depth}>`
+
+  const content = href ? `<a href=${href}>${text}</a>` : text;
+
+  return `<h${depth} id="${id}">${content}</h${depth}>`
 };
 
 export const useWikiArticleStore = defineStore({
