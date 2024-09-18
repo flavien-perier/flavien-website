@@ -1,4 +1,4 @@
-FROM node:hydrogen-alpine as builder
+FROM node:iron-alpine as builder
 
 WORKDIR /opt/flavien
 
