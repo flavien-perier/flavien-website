@@ -1,33 +1,6 @@
 {
   "competences": [
     {
-      "label": "Angular",
-      "faIcon": "fab angular",
-      "descriptionFr": "Framework frontend TypeScript.",
-      "descriptionEn": "Framework frontend TypeScript.",
-      "url": "https://angular.io/",
-      "type": "framework",
-      "experiences": [
-        "Néo-Soft",
-        "Orange",
-        "personal"
-      ],
-      "lvl": 70
-    },
-    {
-      "label": "VueJS",
-      "faIcon": "fab vuejs",
-      "descriptionFr": "Framework frontend JavaScript.",
-      "descriptionEn": "Framework frontend JavaScript.",
-      "url": "https://vuejs.org/",
-      "type": "framework",
-      "experiences": [
-        "Orange",
-        "personal"
-      ],
-      "lvl": 50
-    },
-    {
       "label": "Java spring",
       "faIcon": "fab spring",
       "descriptionFr": "Framework backend java.",
@@ -42,6 +15,34 @@
       "lvl": 70
     },
     {
+      "label": "VueJS",
+      "faIcon": "fab vuejs",
+      "descriptionFr": "Framework frontend JavaScript.",
+      "descriptionEn": "Framework frontend JavaScript.",
+      "url": "https://vuejs.org/",
+      "type": "framework",
+      "experiences": [
+        "Tixeo",
+        "Orange",
+        "personal"
+      ],
+      "lvl": 70
+    },
+    {
+      "label": "Angular",
+      "faIcon": "fab angular",
+      "descriptionFr": "Framework frontend TypeScript.",
+      "descriptionEn": "Framework frontend TypeScript.",
+      "url": "https://angular.io/",
+      "type": "framework",
+      "experiences": [
+        "Néo-Soft",
+        "Orange",
+        "personal"
+      ],
+      "lvl": 60
+    },
+    {
       "label": "JQuery",
       "faIcon": "fab js",
       "descriptionFr": "Framework frontend JavaScript.",
@@ -52,7 +53,7 @@
         "personal",
         "3IL"
       ],
-      "lvl": 65
+      "lvl": 50
     },
     {
       "label": "Swagger",
@@ -81,20 +82,6 @@
       "lvl": 50
     },
     {
-      "label": "Kotlin",
-      "faIcon": "fab kotlin",
-      "descriptionFr": "Langage de programmation Kotlin.",
-      "descriptionEn": "Programming language Kotlin.",
-      "url": "https://kotlinlang.org/",
-      "type": "language",
-      "experiences": [
-        "Orange",
-        "personal",
-        "Henallux"
-      ],
-      "lvl": 65
-    },
-    {
       "label": "Java",
       "faIcon": "fab java",
       "descriptionFr": "Langage de programmation Java.",
@@ -112,6 +99,20 @@
       "lvl": 85
     },
     {
+      "label": "Kotlin",
+      "faIcon": "fab kotlin",
+      "descriptionFr": "Langage de programmation Kotlin.",
+      "descriptionEn": "Programming language Kotlin.",
+      "url": "https://kotlinlang.org/",
+      "type": "language",
+      "experiences": [
+        "Orange",
+        "personal",
+        "Henallux"
+      ],
+      "lvl": 60
+    },
+    {
       "label": "JavaScript",
       "faIcon": "fab js",
       "descriptionFr": "Langage de programmation JavaScript.",
@@ -119,6 +120,7 @@
       "url": "https://developer.mozilla.org/fr/docs/Web/JavaScript",
       "type": "language",
       "experiences": [
+        "Tixeo",
         "Néo-Soft",
         "Orange",
         "personal",
@@ -134,6 +136,7 @@
       "url": "https://www.typescriptlang.org/",
       "type": "language",
       "experiences": [
+        "Tixeo",
         "Néo-Soft",
         "Orange",
         "personal",
@@ -149,6 +152,7 @@
       "url": "https://www.python.org/",
       "type": "language",
       "experiences": [
+        "Tixeo",
         "Association \"Sème tes graines\"",
         "personal",
         "Henallux"
@@ -189,11 +193,12 @@
       "url": "https://isocpp.org/",
       "type": "language",
       "experiences": [
+        "Tixeo",
         "personal",
         "3IL",
         "Henallux"
       ],
-      "lvl": 50
+      "lvl": 60
     },
     {
       "label": "Intellij",
@@ -252,6 +257,7 @@
       "url": "http://ex-vi.sourceforge.net/",
       "type": "ide",
       "experiences": [
+        "Tixeo",
         "Orange",
         "personal",
         "Henallux",
@@ -273,6 +279,22 @@
       "lvl": 80
     },
     {
+      "label": "PostgreSQL",
+      "faIcon": "fas database",
+      "descriptionFr": "Base de données relationnelles.",
+      "descriptionEn": "Relational database.",
+      "url": "https://www.postgresql.org/",
+      "type": "db",
+      "experiences": [
+        "Tixeo",
+        "Néo-Soft",
+        "Orange",
+        "personal",
+        "Henallux"
+      ],
+      "lvl": 70
+    },
+    {
       "label": "MySQL",
       "faIcon": "fas database",
       "descriptionFr": "Base de données relationnelles.",
@@ -284,21 +306,6 @@
         "personal",
         "BTS Beaupeyrat",
         "3IL"
-      ],
-      "lvl": 80
-    },
-    {
-      "label": "PostgreSQL",
-      "faIcon": "fas database",
-      "descriptionFr": "Base de données relationnelles.",
-      "descriptionEn": "Relational database.",
-      "url": "https://www.postgresql.org/",
-      "type": "db",
-      "experiences": [
-        "Néo-Soft",
-        "Orange",
-        "personal",
-        "Henallux"
       ],
       "lvl": 70
     },
@@ -313,6 +320,19 @@
         "personal",
         "BTS Beaupeyrat"
       ],
+      "lvl": 60
+    },
+    {
+      "label": "Redis",
+      "faIcon": "fas database",
+      "descriptionFr": "Base de données clé-valeur.",
+      "descriptionEn": "Key-value database.",
+      "url": "https://redis.io/",
+      "type": "db",
+      "experiences": [
+        "Tixeo",
+        "personal"
+      ],
       "lvl": 70
     },
     {
@@ -326,7 +346,7 @@
         "Orange",
         "personal"
       ],
-      "lvl": 70
+      "lvl": 50
     },
     {
       "label": "Neo4J",
@@ -339,20 +359,7 @@
         "Orange",
         "personal"
       ],
-      "lvl": 70
-    },
-    {
-      "label": "Redis",
-      "faIcon": "fas database",
-      "descriptionFr": "Base de données clé-valeur.",
-      "descriptionEn": "Key-value database.",
-      "url": "https://redis.io/",
-      "type": "db",
-      "experiences": [
-        "Tixeo",
-        "personal"
-      ],
-      "lvl": 60
+      "lvl": 50
     },
     {
       "label": "InfluxDB",
@@ -477,6 +484,7 @@
       "url": "https://www.microsoft.com/fr-fr/windows",
       "type": "os",
       "experiences": [
+        "Tixeo",
         "Néo-Soft",
         "Orange",
         "personal",
@@ -484,7 +492,7 @@
         "BTS Beaupeyrat",
         "3IL"
       ],
-      "lvl": 70
+      "lvl": 60
     },
     {
       "label": "Windows Server",
@@ -497,7 +505,7 @@
         "personal",
         "Henallux"
       ],
-      "lvl": 60
+      "lvl": 40
     },
     {
       "label": "Debian",
@@ -588,6 +596,7 @@
       "url": "https://www.centos.org/",
       "type": "os",
       "experiences": [
+        "Tixeo",
         "personal"
       ],
       "lvl": 60
@@ -600,6 +609,7 @@
       "url": "https://rockylinux.org/",
       "type": "os",
       "experiences": [
+        "Tixeo",
         "personal"
       ],
       "lvl": 60
@@ -645,6 +655,7 @@
       "url": "https://kubernetes.io/",
       "type": "infra",
       "experiences": [
+        "Tixeo",
         "Orange"
       ],
       "lvl": 60
@@ -659,7 +670,7 @@
       "experiences": [
         "Orange"
       ],
-      "lvl": 70
+      "lvl": 50
     },
     {
       "label": "Postfix",
@@ -713,7 +724,7 @@
       "experiences": [
         "personal"
       ],
-      "lvl": 70
+      "lvl": 60
     },
     {
       "label": "Squid",
@@ -743,7 +754,7 @@
         "BTS Beaupeyrat",
         "3IL"
       ],
-      "lvl": 60
+      "lvl": 75
     },
     {
       "label": "GitHub",
