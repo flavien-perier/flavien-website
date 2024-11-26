@@ -39,6 +39,13 @@
             @flavien_perier@mastodon.social
           </a>
           <a
+              class="list-group-item list-group-item-secondary list-group-item-action"
+              href="https://bsky.app/profile/flavien.io"
+          >
+            <font-awesome-icon :icon="['fab', 'bluesky']" />
+            @flavien.io
+          </a>
+          <a
             class="list-group-item list-group-item-secondary list-group-item-action"
             href="https://www.facebook.com/flavien.io"
           >

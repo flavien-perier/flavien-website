@@ -75,6 +75,11 @@
           <font-awesome-icon :icon="['fab', 'mastodon']" />
         </a>
       </li>
+            <li>
+        <a class="nav-link" href="https://bsky.app/profile/flavien.io">
+          <font-awesome-icon :icon="['fab', 'bluesky']" />
+        </a>
+      </li>
       <li class="nav-item">
         <a class="nav-link" href="https://www.facebook.com/flavien.io">
           <font-awesome-icon :icon="['fab', 'facebook-square']" />
