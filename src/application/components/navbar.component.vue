@@ -80,16 +80,6 @@
           <font-awesome-icon :icon="['fab', 'bluesky']" />
         </a>
       </li>
-      <li class="nav-item">
-        <a class="nav-link" href="https://www.facebook.com/flavien.io">
-          <font-awesome-icon :icon="['fab', 'facebook-square']" />
-        </a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="https://www.instagram.com/flavien.perier">
-          <font-awesome-icon :icon="['fab', 'instagram-square']" />
-        </a>
-      </li>
     </ul>
   </nav>
 </template>

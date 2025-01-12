@@ -12,10 +12,10 @@
           }}</strong>
           <a
             class="list-group-item list-group-item-secondary list-group-item-action"
-            href="mailto:perier@flavien.io"
+            href="mailto:contact@flavien.io"
           >
             <font-awesome-icon icon="envelope" />
-            perier@flavien.io
+            contact@flavien.io
           </a>
           <a
             class="list-group-item list-group-item-secondary list-group-item-action"
@@ -44,20 +44,6 @@
           >
             <font-awesome-icon :icon="['fab', 'bluesky']" />
             @flavien.io
-          </a>
-          <a
-            class="list-group-item list-group-item-secondary list-group-item-action"
-            href="https://www.facebook.com/flavien.io"
-          >
-            <font-awesome-icon :icon="['fab', 'facebook-square']" />
-            Flavien PERIER
-          </a>
-          <a
-              class="list-group-item list-group-item-secondary list-group-item-action"
-              href="https://www.instagram.com/flavien.perier"
-          >
-            <font-awesome-icon :icon="['fab', 'instagram-square']" />
-            Flavien PERIER
           </a>
           <a
             class="list-group-item list-group-item-secondary list-group-item-action"
