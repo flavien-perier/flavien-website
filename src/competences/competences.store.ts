@@ -2,8 +2,7 @@ import { defineStore } from "pinia";
 import axios from "axios";
 import type CompetenceModel from "@/competences/model/competence.model";
 
-export const useCompetencesStore = defineStore({
-  id: "competences",
+export const useCompetencesStore = defineStore("competences", {
   state: () => ({
     competences: [] as CompetenceModel[],
     competencesCheckbox: {} as { [key: string]: boolean },

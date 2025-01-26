@@ -2,8 +2,7 @@ import { defineStore } from "pinia";
 import axios from "axios";
 import type ProjectModel from "@/projects/model/project.model";
 
-export const useProjectsStore = defineStore({
-  id: "projects",
+export const useProjectsStore = defineStore("projects", {
   state: () => ({
     projects: [] as ProjectModel[],
   }),

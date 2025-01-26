@@ -2,8 +2,7 @@ import { defineStore } from "pinia";
 import axios from "axios";
 import type ExperienceModel from "@/experiences/model/experience.model";
 
-export const useExperiencesStore = defineStore({
-  id: "experiences",
+export const useExperiencesStore = defineStore("experiences", {
   state: () => ({
     experiences: [] as ExperienceModel[],
   }),

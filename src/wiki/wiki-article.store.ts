@@ -23,8 +23,7 @@ renderer.heading = ({ tokens, depth }) => {
   return `<h${depth} id="${id}">${content}</h${depth}>`
 };
 
-export const useWikiArticleStore = defineStore({
-  id: "wikiArticle",
+export const useWikiArticleStore = defineStore("wikiArticle", {
   state: () => ({
     articleName: "",
     header: null as MarkdownModel | null,

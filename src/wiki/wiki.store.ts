@@ -3,8 +3,7 @@ import axios from "axios";
 import type MarkdownModel from "@/wiki/model/markdown.model";
 import type SearchModel from "@/wiki/model/search.model";
 
-export const useWikiStore = defineStore({
-  id: "wiki",
+export const useWikiStore = defineStore("wiki", {
   state: () => ({
     headers: [] as MarkdownModel[],
     page: 1,

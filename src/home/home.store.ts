@@ -2,8 +2,7 @@ import { defineStore } from "pinia";
 import { marked } from "marked";
 import axios from "axios";
 
-export const useHomeStore = defineStore({
-  id: "home",
+export const useHomeStore = defineStore("home", {
   state: () => ({
     content: "",
   }),
