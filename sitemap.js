@@ -1,8 +1,11 @@
 const fs = require("node:fs");
+const path = require('path');
 const axios = require("axios");
 
 const BASE_URL = "https://www.flavien.io";
 const GITHUB_REPO_URL = "https://api.github.com/repos";
+const DIST_DIR = path.join(__dirname, "dist");
+const SITEMAP_PATH = path.join(DIST_DIR, "sitemap.xml");
 
 function getLastmod(axiosResponse) {
     return axiosResponse.data[0].commit.author.date.split("T")[0];
@@ -40,7 +43,7 @@ async function makeProjects() {
 
 function makeWikis() {
     const now = new Date();
-    return makeUrl(`/projects`, `${now.getFullYear()}-${now.getMonth() + 1}-${now.getDate()}`);
+    return makeUrl(`/wiki`, `${now.getFullYear()}-${now.getMonth() + 1}-${now.getDate()}`);
 }
 
 async function makeWikiUrl(article) {
@@ -65,7 +68,8 @@ async function main() {
 
     sitemap += '</urlset>';
 
-    fs.writeFile("dist/sitemap.xml", sitemap, err => {
+    fs.mkdirSync(DIST_DIR, { recursive: true });
+    fs.writeFile(SITEMAP_PATH, sitemap, err => {
         if (err) {
             console.error(err);
         }

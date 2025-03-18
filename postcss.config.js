@@ -1,3 +1,5 @@
+const { purgeCSSPlugin } = require("@fullhuman/postcss-purgecss");
+
 const competences = require("./public/data/competences.json").competences;
 const competencesLevels = competences
   .map((competence) => competence.lvl)
@@ -44,7 +46,6 @@ const configuration = {
 
 module.exports = {
   plugins: [
-    process.env.NODE_ENV === "production" &&
-      require("@fullhuman/postcss-purgecss")(configuration),
+    process.env.NODE_ENV === "production" && purgeCSSPlugin(configuration),
   ],
 };

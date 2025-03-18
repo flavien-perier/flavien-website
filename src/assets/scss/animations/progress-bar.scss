@@ -1,15 +1,15 @@
-@import "../variables";
+@use "../variables" as variables;
 
 @keyframes progress-bar-animation {
   0% {
-    background-color: $progress-bar-red;
+    background-color: variables.$progress-bar-red;
     width: 0;
   }
 }
 
 @mixin progress-bar-animation-x($percent) {
   width: 1% * $percent;
-  background-color: mix($progress-bar-green, $progress-bar-red, $percent * 1%) !important;
+  background-color: mix(variables.$progress-bar-green, variables.$progress-bar-red, $percent * 1%) !important;
   animation-name: progress-bar-animation;
   animation-duration: 0.05s * $percent;
 }

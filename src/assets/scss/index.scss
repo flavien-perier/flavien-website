@@ -1,6 +1,8 @@
-@import "fonts";
-@import "animations";
-@import "article";
+@use "variables";
+
+@use "fonts";
+@use "animations";
+@use "article";
 @import "bootstrap-configuration";
 @import "bootstrap/scss/bootstrap";
 @import "@fortawesome/fontawesome-svg-core/styles.css";
@@ -32,7 +34,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .box {
-  border-radius: $border-radius;
+  border-radius: variables.$border-radius;
   margin-bottom: 1.5rem;
   background-color: #ffffffd7;
   padding: .75rem;

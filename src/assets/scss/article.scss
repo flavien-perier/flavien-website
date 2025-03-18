@@ -1,4 +1,4 @@
-@import "variables";
+@use "variables";
 
 .text-article {
   text-align: justify;
@@ -39,7 +39,7 @@
 
   code {
     padding: .1rem;
-    border-radius: $border-radius-light;
+    border-radius: variables.$border-radius-light;
     background-color: #222;
     color: #fff;
   }
@@ -47,7 +47,7 @@
   pre {
     display: block;
     padding: .5rem;
-    border-radius: $border-radius-light;
+    border-radius: variables.$border-radius-light;
     background-color: #222;
     max-height: 35rem;
   }
