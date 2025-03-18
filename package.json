@@ -7,10 +7,11 @@
   "scripts": {
     "start": "eco-webserver",
     "dev": "vite -m dev",
-    "build": "run-p type-check build-only",
+    "build": "run-p type-check build-only sitemap",
     "preview": "vite preview --port 4173",
     "build-only": "vite build",
-    "type-check": "vue-tsc --noEmit"
+    "type-check": "vue-tsc --noEmit",
+    "sitemap": "node sitemap.js"
   },
   "dependencies": {
     "@babel/types": "7.26.5",
