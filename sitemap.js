@@ -73,7 +73,7 @@ async function main() {
 
     const articles = await axios.get("https://articles.flavien.io/?p=1&n=10&type=WIKI");
     for (const article of articles.data.files) {
-        sitemap += await makeWikiUrl(article.fileName);
+        sitemap += await makeWikiUrl(article.filename);
     }
 
     sitemap += '</urlset>';

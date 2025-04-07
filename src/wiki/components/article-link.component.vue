@@ -1,6 +1,6 @@
 <template>
   <router-link
-    :to="{ name: 'wikiArticle', params: { fileName: header.fileName } }"
+    :to="{ name: 'wikiArticle', params: { filename: header.filename } }"
     class="col-12 col-md-6"
     style="color: inherit; text-decoration: inherit"
   >

@@ -5,6 +5,6 @@ export default interface MarkdownModel {
   description: string;
   author: string;
   date: string;
-  fileName: string;
+  filename: string;
   url: string;
 }

@@ -30,5 +30,5 @@ const route = useRoute();
 const wikiArticleStore = useWikiArticleStore();
 const { title, author, date, content } = storeToRefs(wikiArticleStore);
 
-wikiArticleStore.loadArticle(route.params.fileName as string);
+wikiArticleStore.loadArticle(route.params.filename as string);
 </script>

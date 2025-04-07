@@ -45,7 +45,7 @@ const router = createRouter({
       component: () => import("@/wiki/wiki.view.vue"),
     },
     {
-      path: "/wiki/:fileName",
+      path: "/wiki/:filename",
       name: "wikiArticle",
       meta: {
         title: "Wiki Articles",
