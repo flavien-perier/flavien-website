@@ -1,26 +1,28 @@
-import { defineStore } from "pinia";
+import {defineStore} from "pinia";
 import axios from "axios";
 import type MarkdownModel from "@/wiki/model/markdown.model";
-import { useApplicationStore } from "@/application/application.store";
-import { marked } from "marked";
-import type { Tokens } from "marked";
+import {useApplicationStore} from "@/application/application.store";
+import {marked} from "marked";
+import type {Tokens} from "marked";
 import YAML from "yaml";
 
 const renderer = new marked.Renderer();
-renderer.heading = ({ tokens, depth }) => {
-  const raw = tokens[0] as (Tokens.Text | Tokens.Link);
-  
-  const { text } = raw;
-  const href = raw.type === "link" ? raw.href : null;
+renderer.heading = ({tokens, depth}) => {
+  const content = tokens.map(token => {
+    const raw = token as (Tokens.Text | Tokens.Link);
 
-  const id = text.toLowerCase()
+    const {text} = raw;
+    const href = raw.type === "link" ? raw.href : null;
+
+    return href ? `<a href=${href}>${text}</a>` : text;
+  }).join("");
+
+  const id = content.toLowerCase()
     .replace(/<.*?>/g, "")
     .normalize("NFD").replace(/[\u0300-\u036f]/g, "")
     .replace(/[^a-zA-Z]+/g, "_");
 
-  const content = href ? `<a href=${href}>${text}</a>` : text;
-
-  return `<h${depth} id="${id}">${content}</h${depth}>`
+  return `<h${depth} id="${id}">${content}</h${depth}>`;
 };
 
 export const useWikiArticleStore = defineStore("wikiArticle", {
@@ -45,7 +47,7 @@ export const useWikiArticleStore = defineStore("wikiArticle", {
 
           const pattern = /^---(.*?)---(.*)$/s.exec(response.data)!;
           this.header = YAML.parse(pattern[1]);
-          this.content = marked(pattern[2], { renderer }) as string;
+          this.content = marked(pattern[2], {renderer}) as string;
 
           applicationStore.changeTitle(this.header!.title);
         });
