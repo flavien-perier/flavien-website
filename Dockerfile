@@ -1,16 +1,12 @@
-FROM node:jod-alpine as builder
+FROM node:22-alpine AS builder
 
-WORKDIR /opt/flavien
+WORKDIR /opt/website
 
-COPY --chown=root:root --chmod=550 . .
+COPY . .
 
-RUN npm ci && npm run build && \
-    chmod -R 750 /opt/flavien && \
-    rm -Rf node_modules && \
-    npm install --production && \
-    rm -Rf src public postcss.config.js vue.config.js tsconfig.json .env*
+RUN npm install && yes | npm run build
 
-FROM nginx:alpine
+FROM node:22-alpine
 
 LABEL org.opencontainers.image.title="Flavien website" \
       org.opencontainers.image.description="Flavien website" \
@@ -21,9 +17,13 @@ LABEL org.opencontainers.image.title="Flavien website" \
       org.opencontainers.image.source="https://github.com/flavien-perier/flavien-website" \
       org.opencontainers.image.licenses="MIT"
 
-WORKDIR /opt/flavien
+WORKDIR /opt/website
 
-COPY --chown=nginx:nginx --chmod=550 --from=builder /opt/flavien/dist .
-COPY --chown=root:root --chmod=400 ./nginx.conf /etc/nginx/nginx.conf
+COPY --from=builder /opt/website/.output/ ./
+
+ENV PORT=80
+ENV HOST=0.0.0.0
 
 EXPOSE 80
+
+CMD ["node", "/opt/website/server/index.mjs"]

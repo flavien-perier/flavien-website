@@ -1,4 +1,6 @@
 <template>
+  <canvas id="bg-canvas" class="d-block mx-auto" height="450" width="800"></canvas>
+
   <AppNavbar />
   <AppHeader />
 
@@ -7,4 +9,7 @@
   <AppFooter />
 </template>
 <script setup lang="ts">
+useHead({
+  script: [{src: "./js/wallpapers/genetic.js", defer: true}]
+});
 </script>

@@ -1,15 +1,10 @@
 <template>
   <NuxtLoadingIndicator/>
-
-  <canvas id="bg-canvas" class="d-block mx-auto" height="450" width="800"></canvas>
-
-  <NuxtLayout :name="layout">
+  <NuxtLayout name="default">
     <NuxtPage/>
   </NuxtLayout>
 </template>
 <script setup lang="ts">
-const layout = "default";
-
 const title = "Flavien PERIER";
 const author = "Flavien PERIER";
 const description = "Flavien PERIER, french full stack developer. This website contains my CV and technical documentation on different subjects (Linux, Privacy...)";
@@ -52,6 +47,5 @@ useHead({
 
     {name: "viewport", content: "width=device-width,initial-scale=1.0"},
   ],
-  script: [{src: "./js/wallpapers/genetic.js", defer: true}]
 });
 </script>
