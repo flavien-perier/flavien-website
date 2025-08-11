@@ -1,0 +1,18 @@
+{
+  "label": "Windows 7/10/11",
+  "faIcon": "fab windows",
+  "descriptionFr": "Système d'exploitation Windows.",
+  "descriptionEn": "Windows operating system.",
+  "url": "https://www.microsoft.com/fr-fr/windows",
+  "type": "os",
+  "experiences": [
+    "Tixeo",
+    "Néo-Soft",
+    "Orange",
+    "personal",
+    "Henallux",
+    "BTS Beaupeyrat",
+    "3IL"
+  ],
+  "lvl": 60
+}

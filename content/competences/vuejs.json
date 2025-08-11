@@ -1,0 +1,14 @@
+{
+  "label": "VueJS",
+  "faIcon": "fab vuejs",
+  "descriptionFr": "Framework frontend JavaScript.",
+  "descriptionEn": "Framework frontend JavaScript.",
+  "url": "https://vuejs.org/",
+  "type": "framework",
+  "experiences": [
+    "Tixeo",
+    "Orange",
+    "personal"
+  ],
+  "lvl": 70
+}

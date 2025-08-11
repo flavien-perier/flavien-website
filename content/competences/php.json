@@ -1,0 +1,14 @@
+{
+  "label": "PHP",
+  "faIcon": "fab php",
+  "descriptionFr": "Langage de programmation PHP.",
+  "descriptionEn": "Programming language PHP.",
+  "url": "https://www.php.net/",
+  "type": "language",
+  "experiences": [
+    "personal",
+    "BTS Beaupeyrat",
+    "3IL"
+  ],
+  "lvl": 50
+}

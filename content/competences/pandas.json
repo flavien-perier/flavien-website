@@ -1,0 +1,13 @@
+{
+  "label": "Pandas",
+  "faIcon": "fas database",
+  "descriptionFr": "Bibliothèque de gestion de DataSet en Python.",
+  "descriptionEn": "DataSet management library in Python.",
+  "url": "https://pandas.pydata.org/",
+  "type": "dataScience",
+  "experiences": [
+    "personal",
+    "Henallux"
+  ],
+  "lvl": 65
+}

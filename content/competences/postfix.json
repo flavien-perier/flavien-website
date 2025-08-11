@@ -1,0 +1,13 @@
+{
+  "label": "Postfix",
+  "faIcon": "fas envelope",
+  "descriptionFr": "Serveur (mail) SMTP.",
+  "descriptionEn": "SMTP (mail) server.",
+  "url": "http://www.postfix.org/",
+  "type": "network",
+  "experiences": [
+    "personal",
+    "Henallux"
+  ],
+  "lvl": 50
+}

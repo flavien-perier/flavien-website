@@ -1,0 +1,12 @@
+{
+  "label": "ANTLR",
+  "faIcon": "fab antlr",
+  "descriptionFr": "Framework de construction de compilateurs.",
+  "descriptionEn": "Framework for compiler construction.",
+  "url": "https://www.antlr.org/",
+  "type": "language",
+  "experiences": [
+    "Orange"
+  ],
+  "lvl": 50
+}

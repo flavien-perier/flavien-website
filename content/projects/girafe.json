@@ -1,0 +1,13 @@
+{
+  "name": "Girafe",
+  "descriptionFr": "Une application pour créer un graph (Neo4j) de dépendance entre les différents champs d'une base de données (DataLineage). Pour ce faire, l'application prend en entrée des fichiers Microsoft DTSX et analyse le XML et le SQL qu'ils contiennent, afin de déduire les actions qui sont effectuées sur la base de données. Pour ma part, je me suis principalement concentré sur l'implémentation d'un analyseur SQL utilisant le framework ANTLR.",
+  "descriptionEn": "An application to create a graph (Neo4j) of dependency between the different fields of a database (DataLineage). To do this, the application takes Microsoft DTSX files as input and analyzes the XML and SQL they contain, in order to deduce the actions that are performed on the database. For my part, I mainly focused on the implementation of an SQL parser using the ANTLR framework.",
+  "technos": [
+    "Kotlin",
+    "Antlr",
+    "Neo4j"
+  ],
+  "experience": "Orange",
+  "start": 2019,
+  "end": 2019
+}

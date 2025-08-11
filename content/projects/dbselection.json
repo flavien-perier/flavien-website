@@ -1,0 +1,15 @@
+{
+  "name": "DbSelection",
+  "descriptionFr": "Outil pour guider sur le choix d'une base de données pour un nouveau projet. Cette application a eu beaucoup de visibilité en interne, on m'a alors chargé de développer de nouvelles versions. Il existe donc maintenant dbSelection, dataVizSelection (un équivalent pour choisir un outil dataViz), distribuSelection (un outil pour choisir une distribution BigData) et enfin cloudSelection (un équivalent pour choisir le cloud interne ou externe le plus adapté à notre architecture) qui est devenu une application interne au niveau groupe.",
+  "descriptionEn": "Tool to guide on the choice of a database for a new project. This application had a lot of visibility internally, so I was asked to develop new versions. So there is now dbSelection, dataVizSelection (an equivalent to choose a dataViz tool), distribuSelection (a tool to choose a BigData distribution) and finally cloudSelection (an equivalent to choose the internal or external cloud best suited to our architecture) which has become an internal application at group level.",
+  "technos": [
+    "TypeScript",
+    "ExpressJs",
+    "Angular",
+    "MySQL",
+    "CloudFoundry"
+  ],
+  "experience": "Orange",
+  "start": 2018,
+  "end": 2020
+}

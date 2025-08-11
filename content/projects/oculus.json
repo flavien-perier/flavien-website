@@ -1,0 +1,13 @@
+{
+  "name": "Oculus",
+  "descriptionFr": "Après avoir travaillé sur Clémentine, j'ai essayé de développer un framework qui permettrait de créer facilement des Chatbots.",
+  "descriptionEn": "After working on Clementine, I tried to develop a framework that would allow to easily create Chatbots.",
+  "technos": [
+    "NodeJs",
+    "ExpressJs",
+    "MongoDB"
+  ],
+  "experience": "personal",
+  "start": 2016,
+  "end": 2016
+}

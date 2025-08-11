@@ -1,0 +1,16 @@
+{
+  "label": "VI",
+  "faIcon": "fas server",
+  "descriptionFr": "EDI en ligne de commandes.",
+  "descriptionEn": "Command line IDE.",
+  "url": "http://ex-vi.sourceforge.net/",
+  "type": "ide",
+  "experiences": [
+    "Tixeo",
+    "Orange",
+    "personal",
+    "Henallux",
+    "3IL"
+  ],
+  "lvl": 70
+}

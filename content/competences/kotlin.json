@@ -1,0 +1,14 @@
+{
+  "label": "Kotlin",
+  "faIcon": "fab kotlin",
+  "descriptionFr": "Langage de programmation Kotlin.",
+  "descriptionEn": "Programming language Kotlin.",
+  "url": "https://kotlinlang.org/",
+  "type": "language",
+  "experiences": [
+    "Orange",
+    "personal",
+    "Henallux"
+  ],
+  "lvl": 60
+}

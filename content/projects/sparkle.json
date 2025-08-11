@@ -1,0 +1,14 @@
+{
+  "name": "Sparkle",
+  "descriptionFr": "Sparkle est un framework d'analyse de flux de données. L'objectif de ce framework est d'offrir à l'utilisateur la possibilité de développer des modules qui peuvent être placés dans un pipeline de traitement de flux. L'avantage de cette approche modulaire est que chaque module peut ensuite être testé individuellement. Ceci garantit une certaine fiabilité dans notre workflow.",
+  "descriptionEn": "Sparkle is a framework for data flow analysis. The objective of this framework is to offer the user the possibility to develop modules that can be placed in a flow processing pipeline. The advantage of this modular approach is that each module can then be tested individually. This guarantees a certain reliability in our workflow.",
+  "technos": [
+    "Java",
+    "Vertex",
+    "Java 9 Modules",
+    "Docker"
+  ],
+  "experience": "Orange",
+  "start": 2019,
+  "end": 2019
+}

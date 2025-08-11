@@ -1,0 +1,15 @@
+{
+  "label": "MySQL",
+  "faIcon": "fas database",
+  "descriptionFr": "Base de données relationnelles.",
+  "descriptionEn": "Relational database.",
+  "url": "https://www.mysql.com/",
+  "type": "db",
+  "experiences": [
+    "Orange",
+    "personal",
+    "BTS Beaupeyrat",
+    "3IL"
+  ],
+  "lvl": 70
+}

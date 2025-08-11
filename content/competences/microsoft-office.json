@@ -1,0 +1,17 @@
+{
+  "label": "Microsoft Office",
+  "faIcon": "fas file",
+  "descriptionFr": "Word, PowerPoint, Excel.",
+  "descriptionEn": "Word, PowerPoint, Excel.",
+  "url": "https://www.office.com/",
+  "type": "tool",
+  "experiences": [
+    "Néo-Soft",
+    "Orange",
+    "personal",
+    "Henallux",
+    "BTS Beaupeyrat",
+    "3IL"
+  ],
+  "lvl": 70
+}

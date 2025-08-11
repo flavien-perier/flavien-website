@@ -1,0 +1,14 @@
+{
+  "label": "Scrum",
+  "faIcon": "fab scrum",
+  "descriptionFr": "Méthode de management dite agile.",
+  "descriptionEn": "Agile management method.",
+  "url": "https://www.scrum.org/",
+  "type": "management",
+  "experiences": [
+    "Tixeo",
+    "Néo-Soft",
+    "Orange"
+  ],
+  "lvl": 60
+}

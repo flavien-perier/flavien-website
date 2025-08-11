@@ -1,0 +1,14 @@
+{
+  "label": "WebStorm",
+  "faIcon": "fab intellij",
+  "descriptionFr": "EDI web développé par JetBrains.",
+  "descriptionEn": "Web IDE developed by JetBrains.",
+  "url": "https://www.jetbrains.com/webstorm/",
+  "type": "ide",
+  "experiences": [
+    "Tixeo",
+    "Néo-Soft",
+    "personal"
+  ],
+  "lvl": 80
+}

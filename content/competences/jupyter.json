@@ -1,0 +1,13 @@
+{
+  "label": "Jupyter",
+  "faIcon": "fas server",
+  "descriptionFr": "EDI en ligne très utilisé dans le monde de la DataScience.",
+  "descriptionEn": "Online IDE widely used in the DataScience world.",
+  "url": "https://jupyter.org/",
+  "type": "ide",
+  "experiences": [
+    "personal",
+    "Henallux"
+  ],
+  "lvl": 80
+}

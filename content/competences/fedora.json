@@ -1,0 +1,12 @@
+{
+  "label": "Fedora",
+  "faIcon": "fab linux",
+  "descriptionFr": "Distribution Linux basé sur RedHat.",
+  "descriptionEn": "RedHat-based Linux distribution.",
+  "url": "https://getfedora.org/",
+  "type": "os",
+  "experiences": [
+    "personal"
+  ],
+  "lvl": 60
+}

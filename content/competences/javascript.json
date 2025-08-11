@@ -1,0 +1,16 @@
+{
+  "label": "JavaScript",
+  "faIcon": "fab js",
+  "descriptionFr": "Langage de programmation JavaScript.",
+  "descriptionEn": "Programming language JavaScript.",
+  "url": "https://developer.mozilla.org/fr/docs/Web/JavaScript",
+  "type": "language",
+  "experiences": [
+    "Tixeo",
+    "Néo-Soft",
+    "Orange",
+    "personal",
+    "Henallux"
+  ],
+  "lvl": 80
+}

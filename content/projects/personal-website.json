@@ -1,0 +1,11 @@
+{
+  "name": "Personal website",
+  "descriptionFr": "Ce site web a été développé en TypeScript grâce au framework VueJs. Lors du développement, je me suis intéressé aux problématiques d'optimisation de la transpilation afin de minimiser le poids du fichier transmis au client, sans impacter la qualité du code. L'arrière-plan du site est généré côté client, dans un canvas, grâce à un algorithme génétique développé en JavaScript.",
+  "descriptionEn": "This website has been developed in TypeScript using the VueJs framework. During the development, I was interested in the optimization of the transpilation in order to minimize the weight of the file transmitted to the client, without impacting the quality of the code. The background of the site is generated on the client side, in a canvas, thanks to a genetic algorithm developed in JavaScript.",
+  "technos": [
+    "TypeScript",
+    "VueJs"
+  ],
+  "experience": "personal",
+  "start": 2019
+}

@@ -1,0 +1,13 @@
+{
+  "label": "Rocky",
+  "faIcon": "fab linux",
+  "descriptionFr": "Distribution Linux basé sur RedHat.",
+  "descriptionEn": "RedHat-based Linux distribution.",
+  "url": "https://rockylinux.org/",
+  "type": "os",
+  "experiences": [
+    "Tixeo",
+    "personal"
+  ],
+  "lvl": 60
+}

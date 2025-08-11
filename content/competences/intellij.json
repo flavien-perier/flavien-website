@@ -1,0 +1,17 @@
+{
+  "label": "Intellij",
+  "faIcon": "fab intellij",
+  "descriptionFr": "EDI Java/Kotlin développé par JetBrains.",
+  "descriptionEn": "Java / Kotlin IDE developed by JetBrains.",
+  "url": "https://www.jetbrains.com/idea/",
+  "type": "ide",
+  "experiences": [
+    "Tixeo",
+    "Néo-Soft",
+    "Orange",
+    "personal",
+    "Henallux",
+    "3IL"
+  ],
+  "lvl": 80
+}

@@ -1,0 +1,16 @@
+{
+  "label": "PostgreSQL",
+  "faIcon": "fas database",
+  "descriptionFr": "Base de données relationnelles.",
+  "descriptionEn": "Relational database.",
+  "url": "https://www.postgresql.org/",
+  "type": "db",
+  "experiences": [
+    "Tixeo",
+    "Néo-Soft",
+    "Orange",
+    "personal",
+    "Henallux"
+  ],
+  "lvl": 70
+}

@@ -1,0 +1,12 @@
+{
+  "label": "Kali",
+  "faIcon": "fab linux",
+  "descriptionFr": "Distribution Linux basé sur Debian, orienté test de sécurité.",
+  "descriptionEn": "Debian-based Linux distribution, focused on pentesting.",
+  "url": "https://www.kali.org/",
+  "type": "os",
+  "experiences": [
+    "personal"
+  ],
+  "lvl": 40
+}

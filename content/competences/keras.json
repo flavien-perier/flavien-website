@@ -1,0 +1,13 @@
+{
+  "label": "Keras",
+  "faIcon": "fas database",
+  "descriptionFr": "Surcouche à TensorFlow pour la création de réseau de neurones en python.",
+  "descriptionEn": "TensorFlow overlay for neural network creation in python.",
+  "url": "https://keras.io/",
+  "type": "dataScience",
+  "experiences": [
+    "personal",
+    "Henallux"
+  ],
+  "lvl": 40
+}

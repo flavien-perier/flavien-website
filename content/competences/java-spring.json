@@ -1,0 +1,14 @@
+{
+  "label": "Java spring",
+  "faIcon": "fab spring",
+  "descriptionFr": "Framework backend java.",
+  "descriptionEn": "Framework backend java.",
+  "url": "https://spring.io/",
+  "type": "framework",
+  "experiences": [
+    "Tixeo",
+    "Néo-Soft",
+    "Orange"
+  ],
+  "lvl": 70
+}

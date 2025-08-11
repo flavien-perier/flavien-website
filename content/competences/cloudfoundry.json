@@ -1,0 +1,12 @@
+{
+  "label": "CloudFoundry",
+  "faIcon": "fas server",
+  "descriptionFr": "Plateforme PaaS.",
+  "descriptionEn": "PaaS platform.",
+  "url": "https://www.cloudfoundry.org/",
+  "type": "infra",
+  "experiences": [
+    "Orange"
+  ],
+  "lvl": 50
+}

@@ -1,0 +1,16 @@
+{
+  "label": "Gitlab",
+  "faIcon": "fab gitlab",
+  "descriptionFr": "Implémentation de GIT.",
+  "descriptionEn": "GIT implementation.",
+  "url": "https://about.gitlab.com/",
+  "type": "tool",
+  "experiences": [
+    "Tixeo",
+    "Néo-Soft",
+    "Orange",
+    "personal",
+    "Henallux"
+  ],
+  "lvl": 60
+}

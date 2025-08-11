@@ -1,0 +1,13 @@
+{
+  "label": "MongoDB",
+  "faIcon": "fas database",
+  "descriptionFr": "Base de données orientée documents.",
+  "descriptionEn": "Document database.",
+  "url": "https://www.mongodb.com/",
+  "type": "db",
+  "experiences": [
+    "Orange",
+    "personal"
+  ],
+  "lvl": 50
+}

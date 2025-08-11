@@ -1,0 +1,15 @@
+{
+  "label": "Python",
+  "faIcon": "fab python",
+  "descriptionFr": "Langage de programmation Python.",
+  "descriptionEn": "Programming language Python.",
+  "url": "https://www.python.org/",
+  "type": "language",
+  "experiences": [
+    "Tixeo",
+    "Association \"Sème tes graines\"",
+    "personal",
+    "Henallux"
+  ],
+  "lvl": 70
+}

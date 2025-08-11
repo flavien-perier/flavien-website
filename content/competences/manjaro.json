@@ -1,0 +1,12 @@
+{
+  "label": "Manjaro",
+  "faIcon": "fab linux",
+  "descriptionFr": "Distribution Linux basé sur Arch.",
+  "descriptionEn": "Arch-based Linux distribution.",
+  "url": "https://manjaro.org/",
+  "type": "os",
+  "experiences": [
+    "personal"
+  ],
+  "lvl": 80
+}

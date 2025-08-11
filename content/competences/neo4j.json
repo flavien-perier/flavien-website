@@ -1,0 +1,13 @@
+{
+  "label": "Neo4J",
+  "faIcon": "fab neo4j",
+  "descriptionFr": "Base de données orientée graphe.",
+  "descriptionEn": "Graph database.",
+  "url": "https://neo4j.com/",
+  "type": "db",
+  "experiences": [
+    "Orange",
+    "personal"
+  ],
+  "lvl": 50
+}

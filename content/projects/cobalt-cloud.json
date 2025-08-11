@@ -1,0 +1,12 @@
+{
+  "name": "Cobalt cloud",
+  "descriptionFr": "Projet de recherche Orange ayant pour but de mettre en place une plateforme SaaS, capable de rajouter des métadonnées de manière automatique à des médias. Par exemple, générer des sous-titres pour une vidéo grâce à sa bande-son.",
+  "descriptionEn": "Orange research project aiming to set up a SaaS platform, capable of adding metadata automatically to media. For example, generate subtitles for a video thanks to its soundtrack.",
+  "technos": [
+    "Kubernetes",
+    "Java"
+  ],
+  "experience": "Orange",
+  "start": 2020,
+  "end": 2020
+}

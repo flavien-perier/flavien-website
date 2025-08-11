@@ -1,0 +1,13 @@
+{
+  "label": "Redis",
+  "faIcon": "fas database",
+  "descriptionFr": "Base de données clé-valeur.",
+  "descriptionEn": "Key-value database.",
+  "url": "https://redis.io/",
+  "type": "db",
+  "experiences": [
+    "Tixeo",
+    "personal"
+  ],
+  "lvl": 70
+}

@@ -1,0 +1,15 @@
+{
+  "label": "C / C++",
+  "faIcon": "fas microchip",
+  "descriptionFr": "Langage de programmation C++.",
+  "descriptionEn": "Programming language C++.",
+  "url": "https://isocpp.org/",
+  "type": "language",
+  "experiences": [
+    "Tixeo",
+    "personal",
+    "3IL",
+    "Henallux"
+  ],
+  "lvl": 60
+}

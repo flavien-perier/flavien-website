@@ -1,0 +1,15 @@
+{
+  "label": "Alpine",
+  "faIcon": "fab linux",
+  "descriptionFr": "Distribution Linux optimisé pour conteneurs Docker.",
+  "descriptionEn": "Linux distribution optimized for Docker containers.",
+  "url": "https://www.alpinelinux.org/",
+  "type": "os",
+  "experiences": [
+    "Tixeo",
+    "Orange",
+    "personal",
+    "Henallux"
+  ],
+  "lvl": 85
+}

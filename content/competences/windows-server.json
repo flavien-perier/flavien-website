@@ -1,0 +1,13 @@
+{
+  "label": "Windows Server",
+  "faIcon": "fab windows",
+  "descriptionFr": "Système d'exploitation Windows.",
+  "descriptionEn": "Windows operating system.",
+  "url": "https://www.microsoft.com/fr-fr/windows",
+  "type": "os",
+  "experiences": [
+    "personal",
+    "Henallux"
+  ],
+  "lvl": 40
+}

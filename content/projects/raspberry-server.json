@@ -1,0 +1,22 @@
+{
+  "name": "Raspberry server",
+  "descriptionFr": "Infrastructure serveur basée sur Raspberry Pi que j'ai déployé à mon domicile afin d'héberger mon site web et un certain nombre d'autres services. La plupart de ces démons sont toujours en cours d'exécution après 4 années même si j'ai décidé d'en supprimer certains (comme la stack mail), ou de remplacer certains services par des équivalents (remplacement du serveur Apache2 par un serveur Nginx).",
+  "descriptionEn": "Server infrastructure based on Raspberry Pi that I deployed at my home to host my website and a number of other services. Most of these daemons are still running after 4 years even if I decided to remove some of them (like the mail stack), or to replace some services by equivalents (replacement of the Apache2 server by a Nginx server).",
+  "technos": [
+    "Raspberry Pi",
+    "Rasbian",
+    "Docker",
+    "Squid proxy",
+    "Bind9",
+    "Postfix",
+    "Courier",
+    "Nextcloud",
+    "Nginx",
+    "Apache2",
+    "Wordpress",
+    "NextCloud",
+    "Letsencrypt"
+  ],
+  "experience": "personal",
+  "start": 2015
+}

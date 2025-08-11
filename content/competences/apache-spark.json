@@ -1,0 +1,13 @@
+{
+  "label": "Apache Spark",
+  "faIcon": "fas server",
+  "descriptionFr": "Framework de calculs distribués.",
+  "descriptionEn": "Distributed framework.",
+  "url": "https://spark.apache.org/",
+  "type": "bigData",
+  "experiences": [
+    "Orange",
+    "personal"
+  ],
+  "lvl": 30
+}

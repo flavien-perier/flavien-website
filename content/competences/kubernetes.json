@@ -1,0 +1,13 @@
+{
+  "label": "Kubernetes",
+  "faIcon": "fab kubernetes",
+  "descriptionFr": "Orchestrateur d'infrastructures conteneurisées.",
+  "descriptionEn": "Container infrastructure orchestrator.",
+  "url": "https://kubernetes.io/",
+  "type": "infra",
+  "experiences": [
+    "Tixeo",
+    "Orange"
+  ],
+  "lvl": 60
+}

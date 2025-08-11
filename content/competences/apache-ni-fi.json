@@ -1,0 +1,12 @@
+{
+  "label": "Apache Ni-Fi",
+  "faIcon": "fas server",
+  "descriptionFr": "Framework de gestion de flux.",
+  "descriptionEn": "Flow management framework.",
+  "url": "https://nifi.apache.org/",
+  "type": "bigData",
+  "experiences": [
+    "Orange"
+  ],
+  "lvl": 30
+}

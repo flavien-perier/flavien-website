@@ -1,0 +1,12 @@
+{
+  "label": "Squid",
+  "faIcon": "fas server",
+  "descriptionFr": "Proxy.",
+  "descriptionEn": "Proxy.",
+  "url": "http://www.squid-cache.org/",
+  "type": "network",
+  "experiences": [
+    "personal"
+  ],
+  "lvl": 50
+}

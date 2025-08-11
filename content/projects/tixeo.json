@@ -1,0 +1,14 @@
+{
+  "name": "Tixeo",
+  "descriptionFr": "Solution de visioconférence sécurisée.",
+  "descriptionEn": "Secure video conferencing solution.",
+  "technos": [
+    "Java",
+    "Spring",
+    "PostgreSQL",
+    "Vue3",
+    "Docker"
+  ],
+  "experience": "Tixeo",
+  "start": 2022
+}

@@ -1,0 +1,12 @@
+{
+  "label": "Apache Kafka",
+  "faIcon": "fab kafka",
+  "descriptionFr": "File de messages asynchrones.",
+  "descriptionEn": "Asynchronous message queue.",
+  "url": "https://kafka.apache.org/",
+  "type": "bigData",
+  "experiences": [
+    "Orange"
+  ],
+  "lvl": 60
+}

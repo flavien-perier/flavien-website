@@ -1,0 +1,15 @@
+{
+  "label": "Ubuntu",
+  "faIcon": "fab linux",
+  "descriptionFr": "Distribution Linux basé sur Debian.",
+  "descriptionEn": "Debian-based Linux distribution.",
+  "url": "https://ubuntu.com/",
+  "type": "os",
+  "experiences": [
+    "Tixeo",
+    "Orange",
+    "personal",
+    "Henallux"
+  ],
+  "lvl": 70
+}

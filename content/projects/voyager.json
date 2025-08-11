@@ -1,0 +1,16 @@
+{
+  "name": "Voyager",
+  "descriptionFr": "Voyageur est une application Orange qui calcule l'effet d'une relocalisation de bâtiments de travail sur le temps de déplacement du personnel.",
+  "descriptionEn": "Voyageur is an Orange application that calculates the effect of relocating work buildings on staff travel time.",
+  "technos": [
+    "TypeScript",
+    "Angular",
+    "Java",
+    "Spring",
+    "MongoDB",
+    "CloudFoundry"
+  ],
+  "experience": "Orange",
+  "start": 2017,
+  "end": 2018
+}

@@ -1,0 +1,14 @@
+{
+  "name": "Pilact",
+  "descriptionFr": "Outil de pilotage d'activité interne à l'ASP (Agence de Service et de Paiement).",
+  "descriptionEn": "Internal activity management tool for ASP (Agence de Service et de Paiement).",
+  "technos": [
+    "Java",
+    "Spring",
+    "Angular",
+    "PostgreSQL"
+  ],
+  "experience": "NéoSoft",
+  "start": 2020,
+  "end": 2022
+}

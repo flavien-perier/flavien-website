@@ -1,0 +1,13 @@
+{
+  "label": "InfluxDB",
+  "faIcon": "fas database",
+  "descriptionFr": "Base de données time series.",
+  "descriptionEn": "Time series database.",
+  "url": "https://www.influxdata.com/",
+  "type": "db",
+  "experiences": [
+    "Tixeo",
+    "personal"
+  ],
+  "lvl": 60
+}

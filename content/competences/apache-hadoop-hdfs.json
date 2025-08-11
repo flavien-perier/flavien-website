@@ -1,0 +1,13 @@
+{
+  "label": "Apache Hadoop HDFS",
+  "faIcon": "fas server",
+  "descriptionFr": "Système de fichiers distribué.",
+  "descriptionEn": "Hight level distributed file system.",
+  "url": "https://hadoop.apache.org/",
+  "type": "bigData",
+  "experiences": [
+    "Orange",
+    "Henallux"
+  ],
+  "lvl": 40
+}

@@ -1,0 +1,14 @@
+{
+  "label": "Angular",
+  "faIcon": "fab angular",
+  "descriptionFr": "Framework frontend TypeScript.",
+  "descriptionEn": "Framework frontend TypeScript.",
+  "url": "https://angular.io/",
+  "type": "framework",
+  "experiences": [
+    "Néo-Soft",
+    "Orange",
+    "personal"
+  ],
+  "lvl": 60
+}

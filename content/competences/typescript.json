@@ -1,0 +1,16 @@
+{
+  "label": "TypeScript",
+  "faIcon": "fab ts",
+  "descriptionFr": "Langage de programmation TypeScript.",
+  "descriptionEn": "Programming language TypeScript.",
+  "url": "https://www.typescriptlang.org/",
+  "type": "language",
+  "experiences": [
+    "Tixeo",
+    "Néo-Soft",
+    "Orange",
+    "personal",
+    "Henallux"
+  ],
+  "lvl": 80
+}

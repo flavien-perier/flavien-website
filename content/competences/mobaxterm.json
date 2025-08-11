@@ -1,0 +1,15 @@
+{
+  "label": "MobaXterm",
+  "faIcon": "fas terminal",
+  "descriptionFr": "Client SSH, Telnet, RDP, FTP....",
+  "descriptionEn": "SSH, Telnet, RDP, FTP client....",
+  "url": "https://mobaxterm.mobatek.net/",
+  "type": "tool",
+  "experiences": [
+    "Néo-Soft",
+    "Orange",
+    "personal",
+    "Henallux"
+  ],
+  "lvl": 70
+}

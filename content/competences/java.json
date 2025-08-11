@@ -1,0 +1,17 @@
+{
+  "label": "Java",
+  "faIcon": "fab java",
+  "descriptionFr": "Langage de programmation Java.",
+  "descriptionEn": "Programming language Java.",
+  "url": "https://www.java.com/fr/",
+  "type": "language",
+  "experiences": [
+    "Tixeo",
+    "Néo-Soft",
+    "Orange",
+    "personal",
+    "Henallux",
+    "3IL"
+  ],
+  "lvl": 85
+}

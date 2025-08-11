@@ -1,0 +1,14 @@
+{
+  "label": "Swagger",
+  "faIcon": "fab swagger",
+  "descriptionFr": "API designer.",
+  "descriptionEn": "API designer.",
+  "url": "https://swagger.io/",
+  "type": "framework",
+  "experiences": [
+    "Tixeo",
+    "Néo-Soft",
+    "personal"
+  ],
+  "lvl": 70
+}

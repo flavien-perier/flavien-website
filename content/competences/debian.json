@@ -1,0 +1,18 @@
+{
+  "label": "Debian",
+  "faIcon": "fab linux",
+  "descriptionFr": "Distribution Linux.",
+  "descriptionEn": "Linux distribution.",
+  "url": "https://www.debian.org/",
+  "type": "os",
+  "experiences": [
+    "Tixeo",
+    "Néo-Soft",
+    "Orange",
+    "personal",
+    "Henallux",
+    "BTS Beaupeyrat",
+    "3IL"
+  ],
+  "lvl": 80
+}

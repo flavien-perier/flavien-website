@@ -1,0 +1,18 @@
+{
+  "label": "GIT",
+  "faIcon": "fab git-alt",
+  "descriptionFr": "Logiciel de gestion de versions.",
+  "descriptionEn": "Ddistributed version control system.",
+  "url": "https://git-scm.com/",
+  "type": "tool",
+  "experiences": [
+    "Tixeo",
+    "Néo-Soft",
+    "Orange",
+    "personal",
+    "Henallux",
+    "BTS Beaupeyrat",
+    "3IL"
+  ],
+  "lvl": 75
+}

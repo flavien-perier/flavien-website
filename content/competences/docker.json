@@ -1,0 +1,18 @@
+{
+  "label": "Docker",
+  "faIcon": "fab docker",
+  "descriptionFr": "Gestionnaire de conteneurs.",
+  "descriptionEn": "Container manager.",
+  "url": "https://www.docker.com/",
+  "type": "infra",
+  "experiences": [
+    "Tixeo",
+    "Néo-Soft",
+    "Orange",
+    "personal",
+    "Henallux",
+    "BTS Beaupeyrat",
+    "3IL"
+  ],
+  "lvl": 85
+}

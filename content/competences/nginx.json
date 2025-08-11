@@ -1,0 +1,15 @@
+{
+  "label": "NGINX",
+  "faIcon": "fab nginx",
+  "descriptionFr": "Serveur HTTP / Reverse proxy.",
+  "descriptionEn": "HTTP server / Reverse proxy.",
+  "url": "https://nginx.org/",
+  "type": "network",
+  "experiences": [
+    "Tixeo",
+    "Orange",
+    "personal",
+    "Henallux"
+  ],
+  "lvl": 70
+}

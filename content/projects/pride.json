@@ -1,0 +1,13 @@
+{
+  "name": "Pride",
+  "descriptionFr": "Projet de recherche financé par l'ADEME (Agence de la transition écologique) dans lequel Orange a développé un composant permettant à des collectivités de récupérer les données concernant leurs factures énergétiques Enedis ou GRDF.",
+  "descriptionEn": "Research project funded by ADEME (Agence de la transition écologique) in which Orange has developed a component enabling local authorities to retrieve data concerning their Enedis or GRDF energy bills.",
+  "technos": [
+    "Kotlin",
+    "VueJs",
+    "Apache Kafka"
+  ],
+  "experience": "Orange",
+  "start": 2020,
+  "end": 2020
+}

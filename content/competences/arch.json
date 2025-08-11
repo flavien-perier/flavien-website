@@ -1,0 +1,12 @@
+{
+  "label": "Arch",
+  "faIcon": "fab linux",
+  "descriptionFr": "Distribution Linux.",
+  "descriptionEn": "Linux distribution.",
+  "url": "https://archlinux.org/",
+  "type": "os",
+  "experiences": [
+    "personal"
+  ],
+  "lvl": 70
+}

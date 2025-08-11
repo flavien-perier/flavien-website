@@ -1,0 +1,13 @@
+{
+  "label": "JQuery",
+  "faIcon": "fab js",
+  "descriptionFr": "Framework frontend JavaScript.",
+  "descriptionEn": "Framework frontend JavaScript.",
+  "url": "https://jquery.com/",
+  "type": "framework",
+  "experiences": [
+    "personal",
+    "3IL"
+  ],
+  "lvl": 50
+}

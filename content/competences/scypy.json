@@ -1,0 +1,13 @@
+{
+  "label": "ScyPy",
+  "faIcon": "fas database",
+  "descriptionFr": "Bibliothèque d'outils mathématique en Python.",
+  "descriptionEn": "Library of mathematical tools in Python.",
+  "url": "https://scipy.org/",
+  "type": "dataScience",
+  "experiences": [
+    "personal",
+    "Henallux"
+  ],
+  "lvl": 50
+}

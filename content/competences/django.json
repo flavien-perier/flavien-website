@@ -1,0 +1,12 @@
+{
+  "label": "Django",
+  "faIcon": "fab python",
+  "descriptionFr": "Framework backend python.",
+  "descriptionEn": "Framework backend python.",
+  "url": "https://www.djangoproject.com/",
+  "type": "framework",
+  "experiences": [
+    "Association \"Sème tes graines\""
+  ],
+  "lvl": 50
+}

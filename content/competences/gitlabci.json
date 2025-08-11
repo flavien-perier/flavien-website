@@ -1,0 +1,12 @@
+{
+  "label": "GitlabCI",
+  "faIcon": "fab gitlab",
+  "descriptionFr": "Gestion de pipelines de déploiement continu.",
+  "descriptionEn": "Continuous deployment pipeline management.",
+  "url": "https://docs.gitlab.com/ee/ci/",
+  "type": "tool",
+  "experiences": [
+    "Orange"
+  ],
+  "lvl": 70
+}

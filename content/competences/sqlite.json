@@ -1,0 +1,13 @@
+{
+  "label": "SQLite",
+  "faIcon": "fas database",
+  "descriptionFr": "Base de données relationnelles.",
+  "descriptionEn": "Relational database.",
+  "url": "https://sqlite.org/",
+  "type": "db",
+  "experiences": [
+    "personal",
+    "BTS Beaupeyrat"
+  ],
+  "lvl": 60
+}

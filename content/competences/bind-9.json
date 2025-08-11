@@ -1,0 +1,12 @@
+{
+  "label": "Bind 9",
+  "faIcon": "fas server",
+  "descriptionFr": "DNS.",
+  "descriptionEn": "DNS.",
+  "url": "https://www.isc.org/bind/",
+  "type": "network",
+  "experiences": [
+    "personal"
+  ],
+  "lvl": 60
+}

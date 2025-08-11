@@ -1,0 +1,14 @@
+{
+  "label": "Apache 2",
+  "faIcon": "fas server",
+  "descriptionFr": "Serveur HTTP.",
+  "descriptionEn": "HTTP server.",
+  "url": "https://httpd.apache.org/",
+  "type": "network",
+  "experiences": [
+    "personal",
+    "BTS Beaupeyrat",
+    "3IL"
+  ],
+  "lvl": 50
+}

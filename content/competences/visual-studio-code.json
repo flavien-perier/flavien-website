@@ -1,0 +1,18 @@
+{
+  "label": "Visual Studio Code",
+  "faIcon": "fab vscode",
+  "descriptionFr": "EDI universel minimaliste.",
+  "descriptionEn": "Minimalist universal IDE.",
+  "url": "https://code.visualstudio.com/",
+  "type": "ide",
+  "experiences": [
+    "Tixeo",
+    "Néo-Soft",
+    "Orange",
+    "personal",
+    "Henallux",
+    "BTS Beaupeyrat",
+    "3IL"
+  ],
+  "lvl": 70
+}

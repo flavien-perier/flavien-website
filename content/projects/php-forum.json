@@ -1,0 +1,12 @@
+{
+  "name": "PHP forum",
+  "descriptionFr": "Premier développement web, avec intégration d'un forum. Il a été principalement utilisé comme plateforme de communication pour les étudiants de ma classe pendant mes deux années de BTS.",
+  "descriptionEn": "First web development, with integration of a forum. It was mainly used as a communication platform for the students of my class during my two years of BTS.",
+  "technos": [
+    "PHP",
+    "MySQL"
+  ],
+  "experience": "personal",
+  "start": 2015,
+  "end": 2016
+}
