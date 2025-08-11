@@ -26,7 +26,21 @@ import { useWikiArticleStore } from "~/store/WikiArticle";
 
 const route = useRoute();
 const wikiArticleStore = useWikiArticleStore();
-const { title, author, date, content } = storeToRefs(wikiArticleStore);
+const { title, author, date, content, description } = storeToRefs(wikiArticleStore);
 
-wikiArticleStore.loadArticle(route.params.filename as string);
+await wikiArticleStore.loadArticle(route.params.filename as string);
+
+const pageTitle = `Flavien PERIER - ${title.value}`
+
+useSeoMeta({
+  title: pageTitle,
+  description: description.value,
+  author: author.value,
+
+  ogTitle: pageTitle,
+  ogDescription: description.value,
+
+  twitterTitle: pageTitle,
+  twitterDescription: description.value,
+});
 </script>

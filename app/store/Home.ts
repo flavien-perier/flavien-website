@@ -1,5 +1,6 @@
 import { defineStore } from "pinia";
 import { marked } from "marked";
+import { useFetch } from "#app";
 
 export const useHomeStore = defineStore("home", {
   state: () => ({
@@ -7,15 +8,23 @@ export const useHomeStore = defineStore("home", {
   }),
   getters: {},
   actions: {
-    loadMarkdown() {
-      if (!this.content) {
-        $fetch<string>(import.meta.env.VITE_BASE_PATH + "home.md", { responseType: 'text' })
-          .then(async (data) => {
-            const pattern = /^---.*---(.*)$/s.exec(data)!;
+    async loadMarkdown() {
+      if (this.content) return;
 
-            this.content = await marked(pattern[1] || "");
-          });
+      const base = import.meta.env.VITE_BASE_PATH || "";
+      const { data, error } = await useFetch<string>(base + "home.md", {
+        responseType: "text",
+        key: "home-md",
+      });
+
+      if (error?.value || !data?.value) {
+        console.error("Failed to load home.md:", error.value);
+        return;
       }
+
+      // Remove YAML front-matter if present and parse Markdown
+      const match = /^---.*?---\s*(.*)$/s.exec(data.value);
+      this.content = await marked((match && match[1]) || "");
     },
   },
 });

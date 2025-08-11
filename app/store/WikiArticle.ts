@@ -1,4 +1,5 @@
 import {defineStore} from "pinia";
+import { useFetch } from "#app";
 import type Markdown from "~/model/wiki/Markdown";
 import {marked} from "marked";
 import type {Tokens} from "marked";
@@ -34,18 +35,23 @@ export const useWikiArticleStore = defineStore("wikiArticle", {
     author: (state) => (state.header ? state.header.author : ""),
     date: (state) =>
       state.header ? new Date(state.header.date).toLocaleDateString() : "",
+    description: (state) => (state.header ? state.header.description : ""),
   },
   actions: {
-    loadArticle(name: string) {
+    async loadArticle(name: string) {
       if (name !== this.articleName) {
-        $fetch<string>(import.meta.env.VITE_BASE_PATH + name, { responseType: 'text' }).then((data) => {
-          this.articleName = name;
+        const { data, error } = await useFetch<string>(import.meta.env.VITE_BASE_PATH + name, { responseType: 'text' });
 
-          const pattern = /^---(.*?)---(.*)$/s.exec(data)!;
+        if (error.value || !data.value) {
+          console.error("Failed to load home.md:", error.value);
+          return;
+        }
+        this.articleName = name;
 
-          this.header = YAML.parse(pattern[1] || "");
-          this.content = marked(pattern[2] || "", {renderer}) as string;
-        });
+        const pattern = /^---(.*?)---(.*)$/s.exec(data.value)!;
+
+        this.header = YAML.parse(pattern[1] || "");
+        this.content = marked(pattern[2] || "", {renderer}) as string;
       }
     },
   },

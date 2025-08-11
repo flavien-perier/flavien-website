@@ -1,4 +1,5 @@
 import { defineStore } from "pinia";
+import { useFetch } from "#app";
 import type Markdown from "~/model/wiki/Markdown";
 import type Search from "~/model/wiki/Search";
 
@@ -10,19 +11,24 @@ export const useWikiStore = defineStore("wiki", {
   }),
   getters: {},
   actions: {
-    loadArticles(page: number) {
+    async loadArticles(page: number) {
       if (this.headers.length == 0 || this.page !== page) {
         this.page = page;
-        $fetch<Search>(import.meta.env.VITE_BASE_PATH, {
+        const { data, error } = await useFetch<Search>(import.meta.env.VITE_BASE_PATH, {
           query: {
             p: page,
             n: 10,
             type: 'WIKI',
           },
-        }).then((data) => {
-          this.headers = data.files;
-          this.numberOfPages = data.pages;
         });
+
+        if (error?.value || !data.value) {
+          console.error("Failed to load wiki articles:", error.value);
+          return;
+        }
+
+        this.headers = data.value.files;
+        this.numberOfPages = data.value.pages;
       }
     },
   },
