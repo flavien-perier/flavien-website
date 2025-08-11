@@ -89,6 +89,6 @@ function hide() {
   showNavbar.value = false;
 }
 function changeLanguage() {
-  i18n.locale.value = i18n.locale.value === 'fr' ? 'en' : 'fr';
+  i18n.setLocale(i18n.locale.value === "fr" ? "en" : "fr");
 }
 </script>
