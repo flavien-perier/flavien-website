@@ -45,6 +45,18 @@
 import { storeToRefs } from "pinia";
 import { useCompetencesStore } from "~/store/Competences";
 
+const title = "Flavien PERIER - Competences";
+const description = "Flavien PERIER's development and system skills.";
+
+useSeoMeta({
+  title: title,
+  description: description,
+  ogTitle: title,
+  ogDescription: description,
+  twitterTitle: title,
+  twitterDescription: description,
+});
+
 const competencesStore = useCompetencesStore();
 
 const {

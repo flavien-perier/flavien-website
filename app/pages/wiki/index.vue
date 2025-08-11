@@ -32,6 +32,18 @@
 import { useWikiStore } from "~/store/Wiki";
 import { storeToRefs } from "pinia";
 
+const title = "Flavien PERIER - Wiki";
+const description = "French wiki articles about Linux, Privacy and Security";
+
+useSeoMeta({
+  title: title,
+  description: description,
+  ogTitle: title,
+  ogDescription: description,
+  twitterTitle: title,
+  twitterDescription: description,
+});
+
 const wikiStore = useWikiStore();
 const { headers, page, numberOfPages } = storeToRefs(wikiStore);
 

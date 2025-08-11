@@ -16,6 +16,18 @@
 import { storeToRefs } from "pinia";
 import { useExperiencesStore } from "~/store/Experiences";
 
+const title = "Flavien PERIER - Experiences";
+const description = "Flavien PERIER's working experiences.";
+
+useSeoMeta({
+  title: title,
+  description: description,
+  ogTitle: title,
+  ogDescription: description,
+  twitterTitle: title,
+  twitterDescription: description,
+});
+
 const experiencesStore = useExperiencesStore();
 const { experiencesSorted } = storeToRefs(experiencesStore);
 

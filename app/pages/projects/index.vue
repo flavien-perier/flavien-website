@@ -12,6 +12,18 @@
 import { useProjectsStore } from "~/store/Projects";
 import { storeToRefs } from "pinia";
 
+const title = "Flavien PERIER - Projects";
+const description = "Some of the projects Flavien PERIER has worked on.";
+
+useSeoMeta({
+  title: title,
+  description: description,
+  ogTitle: title,
+  ogDescription: description,
+  twitterTitle: title,
+  twitterDescription: description,
+});
+
 const projectsStore = useProjectsStore();
 const { projectsSorted } = storeToRefs(projectsStore);
 
