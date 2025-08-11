@@ -9,7 +9,9 @@
   <AppFooter />
 </template>
 <script setup lang="ts">
-useHead({
-  script: [{src: "./js/wallpapers/genetic.js", defer: true}]
-});
+import {loadWallpaper} from "~/scripts/wallpaper";
+
+if (import.meta.client) {
+  loadWallpaper();
+}
 </script>

@@ -1,5 +1,3 @@
-"use strict";
-
 const CASE_WIDTH = 15;
 const CASE_HEIGHT = 15;
 
@@ -10,17 +8,24 @@ const WORKERS_LOOP_INTERVAL = 100;
 const REDUCE_GRID_WEIGHT_LOOP_INTERVAL = 3000;
 const MANAGE_CHECK_POINTS_LOOP_INTERVAL = 10000;
 
-const ANIMATION_DURATION = 60000;
+const ANIMATION_DURATION = 60000; // currently unused but kept for parity
+
+type RGBChannel = "r" | "g" | "b";
+type Direction = "t" | "r" | "b" | "l"; // top, right, bottom, left
 
 class Color {
-  constructor(red, green, blue) {
+  red: number;
+  green: number;
+  blue: number;
+
+  constructor(red: number, green: number, blue: number) {
     this.red = red;
     this.green = green;
     this.blue = blue;
   }
 
-  add(color) {
-    switch (color) {
+  add(channel: RGBChannel): void {
+    switch (channel) {
       case "r":
         if (this.red < 255) this.red++;
         break;
@@ -33,8 +38,8 @@ class Color {
     }
   }
 
-  get(color) {
-    switch (color) {
+  get(channel: RGBChannel): number {
+    switch (channel) {
       case "r":
         return this.red;
       case "g":
@@ -44,61 +49,69 @@ class Color {
     }
   }
 
-  getCss() {
+  getCss(): string {
     return `rgb(${this.red},${this.green},${this.blue})`;
   }
 }
 
 class Grid {
-  constructor(height, width, context) {
+  height: number;
+  width: number;
+  context: CanvasRenderingContext2D;
+  grid: Case[][];
+  workerMaximumDistance: number;
+
+  constructor(height: number, width: number, context: CanvasRenderingContext2D) {
     this.height = height / CASE_HEIGHT;
     this.width = width / CASE_WIDTH;
     this.context = context;
     this.grid = new Array(this.width);
 
-    this.workerMaximumDistance = Math.sqrt(
-      this.grid.height * this.grid.height * this.grid.width * this.grid.width
-    );
+    this.workerMaximumDistance = this.width * this.height;
 
-    let i, j;
-    for (i = 0; i < this.width; i++) {
+    for (let i = 0; i < this.width; i++) {
       this.grid[i] = new Array(this.height);
-      for (j = 0; j < this.height; j++) {
-        this.grid[i][j] = new Case(i, j, this.context);
+      for (let j = 0; j < this.height; j++) {
+        this.grid[i]!![j] = new Case(i, j, this.context);
       }
     }
 
     this.draw();
   }
 
-  get(x, y) {
-    return this.grid[x][y];
+  get(x: number, y: number): Case {
+    return this.grid!![x]!![y]!!;
   }
 
-  draw() {
+  draw(): void {
     this.grid.forEach((column) => column.forEach((element) => element.draw()));
   }
 }
 
 class Case {
-  constructor(posX, posY, context) {
+  posX: number;
+  posY: number;
+  context: CanvasRenderingContext2D;
+  color: Color;
+
+  constructor(posX: number, posY: number, context: CanvasRenderingContext2D) {
     this.posX = posX;
     this.posY = posY;
     this.context = context;
     this.color = new Color(1, 1, 1);
   }
 
-  minus() {
+  minus(): void {
     this.color.red -= Math.round(Math.log(this.color.red));
     this.color.green -= Math.round(Math.log(this.color.green));
     this.color.blue -= Math.round(Math.log(this.color.blue));
   }
 
-  isCheckPoint() {
+  isCheckPoint(): boolean {
     return false;
   }
 
-  draw() {
+  draw(): void {
     this.context.fillStyle = this.color.getCss();
     this.context.fillRect(
       this.posX * CASE_WIDTH,
@@ -110,9 +123,13 @@ class Case {
 }
 
 class CheckPoint extends Case {
-  constructor(grid, context) {
-    let posX;
-    let posY;
+  grid: Grid;
+  checkPointType!: RGBChannel;
+  workers: Worker[];
+
+  constructor(grid: Grid, context: CanvasRenderingContext2D) {
+    let posX: number;
+    let posY: number;
 
     // Test if the selected position is not a CheckPoint.
     do {
@@ -145,10 +162,10 @@ class CheckPoint extends Case {
       this.workers.push(new Worker(this));
     }
 
-    grid.grid[posX][posY] = this;
+    grid.grid[posX]!![posY] = this;
   }
 
-  minus() {
+  override minus(): void {
     if (this.checkPointType != "r") {
       this.color.red -= Math.round(Math.log(this.color.red));
     }
@@ -160,30 +177,36 @@ class CheckPoint extends Case {
     }
   }
 
-  isCheckPoint() {
+  override isCheckPoint(): boolean {
     return true;
   }
 
-  work() {
+  work(): void {
     this.workers.forEach((f) => f.work());
   }
 }
 
 class Worker {
-  constructor(checkPoint) {
+  checkPoint: CheckPoint;
+  grid: Grid;
+  posX!: number;
+  posY!: number;
+  history!: Array<[number, number]>;
+
+  constructor(checkPoint: CheckPoint) {
     this.checkPoint = checkPoint;
     this.grid = checkPoint.grid;
     this.reset();
   }
 
-  reset() {
+  reset(): void {
     this.posX = this.checkPoint.posX;
     this.posY = this.checkPoint.posY;
     this.history = [];
     this.history.push([this.posX, this.posY]);
   }
 
-  save() {
+  save(): void {
     this.history.forEach(([x, y]) => {
       this.grid.get(x, y).color.add(this.checkPoint.checkPointType);
       this.grid.get(x, y).draw();
@@ -192,7 +215,7 @@ class Worker {
     this.reset();
   }
 
-  getDirCase(dir) {
+  getDirCase(dir: Direction): Case {
     switch (dir) {
       case "t":
         return this.grid.get(this.posX, this.posY - 1);
@@ -205,8 +228,8 @@ class Worker {
     }
   }
 
-  work() {
-    const directions = new Set(["t", "r", "b", "l"]); // top, right, bottom, left
+  work(): void {
+    const directions: Set<Direction> = new Set(["t", "r", "b", "l"]);
 
     // Removes travel possibilities within the map limits.
     if (this.posX <= 0) directions.delete("l");
@@ -244,7 +267,7 @@ class Worker {
 
     // Determines the direction according to the `randomChoice`.
     let actualStatisticJauge = 0;
-    let directionChoice = null;
+    let directionChoice: Direction | null = null;
 
     for (const dir of directions) {
       actualStatisticJauge += this.getDirCase(dir).color.get(
@@ -268,13 +291,13 @@ class Worker {
         break;
       case "l":
         this.posX--;
-        reduceGridWeights;
+        break;
     }
 
     // Test if the case found is a checkpoint and if it is of the same type as the one you came from.
     if (
       this.grid.get(this.posX, this.posY).isCheckPoint() &&
-      this.grid.get(this.posX, this.posY).checkPointType ==
+      (this.grid.get(this.posX, this.posY) as CheckPoint).checkPointType ==
         this.checkPoint.checkPointType
     ) {
       this.save();
@@ -291,12 +314,16 @@ class Worker {
   }
 }
 
-function reduceGridWeights(grid) {
+function reduceGridWeights(grid: Grid): void {
   grid.grid.forEach((column) => column.forEach((element) => element.minus()));
   grid.draw();
 }
 
-function manageCheckPoints(checkPoints, grid, ctx) {
+function manageCheckPoints(
+  checkPoints: Array<CheckPoint | undefined>,
+  grid: Grid,
+  ctx: CanvasRenderingContext2D
+): void {
   // Create new checkpoint, or delete an existing checkpoint.
   if (Math.random() > 0.5) {
     checkPoints.push(new CheckPoint(grid, ctx));
@@ -304,52 +331,63 @@ function manageCheckPoints(checkPoints, grid, ctx) {
     const deletedCheckPointIndex = Math.floor(
       Math.random() * checkPoints.length
     );
-    const posX = checkPoints[deletedCheckPointIndex].posX;
-    const posY = checkPoints[deletedCheckPointIndex].posY;
 
-    grid.grid[posX][posY] = new Case(posX, posY, ctx);
+    const cp = checkPoints[deletedCheckPointIndex];
+    if (!cp) return;
+
+    const posX = cp.posX;
+    const posY = cp.posY;
+
+    grid.grid[posX]!![posY] = new Case(posX, posY, ctx);
 
     delete checkPoints[deletedCheckPointIndex];
-    grid.grid[posX][posY].draw();
+    grid.grid[posX]!![posY].draw();
   }
 }
 
-const canvas = document.getElementById("bg-canvas");
-let workersLoop;
-let reduceGridWeightLoop;
-let manageCheckPointsLoop;
+let workersLoop: number | undefined;
+let reduceGridWeightLoop: number | undefined;
+let manageCheckPointsLoop: number | undefined;
 
-function geneticLoader() {
-  clearInterval(workersLoop);
-  clearInterval(reduceGridWeightLoop);
-  clearInterval(manageCheckPointsLoop);
+function loadWallpaper(): void {
+  if (typeof window === "undefined" || typeof document === "undefined") return;
+
+  if (workersLoop) clearInterval(workersLoop);
+  if (reduceGridWeightLoop) clearInterval(reduceGridWeightLoop);
+  if (manageCheckPointsLoop) clearInterval(manageCheckPointsLoop);
+
+  const canvas = document.getElementById("bg-canvas") as HTMLCanvasElement | null;
 
   if (
     canvas &&
-    canvas.getContext &&
+    // canvas.getContext exists on HTMLCanvasElement
+    typeof (canvas as HTMLCanvasElement).getContext === "function" &&
+    typeof navigator !== "undefined" &&
     navigator.userAgent !== "internal-eco-webserver"
   ) {
     const ctx = canvas.getContext("2d");
+    if (!ctx) return;
+
     canvas.height = Math.round(window.innerHeight / CASE_WIDTH) * CASE_WIDTH;
     canvas.width = Math.round(window.innerWidth / CASE_HEIGHT) * CASE_HEIGHT;
     const grid = new Grid(canvas.height, canvas.width, ctx);
 
-    let checkPoints = [];
+    let checkPoints: Array<CheckPoint | undefined> = [];
     for (let i = 0; i < grid.width * grid.height * CHECK_POINT_DENSITY; i++) {
       checkPoints.push(new CheckPoint(grid, ctx));
     }
 
     grid.draw();
 
-    workersLoop = setInterval(() => {
-      checkPoints.forEach((cp) => cp.work());
+    workersLoop = window.setInterval(() => {
+      checkPoints.forEach((cp) => cp && cp.work());
     }, WORKERS_LOOP_INTERVAL);
 
-    reduceGridWeightLoop = setInterval(() => {
+    reduceGridWeightLoop = window.setInterval(() => {
       reduceGridWeights(grid);
     }, REDUCE_GRID_WEIGHT_LOOP_INTERVAL);
 
-    manageCheckPointsLoop = setInterval(() => {
+    manageCheckPointsLoop = window.setInterval(() => {
       manageCheckPoints(checkPoints, grid, ctx);
 
       // We only keep the CheckPoints that are not removed.
@@ -358,5 +396,5 @@ function geneticLoader() {
   }
 }
 
-geneticLoader();
-window.addEventListener("resize", geneticLoader);
+
+export { loadWallpaper };
