@@ -25,7 +25,7 @@
             v-for="id in competencesTypes"
             :key="id"
             :competenceTypeId="id"
-            :selected="competenceIsChecked(id) || true"
+            :selected="competenceIsChecked(id)"
             @check="competencesStore.selectCompetence(id)"
         />
       </div>
@@ -44,6 +44,7 @@
 <script setup lang="ts">
 import { storeToRefs } from "pinia";
 import { useCompetencesStore } from "~/store/Competences";
+import type Competence from "~/model/competences/Competence";
 
 const title = "Flavien PERIER - Competences";
 const description = "Flavien PERIER's development and system skills.";
@@ -57,7 +58,19 @@ useSeoMeta({
   twitterDescription: description,
 });
 
+const { data: fetchedCompetences } = await useAsyncData(
+  "competences",
+  () =>
+    queryCollection("competences")
+      .order("lvl", "DESC")
+      .all() as Promise<Competence[]>
+);
+
 const competencesStore = useCompetencesStore();
+
+if (fetchedCompetences.value) {
+  competencesStore.initialize(fetchedCompetences.value);
+}
 
 const {
   competences,
@@ -65,8 +78,6 @@ const {
   competencesTypes,
   competenceIsChecked,
 } = storeToRefs(competencesStore);
-
-competencesStore.loadCompetences();
 </script>
 
 <style lang="scss" scoped>

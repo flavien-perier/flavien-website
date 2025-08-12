@@ -4,7 +4,7 @@
 
     <article class="row">
       <ExperiencesExperience
-          v-for="e in experiencesSorted"
+          v-for="e in experiences"
           :key="e.location"
           :experience="e"
       />
@@ -13,8 +13,7 @@
 </template>
 
 <script setup lang="ts">
-import { storeToRefs } from "pinia";
-import { useExperiencesStore } from "~/store/Experiences";
+import type Experience from "~/model/experiences/Experience";
 
 const title = "Flavien PERIER - Experiences";
 const description = "Flavien PERIER's working experiences.";
@@ -28,8 +27,10 @@ useSeoMeta({
   twitterDescription: description,
 });
 
-const experiencesStore = useExperiencesStore();
-const { experiencesSorted } = storeToRefs(experiencesStore);
-
-experiencesStore.loadExperiences();
+const { data: experiences } = await useAsyncData("experiences", () =>
+  queryCollection("experiences")
+    .order("end", "DESC")
+    .order("start", "DESC")
+    .all() as Promise<Experience[]>
+);
 </script>

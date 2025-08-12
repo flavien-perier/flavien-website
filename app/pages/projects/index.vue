@@ -3,14 +3,13 @@
     <h1 class="col-12 section-title" v-t="'projects'" />
 
     <article>
-      <ProjectsProject v-for="p in projectsSorted" :key="p.name" :project="p" />
+      <ProjectsProject v-for="p in projects" :key="p.name" :project="p" />
     </article>
   </section>
 </template>
 
 <script setup lang="ts">
-import { useProjectsStore } from "~/store/Projects";
-import { storeToRefs } from "pinia";
+import type Project from "~/model/projects/Project";
 
 const title = "Flavien PERIER - Projects";
 const description = "Some of the projects Flavien PERIER has worked on.";
@@ -24,8 +23,10 @@ useSeoMeta({
   twitterDescription: description,
 });
 
-const projectsStore = useProjectsStore();
-const { projectsSorted } = storeToRefs(projectsStore);
-
-projectsStore.loadProjects();
+const { data: projects } = await useAsyncData("projects", () =>
+    queryCollection("projects")
+        .order("end", "DESC")
+        .order("start", "DESC")
+        .all() as Promise<Project[]>
+);
 </script>

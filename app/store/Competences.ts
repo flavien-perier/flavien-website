@@ -1,5 +1,6 @@
 import { defineStore } from "pinia";
 import type Competence from "~/model/competences/Competence";
+import {competenceType} from "~/model/competences/competenceType";
 
 export const useCompetencesStore = defineStore("competences", {
   state: () => ({
@@ -8,26 +9,26 @@ export const useCompetencesStore = defineStore("competences", {
   }),
   getters: {
     competencesTypes: (state) => Object.keys(state.competencesCheckbox),
-    competenceIsChecked: (state) => (competenceId: string) =>
-      state.competencesCheckbox[competenceId],
+    competenceIsChecked: (state) => (competenceId: string) => {
+      if (!state.competencesCheckbox.hasOwnProperty(competenceId)) {
+        return false;
+      }
+      return state.competencesCheckbox[competenceId];
+    },
     allCompetencesIsChecked: (state) =>
       Object.keys(state.competencesCheckbox).every(
         (competenceId) => state.competencesCheckbox[competenceId]
       ),
   },
   actions: {
-    loadCompetences() {
-      if (this.competences.length == 0) {
-        $fetch<{ competences: Competence[] }>("data/competences.json").then((data) => {
-          this.competences = data.competences;
-          const competencesCheckbox: { [key: string]: boolean } = {};
-          this.competences
-            .map((c) => c.type)
-            .filter((value, index, self) => self.indexOf(value) == index)
-            .forEach((id) => (competencesCheckbox[id] = true));
-          this.competencesCheckbox = competencesCheckbox;
-        });
-      }
+    initialize(competences: Competence[]) {
+      this.competences = competences;
+      this.competencesCheckbox = competenceType
+        .reduce((acc: { [key: string]: boolean }, competence) => {
+            acc[competence] = true;
+            return acc;
+          }, {}
+        );
     },
     selectCompetence(competenceId: string) {
       this.competencesCheckbox[competenceId] =

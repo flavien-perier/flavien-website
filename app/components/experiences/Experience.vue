@@ -22,7 +22,7 @@
           {{ experience?.city }}
           <br />
           <strong>{{ $t("period") }} :</strong>
-          {{ experience.start }} - {{ experience.end || "*" }}
+          {{ experience.start }} - {{ experience.end }}
           <br />
         </p>
       </div>
@@ -44,7 +44,7 @@ const props = defineProps({
 const { experience } = toRefs(props);
 
 function description(): string {
-  const experienceValue = experience?.value as ExperienceModel;
+  const experienceValue = experience?.value as Experience;
   return i18n.locale.value === "fr"
     ? experienceValue.descriptionFr
     : experienceValue.descriptionEn;
