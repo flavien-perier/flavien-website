@@ -22,7 +22,7 @@ export default defineSitemapEventHandler(async (event) => {
     return data.files.map(f => {
       return {
         loc: `/wiki/${f.filename}`,
-        _sitemap: "pages",
+        _sitemap: "fr",
         changefreq: "weekly",
         priority: 0.8,
       };
