@@ -2,9 +2,11 @@ FROM node:22-alpine AS builder
 
 WORKDIR /opt/website
 
-COPY . .
+COPY package*.json .
+RUN npm ci
 
-RUN npm install && yes | npm run build
+COPY . .
+RUN yes | npm run build
 
 FROM node:22-alpine
 

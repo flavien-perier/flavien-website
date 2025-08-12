@@ -11,8 +11,8 @@ export const useHomeStore = defineStore("home", {
     async loadMarkdown() {
       if (this.content) return;
 
-      const base = import.meta.env.VITE_BASE_PATH || "";
-      const { data, error } = await useFetch<string>(base + "home.md", {
+      const config = useRuntimeConfig();
+      const { data, error } = await useFetch<string>(config.public.WIKI_BASE_PATH + "home.md", {
         responseType: "text",
         key: "home-md",
       });

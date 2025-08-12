@@ -14,11 +14,12 @@ export const useWikiStore = defineStore("wiki", {
     async loadArticles(page: number) {
       if (this.headers.length == 0 || this.page !== page) {
         this.page = page;
-        const { data, error } = await useFetch<Search>(import.meta.env.VITE_BASE_PATH, {
+        const config = useRuntimeConfig();
+        const { data, error } = await useFetch<Search>(config.public.WIKI_BASE_PATH, {
           query: {
             p: page,
             n: 10,
-            type: 'WIKI',
+            type: "WIKI",
           },
         });
 

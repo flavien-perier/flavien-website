@@ -40,7 +40,8 @@ export const useWikiArticleStore = defineStore("wikiArticle", {
   actions: {
     async loadArticle(name: string) {
       if (name !== this.articleName) {
-        const { data, error } = await useFetch<string>(import.meta.env.VITE_BASE_PATH + name, { responseType: 'text' });
+        const config = useRuntimeConfig();
+        const { data, error } = await useFetch<string>(config.public.WIKI_BASE_PATH + name, { responseType: "text" });
 
         if (error.value || !data.value) {
           console.error("Failed to load home.md:", error.value);
