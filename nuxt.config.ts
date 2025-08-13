@@ -1,12 +1,9 @@
-import {createResolver} from "@nuxt/kit";
-
-const {resolve} = createResolver(import.meta.url);
+import {purgeCssConfiguration} from "./purgecss.config";
 
 export default defineNuxtConfig({
   compatibilityDate: "2025-07-15",
   devtools: {enabled: true},
   modules: ["@nuxt/content", "@pinia/nuxt", "@nuxtjs/i18n", "@nuxtjs/sitemap"],
-  css: [resolve("./app/assets/scss/index.scss")],
 
   site: {
     url: "https://www.flavien.io/",
@@ -27,6 +24,7 @@ export default defineNuxtConfig({
 
   i18n: {
     defaultLocale: "fr",
+    strategy: "prefix_except_default",
     locales: [
       {code: "fr", name: "French", file: "fr.json"},
       {code: "en", name: "English", file: "en.json"},
@@ -39,4 +37,11 @@ export default defineNuxtConfig({
       "/api/__sitemap__/urls",
     ]
   },
+
+  postcss: {
+    plugins: {
+      "@fullhuman/postcss-purgecss": purgeCssConfiguration,
+      "cssnano": {},
+    }
+  }
 })

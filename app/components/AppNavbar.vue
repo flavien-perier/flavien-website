@@ -4,7 +4,7 @@
       <span class="navbar-toggler-icon"></span>
     </button>
 
-    <NuxtLink to="/" class="navbar-brand" @click="hide()">
+    <NuxtLink :to="localePath('/')" class="navbar-brand" @click="hide()">
       <img alt="logo" class="d-inline-block align-top" height="30" width="30" src="~/assets/img/logo.svg" />
       Flavien
     </NuxtLink>
@@ -12,31 +12,31 @@
     <div class="navbar-collapse" v-show="showNavbar">
       <ul class="navbar-nav">
         <li class="nav-item">
-          <NuxtLink to="/" class="nav-link" @click="hide()">
+          <NuxtLink :to="localePath('/')" class="nav-link" @click="hide()">
             <font-awesome-icon icon="home" />
             {{ $t("home") }}
           </NuxtLink>
         </li>
         <li class="nav-item">
-          <NuxtLink to="/competences" class="nav-link" @click="hide()">
+          <NuxtLink :to="localePath('/competences')" class="nav-link" @click="hide()">
             <font-awesome-icon icon="list" />
             {{ $t("competences") }}
           </NuxtLink>
         </li>
         <li class="nav-item">
-          <NuxtLink to="/experiences" class="nav-link" @click="hide()">
+          <NuxtLink :to="localePath('/experiences')" class="nav-link" @click="hide()">
             <font-awesome-icon icon="graduation-cap" />
             {{ $t("experiences") }}
           </NuxtLink>
         </li>
         <li class="nav-item">
-          <NuxtLink to="/projects" class="nav-link" @click="hide()">
+          <NuxtLink :to="localePath('/projects')" class="nav-link" @click="hide()">
             <font-awesome-icon icon="project-diagram" />
             {{ $t("projects") }}
           </NuxtLink>
         </li>
         <li class="nav-item">
-          <NuxtLink to="/wiki" class="nav-link" @click="hide()">
+          <NuxtLink :to="localePath('/wiki')" class="nav-link" @click="hide()">
             <font-awesome-icon icon="book" />
             {{ $t("wiki") }}
           </NuxtLink>
@@ -81,6 +81,8 @@ import { useI18n } from "vue-i18n";
 
 const i18n = useI18n();
 const showNavbar = ref(false);
+
+const localePath = useLocalePath();
 
 function collapse() {
   showNavbar.value = !showNavbar.value;

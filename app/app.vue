@@ -5,6 +5,8 @@
   </NuxtLayout>
 </template>
 <script setup lang="ts">
+import "~/assets/scss/index.scss";
+
 const title = "Flavien PERIER";
 const author = "Flavien PERIER";
 const description = "Flavien PERIER, french full stack developer. This website contains my CV and technical documentation on different subjects (Linux, Privacy...)";

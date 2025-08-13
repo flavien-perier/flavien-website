@@ -13,5 +13,6 @@ import {loadWallpaper} from "~/scripts/wallpaper";
 
 if (import.meta.client) {
   loadWallpaper();
+  window.addEventListener("resize", () => loadWallpaper());
 }
 </script>

@@ -89,8 +89,8 @@
   display: block;
   width: 75%;
   border: 10px solid #fff;
-  image-resolution: 20dpi;
   margin-left: auto;
   margin-right: auto;
+  image-rendering: pixelated;
 }
 </style>

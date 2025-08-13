@@ -50,7 +50,11 @@ class Color {
   }
 
   getCss(): string {
-    return `rgb(${this.red},${this.green},${this.blue})`;
+    // Lighten the color by 50% towards white for rendering only
+    const r = Math.round(this.red + (255 - this.red) * 0.5);
+    const g = Math.round(this.green + (255 - this.green) * 0.5);
+    const b = Math.round(this.blue + (255 - this.blue) * 0.5);
+    return `rgb(${r},${g},${b})`;
   }
 }
 

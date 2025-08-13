@@ -1,15 +1,48 @@
-@use "variables";
+@use "bootstrap/scss/bootstrap" as * with (
+  $theme-colors: (
+    dark: #343a40,
+    light: #f8f9fa,
+    article-information: #f9f9ff,
+    competence-framework: #e8b6b6d7,
+    competence-language: #d7d4ffd7,
+    competence-ide: #fff0d4d7,
+    competence-db: #b6e8d4d7,
+    competence-bigData: #edc4ffd7,
+    competence-dataScience: #c4ecffd7,
+    competence-os: #fad9bfd7,
+    competence-infra: #bfd2fad7,
+    competence-network: #fffddcd7,
+    competence-tool: #dcfdffd7,
+    competence-management: #cfb7cfd7,
+  ),
 
+  $container-max-widths: (
+    xl: 1400px,
+    xxl: 1500px,
+  ),
+
+  $enable-rounded: false,
+  $enable-grid-classes: true,
+
+  $list-group-item-padding-y: .75rem,
+  $list-group-item-padding-x: 1.25rem,
+
+  $navbar-padding-x: .75rem
+);
+@use "@fortawesome/fontawesome-svg-core/styles.css";
+
+@use "variables";
 @use "fonts";
 @use "animations";
 @use "article";
-@import "bootstrap-configuration";
-@import "bootstrap/scss/bootstrap";
-@import "@fortawesome/fontawesome-svg-core/styles.css";
-@import "print";
+@use "print";
 
 h1, h2, h3, h4, h5, h6 {
   font-family: title;
+}
+
+body {
+  background-color: #808080;
 }
 
 .cursor-pointer {
@@ -45,10 +78,9 @@ h1, h2, h3, h4, h5, h6 {
 
 #bg-canvas {
   position: fixed;
-  width: 100%;
-  height: 100%;
+  top: 0;
+  left: 0;
   z-index: -1000;
-  opacity: 0.5;
 }
 
 .bg-parallax {
