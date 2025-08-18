@@ -46,8 +46,10 @@ import { storeToRefs } from "pinia";
 import { useCompetencesStore } from "~/store/Competences";
 import type Competence from "~/model/competences/Competence";
 
-const title = "Flavien PERIER - Competences";
-const description = "Flavien PERIER's development and system skills.";
+const { t } = useI18n();
+
+const title = `Flavien PERIER - ${t("competences")}`;
+const description = t("competences.description");
 
 useSeoMeta({
   title: title,

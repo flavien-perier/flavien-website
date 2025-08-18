@@ -32,8 +32,10 @@
 import { useWikiStore } from "~/store/Wiki";
 import { storeToRefs } from "pinia";
 
-const title = "Flavien PERIER - Wiki";
-const description = "French wiki articles about Linux, Privacy and Security";
+const { t } = useI18n();
+
+const title = `Flavien PERIER - ${t("wiki")}`;
+const description = t("wiki.description");
 
 useSeoMeta({
   title: title,

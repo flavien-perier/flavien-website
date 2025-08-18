@@ -6,10 +6,14 @@
 </template>
 <script setup lang="ts">
 import "~/assets/scss/index.scss";
+import {useI18n} from "vue-i18n";
+
+const { t, locale } = useI18n();
 
 const title = "Flavien PERIER";
 const author = "Flavien PERIER";
-const description = "Flavien PERIER, french full stack developer. This website contains my CV and technical documentation on different subjects (Linux, Privacy...)";
+const description = t("home.description");
+
 
 useSeoMeta({
   title: title,
@@ -49,5 +53,8 @@ useHead({
 
     {name: "viewport", content: "width=device-width,initial-scale=1.0"},
   ],
+  htmlAttrs: {
+    lang: locale.value,
+  },
 });
 </script>

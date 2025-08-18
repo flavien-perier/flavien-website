@@ -11,8 +11,10 @@
 <script setup lang="ts">
 import type Project from "~/model/projects/Project";
 
-const title = "Flavien PERIER - Projects";
-const description = "Some of the projects Flavien PERIER has worked on.";
+const { t } = useI18n();
+
+const title = `Flavien PERIER - ${t("projects")}`;
+const description = t("projects.description");
 
 useSeoMeta({
   title: title,
