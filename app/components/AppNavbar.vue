@@ -1,6 +1,6 @@
 <template>
   <nav class="navbar navbar-dark fixed-top navbar-expand-lg bg-parallax container-fluid">
-    <button class="navbar-toggler" type="button" @click="collapse()">
+    <button class="navbar-toggler" type="button" @click="collapse()" :title="$t('menu')">
       <span class="navbar-toggler-icon"></span>
     </button>
 

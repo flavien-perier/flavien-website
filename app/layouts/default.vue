@@ -9,10 +9,19 @@
   <AppFooter />
 </template>
 <script setup lang="ts">
-import {loadWallpaper} from "~/scripts/wallpaper";
+import { onMounted, onBeforeUnmount } from "vue";
+import { loadWallpaper } from "~/scripts/wallpaper";
 
 if (import.meta.client) {
-  loadWallpaper();
-  window.addEventListener("resize", () => loadWallpaper());
+  let resizeHandler: (() => void) | null = null;
+
+  onMounted(() => {
+    loadWallpaper();
+    resizeHandler = loadWallpaper;
+    window.addEventListener("resize", resizeHandler);
+  });
+  onBeforeUnmount(() => {
+    if (resizeHandler) window.removeEventListener("resize", resizeHandler);
+  });
 }
 </script>
