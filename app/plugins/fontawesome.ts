@@ -1,5 +1,6 @@
-import { library, config } from '@fortawesome/fontawesome-svg-core'
-import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
+import { library, config } from "@fortawesome/fontawesome-svg-core";
+import { FontAwesomeIcon } from "@fortawesome/vue-fontawesome";
+
 import {
   faBook,
   faCode,
@@ -51,7 +52,8 @@ import {
   faTs,
   faVscode,
 } from "@/icons";
-config.autoAddCss = false
+
+config.autoAddCss = false;
 
 library.add(
   faHome,
@@ -99,9 +101,9 @@ library.add(
   faKafka,
   faIntellij,
   faNeo4j,
-  faScrum
+  faScrum,
 );
 
 export default defineNuxtPlugin((nuxtApp) => {
-  nuxtApp.vueApp.component('font-awesome-icon', FontAwesomeIcon)
-})
+  nuxtApp.vueApp.component("font-awesome-icon", FontAwesomeIcon);
+});

@@ -2,13 +2,14 @@
   <div class="mb-3 col-lg-4 col-md-6 col-sm-12" @click="check()">
     <div class="input-group">
       <div class="input-group-text">
-        <input :checked="selected" type="checkbox" />
+        <input :id="`competence-${competenceTypeId}`" :checked="selected" type="checkbox" />
       </div>
-      <span
+      <label
+        :for="`competence-${competenceTypeId}`"
         :class="`input-group-text competence-title bg-competence-${competenceTypeId}`"
       >
         {{ $t(competenceTypeId) }}
-      </span>
+      </label>
     </div>
   </div>
 </template>

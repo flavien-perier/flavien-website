@@ -7,13 +7,13 @@ export default defineNuxtConfig({
 
   site: {
     url: "https://www.flavien.io/",
-    name: "Flavien PERIER"
+    name: "Flavien PERIER",
   },
 
   app: {
     head: {
-      link: [{rel: "icon", type: "image/x-icon", href: "/favicon.svg"}]
-    }
+      link: [{rel: "icon", type: "image/x-icon", href: "/favicon.svg"}],
+    },
   },
 
   runtimeConfig: {
@@ -22,26 +22,35 @@ export default defineNuxtConfig({
     },
   },
 
+  build: {
+    transpile: [
+      "@fortawesome/vue-fontawesome",
+      "@fortawesome/fontawesome-svg-core",
+      "@fortawesome/free-solid-svg-icons",
+      "@fortawesome/free-brands-svg-icons",
+    ],
+  },
+
   i18n: {
     defaultLocale: "fr",
     strategy: "prefix_except_default",
     locales: [
       {code: "fr", name: "French", file: "fr.json"},
       {code: "en", name: "English", file: "en.json"},
-    ]
+    ],
   },
 
   sitemap: {
     cacheMaxAgeSeconds: 3600,
     sources: [
       "/api/__sitemap__/urls",
-    ]
+    ],
   },
 
   postcss: {
     plugins: {
       "@fullhuman/postcss-purgecss": purgeCssConfiguration,
       "cssnano": {},
-    }
-  }
-})
+    },
+  },
+});

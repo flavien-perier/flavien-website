@@ -34,11 +34,11 @@ defineProps({
 function categoryToFa(category: string) {
   switch (category) {
     case "system":
-      return ["fa", "terminal"];
+      return ["fas", "terminal"];
     case "security":
-      return ["fa", "lock"];
+      return ["fas", "lock"];
     case "development":
-      return ["fa", "code"];
+      return ["fas", "code"];
   }
 }
 </script>

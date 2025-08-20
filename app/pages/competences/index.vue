@@ -9,13 +9,14 @@
           @click="competencesStore.selectAllCompetences()"
       >
         <input
+            id="select-all"
             :checked="allCompetencesIsChecked"
             class="custom-control-input"
             type="checkbox"
         />
-        <span class="custom-control-label select-all-text d-none d-sm-inline">
+        <label for="select-all" class="custom-control-label select-all-text d-none d-sm-inline">
           {{ allCompetencesIsChecked ? $t("unselectAll") : $t("selectAll") }}
-        </span>
+        </label>
       </div>
       <h2 class="text-center">{{ $t("filters") }}</h2>
       <hr />
