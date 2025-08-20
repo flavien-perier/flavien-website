@@ -4,17 +4,17 @@
 
     <article class="box container position-relative">
       <div
-          id="select-all"
+          id="select-all-group"
           class="custom-control custom-checkbox"
-          @click="competencesStore.selectAllCompetences()"
       >
         <input
             id="select-all"
             :checked="allCompetencesIsChecked"
             class="custom-control-input"
             type="checkbox"
+            @click="competencesStore.selectAllCompetences()"
         />
-        <label for="select-all" class="custom-control-label select-all-text d-none d-sm-inline">
+        <label for="select-all" class="custom-control-label d-none d-sm-inline cursor-pointer">
           {{ allCompetencesIsChecked ? $t("unselectAll") : $t("selectAll") }}
         </label>
       </div>
@@ -84,9 +84,8 @@ const {
 </script>
 
 <style lang="scss" scoped>
-#select-all {
+#select-all-group {
   position: absolute;
-  cursor: pointer;
   left: 1.6rem;
   top: 1.2rem;
 

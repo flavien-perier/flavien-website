@@ -1,8 +1,8 @@
 <template>
-  <div class="mb-3 col-lg-4 col-md-6 col-sm-12" @click="check()">
+  <div class="mb-3 col-lg-4 col-md-6 col-sm-12">
     <div class="input-group">
       <div class="input-group-text">
-        <input :id="`competence-${competenceTypeId}`" :checked="selected" type="checkbox" />
+        <input :id="`competence-${competenceTypeId}`" :checked="selected" type="checkbox" @click="check()" />
       </div>
       <label
         :for="`competence-${competenceTypeId}`"
