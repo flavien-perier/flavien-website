@@ -12,7 +12,11 @@ export default defineNuxtConfig({
 
   app: {
     head: {
-      link: [{rel: "icon", type: "image/x-icon", href: "/favicon.svg"}],
+      link: [
+        { rel: "icon", type: "image/svg+xml", href: "/favicon.svg" },
+        { rel: "icon", type: "image/x-icon", href: "/favicon.ico" },
+        { rel: "apple-touch-icon", href: "/favicon.svg" },
+      ],
     },
   },
 

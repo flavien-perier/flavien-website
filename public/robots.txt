@@ -1,9 +1,4 @@
 User-Agent: *
 Allow: *
-Disallow: /css/
-Disallow: /data/
-Disallow: /fonts/
-Disallow: /img/
-Disallow: /js/
 
-Sitemap: https://www.flavien.io/sitemap.xml
+Sitemap: https://www.flavien.io/sitemap_index.xml

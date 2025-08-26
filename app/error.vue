@@ -20,6 +20,7 @@ const { error } = defineProps({
 });
 
 useSeoMeta({
-  title: error?.statusCode,
+  title: String(error?.statusCode || ""),
+  robots: "noindex, nofollow",
 });
 </script>
