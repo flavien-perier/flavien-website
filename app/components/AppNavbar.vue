@@ -1,13 +1,13 @@
 <template>
   <nav class="navbar navbar-dark fixed-top navbar-expand-lg bg-parallax container-fluid">
-    <button class="navbar-toggler" type="button" @click="collapse()" :title="$t('menu')">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-
     <NuxtLink :to="localePath('/')" class="navbar-brand" @click="hide()">
       <img alt="logo" class="d-inline-block align-top" height="30" width="30" src="~/assets/img/logo.svg" />
       Flavien
     </NuxtLink>
+
+    <button class="navbar-toggler" type="button" @click="collapse()" :title="$t('menu')">
+      <span class="navbar-toggler-icon"></span>
+    </button>
 
     <div class="navbar-collapse" v-show="showNavbar">
       <ul class="navbar-nav">

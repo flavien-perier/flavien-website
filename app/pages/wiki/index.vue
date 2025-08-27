@@ -1,31 +1,29 @@
 <template>
-  <section class="container">
-    <h1 class="col-12 section-title">{{ $t("wiki") }}</h1>
+  <h1>{{ $t("wiki") }}</h1>
 
-    <article class="row">
-      <WikiArticleLink v-for="h in headers" :key="h.date" :header="h" />
-    </article>
+  <div class="row">
+    <WikiArticleLink v-for="h in headers" :key="h.date" :header="h" />
+  </div>
 
-    <div class="container">
-      <p class="col-12 page-indicator">
-        <span
-            v-if="page > 1"
-            class="cursor-pointer"
-            @click="wikiStore.loadArticles(page - 1)"
-        >
-          {{ $t("previous") }} -
-        </span>
-        {{ $t("page") }}: {{ page }}/{{ numberOfPages }}
-        <span
-            v-if="page < numberOfPages"
-            class="cursor-pointer"
-            @click="wikiStore.loadArticles(page + 1)"
-        >
-          - {{ $t("next") }}
-        </span>
-      </p>
-    </div>
-  </section>
+  <div class="container">
+    <p class="col-12 page-indicator">
+      <span
+          v-if="page > 1"
+          class="cursor-pointer"
+          @click="wikiStore.loadArticles(page - 1)"
+      >
+        {{ $t("previous") }} -
+      </span>
+      {{ $t("page") }}: {{ page }}/{{ numberOfPages }}
+      <span
+          v-if="page < numberOfPages"
+          class="cursor-pointer"
+          @click="wikiStore.loadArticles(page + 1)"
+      >
+        - {{ $t("next") }}
+      </span>
+    </p>
+  </div>
 </template>
 
 <script setup lang="ts">
@@ -51,3 +49,11 @@ const { headers, page, numberOfPages } = storeToRefs(wikiStore);
 
 wikiStore.loadArticles(1);
 </script>
+
+<style lang="scss" scoped>
+.page-indicator {
+  color: #fff;
+  text-shadow: 0 0 .5rem #000;
+  text-align: center;
+}
+</style>

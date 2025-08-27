@@ -20,3 +20,7 @@
   font-family: "print";
   src: local("ryman-eco"), local("ryman eco"), url("../fonts/ryman-eco.woff2") format("woff2");
 }
+
+h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
+  font-family: title, sans-serif;
+}

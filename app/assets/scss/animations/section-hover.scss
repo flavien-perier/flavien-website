@@ -1,4 +1,4 @@
-@keyframes box-hover {
+@keyframes section-hover {
   0% {
     transform: rotate(0deg)
   }
@@ -13,7 +13,7 @@
   }
 }
 
-.box-hover:hover {
-  animation-name: box-hover;
+.section-hover:hover {
+  animation-name: section-hover;
   animation-duration: 0.5s;
 }

@@ -4,7 +4,7 @@
     class="col-12 col-lg-6"
     style="color: inherit; text-decoration: inherit"
   >
-    <div class="row mx-auto box box-hover">
+    <section class="row mx-auto section-hover">
       <div class="text-center col-12">
         <h2>{{ experience.location }}</h2>
         <hr />
@@ -26,7 +26,7 @@
           <br />
         </p>
       </div>
-    </div>
+    </section>
   </a>
 </template>
 
@@ -52,7 +52,7 @@ function description(): string {
 </script>
 
 <style lang="scss" scoped>
-.box {
+section {
   height: 17rem;
   overflow: hidden;
 }

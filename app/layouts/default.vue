@@ -4,7 +4,9 @@
   <AppNavbar />
   <AppHeader />
 
-  <slot class="mt-5 mt-lg-0" />
+  <main class="mt-5 mt-lg-0 container">
+    <slot />
+  </main>
 
   <AppFooter />
 </template>

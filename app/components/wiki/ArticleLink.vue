@@ -4,7 +4,7 @@
     class="col-12 col-md-6"
     style="color: inherit; text-decoration: inherit"
   >
-    <div class="box box-hover text-article col-12">
+    <section class="section-hover text-article col-12">
       <h2 class="text-center">{{ header.title }}</h2>
       <hr />
       <div class="content">{{ header.description }}</div>
@@ -18,7 +18,7 @@
           <font-awesome-icon :icon="categoryToFa(category)" />
         </span>
       </div>
-    </div>
+    </section>
   </NuxtLink>
 </template>
 

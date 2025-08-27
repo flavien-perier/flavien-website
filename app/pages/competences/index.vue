@@ -1,45 +1,43 @@
 <template>
-  <section class="container">
-    <h1 class="col-12 section-title">{{ $t("competences") }}</h1>
+<h1>{{ $t("competences") }}</h1>
 
-    <article class="box container position-relative">
-      <div
-          id="select-all-group"
-          class="custom-control custom-checkbox"
-      >
-        <input
-            id="select-all"
-            :checked="allCompetencesIsChecked"
-            class="custom-control-input"
-            type="checkbox"
-            @click="competencesStore.selectAllCompetences()"
-        />
-        <label for="select-all" class="custom-control-label d-none d-sm-inline cursor-pointer">
-          {{ allCompetencesIsChecked ? $t("unselectAll") : $t("selectAll") }}
-        </label>
-      </div>
-      <h2 class="text-center">{{ $t("filters") }}</h2>
-      <hr />
-
-      <div class="row">
-        <CompetencesCompetenceType
-            v-for="id in competencesTypes"
-            :key="id"
-            :competenceTypeId="id"
-            :selected="competenceIsChecked(id)"
-            @check="competencesStore.selectCompetence(id)"
-        />
-      </div>
-    </article>
-
-    <article class="row">
-      <CompetencesCompetence
-          v-for="c in competences.filter((c) => competenceIsChecked(c.type))"
-          :key="c.label"
-          :competence="c"
+  <section class="container position-relative">
+    <div
+        id="select-all-group"
+        class="custom-control custom-checkbox"
+    >
+      <input
+          id="select-all"
+          :checked="allCompetencesIsChecked"
+          class="custom-control-input"
+          type="checkbox"
+          @click="competencesStore.selectAllCompetences()"
       />
-    </article>
+      <label for="select-all" class="custom-control-label d-none d-sm-inline cursor-pointer">
+        {{ allCompetencesIsChecked ? $t("unselectAll") : $t("selectAll") }}
+      </label>
+    </div>
+    <h2 class="text-center">{{ $t("filters") }}</h2>
+    <hr />
+
+    <div class="row">
+      <CompetencesCompetenceType
+          v-for="id in competencesTypes"
+          :key="id"
+          :competenceTypeId="id"
+          :selected="competenceIsChecked(id)"
+          @check="competencesStore.selectCompetence(id)"
+      />
+    </div>
   </section>
+
+  <div class="row">
+    <CompetencesCompetence
+        v-for="c in competences.filter((c) => competenceIsChecked(c.type))"
+        :key="c.label"
+        :competence="c"
+    />
+  </div>
 </template>
 
 <script setup lang="ts">

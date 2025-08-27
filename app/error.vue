@@ -1,13 +1,11 @@
 <template>
   <NuxtLayout name="default">
-    <section class="container">
-      <h1 class="col-12 section-title">
-        {{ error?.statusCode }}
-      </h1>
-      <article class="box container position-relative">
+    <div class="container">
+      <h1>{{ error?.statusCode }}</h1>
+      <article class="position-relative">
         {{ error?.message }}
       </article>
-    </section>
+    </div>
   </NuxtLayout>
 
 </template>

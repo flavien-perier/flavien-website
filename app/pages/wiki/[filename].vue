@@ -1,22 +1,20 @@
 <template>
-  <section class="container">
-    <h1 class="col-12 section-title">{{ title }}</h1>
-    <article class="box text-article">
-      <div class="row">
-        <div class="col-12 col-lg-8">
-          <h2 class="text-left text-lg-center">{{ $t("tableOfContents") }}</h2>
-          <WikiTableOfContents :htmlContent="content" />
-        </div>
-
-        <div class="col-12 col-lg-4">
-          <h2 class="text-left text-lg-center">{{ $t("information") }}</h2>
-          <WikiArticleInformation :author="author" :date="date" />
-        </div>
+  <h1>{{ title }}</h1>
+  <article class="text-article">
+    <div class="row">
+      <div class="col-12 col-lg-8">
+        <h2 class="text-left text-lg-center">{{ $t("tableOfContents") }}</h2>
+        <WikiTableOfContents :htmlContent="content" />
       </div>
 
-      <div v-html="content"></div>
-    </article>
-  </section>
+      <div class="col-12 col-lg-4">
+        <h2 class="text-left text-lg-center">{{ $t("information") }}</h2>
+        <WikiArticleInformation :author="author" :date="date" />
+      </div>
+    </div>
+
+    <div v-html="content"></div>
+  </article>
 </template>
 
 <script setup lang="ts">

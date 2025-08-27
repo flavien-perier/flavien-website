@@ -1,11 +1,7 @@
 <template>
-  <section class="container">
-    <h1 class="col-12 section-title">{{ $t("projects") }}</h1>
+  <h1>{{ $t("projects") }}</h1>
 
-    <article>
-      <ProjectsProject v-for="p in projects" :key="p.name" :project="p" />
-    </article>
-  </section>
+  <ProjectsProject v-for="p in projects" :key="p.name" :project="p" />
 </template>
 
 <script setup lang="ts">

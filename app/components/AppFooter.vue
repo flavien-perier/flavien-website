@@ -3,7 +3,7 @@
     <div class="container">
       <div class="row">
         <div class="col-3 d-none d-lg-block my-auto">
-          <h2 class="text-center text-light">{{ $t("scanMe") }}</h2>
+          <p class="h2 text-center text-light">{{ $t("scanMe") }}</p>
           <img id="qr-code" alt="qr-code" src="~/assets/img/qr-code.png" />
         </div>
         <div class="list-group mx-auto col-12 pe-0 col-lg-6 pe-lg-2">

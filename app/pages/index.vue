@@ -1,8 +1,6 @@
 <template>
-  <section class="container">
-    <h1 class="col-12 section-title">{{ $t("home") }}</h1>
-    <div class="box text-article" v-html="content"></div>
-  </section>
+  <h1>{{ $t("home") }}</h1>
+  <article class="text-article" v-html="content"></article>
 </template>
 
 <script setup lang="ts">

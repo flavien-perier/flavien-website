@@ -1,5 +1,5 @@
 <template>
-  <div class="col-12 box">
+  <section class="col-12">
     <div class="text-center col-12">
       <h2>{{ project.name }}</h2>
       <hr />
@@ -20,7 +20,7 @@
       </div>
       {{ description() }}
     </div>
-  </div>
+  </section>
 </template>
 
 <script setup lang="ts">

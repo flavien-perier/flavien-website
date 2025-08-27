@@ -1,6 +1,6 @@
 <template>
   <header class="d-none d-lg-flex bg-parallax">
-    <h1 class="display-4">Flavien PERIER</h1>
+    <p class="h1 display-4">Flavien PERIER</p>
     <p class="lead">{{ $t("fullStackDeveloper") }}</p>
   </header>
 </template>
