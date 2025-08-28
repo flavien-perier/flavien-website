@@ -1,28 +1,8 @@
 import {defineStore} from "pinia";
 import { useFetch } from "#app";
 import type Markdown from "~/model/wiki/Markdown";
-import {marked} from "marked";
-import type {Tokens} from "marked";
 import YAML from "yaml";
-
-const renderer = new marked.Renderer();
-renderer.heading = ({tokens, depth}) => {
-  const content = tokens.map(token => {
-    const raw = token as (Tokens.Text | Tokens.Link);
-
-    const {text} = raw;
-    const href = raw.type === "link" ? raw.href : null;
-
-    return href ? `<a href=${href}>${text}</a>` : text;
-  }).join("");
-
-  const id = content.toLowerCase()
-    .replace(/<.*?>/g, "")
-    .normalize("NFD").replace(/[\u0300-\u036f]/g, "")
-    .replace(/[^a-zA-Z]+/g, "_");
-
-  return `<h${depth} id="${id}">${content}</h${depth}>`;
-};
+import { markdownRenderer } from "~/scripts/markdownRenderer";
 
 export const useWikiArticleStore = defineStore("wikiArticle", {
   state: () => ({
@@ -52,7 +32,7 @@ export const useWikiArticleStore = defineStore("wikiArticle", {
         const pattern = /^---(.*?)---(.*)$/s.exec(data.value)!;
 
         this.header = YAML.parse(pattern[1] || "");
-        this.content = marked(pattern[2] || "", {renderer}) as string;
+        this.content = markdownRenderer(pattern[2] || "");
       }
     },
   },

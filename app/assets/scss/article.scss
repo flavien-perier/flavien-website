@@ -38,17 +38,17 @@ article {
   }
 
   code {
-    padding: .1rem;
+    padding: .1rem variables.$border-radius-light;
     border-radius: variables.$border-radius-light;
-    background-color: #222;
+    background-color: #1c1b1b;
     color: #fff;
   }
 
   pre {
     display: block;
-    padding: .5rem;
+    padding: .3rem;
     border-radius: variables.$border-radius-light;
-    background-color: #222;
+    background-color: #1c1b1b;
     max-height: 35rem;
   }
 }

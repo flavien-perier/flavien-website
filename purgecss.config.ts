@@ -71,5 +71,6 @@ export const purgeCssConfiguration = {
     /data-v-.*/,
     /svg.*/,
     /fa.*/,
+    /.*hljs.*/,
   ],
 } as UserDefinedOptions;
