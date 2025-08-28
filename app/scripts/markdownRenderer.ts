@@ -2,9 +2,12 @@ import {marked} from "marked";
 import type {Tokens} from "marked";
 
 import hljs from "highlight.js/lib/core";
+import plaintext from "highlight.js/lib/languages/plaintext";
 import json from "highlight.js/lib/languages/json";
 import yaml from "highlight.js/lib/languages/yaml";
 import xml from "highlight.js/lib/languages/xml";
+import properties from "highlight.js/lib/languages/properties";
+import ini from "highlight.js/lib/languages/ini";
 import bash from "highlight.js/lib/languages/bash";
 import java from "highlight.js/lib/languages/java";
 import kotlin from "highlight.js/lib/languages/kotlin";
@@ -13,9 +16,14 @@ import dockerfile from "highlight.js/lib/languages/dockerfile";
 
 const renderer = new marked.Renderer();
 
+hljs.registerLanguage("txt", plaintext);
+hljs.registerLanguage("plaintext", plaintext);
 hljs.registerLanguage("json", json);
 hljs.registerLanguage("yaml", yaml);
 hljs.registerLanguage("xml", xml);
+hljs.registerLanguage("conf", properties);
+hljs.registerLanguage("properties", properties);
+hljs.registerLanguage("ini", ini);
 hljs.registerLanguage("bash", bash);
 hljs.registerLanguage("java", java);
 hljs.registerLanguage("kotlin", kotlin);
