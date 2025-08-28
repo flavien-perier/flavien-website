@@ -1,6 +1,6 @@
 <template>
   <h1>{{ $t("home") }}</h1>
-  <article class="text-article" v-html="content"></article>
+  <article v-html="content"></article>
 </template>
 
 <script setup lang="ts">

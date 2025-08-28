@@ -1,7 +1,7 @@
 <template>
 <h1>{{ $t("competences") }}</h1>
 
-  <section class="container position-relative">
+  <section>
     <div
         id="select-all-group"
         class="custom-control custom-checkbox"

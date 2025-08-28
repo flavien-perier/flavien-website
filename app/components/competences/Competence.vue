@@ -5,7 +5,7 @@
     style="color: inherit; text-decoration: inherit"
   >
     <section :class="`row mx-auto section-hover bg-competence-${competence.type}`">
-      <div class="text-center col-12">
+      <div class="text-center">
         <h2>
           <font-awesome-icon :icon="competence.faIcon.split(' ')" />
           {{ competence.label }}

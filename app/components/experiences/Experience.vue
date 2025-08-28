@@ -5,7 +5,7 @@
     style="color: inherit; text-decoration: inherit"
   >
     <section class="row mx-auto section-hover">
-      <div class="text-center col-12">
+      <div class="text-center">
         <h2>{{ experience.location }}</h2>
         <hr />
       </div>

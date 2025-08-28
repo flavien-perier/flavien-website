@@ -1,6 +1,6 @@
 <template>
   <h1>{{ title }}</h1>
-  <article class="text-article">
+  <article>
     <div class="row">
       <div class="col-12 col-lg-8">
         <h2 class="text-left text-lg-center">{{ $t("tableOfContents") }}</h2>

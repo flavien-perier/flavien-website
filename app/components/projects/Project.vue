@@ -1,18 +1,18 @@
 <template>
-  <section class="col-12">
-    <div class="text-center col-12">
+  <section>
+    <div class="text-center">
       <h2>{{ project.name }}</h2>
       <hr />
     </div>
 
-    <div class="col-12">
+    <div>
       <h3 class="text-left">{{ $t("technos") }}</h3>
       <ul>
         <li v-for="t in project.technos" :key="t">{{ t }}</li>
       </ul>
     </div>
 
-    <div class="col-12">
+    <div>
       <div>
         <h3 class="text-left d-inline-block">{{ $t("description") }}</h3>
         ({{ $t(project.experience) }} {{ $t("in") }} {{ project.start }} -
