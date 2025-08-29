@@ -46,7 +46,7 @@ article {
 
   pre {
     display: block;
-    padding: .3rem;
+    padding: variables.$border-radius-light;
     border-radius: variables.$border-radius-light;
     background-color: #1c1b1b;
     max-height: 35rem;

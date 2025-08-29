@@ -52,8 +52,12 @@ renderer.heading = ({tokens, depth}) => {
 
 renderer.code = ({text, lang, escaped}) => {
   console.log(text, lang, escaped);
-  const code = hljs.highlight(text, { language: lang || "" }).value;
-  return `<pre><code class="hljs ${lang}">${code}</code></pre>`;
+  try {
+    const code = hljs.highlight(text, { language: lang || "" }).value;
+    return `<pre><code class="hljs ${lang}">${code}</code></pre>`;
+  } catch (e) {
+    return `<pre><code class="${lang}">${text}</code></pre>`;
+  }
 };
 
 export function markdownRenderer(markdown: string) {
