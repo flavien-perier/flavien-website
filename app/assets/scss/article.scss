@@ -1,4 +1,5 @@
-@use "variables";
+@use "variables" as *;
+@use "highlight.js/styles/stackoverflow-dark.css";
 
 article {
   text-align: justify;
@@ -38,17 +39,35 @@ article {
   }
 
   code {
-    padding: .1rem variables.$border-radius-light;
-    border-radius: variables.$border-radius-light;
-    background-color: #1c1b1b;
-    color: #fff;
+    padding: .2rem $border-radius-light;
+    border-radius: $border-radius-light;
+    background-color: $code-background-color;
+    color: $code-color;
   }
 
-  pre {
+  .code-container {
     display: block;
-    padding: variables.$border-radius-light;
-    border-radius: variables.$border-radius-light;
-    background-color: #1c1b1b;
-    max-height: 35rem;
+    position: relative;
+    border-radius: $border-radius-light;
+    background-color: $code-background-color;
+
+    .code-header {
+      position: absolute;
+      top: $border-radius-light;
+      right: $border-radius-light;
+      z-index: 1000;
+      color: $code-type-color;
+    }
+
+    pre {
+      padding-top: 1rem + $border-radius-light;
+      display: block;
+      max-height: 35rem;
+      overflow: hidden;
+
+      &:hover, &:focus {
+        overflow: auto;
+      }
+    }
   }
 }

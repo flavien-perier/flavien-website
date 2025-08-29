@@ -2,7 +2,7 @@ import {purgeCssConfiguration} from "./purgecss.config";
 
 export default defineNuxtConfig({
   compatibilityDate: "2025-07-15",
-  devtools: {enabled: true},
+  devtools: {enabled: false},
   modules: ["@nuxt/content", "@pinia/nuxt", "@nuxtjs/i18n", "@nuxtjs/sitemap"],
 
   site: {
