@@ -2,7 +2,6 @@
 @use "highlight.js/styles/stackoverflow-dark.css";
 
 article {
-  text-align: justify;
   padding: 1rem !important;
   line-height: 1.75;
 
@@ -52,6 +51,7 @@ article {
     background-color: $code-background-color;
 
     .code-header {
+      display: none;
       position: absolute;
       top: $border-radius-light;
       right: $border-radius-light;
@@ -59,8 +59,13 @@ article {
       color: $code-type-color;
     }
 
+    &:hover {
+      .code-header {
+        display: block;
+      }
+    }
+
     pre {
-      padding-top: 1rem + $border-radius-light;
       display: block;
       max-height: 35rem;
       overflow: hidden;

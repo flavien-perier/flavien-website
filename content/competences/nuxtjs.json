@@ -1,0 +1,12 @@
+{
+  "label": "NuxtJs",
+  "faIcon": "fab vuejs",
+  "descriptionFr": "Framework basé sur VueJs pour optimiser le SEO.",
+  "descriptionEn": "VueJs based framework for optimizing SEO.",
+  "url": "https://nuxt.com/",
+  "type": "framework",
+  "experiences": [
+    "personal"
+  ],
+  "lvl": 60
+}
