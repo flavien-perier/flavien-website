@@ -1,0 +1,14 @@
+{
+  "name": "Dawex",
+  "descriptionFr": "Technologie francaise d'échange de données.",
+  "descriptionEn": "French data exchange technology.",
+  "technos": [
+    "Java",
+    "Spring",
+    "MongoDB",
+    "Vue3",
+    "Docker"
+  ],
+  "experience": "Dawex",
+  "start": 2026
+}

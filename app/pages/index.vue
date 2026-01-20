@@ -4,10 +4,11 @@
 </template>
 
 <script setup lang="ts">
+import { watch } from "vue";
 import { storeToRefs } from "pinia";
 import { useHomeStore } from "~/store/Home";
 
-const { t } = useI18n();
+const { t, locale } = useI18n();
 const title = `Flavien PERIER - ${t("home")}`;
 const description = t("home.description");
 
@@ -23,5 +24,9 @@ useSeoMeta({
 const homeStore = useHomeStore();
 const { content } = storeToRefs(homeStore);
 
-homeStore.loadMarkdown();
+watch(locale, (newLocale) => {
+  homeStore.loadMarkdown(newLocale);
+});
+
+homeStore.loadMarkdown(locale.value);
 </script>

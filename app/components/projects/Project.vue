@@ -29,7 +29,7 @@ import type { PropType } from "vue";
 import type ProjectModel from "~/model/projects/Project";
 import { useI18n } from "vue-i18n";
 
-const i18n = useI18n();
+const { locale } = useI18n();
 
 const props = defineProps({
   project: { type: Object as PropType<ProjectModel>, required: true },
@@ -38,7 +38,7 @@ const { project } = toRefs(props);
 
 function description(): string {
   const projectValue = project?.value as ProjectModel;
-  return i18n.locale.value === "fr"
+  return locale.value === "fr"
     ? projectValue.descriptionFr
     : projectValue.descriptionEn;
 }

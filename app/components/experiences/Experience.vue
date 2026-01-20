@@ -36,7 +36,7 @@ import type { PropType } from "vue";
 import type Experience from "~/model/experiences/Experience";
 import { useI18n } from "vue-i18n";
 
-const i18n = useI18n();
+const { locale } = useI18n();
 
 const props = defineProps({
   experience: { type: Object as PropType<Experience>, required: true },
@@ -45,7 +45,7 @@ const { experience } = toRefs(props);
 
 function description(): string {
   const experienceValue = experience?.value as Experience;
-  return i18n.locale.value === "fr"
+  return locale.value === "fr"
     ? experienceValue.descriptionFr
     : experienceValue.descriptionEn;
 }

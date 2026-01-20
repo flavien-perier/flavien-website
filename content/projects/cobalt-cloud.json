@@ -4,7 +4,8 @@
   "descriptionEn": "Orange research project aiming to set up a SaaS platform, capable of adding metadata automatically to media. For example, generate subtitles for a video thanks to its soundtrack.",
   "technos": [
     "Kubernetes",
-    "Java"
+    "Java",
+    "Spring"
   ],
   "experience": "Orange",
   "start": 2020,
