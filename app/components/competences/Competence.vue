@@ -21,7 +21,9 @@
       <div class="d-none d-lg-block col-6">
         <h3 class="text-left text-lg-center">{{ $t("enterprises") }}</h3>
         <ul class="description">
-          <li v-for="e in competence.experiences" :key="e">{{ $t(e) }}</li>
+          <li v-for="e in competence.experiences" :key="e">
+            {{ e === "personal" ? $t("personal") : e }}
+          </li>
         </ul>
       </div>
 
