@@ -8,7 +8,7 @@ RUN npm ci
 COPY . .
 RUN npm run build
 
-FROM node:22-alpine
+FROM node:24-alpine
 
 LABEL org.opencontainers.image.title="Flavien website" \
       org.opencontainers.image.description="Flavien website" \
