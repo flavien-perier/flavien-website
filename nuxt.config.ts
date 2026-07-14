@@ -26,6 +26,8 @@ export default defineNuxtConfig({
     },
   },
 
+  css: ["~/assets/scss/index.scss"],
+
   build: {
     transpile: [
       "@fortawesome/vue-fontawesome",

@@ -5,7 +5,6 @@
   </NuxtLayout>
 </template>
 <script setup lang="ts">
-import "~/assets/scss/index.scss";
 import {useI18n} from "vue-i18n";
 import type {Graph} from "schema-dts";
 
