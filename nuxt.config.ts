@@ -46,6 +46,13 @@ export default defineNuxtConfig({
     ],
   },
 
+  content: {
+    database: {
+      type: "sqlite",
+      filename: ":memory:",
+    },
+  },
+
   sitemap: {
     cacheMaxAgeSeconds: 3600,
     sources: [
