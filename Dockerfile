@@ -1,4 +1,4 @@
-FROM node:24-alpine AS builder
+FROM node:26 AS builder
 
 WORKDIR /opt/website
 
@@ -8,7 +8,7 @@ RUN npm ci
 COPY . .
 RUN npm run build
 
-FROM node:24-alpine
+FROM node:26-alpine
 
 LABEL org.opencontainers.image.title="Flavien website" \
       org.opencontainers.image.description="Flavien website" \
