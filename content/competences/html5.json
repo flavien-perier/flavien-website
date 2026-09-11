@@ -1,0 +1,10 @@
+{
+  "label": "HTML5",
+  "faIcon": "fab html5",
+  "descriptionFr": "Langage de balisage pour la création de pages web.",
+  "descriptionEn": "Markup language for creating web pages.",
+  "url": "https://developer.mozilla.org/fr/docs/Web/HTML",
+  "type": "language",
+  "experiences": ["Tixeo", "Néo-Soft", "Orange", "personal", "Dawex"],
+  "lvl": 80
+}

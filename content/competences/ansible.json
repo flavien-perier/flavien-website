@@ -1,0 +1,10 @@
+{
+  "label": "Ansible",
+  "faIcon": "fas server",
+  "descriptionFr": "Outil d'automatisation et de gestion de configuration.",
+  "descriptionEn": "Automation and configuration management tool.",
+  "url": "https://www.ansible.com/",
+  "type": "tool",
+  "experiences": ["personal"],
+  "lvl": 50
+}

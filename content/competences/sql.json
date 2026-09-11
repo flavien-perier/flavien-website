@@ -1,0 +1,10 @@
+{
+  "label": "SQL",
+  "faIcon": "fas database",
+  "descriptionFr": "Langage de requête pour bases de données relationnelles.",
+  "descriptionEn": "Query language for relational databases.",
+  "url": "https://fr.wikipedia.org/wiki/Structured_Query_Language",
+  "type": "db",
+  "experiences": ["Tixeo", "Néo-Soft", "Orange"],
+  "lvl": 70
+}

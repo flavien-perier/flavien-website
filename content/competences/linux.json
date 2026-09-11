@@ -1,0 +1,10 @@
+{
+  "label": "Linux",
+  "faIcon": "fab linux",
+  "descriptionFr": "Système d'exploitation open source.",
+  "descriptionEn": "Open source operating system.",
+  "url": "https://www.linux.org/",
+  "type": "os",
+  "experiences": ["Tixeo", "Néo-Soft", "Orange", "personal"],
+  "lvl": 85
+}

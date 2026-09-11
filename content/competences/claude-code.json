@@ -1,0 +1,10 @@
+{
+  "label": "Claude Code",
+  "faIcon": "fas robot",
+  "descriptionFr": "Assistant de développement IA par Anthropic.",
+  "descriptionEn": "AI development assistant by Anthropic.",
+  "url": "https://code.claude.com/docs",
+  "type": "tool",
+  "experiences": ["Tixeo", "Dawex"],
+  "lvl": 80
+}

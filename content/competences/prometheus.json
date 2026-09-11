@@ -1,0 +1,10 @@
+{
+  "label": "Prometheus",
+  "faIcon": "fas chart-line",
+  "descriptionFr": "Système de monitoring et d'alertes open source.",
+  "descriptionEn": "Open source monitoring and alerting system.",
+  "url": "https://prometheus.io/",
+  "type": "infra",
+  "experiences": ["personal"],
+  "lvl": 60
+}

@@ -1,0 +1,10 @@
+{
+  "label": "Node.js",
+  "faIcon": "fab node-js",
+  "descriptionFr": "Environnement d'exécution JavaScript côté serveur.",
+  "descriptionEn": "JavaScript server-side runtime environment.",
+  "url": "https://nodejs.org/",
+  "type": "language",
+  "experiences": ["Tixeo", "Orange", "personal", "Dawex"],
+  "lvl": 60
+}

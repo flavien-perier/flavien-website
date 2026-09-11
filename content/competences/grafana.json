@@ -1,0 +1,10 @@
+{
+  "label": "Grafana",
+  "faIcon": "fas chart-line",
+  "descriptionFr": "Plateforme de monitoring et visualisation de données.",
+  "descriptionEn": "Monitoring and data visualization platform.",
+  "url": "https://grafana.com/",
+  "type": "tool",
+  "experiences": ["Tixeo", "personal", "Dawex"],
+  "lvl": 60
+}

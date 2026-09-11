@@ -1,0 +1,10 @@
+{
+  "label": "CSS",
+  "faIcon": "fab css3-alt",
+  "descriptionFr": "Langage de feuilles de style pour la mise en forme des pages web.",
+  "descriptionEn": "Style sheet language for web page layout.",
+  "url": "https://developer.mozilla.org/fr/docs/Web/CSS",
+  "type": "language",
+  "experiences": ["Tixeo", "Néo-Soft", "Orange", "personal", "Dawex"],
+  "lvl": 75
+}

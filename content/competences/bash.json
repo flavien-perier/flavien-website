@@ -1,0 +1,10 @@
+{
+  "label": "Bash",
+  "faIcon": "fas terminal",
+  "descriptionFr": "Interpréteur de commandes Unix et langage de script.",
+  "descriptionEn": "Unix command interpreter and scripting language.",
+  "url": "https://www.gnu.org/software/bash/",
+  "type": "language",
+  "experiences": ["Tixeo", "personal"],
+  "lvl": 80
+}

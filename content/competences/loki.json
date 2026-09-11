@@ -1,0 +1,10 @@
+{
+  "label": "Loki",
+  "faIcon": "fas chart-line",
+  "descriptionFr": "Système d'agrégation de logs pour Grafana.",
+  "descriptionEn": "Log aggregation system for Grafana.",
+  "url": "https://grafana.com/oss/loki/",
+  "type": "infra",
+  "experiences": ["personal"],
+  "lvl": 60
+}
