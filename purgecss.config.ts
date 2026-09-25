@@ -67,6 +67,7 @@ export const purgeCssConfiguration = {
     "pre",
     "code-container",
     "code-header",
+    "mermaid",
     /-(leave|enter|appear)(|-(to|from|active))$/,
     /^(?!(|.*?:)cursor-move).+-move$/,
     /^router-link(|-exact)-active$/,

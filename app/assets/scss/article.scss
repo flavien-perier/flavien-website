@@ -75,4 +75,16 @@ article {
       }
     }
   }
+
+  pre.mermaid {
+    display: flex;
+    justify-content: center;
+    overflow: auto;
+    background-color: transparent;
+
+    svg {
+      max-width: 100%;
+      height: auto;
+    }
+  }
 }

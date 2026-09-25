@@ -21,12 +21,15 @@
 import { useRoute } from "vue-router";
 import { storeToRefs } from "pinia";
 import { useWikiArticleStore } from "~/store/WikiArticle";
+import { useMermaid } from "~/composables/useMermaid";
 
 const route = useRoute();
 const wikiArticleStore = useWikiArticleStore();
 const { title, author, date, content, description } = storeToRefs(wikiArticleStore);
 
 await wikiArticleStore.loadArticle(route.params.filename as string);
+
+useMermaid(content);
 
 const pageTitle = `Flavien PERIER - ${title.value}`
 

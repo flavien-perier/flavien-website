@@ -19,6 +19,11 @@ import dockerfile from "highlight.js/lib/languages/dockerfile";
 
 const renderer = new marked.Renderer();
 
+const escapeHtml = (text: string) => text
+  .replaceAll("&", "&amp;")
+  .replaceAll("<", "&lt;")
+  .replaceAll(">", "&gt;");
+
 hljs.registerLanguage("txt", plaintext);
 hljs.registerLanguage("text", plaintext);
 hljs.registerLanguage("plaintext", plaintext);
@@ -58,6 +63,10 @@ renderer.heading = ({tokens, depth}) => {
 
 renderer.code = ({text, lang, escaped}) => {
   let highlighted = "";
+
+  if (lang === "mermaid") {
+    return `<pre class="mermaid">${escapeHtml(text)}</pre>`;
+  }
 
   try {
     highlighted = hljs.highlight(text, { language:  lang || "" }).value;
